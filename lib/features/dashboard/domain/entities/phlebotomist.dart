@@ -2,8 +2,8 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../../sample_collection/domain/entities/sample_event.dart';
 
-part 'phlemotomist.freezed.dart';
-part 'phlemotomist.g.dart';
+part 'phlebotomist.freezed.dart';
+part 'phlebotomist.g.dart';
 
 @freezed
 abstract class Phlebotomist with _$Phlebotomist {

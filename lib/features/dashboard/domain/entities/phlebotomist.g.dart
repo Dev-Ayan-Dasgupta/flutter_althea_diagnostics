@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'phlemotomist.dart';
+part of 'phlebotomist.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator

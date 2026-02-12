@@ -1,10 +1,10 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../../cold_chain/domain/entities/cold_chain_data.dart';
+import '../../../sample_integrity/domain/entities/sample_integrity_score.dart';
 import 'biometric_verification.dart';
-import 'pre_analytical_risk.dart';
+import '../../../sample_integrity/domain/entities/pre_analytical_risk.dart';
 import 'sample_event.dart';
-import 'sample_integrity_score.dart';
 
 part 'sample.freezed.dart';
 part 'sample.g.dart';
