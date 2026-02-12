@@ -1,4 +1,3 @@
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import '../../../../core/providers/providers.dart';
 import '../../../sample_collection/domain/entities/sample_event.dart';
@@ -15,9 +14,7 @@ part 'cold_chain_providers.g.dart';
 // Data Source
 
 @riverpod
-ColdChainRemoteDataSource coldChainRemoteDataSource(
-  Ref ref,
-) {
+ColdChainRemoteDataSource coldChainRemoteDataSource(Ref ref) {
   final graphqlService = ref.watch(graphqlServiceProvider);
   return ColdChainRemoteDataSourceImpl(graphqlService: graphqlService);
 }
@@ -56,13 +53,11 @@ WatchTelemetry watchTelemetryUseCase(Ref ref) {
 class ColdChainNotifier extends _$ColdChainNotifier {
   @override
   Future<ColdChainData> build(String sampleId) async {
-    final result =
-        await ref.read(getColdChainDataUseCaseProvider).call(sampleId);
+    final result = await ref
+        .read(getColdChainDataUseCaseProvider)
+        .call(sampleId);
 
-    return result.fold(
-      (failure) => throw failure,
-      (data) => data,
-    );
+    return result.fold((failure) => throw failure, (data) => data);
   }
 
   Future<void> logTemperature({
@@ -70,7 +65,9 @@ class ColdChainNotifier extends _$ColdChainNotifier {
     double? humidity,
     required GeoLocation location,
   }) async {
-    final result = await ref.read(logTemperatureUseCaseProvider).call(
+    final result = await ref
+        .read(logTemperatureUseCaseProvider)
+        .call(
           LogTemperatureParams(
             sampleId: sampleId,
             temperature: temperature,
@@ -94,17 +91,11 @@ class ColdChainNotifier extends _$ColdChainNotifier {
 // Watch Telemetry Stream Provider
 
 @riverpod
-Stream<TelemetryReading> watchTelemetry(
-  Ref ref,
-  String sampleId,
-) async* {
+Stream<TelemetryReading> watchTelemetry(Ref ref, String sampleId) async* {
   final streamUseCase = ref.watch(watchTelemetryUseCaseProvider);
 
   await for (final result in streamUseCase.call(sampleId)) {
-    yield result.fold(
-      (failure) => throw failure,
-      (reading) => reading,
-    );
+    yield result.fold((failure) => throw failure, (reading) => reading);
   }
 }
 
@@ -117,6 +108,6 @@ bool isCompliant(Ref ref, String sampleId) {
   return coldChainState.when(
     data: (data) => data.compliance.compliancePercentage >= 95.0,
     loading: () => true,
-    error: (_, __) => false,
+    error: (_, _) => false,
   );
 }

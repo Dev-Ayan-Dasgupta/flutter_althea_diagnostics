@@ -4,7 +4,7 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'package:graphql_flutter/graphql_flutter.dart';
 import 'core/network/graphql_client.dart';
 import 'core/providers/theme_provider.dart';
-import 'core/config/theme/app_theme.dart';
+import 'core/config/routes/app_router.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -29,22 +29,19 @@ class DiagnosticPartnerApp extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final themeMode = ref.watch(themeProvider);
+    final router = ref.watch(routerProvider);
 
-    return MaterialApp(
+    return MaterialApp.router(
       title: 'AltheaCare Diagnostics',
       debugShowCheckedModeBanner: false,
 
       // Theme
-      theme: AppTheme.lightTheme,
-      darkTheme: AppTheme.darkTheme,
+      theme: ref.watch(lightThemeProvider),
+      darkTheme: ref.watch(darkThemeProvider),
       themeMode: themeMode,
 
-      // TODO: Add Go Router here
-      home: const Scaffold(
-        body: Center(
-          child: Text('AltheaCare Diagnostic Partner App'),
-        ),
-      ),
+      // Router
+      routerConfig: router,
     );
   }
 }

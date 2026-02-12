@@ -1,5 +1,4 @@
 import 'package:riverpod_annotation/riverpod_annotation.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../../core/providers/providers.dart';
 import '../../data/datasources/auth_local_datasource.dart';
 import '../../data/datasources/auth_remote_datasource.dart';
@@ -86,35 +85,22 @@ class AuthNotifier extends _$AuthNotifier {
     }
 
     final result = await ref.read(getCurrentUserUseCaseProvider).call();
-    return result.fold(
-      (failure) => null,
-      (user) => user,
-    );
+    return result.fold((failure) => null, (user) => user);
   }
 
-  Future<void> login({
-    required String email,
-    required String password,
-  }) async {
+  Future<void> login({required String email, required String password}) async {
     state = const AsyncLoading();
 
-    final result = await ref.read(loginUseCaseProvider).call(
-          LoginParams(email: email, password: password),
-        );
+    final result = await ref
+        .read(loginUseCaseProvider)
+        .call(LoginParams(email: email, password: password));
 
     state = await AsyncValue.guard(() async {
-      return result.fold(
-        (failure) => throw failure,
-        (token) async {
-          // Get user after successful login
-          final userResult =
-              await ref.read(getCurrentUserUseCaseProvider).call();
-          return userResult.fold(
-            (failure) => throw failure,
-            (user) => user,
-          );
-        },
-      );
+      return result.fold((failure) => throw failure, (token) async {
+        // Get user after successful login
+        final userResult = await ref.read(getCurrentUserUseCaseProvider).call();
+        return userResult.fold((failure) => throw failure, (user) => user);
+      });
     });
   }
 
@@ -124,22 +110,15 @@ class AuthNotifier extends _$AuthNotifier {
   }) async {
     state = const AsyncLoading();
 
-    final result = await ref.read(verifyOtpUseCaseProvider).call(
-          VerifyOtpParams(phoneNumber: phoneNumber, otp: otp),
-        );
+    final result = await ref
+        .read(verifyOtpUseCaseProvider)
+        .call(VerifyOtpParams(phoneNumber: phoneNumber, otp: otp));
 
     state = await AsyncValue.guard(() async {
-      return result.fold(
-        (failure) => throw failure,
-        (token) async {
-          final userResult =
-              await ref.read(getCurrentUserUseCaseProvider).call();
-          return userResult.fold(
-            (failure) => throw failure,
-            (user) => user,
-          );
-        },
-      );
+      return result.fold((failure) => throw failure, (token) async {
+        final userResult = await ref.read(getCurrentUserUseCaseProvider).call();
+        return userResult.fold((failure) => throw failure, (user) => user);
+      });
     });
   }
 
@@ -149,10 +128,7 @@ class AuthNotifier extends _$AuthNotifier {
     final result = await ref.read(logoutUseCaseProvider).call();
 
     state = await AsyncValue.guard(() async {
-      return result.fold(
-        (failure) => throw failure,
-        (_) => null,
-      );
+      return result.fold((failure) => throw failure, (_) => null);
     });
   }
 

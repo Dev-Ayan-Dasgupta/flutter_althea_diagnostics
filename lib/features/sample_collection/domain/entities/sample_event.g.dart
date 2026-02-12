@@ -7,21 +7,21 @@ part of 'sample_event.dart';
 // **************************************************************************
 
 _SampleEvent _$SampleEventFromJson(Map<String, dynamic> json) => _SampleEvent(
-      id: json['id'] as String,
-      sampleId: json['sampleId'] as String,
-      eventType: $enumDecode(_$SampleEventTypeEnumMap, json['eventType']),
-      actorId: json['actorId'] as String,
-      actorName: json['actorName'] as String,
-      actorRole: $enumDecode(_$ActorRoleEnumMap, json['actorRole']),
-      timestamp: DateTime.parse(json['timestamp'] as String),
-      location: GeoLocation.fromJson(json['location'] as Map<String, dynamic>),
-      eventHash: json['eventHash'] as String,
-      previousEventHash: json['previousEventHash'] as String?,
-      metadata: json['metadata'] == null
-          ? null
-          : EventMetadata.fromJson(json['metadata'] as Map<String, dynamic>),
-      notes: json['notes'] as String?,
-    );
+  id: json['id'] as String,
+  sampleId: json['sampleId'] as String,
+  eventType: $enumDecode(_$SampleEventTypeEnumMap, json['eventType']),
+  actorId: json['actorId'] as String,
+  actorName: json['actorName'] as String,
+  actorRole: $enumDecode(_$ActorRoleEnumMap, json['actorRole']),
+  timestamp: DateTime.parse(json['timestamp'] as String),
+  location: GeoLocation.fromJson(json['location'] as Map<String, dynamic>),
+  eventHash: json['eventHash'] as String,
+  previousEventHash: json['previousEventHash'] as String?,
+  metadata: json['metadata'] == null
+      ? null
+      : EventMetadata.fromJson(json['metadata'] as Map<String, dynamic>),
+  notes: json['notes'] as String?,
+);
 
 Map<String, dynamic> _$SampleEventToJson(_SampleEvent instance) =>
     <String, dynamic>{
@@ -93,14 +93,14 @@ Map<String, dynamic> _$EventMetadataToJson(_EventMetadata instance) =>
     };
 
 _GeoLocation _$GeoLocationFromJson(Map<String, dynamic> json) => _GeoLocation(
-      latitude: (json['latitude'] as num).toDouble(),
-      longitude: (json['longitude'] as num).toDouble(),
-      altitude: (json['altitude'] as num?)?.toDouble(),
-      accuracy: (json['accuracy'] as num?)?.toDouble(),
-      timestamp: json['timestamp'] == null
-          ? null
-          : DateTime.parse(json['timestamp'] as String),
-    );
+  latitude: (json['latitude'] as num).toDouble(),
+  longitude: (json['longitude'] as num).toDouble(),
+  altitude: (json['altitude'] as num?)?.toDouble(),
+  accuracy: (json['accuracy'] as num?)?.toDouble(),
+  timestamp: json['timestamp'] == null
+      ? null
+      : DateTime.parse(json['timestamp'] as String),
+);
 
 Map<String, dynamic> _$GeoLocationToJson(_GeoLocation instance) =>
     <String, dynamic>{

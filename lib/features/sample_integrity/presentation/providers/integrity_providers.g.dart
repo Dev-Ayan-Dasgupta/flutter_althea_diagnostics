@@ -13,21 +13,24 @@ part of 'integrity_providers.dart';
 final sampleIntegrityRemoteDataSourceProvider =
     SampleIntegrityRemoteDataSourceProvider._();
 
-final class SampleIntegrityRemoteDataSourceProvider extends $FunctionalProvider<
-        SampleIntegrityRemoteDataSource,
-        SampleIntegrityRemoteDataSource,
-        SampleIntegrityRemoteDataSource>
+final class SampleIntegrityRemoteDataSourceProvider
+    extends
+        $FunctionalProvider<
+          SampleIntegrityRemoteDataSource,
+          SampleIntegrityRemoteDataSource,
+          SampleIntegrityRemoteDataSource
+        >
     with $Provider<SampleIntegrityRemoteDataSource> {
   SampleIntegrityRemoteDataSourceProvider._()
-      : super(
-          from: null,
-          argument: null,
-          retry: null,
-          name: r'sampleIntegrityRemoteDataSourceProvider',
-          isAutoDispose: true,
-          dependencies: null,
-          $allTransitiveDependencies: null,
-        );
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'sampleIntegrityRemoteDataSourceProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
 
   @override
   String debugGetCreateSourceHash() => _$sampleIntegrityRemoteDataSourceHash();
@@ -35,8 +38,8 @@ final class SampleIntegrityRemoteDataSourceProvider extends $FunctionalProvider<
   @$internal
   @override
   $ProviderElement<SampleIntegrityRemoteDataSource> $createElement(
-          $ProviderPointer pointer) =>
-      $ProviderElement(pointer);
+    $ProviderPointer pointer,
+  ) => $ProviderElement(pointer);
 
   @override
   SampleIntegrityRemoteDataSource create(Ref ref) {
@@ -47,8 +50,9 @@ final class SampleIntegrityRemoteDataSourceProvider extends $FunctionalProvider<
   Override overrideWithValue(SampleIntegrityRemoteDataSource value) {
     return $ProviderOverride(
       origin: this,
-      providerOverride:
-          $SyncValueProvider<SampleIntegrityRemoteDataSource>(value),
+      providerOverride: $SyncValueProvider<SampleIntegrityRemoteDataSource>(
+        value,
+      ),
     );
   }
 }
@@ -59,20 +63,24 @@ String _$sampleIntegrityRemoteDataSourceHash() =>
 @ProviderFor(sampleIntegrityRepository)
 final sampleIntegrityRepositoryProvider = SampleIntegrityRepositoryProvider._();
 
-final class SampleIntegrityRepositoryProvider extends $FunctionalProvider<
-    SampleIntegrityRepository,
-    SampleIntegrityRepository,
-    SampleIntegrityRepository> with $Provider<SampleIntegrityRepository> {
+final class SampleIntegrityRepositoryProvider
+    extends
+        $FunctionalProvider<
+          SampleIntegrityRepository,
+          SampleIntegrityRepository,
+          SampleIntegrityRepository
+        >
+    with $Provider<SampleIntegrityRepository> {
   SampleIntegrityRepositoryProvider._()
-      : super(
-          from: null,
-          argument: null,
-          retry: null,
-          name: r'sampleIntegrityRepositoryProvider',
-          isAutoDispose: true,
-          dependencies: null,
-          $allTransitiveDependencies: null,
-        );
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'sampleIntegrityRepositoryProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
 
   @override
   String debugGetCreateSourceHash() => _$sampleIntegrityRepositoryHash();
@@ -80,8 +88,8 @@ final class SampleIntegrityRepositoryProvider extends $FunctionalProvider<
   @$internal
   @override
   $ProviderElement<SampleIntegrityRepository> $createElement(
-          $ProviderPointer pointer) =>
-      $ProviderElement(pointer);
+    $ProviderPointer pointer,
+  ) => $ProviderElement(pointer);
 
   @override
   SampleIntegrityRepository create(Ref ref) {
@@ -104,20 +112,24 @@ String _$sampleIntegrityRepositoryHash() =>
 final calculateIntegrityScoreUseCaseProvider =
     CalculateIntegrityScoreUseCaseProvider._();
 
-final class CalculateIntegrityScoreUseCaseProvider extends $FunctionalProvider<
-    CalculateIntegrityScore,
-    CalculateIntegrityScore,
-    CalculateIntegrityScore> with $Provider<CalculateIntegrityScore> {
+final class CalculateIntegrityScoreUseCaseProvider
+    extends
+        $FunctionalProvider<
+          CalculateIntegrityScore,
+          CalculateIntegrityScore,
+          CalculateIntegrityScore
+        >
+    with $Provider<CalculateIntegrityScore> {
   CalculateIntegrityScoreUseCaseProvider._()
-      : super(
-          from: null,
-          argument: null,
-          retry: null,
-          name: r'calculateIntegrityScoreUseCaseProvider',
-          isAutoDispose: true,
-          dependencies: null,
-          $allTransitiveDependencies: null,
-        );
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'calculateIntegrityScoreUseCaseProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
 
   @override
   String debugGetCreateSourceHash() => _$calculateIntegrityScoreUseCaseHash();
@@ -125,8 +137,8 @@ final class CalculateIntegrityScoreUseCaseProvider extends $FunctionalProvider<
   @$internal
   @override
   $ProviderElement<CalculateIntegrityScore> $createElement(
-          $ProviderPointer pointer) =>
-      $ProviderElement(pointer);
+    $ProviderPointer pointer,
+  ) => $ProviderElement(pointer);
 
   @override
   CalculateIntegrityScore create(Ref ref) {
@@ -148,20 +160,24 @@ String _$calculateIntegrityScoreUseCaseHash() =>
 @ProviderFor(getIntegrityScoreUseCase)
 final getIntegrityScoreUseCaseProvider = GetIntegrityScoreUseCaseProvider._();
 
-final class GetIntegrityScoreUseCaseProvider extends $FunctionalProvider<
-    GetIntegrityScore,
-    GetIntegrityScore,
-    GetIntegrityScore> with $Provider<GetIntegrityScore> {
+final class GetIntegrityScoreUseCaseProvider
+    extends
+        $FunctionalProvider<
+          GetIntegrityScore,
+          GetIntegrityScore,
+          GetIntegrityScore
+        >
+    with $Provider<GetIntegrityScore> {
   GetIntegrityScoreUseCaseProvider._()
-      : super(
-          from: null,
-          argument: null,
-          retry: null,
-          name: r'getIntegrityScoreUseCaseProvider',
-          isAutoDispose: true,
-          dependencies: null,
-          $allTransitiveDependencies: null,
-        );
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'getIntegrityScoreUseCaseProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
 
   @override
   String debugGetCreateSourceHash() => _$getIntegrityScoreUseCaseHash();
@@ -169,8 +185,8 @@ final class GetIntegrityScoreUseCaseProvider extends $FunctionalProvider<
   @$internal
   @override
   $ProviderElement<GetIntegrityScore> $createElement(
-          $ProviderPointer pointer) =>
-      $ProviderElement(pointer);
+    $ProviderPointer pointer,
+  ) => $ProviderElement(pointer);
 
   @override
   GetIntegrityScore create(Ref ref) {
@@ -193,20 +209,24 @@ String _$getIntegrityScoreUseCaseHash() =>
 final assessPreAnalyticalRiskUseCaseProvider =
     AssessPreAnalyticalRiskUseCaseProvider._();
 
-final class AssessPreAnalyticalRiskUseCaseProvider extends $FunctionalProvider<
-    AssessPreAnalyticalRisk,
-    AssessPreAnalyticalRisk,
-    AssessPreAnalyticalRisk> with $Provider<AssessPreAnalyticalRisk> {
+final class AssessPreAnalyticalRiskUseCaseProvider
+    extends
+        $FunctionalProvider<
+          AssessPreAnalyticalRisk,
+          AssessPreAnalyticalRisk,
+          AssessPreAnalyticalRisk
+        >
+    with $Provider<AssessPreAnalyticalRisk> {
   AssessPreAnalyticalRiskUseCaseProvider._()
-      : super(
-          from: null,
-          argument: null,
-          retry: null,
-          name: r'assessPreAnalyticalRiskUseCaseProvider',
-          isAutoDispose: true,
-          dependencies: null,
-          $allTransitiveDependencies: null,
-        );
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'assessPreAnalyticalRiskUseCaseProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
 
   @override
   String debugGetCreateSourceHash() => _$assessPreAnalyticalRiskUseCaseHash();
@@ -214,8 +234,8 @@ final class AssessPreAnalyticalRiskUseCaseProvider extends $FunctionalProvider<
   @$internal
   @override
   $ProviderElement<AssessPreAnalyticalRisk> $createElement(
-          $ProviderPointer pointer) =>
-      $ProviderElement(pointer);
+    $ProviderPointer pointer,
+  ) => $ProviderElement(pointer);
 
   @override
   AssessPreAnalyticalRisk create(Ref ref) {
@@ -237,18 +257,19 @@ String _$assessPreAnalyticalRiskUseCaseHash() =>
 @ProviderFor(IntegrityScoreNotifier)
 final integrityScoreProvider = IntegrityScoreNotifierFamily._();
 
-final class IntegrityScoreNotifierProvider extends $AsyncNotifierProvider<
-    IntegrityScoreNotifier, SampleIntegrityScore> {
-  IntegrityScoreNotifierProvider._(
-      {required IntegrityScoreNotifierFamily super.from,
-      required String super.argument})
-      : super(
-          retry: null,
-          name: r'integrityScoreProvider',
-          isAutoDispose: true,
-          dependencies: null,
-          $allTransitiveDependencies: null,
-        );
+final class IntegrityScoreNotifierProvider
+    extends
+        $AsyncNotifierProvider<IntegrityScoreNotifier, SampleIntegrityScore> {
+  IntegrityScoreNotifierProvider._({
+    required IntegrityScoreNotifierFamily super.from,
+    required String super.argument,
+  }) : super(
+         retry: null,
+         name: r'integrityScoreProvider',
+         isAutoDispose: true,
+         dependencies: null,
+         $allTransitiveDependencies: null,
+       );
 
   @override
   String debugGetCreateSourceHash() => _$integrityScoreNotifierHash();
@@ -282,23 +303,22 @@ String _$integrityScoreNotifierHash() =>
 final class IntegrityScoreNotifierFamily extends $Family
     with
         $ClassFamilyOverride<
-            IntegrityScoreNotifier,
-            AsyncValue<SampleIntegrityScore>,
-            SampleIntegrityScore,
-            FutureOr<SampleIntegrityScore>,
-            String> {
+          IntegrityScoreNotifier,
+          AsyncValue<SampleIntegrityScore>,
+          SampleIntegrityScore,
+          FutureOr<SampleIntegrityScore>,
+          String
+        > {
   IntegrityScoreNotifierFamily._()
-      : super(
-          retry: null,
-          name: r'integrityScoreProvider',
-          dependencies: null,
-          $allTransitiveDependencies: null,
-          isAutoDispose: true,
-        );
+    : super(
+        retry: null,
+        name: r'integrityScoreProvider',
+        dependencies: null,
+        $allTransitiveDependencies: null,
+        isAutoDispose: true,
+      );
 
-  IntegrityScoreNotifierProvider call(
-    String sampleId,
-  ) =>
+  IntegrityScoreNotifierProvider call(String sampleId) =>
       IntegrityScoreNotifierProvider._(argument: sampleId, from: this);
 
   @override
@@ -310,24 +330,25 @@ abstract class _$IntegrityScoreNotifier
   late final _$args = ref.$arg as String;
   String get sampleId => _$args;
 
-  FutureOr<SampleIntegrityScore> build(
-    String sampleId,
-  );
+  FutureOr<SampleIntegrityScore> build(String sampleId);
   @$mustCallSuper
   @override
   void runBuild() {
-    final ref = this.ref
-        as $Ref<AsyncValue<SampleIntegrityScore>, SampleIntegrityScore>;
-    final element = ref.element as $ClassProviderElement<
-        AnyNotifier<AsyncValue<SampleIntegrityScore>, SampleIntegrityScore>,
-        AsyncValue<SampleIntegrityScore>,
-        Object?,
-        Object?>;
-    element.handleCreate(
-        ref,
-        () => build(
-              _$args,
-            ));
+    final ref =
+        this.ref
+            as $Ref<AsyncValue<SampleIntegrityScore>, SampleIntegrityScore>;
+    final element =
+        ref.element
+            as $ClassProviderElement<
+              AnyNotifier<
+                AsyncValue<SampleIntegrityScore>,
+                SampleIntegrityScore
+              >,
+              AsyncValue<SampleIntegrityScore>,
+              Object?,
+              Object?
+            >;
+    element.handleCreate(ref, () => build(_$args));
   }
 }
 
@@ -335,17 +356,18 @@ abstract class _$IntegrityScoreNotifier
 final integrityLevelColorProvider = IntegrityLevelColorFamily._();
 
 final class IntegrityLevelColorProvider
-    extends $FunctionalProvider<int, int, int> with $Provider<int> {
-  IntegrityLevelColorProvider._(
-      {required IntegrityLevelColorFamily super.from,
-      required IntegrityLevel super.argument})
-      : super(
-          retry: null,
-          name: r'integrityLevelColorProvider',
-          isAutoDispose: true,
-          dependencies: null,
-          $allTransitiveDependencies: null,
-        );
+    extends $FunctionalProvider<int, int, int>
+    with $Provider<int> {
+  IntegrityLevelColorProvider._({
+    required IntegrityLevelColorFamily super.from,
+    required IntegrityLevel super.argument,
+  }) : super(
+         retry: null,
+         name: r'integrityLevelColorProvider',
+         isAutoDispose: true,
+         dependencies: null,
+         $allTransitiveDependencies: null,
+       );
 
   @override
   String debugGetCreateSourceHash() => _$integrityLevelColorHash();
@@ -365,10 +387,7 @@ final class IntegrityLevelColorProvider
   @override
   int create(Ref ref) {
     final argument = this.argument as IntegrityLevel;
-    return integrityLevelColor(
-      ref,
-      argument,
-    );
+    return integrityLevelColor(ref, argument);
   }
 
   /// {@macro riverpod.override_with_value}
@@ -396,17 +415,15 @@ String _$integrityLevelColorHash() =>
 final class IntegrityLevelColorFamily extends $Family
     with $FunctionalFamilyOverride<int, IntegrityLevel> {
   IntegrityLevelColorFamily._()
-      : super(
-          retry: null,
-          name: r'integrityLevelColorProvider',
-          dependencies: null,
-          $allTransitiveDependencies: null,
-          isAutoDispose: true,
-        );
+    : super(
+        retry: null,
+        name: r'integrityLevelColorProvider',
+        dependencies: null,
+        $allTransitiveDependencies: null,
+        isAutoDispose: true,
+      );
 
-  IntegrityLevelColorProvider call(
-    IntegrityLevel level,
-  ) =>
+  IntegrityLevelColorProvider call(IntegrityLevel level) =>
       IntegrityLevelColorProvider._(argument: level, from: this);
 
   @override

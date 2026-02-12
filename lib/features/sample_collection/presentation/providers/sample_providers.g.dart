@@ -12,20 +12,24 @@ part of 'sample_providers.dart';
 @ProviderFor(sampleRemoteDataSource)
 final sampleRemoteDataSourceProvider = SampleRemoteDataSourceProvider._();
 
-final class SampleRemoteDataSourceProvider extends $FunctionalProvider<
-    SampleRemoteDataSource,
-    SampleRemoteDataSource,
-    SampleRemoteDataSource> with $Provider<SampleRemoteDataSource> {
+final class SampleRemoteDataSourceProvider
+    extends
+        $FunctionalProvider<
+          SampleRemoteDataSource,
+          SampleRemoteDataSource,
+          SampleRemoteDataSource
+        >
+    with $Provider<SampleRemoteDataSource> {
   SampleRemoteDataSourceProvider._()
-      : super(
-          from: null,
-          argument: null,
-          retry: null,
-          name: r'sampleRemoteDataSourceProvider',
-          isAutoDispose: true,
-          dependencies: null,
-          $allTransitiveDependencies: null,
-        );
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'sampleRemoteDataSourceProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
 
   @override
   String debugGetCreateSourceHash() => _$sampleRemoteDataSourceHash();
@@ -33,8 +37,8 @@ final class SampleRemoteDataSourceProvider extends $FunctionalProvider<
   @$internal
   @override
   $ProviderElement<SampleRemoteDataSource> $createElement(
-          $ProviderPointer pointer) =>
-      $ProviderElement(pointer);
+    $ProviderPointer pointer,
+  ) => $ProviderElement(pointer);
 
   @override
   SampleRemoteDataSource create(Ref ref) {
@@ -56,20 +60,24 @@ String _$sampleRemoteDataSourceHash() =>
 @ProviderFor(sampleLocalDataSource)
 final sampleLocalDataSourceProvider = SampleLocalDataSourceProvider._();
 
-final class SampleLocalDataSourceProvider extends $FunctionalProvider<
-    SampleLocalDataSource,
-    SampleLocalDataSource,
-    SampleLocalDataSource> with $Provider<SampleLocalDataSource> {
+final class SampleLocalDataSourceProvider
+    extends
+        $FunctionalProvider<
+          SampleLocalDataSource,
+          SampleLocalDataSource,
+          SampleLocalDataSource
+        >
+    with $Provider<SampleLocalDataSource> {
   SampleLocalDataSourceProvider._()
-      : super(
-          from: null,
-          argument: null,
-          retry: null,
-          name: r'sampleLocalDataSourceProvider',
-          isAutoDispose: true,
-          dependencies: null,
-          $allTransitiveDependencies: null,
-        );
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'sampleLocalDataSourceProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
 
   @override
   String debugGetCreateSourceHash() => _$sampleLocalDataSourceHash();
@@ -77,8 +85,8 @@ final class SampleLocalDataSourceProvider extends $FunctionalProvider<
   @$internal
   @override
   $ProviderElement<SampleLocalDataSource> $createElement(
-          $ProviderPointer pointer) =>
-      $ProviderElement(pointer);
+    $ProviderPointer pointer,
+  ) => $ProviderElement(pointer);
 
   @override
   SampleLocalDataSource create(Ref ref) {
@@ -100,20 +108,24 @@ String _$sampleLocalDataSourceHash() =>
 @ProviderFor(sampleRepository)
 final sampleRepositoryProvider = SampleRepositoryProvider._();
 
-final class SampleRepositoryProvider extends $FunctionalProvider<
-    SampleRepository,
-    SampleRepository,
-    SampleRepository> with $Provider<SampleRepository> {
+final class SampleRepositoryProvider
+    extends
+        $FunctionalProvider<
+          SampleRepository,
+          SampleRepository,
+          SampleRepository
+        >
+    with $Provider<SampleRepository> {
   SampleRepositoryProvider._()
-      : super(
-          from: null,
-          argument: null,
-          retry: null,
-          name: r'sampleRepositoryProvider',
-          isAutoDispose: true,
-          dependencies: null,
-          $allTransitiveDependencies: null,
-        );
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'sampleRepositoryProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
 
   @override
   String debugGetCreateSourceHash() => _$sampleRepositoryHash();
@@ -146,15 +158,15 @@ final class GetSamplesUseCaseProvider
     extends $FunctionalProvider<GetSamples, GetSamples, GetSamples>
     with $Provider<GetSamples> {
   GetSamplesUseCaseProvider._()
-      : super(
-          from: null,
-          argument: null,
-          retry: null,
-          name: r'getSamplesUseCaseProvider',
-          isAutoDispose: true,
-          dependencies: null,
-          $allTransitiveDependencies: null,
-        );
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'getSamplesUseCaseProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
 
   @override
   String debugGetCreateSourceHash() => _$getSamplesUseCaseHash();
@@ -187,15 +199,15 @@ final class GetSampleByIdUseCaseProvider
     extends $FunctionalProvider<GetSampleById, GetSampleById, GetSampleById>
     with $Provider<GetSampleById> {
   GetSampleByIdUseCaseProvider._()
-      : super(
-          from: null,
-          argument: null,
-          retry: null,
-          name: r'getSampleByIdUseCaseProvider',
-          isAutoDispose: true,
-          dependencies: null,
-          $allTransitiveDependencies: null,
-        );
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'getSampleByIdUseCaseProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
 
   @override
   String debugGetCreateSourceHash() => _$getSampleByIdUseCaseHash();
@@ -229,15 +241,15 @@ final class ScanBarcodeUseCaseProvider
     extends $FunctionalProvider<ScanBarcode, ScanBarcode, ScanBarcode>
     with $Provider<ScanBarcode> {
   ScanBarcodeUseCaseProvider._()
-      : super(
-          from: null,
-          argument: null,
-          retry: null,
-          name: r'scanBarcodeUseCaseProvider',
-          isAutoDispose: true,
-          dependencies: null,
-          $allTransitiveDependencies: null,
-        );
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'scanBarcodeUseCaseProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
 
   @override
   String debugGetCreateSourceHash() => _$scanBarcodeUseCaseHash();
@@ -268,20 +280,24 @@ String _$scanBarcodeUseCaseHash() =>
 final verifyBiometricHandshakeUseCaseProvider =
     VerifyBiometricHandshakeUseCaseProvider._();
 
-final class VerifyBiometricHandshakeUseCaseProvider extends $FunctionalProvider<
-    VerifyBiometricHandshake,
-    VerifyBiometricHandshake,
-    VerifyBiometricHandshake> with $Provider<VerifyBiometricHandshake> {
+final class VerifyBiometricHandshakeUseCaseProvider
+    extends
+        $FunctionalProvider<
+          VerifyBiometricHandshake,
+          VerifyBiometricHandshake,
+          VerifyBiometricHandshake
+        >
+    with $Provider<VerifyBiometricHandshake> {
   VerifyBiometricHandshakeUseCaseProvider._()
-      : super(
-          from: null,
-          argument: null,
-          retry: null,
-          name: r'verifyBiometricHandshakeUseCaseProvider',
-          isAutoDispose: true,
-          dependencies: null,
-          $allTransitiveDependencies: null,
-        );
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'verifyBiometricHandshakeUseCaseProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
 
   @override
   String debugGetCreateSourceHash() => _$verifyBiometricHandshakeUseCaseHash();
@@ -289,8 +305,8 @@ final class VerifyBiometricHandshakeUseCaseProvider extends $FunctionalProvider<
   @$internal
   @override
   $ProviderElement<VerifyBiometricHandshake> $createElement(
-          $ProviderPointer pointer) =>
-      $ProviderElement(pointer);
+    $ProviderPointer pointer,
+  ) => $ProviderElement(pointer);
 
   @override
   VerifyBiometricHandshake create(Ref ref) {
@@ -313,20 +329,24 @@ String _$verifyBiometricHandshakeUseCaseHash() =>
 final markSampleAsCollectedUseCaseProvider =
     MarkSampleAsCollectedUseCaseProvider._();
 
-final class MarkSampleAsCollectedUseCaseProvider extends $FunctionalProvider<
-    MarkSampleAsCollected,
-    MarkSampleAsCollected,
-    MarkSampleAsCollected> with $Provider<MarkSampleAsCollected> {
+final class MarkSampleAsCollectedUseCaseProvider
+    extends
+        $FunctionalProvider<
+          MarkSampleAsCollected,
+          MarkSampleAsCollected,
+          MarkSampleAsCollected
+        >
+    with $Provider<MarkSampleAsCollected> {
   MarkSampleAsCollectedUseCaseProvider._()
-      : super(
-          from: null,
-          argument: null,
-          retry: null,
-          name: r'markSampleAsCollectedUseCaseProvider',
-          isAutoDispose: true,
-          dependencies: null,
-          $allTransitiveDependencies: null,
-        );
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'markSampleAsCollectedUseCaseProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
 
   @override
   String debugGetCreateSourceHash() => _$markSampleAsCollectedUseCaseHash();
@@ -334,8 +354,8 @@ final class MarkSampleAsCollectedUseCaseProvider extends $FunctionalProvider<
   @$internal
   @override
   $ProviderElement<MarkSampleAsCollected> $createElement(
-          $ProviderPointer pointer) =>
-      $ProviderElement(pointer);
+    $ProviderPointer pointer,
+  ) => $ProviderElement(pointer);
 
   @override
   MarkSampleAsCollected create(Ref ref) {
@@ -361,15 +381,15 @@ final class WatchSampleUseCaseProvider
     extends $FunctionalProvider<WatchSample, WatchSample, WatchSample>
     with $Provider<WatchSample> {
   WatchSampleUseCaseProvider._()
-      : super(
-          from: null,
-          argument: null,
-          retry: null,
-          name: r'watchSampleUseCaseProvider',
-          isAutoDispose: true,
-          dependencies: null,
-          $allTransitiveDependencies: null,
-        );
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'watchSampleUseCaseProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
 
   @override
   String debugGetCreateSourceHash() => _$watchSampleUseCaseHash();
@@ -401,23 +421,23 @@ final samplesProvider = SamplesNotifierFamily._();
 
 final class SamplesNotifierProvider
     extends $AsyncNotifierProvider<SamplesNotifier, List<Sample>> {
-  SamplesNotifierProvider._(
-      {required SamplesNotifierFamily super.from,
-      required ({
-        SampleStatus? status,
-        DateTime? startDate,
-        DateTime? endDate,
-        int page,
-        int limit,
-      })
-          super.argument})
-      : super(
-          retry: null,
-          name: r'samplesProvider',
-          isAutoDispose: true,
-          dependencies: null,
-          $allTransitiveDependencies: null,
-        );
+  SamplesNotifierProvider._({
+    required SamplesNotifierFamily super.from,
+    required ({
+      SampleStatus? status,
+      DateTime? startDate,
+      DateTime? endDate,
+      int page,
+      int limit,
+    })
+    super.argument,
+  }) : super(
+         retry: null,
+         name: r'samplesProvider',
+         isAutoDispose: true,
+         dependencies: null,
+         $allTransitiveDependencies: null,
+       );
 
   @override
   String debugGetCreateSourceHash() => _$samplesNotifierHash();
@@ -449,25 +469,26 @@ String _$samplesNotifierHash() => r'1bf01fc2bda2018a8b38af564c36155524e05325';
 final class SamplesNotifierFamily extends $Family
     with
         $ClassFamilyOverride<
-            SamplesNotifier,
-            AsyncValue<List<Sample>>,
-            List<Sample>,
-            FutureOr<List<Sample>>,
-            ({
-              SampleStatus? status,
-              DateTime? startDate,
-              DateTime? endDate,
-              int page,
-              int limit,
-            })> {
+          SamplesNotifier,
+          AsyncValue<List<Sample>>,
+          List<Sample>,
+          FutureOr<List<Sample>>,
+          ({
+            SampleStatus? status,
+            DateTime? startDate,
+            DateTime? endDate,
+            int page,
+            int limit,
+          })
+        > {
   SamplesNotifierFamily._()
-      : super(
-          retry: null,
-          name: r'samplesProvider',
-          dependencies: null,
-          $allTransitiveDependencies: null,
-          isAutoDispose: true,
-        );
+    : super(
+        retry: null,
+        name: r'samplesProvider',
+        dependencies: null,
+        $allTransitiveDependencies: null,
+        isAutoDispose: true,
+      );
 
   SamplesNotifierProvider call({
     SampleStatus? status,
@@ -475,27 +496,31 @@ final class SamplesNotifierFamily extends $Family
     DateTime? endDate,
     int page = 1,
     int limit = 20,
-  }) =>
-      SamplesNotifierProvider._(argument: (
-        status: status,
-        startDate: startDate,
-        endDate: endDate,
-        page: page,
-        limit: limit,
-      ), from: this);
+  }) => SamplesNotifierProvider._(
+    argument: (
+      status: status,
+      startDate: startDate,
+      endDate: endDate,
+      page: page,
+      limit: limit,
+    ),
+    from: this,
+  );
 
   @override
   String toString() => r'samplesProvider';
 }
 
 abstract class _$SamplesNotifier extends $AsyncNotifier<List<Sample>> {
-  late final _$args = ref.$arg as ({
-    SampleStatus? status,
-    DateTime? startDate,
-    DateTime? endDate,
-    int page,
-    int limit,
-  });
+  late final _$args =
+      ref.$arg
+          as ({
+            SampleStatus? status,
+            DateTime? startDate,
+            DateTime? endDate,
+            int page,
+            int limit,
+          });
   SampleStatus? get status => _$args.status;
   DateTime? get startDate => _$args.startDate;
   DateTime? get endDate => _$args.endDate;
@@ -513,20 +538,24 @@ abstract class _$SamplesNotifier extends $AsyncNotifier<List<Sample>> {
   @override
   void runBuild() {
     final ref = this.ref as $Ref<AsyncValue<List<Sample>>, List<Sample>>;
-    final element = ref.element as $ClassProviderElement<
-        AnyNotifier<AsyncValue<List<Sample>>, List<Sample>>,
-        AsyncValue<List<Sample>>,
-        Object?,
-        Object?>;
+    final element =
+        ref.element
+            as $ClassProviderElement<
+              AnyNotifier<AsyncValue<List<Sample>>, List<Sample>>,
+              AsyncValue<List<Sample>>,
+              Object?,
+              Object?
+            >;
     element.handleCreate(
-        ref,
-        () => build(
-              status: _$args.status,
-              startDate: _$args.startDate,
-              endDate: _$args.endDate,
-              page: _$args.page,
-              limit: _$args.limit,
-            ));
+      ref,
+      () => build(
+        status: _$args.status,
+        startDate: _$args.startDate,
+        endDate: _$args.endDate,
+        page: _$args.page,
+        limit: _$args.limit,
+      ),
+    );
   }
 }
 
@@ -535,16 +564,16 @@ final sampleProvider = SampleNotifierFamily._();
 
 final class SampleNotifierProvider
     extends $AsyncNotifierProvider<SampleNotifier, Sample> {
-  SampleNotifierProvider._(
-      {required SampleNotifierFamily super.from,
-      required String super.argument})
-      : super(
-          retry: null,
-          name: r'sampleProvider',
-          isAutoDispose: true,
-          dependencies: null,
-          $allTransitiveDependencies: null,
-        );
+  SampleNotifierProvider._({
+    required SampleNotifierFamily super.from,
+    required String super.argument,
+  }) : super(
+         retry: null,
+         name: r'sampleProvider',
+         isAutoDispose: true,
+         dependencies: null,
+         $allTransitiveDependencies: null,
+       );
 
   @override
   String debugGetCreateSourceHash() => _$sampleNotifierHash();
@@ -575,20 +604,23 @@ String _$sampleNotifierHash() => r'8364c06b2383683ad312e24571503e457e2639df';
 
 final class SampleNotifierFamily extends $Family
     with
-        $ClassFamilyOverride<SampleNotifier, AsyncValue<Sample>, Sample,
-            FutureOr<Sample>, String> {
+        $ClassFamilyOverride<
+          SampleNotifier,
+          AsyncValue<Sample>,
+          Sample,
+          FutureOr<Sample>,
+          String
+        > {
   SampleNotifierFamily._()
-      : super(
-          retry: null,
-          name: r'sampleProvider',
-          dependencies: null,
-          $allTransitiveDependencies: null,
-          isAutoDispose: true,
-        );
+    : super(
+        retry: null,
+        name: r'sampleProvider',
+        dependencies: null,
+        $allTransitiveDependencies: null,
+        isAutoDispose: true,
+      );
 
-  SampleNotifierProvider call(
-    String sampleId,
-  ) =>
+  SampleNotifierProvider call(String sampleId) =>
       SampleNotifierProvider._(argument: sampleId, from: this);
 
   @override
@@ -599,23 +631,20 @@ abstract class _$SampleNotifier extends $AsyncNotifier<Sample> {
   late final _$args = ref.$arg as String;
   String get sampleId => _$args;
 
-  FutureOr<Sample> build(
-    String sampleId,
-  );
+  FutureOr<Sample> build(String sampleId);
   @$mustCallSuper
   @override
   void runBuild() {
     final ref = this.ref as $Ref<AsyncValue<Sample>, Sample>;
-    final element = ref.element as $ClassProviderElement<
-        AnyNotifier<AsyncValue<Sample>, Sample>,
-        AsyncValue<Sample>,
-        Object?,
-        Object?>;
-    element.handleCreate(
-        ref,
-        () => build(
-              _$args,
-            ));
+    final element =
+        ref.element
+            as $ClassProviderElement<
+              AnyNotifier<AsyncValue<Sample>, Sample>,
+              AsyncValue<Sample>,
+              Object?,
+              Object?
+            >;
+    element.handleCreate(ref, () => build(_$args));
   }
 }
 
@@ -625,15 +654,16 @@ final watchSampleProvider = WatchSampleFamily._();
 final class WatchSampleProvider
     extends $FunctionalProvider<AsyncValue<Sample>, Sample, Stream<Sample>>
     with $FutureModifier<Sample>, $StreamProvider<Sample> {
-  WatchSampleProvider._(
-      {required WatchSampleFamily super.from, required String super.argument})
-      : super(
-          retry: null,
-          name: r'watchSampleProvider',
-          isAutoDispose: true,
-          dependencies: null,
-          $allTransitiveDependencies: null,
-        );
+  WatchSampleProvider._({
+    required WatchSampleFamily super.from,
+    required String super.argument,
+  }) : super(
+         retry: null,
+         name: r'watchSampleProvider',
+         isAutoDispose: true,
+         dependencies: null,
+         $allTransitiveDependencies: null,
+       );
 
   @override
   String debugGetCreateSourceHash() => _$watchSampleHash();
@@ -653,10 +683,7 @@ final class WatchSampleProvider
   @override
   Stream<Sample> create(Ref ref) {
     final argument = this.argument as String;
-    return watchSample(
-      ref,
-      argument,
-    );
+    return watchSample(ref, argument);
   }
 
   @override
@@ -675,17 +702,15 @@ String _$watchSampleHash() => r'66434cce749de5017af11c64aaf0669bd6bfa6f8';
 final class WatchSampleFamily extends $Family
     with $FunctionalFamilyOverride<Stream<Sample>, String> {
   WatchSampleFamily._()
-      : super(
-          retry: null,
-          name: r'watchSampleProvider',
-          dependencies: null,
-          $allTransitiveDependencies: null,
-          isAutoDispose: true,
-        );
+    : super(
+        retry: null,
+        name: r'watchSampleProvider',
+        dependencies: null,
+        $allTransitiveDependencies: null,
+        isAutoDispose: true,
+      );
 
-  WatchSampleProvider call(
-    String sampleId,
-  ) =>
+  WatchSampleProvider call(String sampleId) =>
       WatchSampleProvider._(argument: sampleId, from: this);
 
   @override
@@ -695,19 +720,24 @@ final class WatchSampleFamily extends $Family
 @ProviderFor(samplesInTransit)
 final samplesInTransitProvider = SamplesInTransitProvider._();
 
-final class SamplesInTransitProvider extends $FunctionalProvider<
-        AsyncValue<List<Sample>>, List<Sample>, FutureOr<List<Sample>>>
+final class SamplesInTransitProvider
+    extends
+        $FunctionalProvider<
+          AsyncValue<List<Sample>>,
+          List<Sample>,
+          FutureOr<List<Sample>>
+        >
     with $FutureModifier<List<Sample>>, $FutureProvider<List<Sample>> {
   SamplesInTransitProvider._()
-      : super(
-          from: null,
-          argument: null,
-          retry: null,
-          name: r'samplesInTransitProvider',
-          isAutoDispose: true,
-          dependencies: null,
-          $allTransitiveDependencies: null,
-        );
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'samplesInTransitProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
 
   @override
   String debugGetCreateSourceHash() => _$samplesInTransitHash();
@@ -715,8 +745,8 @@ final class SamplesInTransitProvider extends $FunctionalProvider<
   @$internal
   @override
   $FutureProviderElement<List<Sample>> $createElement(
-          $ProviderPointer pointer) =>
-      $FutureProviderElement(pointer);
+    $ProviderPointer pointer,
+  ) => $FutureProviderElement(pointer);
 
   @override
   FutureOr<List<Sample>> create(Ref ref) {
@@ -729,19 +759,24 @@ String _$samplesInTransitHash() => r'd58b9f63920b9f1e567c1d748dc1c4b8e8eeadff';
 @ProviderFor(samplesProcessing)
 final samplesProcessingProvider = SamplesProcessingProvider._();
 
-final class SamplesProcessingProvider extends $FunctionalProvider<
-        AsyncValue<List<Sample>>, List<Sample>, FutureOr<List<Sample>>>
+final class SamplesProcessingProvider
+    extends
+        $FunctionalProvider<
+          AsyncValue<List<Sample>>,
+          List<Sample>,
+          FutureOr<List<Sample>>
+        >
     with $FutureModifier<List<Sample>>, $FutureProvider<List<Sample>> {
   SamplesProcessingProvider._()
-      : super(
-          from: null,
-          argument: null,
-          retry: null,
-          name: r'samplesProcessingProvider',
-          isAutoDispose: true,
-          dependencies: null,
-          $allTransitiveDependencies: null,
-        );
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'samplesProcessingProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
 
   @override
   String debugGetCreateSourceHash() => _$samplesProcessingHash();
@@ -749,8 +784,8 @@ final class SamplesProcessingProvider extends $FunctionalProvider<
   @$internal
   @override
   $FutureProviderElement<List<Sample>> $createElement(
-          $ProviderPointer pointer) =>
-      $FutureProviderElement(pointer);
+    $ProviderPointer pointer,
+  ) => $FutureProviderElement(pointer);
 
   @override
   FutureOr<List<Sample>> create(Ref ref) {

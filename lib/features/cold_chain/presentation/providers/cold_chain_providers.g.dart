@@ -12,20 +12,24 @@ part of 'cold_chain_providers.dart';
 @ProviderFor(coldChainRemoteDataSource)
 final coldChainRemoteDataSourceProvider = ColdChainRemoteDataSourceProvider._();
 
-final class ColdChainRemoteDataSourceProvider extends $FunctionalProvider<
-    ColdChainRemoteDataSource,
-    ColdChainRemoteDataSource,
-    ColdChainRemoteDataSource> with $Provider<ColdChainRemoteDataSource> {
+final class ColdChainRemoteDataSourceProvider
+    extends
+        $FunctionalProvider<
+          ColdChainRemoteDataSource,
+          ColdChainRemoteDataSource,
+          ColdChainRemoteDataSource
+        >
+    with $Provider<ColdChainRemoteDataSource> {
   ColdChainRemoteDataSourceProvider._()
-      : super(
-          from: null,
-          argument: null,
-          retry: null,
-          name: r'coldChainRemoteDataSourceProvider',
-          isAutoDispose: true,
-          dependencies: null,
-          $allTransitiveDependencies: null,
-        );
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'coldChainRemoteDataSourceProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
 
   @override
   String debugGetCreateSourceHash() => _$coldChainRemoteDataSourceHash();
@@ -33,8 +37,8 @@ final class ColdChainRemoteDataSourceProvider extends $FunctionalProvider<
   @$internal
   @override
   $ProviderElement<ColdChainRemoteDataSource> $createElement(
-          $ProviderPointer pointer) =>
-      $ProviderElement(pointer);
+    $ProviderPointer pointer,
+  ) => $ProviderElement(pointer);
 
   @override
   ColdChainRemoteDataSource create(Ref ref) {
@@ -56,20 +60,24 @@ String _$coldChainRemoteDataSourceHash() =>
 @ProviderFor(coldChainRepository)
 final coldChainRepositoryProvider = ColdChainRepositoryProvider._();
 
-final class ColdChainRepositoryProvider extends $FunctionalProvider<
-    ColdChainRepository,
-    ColdChainRepository,
-    ColdChainRepository> with $Provider<ColdChainRepository> {
+final class ColdChainRepositoryProvider
+    extends
+        $FunctionalProvider<
+          ColdChainRepository,
+          ColdChainRepository,
+          ColdChainRepository
+        >
+    with $Provider<ColdChainRepository> {
   ColdChainRepositoryProvider._()
-      : super(
-          from: null,
-          argument: null,
-          retry: null,
-          name: r'coldChainRepositoryProvider',
-          isAutoDispose: true,
-          dependencies: null,
-          $allTransitiveDependencies: null,
-        );
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'coldChainRepositoryProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
 
   @override
   String debugGetCreateSourceHash() => _$coldChainRepositoryHash();
@@ -77,8 +85,8 @@ final class ColdChainRepositoryProvider extends $FunctionalProvider<
   @$internal
   @override
   $ProviderElement<ColdChainRepository> $createElement(
-          $ProviderPointer pointer) =>
-      $ProviderElement(pointer);
+    $ProviderPointer pointer,
+  ) => $ProviderElement(pointer);
 
   @override
   ColdChainRepository create(Ref ref) {
@@ -100,20 +108,24 @@ String _$coldChainRepositoryHash() =>
 @ProviderFor(getColdChainDataUseCase)
 final getColdChainDataUseCaseProvider = GetColdChainDataUseCaseProvider._();
 
-final class GetColdChainDataUseCaseProvider extends $FunctionalProvider<
-    GetColdChainData,
-    GetColdChainData,
-    GetColdChainData> with $Provider<GetColdChainData> {
+final class GetColdChainDataUseCaseProvider
+    extends
+        $FunctionalProvider<
+          GetColdChainData,
+          GetColdChainData,
+          GetColdChainData
+        >
+    with $Provider<GetColdChainData> {
   GetColdChainDataUseCaseProvider._()
-      : super(
-          from: null,
-          argument: null,
-          retry: null,
-          name: r'getColdChainDataUseCaseProvider',
-          isAutoDispose: true,
-          dependencies: null,
-          $allTransitiveDependencies: null,
-        );
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'getColdChainDataUseCaseProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
 
   @override
   String debugGetCreateSourceHash() => _$getColdChainDataUseCaseHash();
@@ -147,15 +159,15 @@ final class LogTemperatureUseCaseProvider
     extends $FunctionalProvider<LogTemperature, LogTemperature, LogTemperature>
     with $Provider<LogTemperature> {
   LogTemperatureUseCaseProvider._()
-      : super(
-          from: null,
-          argument: null,
-          retry: null,
-          name: r'logTemperatureUseCaseProvider',
-          isAutoDispose: true,
-          dependencies: null,
-          $allTransitiveDependencies: null,
-        );
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'logTemperatureUseCaseProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
 
   @override
   String debugGetCreateSourceHash() => _$logTemperatureUseCaseHash();
@@ -189,15 +201,15 @@ final class WatchTelemetryUseCaseProvider
     extends $FunctionalProvider<WatchTelemetry, WatchTelemetry, WatchTelemetry>
     with $Provider<WatchTelemetry> {
   WatchTelemetryUseCaseProvider._()
-      : super(
-          from: null,
-          argument: null,
-          retry: null,
-          name: r'watchTelemetryUseCaseProvider',
-          isAutoDispose: true,
-          dependencies: null,
-          $allTransitiveDependencies: null,
-        );
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'watchTelemetryUseCaseProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
 
   @override
   String debugGetCreateSourceHash() => _$watchTelemetryUseCaseHash();
@@ -229,16 +241,16 @@ final coldChainProvider = ColdChainNotifierFamily._();
 
 final class ColdChainNotifierProvider
     extends $AsyncNotifierProvider<ColdChainNotifier, ColdChainData> {
-  ColdChainNotifierProvider._(
-      {required ColdChainNotifierFamily super.from,
-      required String super.argument})
-      : super(
-          retry: null,
-          name: r'coldChainProvider',
-          isAutoDispose: true,
-          dependencies: null,
-          $allTransitiveDependencies: null,
-        );
+  ColdChainNotifierProvider._({
+    required ColdChainNotifierFamily super.from,
+    required String super.argument,
+  }) : super(
+         retry: null,
+         name: r'coldChainProvider',
+         isAutoDispose: true,
+         dependencies: null,
+         $allTransitiveDependencies: null,
+       );
 
   @override
   String debugGetCreateSourceHash() => _$coldChainNotifierHash();
@@ -269,20 +281,23 @@ String _$coldChainNotifierHash() => r'04d63afb05018c899cb22a561e5d07195208918d';
 
 final class ColdChainNotifierFamily extends $Family
     with
-        $ClassFamilyOverride<ColdChainNotifier, AsyncValue<ColdChainData>,
-            ColdChainData, FutureOr<ColdChainData>, String> {
+        $ClassFamilyOverride<
+          ColdChainNotifier,
+          AsyncValue<ColdChainData>,
+          ColdChainData,
+          FutureOr<ColdChainData>,
+          String
+        > {
   ColdChainNotifierFamily._()
-      : super(
-          retry: null,
-          name: r'coldChainProvider',
-          dependencies: null,
-          $allTransitiveDependencies: null,
-          isAutoDispose: true,
-        );
+    : super(
+        retry: null,
+        name: r'coldChainProvider',
+        dependencies: null,
+        $allTransitiveDependencies: null,
+        isAutoDispose: true,
+      );
 
-  ColdChainNotifierProvider call(
-    String sampleId,
-  ) =>
+  ColdChainNotifierProvider call(String sampleId) =>
       ColdChainNotifierProvider._(argument: sampleId, from: this);
 
   @override
@@ -293,44 +308,44 @@ abstract class _$ColdChainNotifier extends $AsyncNotifier<ColdChainData> {
   late final _$args = ref.$arg as String;
   String get sampleId => _$args;
 
-  FutureOr<ColdChainData> build(
-    String sampleId,
-  );
+  FutureOr<ColdChainData> build(String sampleId);
   @$mustCallSuper
   @override
   void runBuild() {
     final ref = this.ref as $Ref<AsyncValue<ColdChainData>, ColdChainData>;
-    final element = ref.element as $ClassProviderElement<
-        AnyNotifier<AsyncValue<ColdChainData>, ColdChainData>,
-        AsyncValue<ColdChainData>,
-        Object?,
-        Object?>;
-    element.handleCreate(
-        ref,
-        () => build(
-              _$args,
-            ));
+    final element =
+        ref.element
+            as $ClassProviderElement<
+              AnyNotifier<AsyncValue<ColdChainData>, ColdChainData>,
+              AsyncValue<ColdChainData>,
+              Object?,
+              Object?
+            >;
+    element.handleCreate(ref, () => build(_$args));
   }
 }
 
 @ProviderFor(watchTelemetry)
 final watchTelemetryProvider = WatchTelemetryFamily._();
 
-final class WatchTelemetryProvider extends $FunctionalProvider<
-        AsyncValue<TelemetryReading>,
-        TelemetryReading,
-        Stream<TelemetryReading>>
+final class WatchTelemetryProvider
+    extends
+        $FunctionalProvider<
+          AsyncValue<TelemetryReading>,
+          TelemetryReading,
+          Stream<TelemetryReading>
+        >
     with $FutureModifier<TelemetryReading>, $StreamProvider<TelemetryReading> {
-  WatchTelemetryProvider._(
-      {required WatchTelemetryFamily super.from,
-      required String super.argument})
-      : super(
-          retry: null,
-          name: r'watchTelemetryProvider',
-          isAutoDispose: true,
-          dependencies: null,
-          $allTransitiveDependencies: null,
-        );
+  WatchTelemetryProvider._({
+    required WatchTelemetryFamily super.from,
+    required String super.argument,
+  }) : super(
+         retry: null,
+         name: r'watchTelemetryProvider',
+         isAutoDispose: true,
+         dependencies: null,
+         $allTransitiveDependencies: null,
+       );
 
   @override
   String debugGetCreateSourceHash() => _$watchTelemetryHash();
@@ -345,16 +360,13 @@ final class WatchTelemetryProvider extends $FunctionalProvider<
   @$internal
   @override
   $StreamProviderElement<TelemetryReading> $createElement(
-          $ProviderPointer pointer) =>
-      $StreamProviderElement(pointer);
+    $ProviderPointer pointer,
+  ) => $StreamProviderElement(pointer);
 
   @override
   Stream<TelemetryReading> create(Ref ref) {
     final argument = this.argument as String;
-    return watchTelemetry(
-      ref,
-      argument,
-    );
+    return watchTelemetry(ref, argument);
   }
 
   @override
@@ -373,17 +385,15 @@ String _$watchTelemetryHash() => r'18a0bf9759216848ca0df999047c1d1df6ecddb5';
 final class WatchTelemetryFamily extends $Family
     with $FunctionalFamilyOverride<Stream<TelemetryReading>, String> {
   WatchTelemetryFamily._()
-      : super(
-          retry: null,
-          name: r'watchTelemetryProvider',
-          dependencies: null,
-          $allTransitiveDependencies: null,
-          isAutoDispose: true,
-        );
+    : super(
+        retry: null,
+        name: r'watchTelemetryProvider',
+        dependencies: null,
+        $allTransitiveDependencies: null,
+        isAutoDispose: true,
+      );
 
-  WatchTelemetryProvider call(
-    String sampleId,
-  ) =>
+  WatchTelemetryProvider call(String sampleId) =>
       WatchTelemetryProvider._(argument: sampleId, from: this);
 
   @override
@@ -395,15 +405,16 @@ final isCompliantProvider = IsCompliantFamily._();
 
 final class IsCompliantProvider extends $FunctionalProvider<bool, bool, bool>
     with $Provider<bool> {
-  IsCompliantProvider._(
-      {required IsCompliantFamily super.from, required String super.argument})
-      : super(
-          retry: null,
-          name: r'isCompliantProvider',
-          isAutoDispose: true,
-          dependencies: null,
-          $allTransitiveDependencies: null,
-        );
+  IsCompliantProvider._({
+    required IsCompliantFamily super.from,
+    required String super.argument,
+  }) : super(
+         retry: null,
+         name: r'isCompliantProvider',
+         isAutoDispose: true,
+         dependencies: null,
+         $allTransitiveDependencies: null,
+       );
 
   @override
   String debugGetCreateSourceHash() => _$isCompliantHash();
@@ -423,10 +434,7 @@ final class IsCompliantProvider extends $FunctionalProvider<bool, bool, bool>
   @override
   bool create(Ref ref) {
     final argument = this.argument as String;
-    return isCompliant(
-      ref,
-      argument,
-    );
+    return isCompliant(ref, argument);
   }
 
   /// {@macro riverpod.override_with_value}
@@ -448,22 +456,20 @@ final class IsCompliantProvider extends $FunctionalProvider<bool, bool, bool>
   }
 }
 
-String _$isCompliantHash() => r'1518c28708f38f0cf3d95db651d819c150516f76';
+String _$isCompliantHash() => r'386e9011d006d5e770087d4c76d1bdd2600a057c';
 
 final class IsCompliantFamily extends $Family
     with $FunctionalFamilyOverride<bool, String> {
   IsCompliantFamily._()
-      : super(
-          retry: null,
-          name: r'isCompliantProvider',
-          dependencies: null,
-          $allTransitiveDependencies: null,
-          isAutoDispose: true,
-        );
+    : super(
+        retry: null,
+        name: r'isCompliantProvider',
+        dependencies: null,
+        $allTransitiveDependencies: null,
+        isAutoDispose: true,
+      );
 
-  IsCompliantProvider call(
-    String sampleId,
-  ) =>
+  IsCompliantProvider call(String sampleId) =>
       IsCompliantProvider._(argument: sampleId, from: this);
 
   @override

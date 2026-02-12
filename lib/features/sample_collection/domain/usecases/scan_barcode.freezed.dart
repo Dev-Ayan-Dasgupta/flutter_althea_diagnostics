@@ -11,51 +11,47 @@ part of 'scan_barcode.dart';
 
 // dart format off
 T _$identity<T>(T value) => value;
-
 /// @nodoc
 mixin _$ScanBarcodeParams {
-  String get vialId;
-  String get phlebotomistId;
-  GeoLocation get location;
 
-  /// Create a copy of ScanBarcodeParams
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @pragma('vm:prefer-inline')
-  $ScanBarcodeParamsCopyWith<ScanBarcodeParams> get copyWith =>
-      _$ScanBarcodeParamsCopyWithImpl<ScanBarcodeParams>(
-          this as ScanBarcodeParams, _$identity);
+ String get vialId; String get phlebotomistId; GeoLocation get location;
+/// Create a copy of ScanBarcodeParams
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$ScanBarcodeParamsCopyWith<ScanBarcodeParams> get copyWith => _$ScanBarcodeParamsCopyWithImpl<ScanBarcodeParams>(this as ScanBarcodeParams, _$identity);
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is ScanBarcodeParams &&
-            (identical(other.vialId, vialId) || other.vialId == vialId) &&
-            (identical(other.phlebotomistId, phlebotomistId) ||
-                other.phlebotomistId == phlebotomistId) &&
-            const DeepCollectionEquality().equals(other.location, location));
-  }
 
-  @override
-  int get hashCode => Object.hash(runtimeType, vialId, phlebotomistId,
-      const DeepCollectionEquality().hash(location));
 
-  @override
-  String toString() {
-    return 'ScanBarcodeParams(vialId: $vialId, phlebotomistId: $phlebotomistId, location: $location)';
-  }
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is ScanBarcodeParams&&(identical(other.vialId, vialId) || other.vialId == vialId)&&(identical(other.phlebotomistId, phlebotomistId) || other.phlebotomistId == phlebotomistId)&&const DeepCollectionEquality().equals(other.location, location));
+}
+
+
+@override
+int get hashCode => Object.hash(runtimeType,vialId,phlebotomistId,const DeepCollectionEquality().hash(location));
+
+@override
+String toString() {
+  return 'ScanBarcodeParams(vialId: $vialId, phlebotomistId: $phlebotomistId, location: $location)';
+}
+
+
 }
 
 /// @nodoc
-abstract mixin class $ScanBarcodeParamsCopyWith<$Res> {
-  factory $ScanBarcodeParamsCopyWith(
-          ScanBarcodeParams value, $Res Function(ScanBarcodeParams) _then) =
-      _$ScanBarcodeParamsCopyWithImpl;
-  @useResult
-  $Res call({String vialId, String phlebotomistId, GeoLocation location});
-}
+abstract mixin class $ScanBarcodeParamsCopyWith<$Res>  {
+  factory $ScanBarcodeParamsCopyWith(ScanBarcodeParams value, $Res Function(ScanBarcodeParams) _then) = _$ScanBarcodeParamsCopyWithImpl;
+@useResult
+$Res call({
+ String vialId, String phlebotomistId, GeoLocation location
+});
 
+
+
+
+}
 /// @nodoc
 class _$ScanBarcodeParamsCopyWithImpl<$Res>
     implements $ScanBarcodeParamsCopyWith<$Res> {
@@ -64,249 +60,198 @@ class _$ScanBarcodeParamsCopyWithImpl<$Res>
   final ScanBarcodeParams _self;
   final $Res Function(ScanBarcodeParams) _then;
 
-  /// Create a copy of ScanBarcodeParams
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? vialId = null,
-    Object? phlebotomistId = null,
-    Object? location = freezed,
-  }) {
-    return _then(_self.copyWith(
-      vialId: null == vialId
-          ? _self.vialId
-          : vialId // ignore: cast_nullable_to_non_nullable
-              as String,
-      phlebotomistId: null == phlebotomistId
-          ? _self.phlebotomistId
-          : phlebotomistId // ignore: cast_nullable_to_non_nullable
-              as String,
-      location: freezed == location
-          ? _self.location
-          : location // ignore: cast_nullable_to_non_nullable
-              as GeoLocation,
-    ));
-  }
+/// Create a copy of ScanBarcodeParams
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? vialId = null,Object? phlebotomistId = null,Object? location = freezed,}) {
+  return _then(_self.copyWith(
+vialId: null == vialId ? _self.vialId : vialId // ignore: cast_nullable_to_non_nullable
+as String,phlebotomistId: null == phlebotomistId ? _self.phlebotomistId : phlebotomistId // ignore: cast_nullable_to_non_nullable
+as String,location: freezed == location ? _self.location : location // ignore: cast_nullable_to_non_nullable
+as GeoLocation,
+  ));
 }
+
+}
+
 
 /// Adds pattern-matching-related methods to [ScanBarcodeParams].
 extension ScanBarcodeParamsPatterns on ScanBarcodeParams {
-  /// A variant of `map` that fallback to returning `orElse`.
-  ///
-  /// It is equivalent to doing:
-  /// ```dart
-  /// switch (sealedClass) {
-  ///   case final Subclass value:
-  ///     return ...;
-  ///   case _:
-  ///     return orElse();
-  /// }
-  /// ```
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
 
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>(
-    TResult Function(_ScanBarcodeParams value)? $default, {
-    required TResult orElse(),
-  }) {
-    final _that = this;
-    switch (_that) {
-      case _ScanBarcodeParams() when $default != null:
-        return $default(_that);
-      case _:
-        return orElse();
-    }
-  }
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _ScanBarcodeParams value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _ScanBarcodeParams() when $default != null:
+return $default(_that);case _:
+  return orElse();
 
-  /// A `switch`-like method, using callbacks.
-  ///
-  /// Callbacks receives the raw object, upcasted.
-  /// It is equivalent to doing:
-  /// ```dart
-  /// switch (sealedClass) {
-  ///   case final Subclass value:
-  ///     return ...;
-  ///   case final Subclass2 value:
-  ///     return ...;
-  /// }
-  /// ```
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
 
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>(
-    TResult Function(_ScanBarcodeParams value) $default,
-  ) {
-    final _that = this;
-    switch (_that) {
-      case _ScanBarcodeParams():
-        return $default(_that);
-      case _:
-        throw StateError('Unexpected subclass');
-    }
-  }
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _ScanBarcodeParams value)  $default,){
+final _that = this;
+switch (_that) {
+case _ScanBarcodeParams():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
 
-  /// A variant of `map` that fallback to returning `null`.
-  ///
-  /// It is equivalent to doing:
-  /// ```dart
-  /// switch (sealedClass) {
-  ///   case final Subclass value:
-  ///     return ...;
-  ///   case _:
-  ///     return null;
-  /// }
-  /// ```
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
 
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>(
-    TResult? Function(_ScanBarcodeParams value)? $default,
-  ) {
-    final _that = this;
-    switch (_that) {
-      case _ScanBarcodeParams() when $default != null:
-        return $default(_that);
-      case _:
-        return null;
-    }
-  }
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _ScanBarcodeParams value)?  $default,){
+final _that = this;
+switch (_that) {
+case _ScanBarcodeParams() when $default != null:
+return $default(_that);case _:
+  return null;
 
-  /// A variant of `when` that fallback to an `orElse` callback.
-  ///
-  /// It is equivalent to doing:
-  /// ```dart
-  /// switch (sealedClass) {
-  ///   case Subclass(:final field):
-  ///     return ...;
-  ///   case _:
-  ///     return orElse();
-  /// }
-  /// ```
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
 
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>(
-    TResult Function(
-            String vialId, String phlebotomistId, GeoLocation location)?
-        $default, {
-    required TResult orElse(),
-  }) {
-    final _that = this;
-    switch (_that) {
-      case _ScanBarcodeParams() when $default != null:
-        return $default(_that.vialId, _that.phlebotomistId, _that.location);
-      case _:
-        return orElse();
-    }
-  }
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String vialId,  String phlebotomistId,  GeoLocation location)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _ScanBarcodeParams() when $default != null:
+return $default(_that.vialId,_that.phlebotomistId,_that.location);case _:
+  return orElse();
 
-  /// A `switch`-like method, using callbacks.
-  ///
-  /// As opposed to `map`, this offers destructuring.
-  /// It is equivalent to doing:
-  /// ```dart
-  /// switch (sealedClass) {
-  ///   case Subclass(:final field):
-  ///     return ...;
-  ///   case Subclass2(:final field2):
-  ///     return ...;
-  /// }
-  /// ```
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
 
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>(
-    TResult Function(String vialId, String phlebotomistId, GeoLocation location)
-        $default,
-  ) {
-    final _that = this;
-    switch (_that) {
-      case _ScanBarcodeParams():
-        return $default(_that.vialId, _that.phlebotomistId, _that.location);
-      case _:
-        throw StateError('Unexpected subclass');
-    }
-  }
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String vialId,  String phlebotomistId,  GeoLocation location)  $default,) {final _that = this;
+switch (_that) {
+case _ScanBarcodeParams():
+return $default(_that.vialId,_that.phlebotomistId,_that.location);case _:
+  throw StateError('Unexpected subclass');
 
-  /// A variant of `when` that fallback to returning `null`
-  ///
-  /// It is equivalent to doing:
-  /// ```dart
-  /// switch (sealedClass) {
-  ///   case Subclass(:final field):
-  ///     return ...;
-  ///   case _:
-  ///     return null;
-  /// }
-  /// ```
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
 
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>(
-    TResult? Function(
-            String vialId, String phlebotomistId, GeoLocation location)?
-        $default,
-  ) {
-    final _that = this;
-    switch (_that) {
-      case _ScanBarcodeParams() when $default != null:
-        return $default(_that.vialId, _that.phlebotomistId, _that.location);
-      case _:
-        return null;
-    }
-  }
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String vialId,  String phlebotomistId,  GeoLocation location)?  $default,) {final _that = this;
+switch (_that) {
+case _ScanBarcodeParams() when $default != null:
+return $default(_that.vialId,_that.phlebotomistId,_that.location);case _:
+  return null;
+
+}
+}
+
 }
 
 /// @nodoc
+
 
 class _ScanBarcodeParams implements ScanBarcodeParams {
-  const _ScanBarcodeParams(
-      {required this.vialId,
-      required this.phlebotomistId,
-      required this.location});
+  const _ScanBarcodeParams({required this.vialId, required this.phlebotomistId, required this.location});
+  
 
-  @override
-  final String vialId;
-  @override
-  final String phlebotomistId;
-  @override
-  final GeoLocation location;
+@override final  String vialId;
+@override final  String phlebotomistId;
+@override final  GeoLocation location;
 
-  /// Create a copy of ScanBarcodeParams
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @pragma('vm:prefer-inline')
-  _$ScanBarcodeParamsCopyWith<_ScanBarcodeParams> get copyWith =>
-      __$ScanBarcodeParamsCopyWithImpl<_ScanBarcodeParams>(this, _$identity);
+/// Create a copy of ScanBarcodeParams
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$ScanBarcodeParamsCopyWith<_ScanBarcodeParams> get copyWith => __$ScanBarcodeParamsCopyWithImpl<_ScanBarcodeParams>(this, _$identity);
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _ScanBarcodeParams &&
-            (identical(other.vialId, vialId) || other.vialId == vialId) &&
-            (identical(other.phlebotomistId, phlebotomistId) ||
-                other.phlebotomistId == phlebotomistId) &&
-            const DeepCollectionEquality().equals(other.location, location));
-  }
 
-  @override
-  int get hashCode => Object.hash(runtimeType, vialId, phlebotomistId,
-      const DeepCollectionEquality().hash(location));
 
-  @override
-  String toString() {
-    return 'ScanBarcodeParams(vialId: $vialId, phlebotomistId: $phlebotomistId, location: $location)';
-  }
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _ScanBarcodeParams&&(identical(other.vialId, vialId) || other.vialId == vialId)&&(identical(other.phlebotomistId, phlebotomistId) || other.phlebotomistId == phlebotomistId)&&const DeepCollectionEquality().equals(other.location, location));
+}
+
+
+@override
+int get hashCode => Object.hash(runtimeType,vialId,phlebotomistId,const DeepCollectionEquality().hash(location));
+
+@override
+String toString() {
+  return 'ScanBarcodeParams(vialId: $vialId, phlebotomistId: $phlebotomistId, location: $location)';
+}
+
+
 }
 
 /// @nodoc
-abstract mixin class _$ScanBarcodeParamsCopyWith<$Res>
-    implements $ScanBarcodeParamsCopyWith<$Res> {
-  factory _$ScanBarcodeParamsCopyWith(
-          _ScanBarcodeParams value, $Res Function(_ScanBarcodeParams) _then) =
-      __$ScanBarcodeParamsCopyWithImpl;
-  @override
-  @useResult
-  $Res call({String vialId, String phlebotomistId, GeoLocation location});
-}
+abstract mixin class _$ScanBarcodeParamsCopyWith<$Res> implements $ScanBarcodeParamsCopyWith<$Res> {
+  factory _$ScanBarcodeParamsCopyWith(_ScanBarcodeParams value, $Res Function(_ScanBarcodeParams) _then) = __$ScanBarcodeParamsCopyWithImpl;
+@override @useResult
+$Res call({
+ String vialId, String phlebotomistId, GeoLocation location
+});
 
+
+
+
+}
 /// @nodoc
 class __$ScanBarcodeParamsCopyWithImpl<$Res>
     implements _$ScanBarcodeParamsCopyWith<$Res> {
@@ -315,30 +260,18 @@ class __$ScanBarcodeParamsCopyWithImpl<$Res>
   final _ScanBarcodeParams _self;
   final $Res Function(_ScanBarcodeParams) _then;
 
-  /// Create a copy of ScanBarcodeParams
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $Res call({
-    Object? vialId = null,
-    Object? phlebotomistId = null,
-    Object? location = freezed,
-  }) {
-    return _then(_ScanBarcodeParams(
-      vialId: null == vialId
-          ? _self.vialId
-          : vialId // ignore: cast_nullable_to_non_nullable
-              as String,
-      phlebotomistId: null == phlebotomistId
-          ? _self.phlebotomistId
-          : phlebotomistId // ignore: cast_nullable_to_non_nullable
-              as String,
-      location: freezed == location
-          ? _self.location
-          : location // ignore: cast_nullable_to_non_nullable
-              as GeoLocation,
-    ));
-  }
+/// Create a copy of ScanBarcodeParams
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? vialId = null,Object? phlebotomistId = null,Object? location = freezed,}) {
+  return _then(_ScanBarcodeParams(
+vialId: null == vialId ? _self.vialId : vialId // ignore: cast_nullable_to_non_nullable
+as String,phlebotomistId: null == phlebotomistId ? _self.phlebotomistId : phlebotomistId // ignore: cast_nullable_to_non_nullable
+as String,location: freezed == location ? _self.location : location // ignore: cast_nullable_to_non_nullable
+as GeoLocation,
+  ));
+}
+
+
 }
 
 // dart format on

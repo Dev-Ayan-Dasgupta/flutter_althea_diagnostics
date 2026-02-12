@@ -7,31 +7,30 @@ part of 'sample_integrity_score.dart';
 // **************************************************************************
 
 _SampleIntegrityScore _$SampleIntegrityScoreFromJson(
-        Map<String, dynamic> json) =>
-    _SampleIntegrityScore(
-      overallScore: (json['overallScore'] as num).toDouble(),
-      level: $enumDecode(_$IntegrityLevelEnumMap, json['level']),
-      calculatedAt: DateTime.parse(json['calculatedAt'] as String),
-      factors:
-          IntegrityFactors.fromJson(json['factors'] as Map<String, dynamic>),
-      alerts: (json['alerts'] as List<dynamic>)
-          .map((e) => IntegrityAlert.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      recommendation: json['recommendation'] as String?,
-      requiresRecollection: json['requiresRecollection'] as bool?,
-    );
+  Map<String, dynamic> json,
+) => _SampleIntegrityScore(
+  overallScore: (json['overallScore'] as num).toDouble(),
+  level: $enumDecode(_$IntegrityLevelEnumMap, json['level']),
+  calculatedAt: DateTime.parse(json['calculatedAt'] as String),
+  factors: IntegrityFactors.fromJson(json['factors'] as Map<String, dynamic>),
+  alerts: (json['alerts'] as List<dynamic>)
+      .map((e) => IntegrityAlert.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  recommendation: json['recommendation'] as String?,
+  requiresRecollection: json['requiresRecollection'] as bool?,
+);
 
 Map<String, dynamic> _$SampleIntegrityScoreToJson(
-        _SampleIntegrityScore instance) =>
-    <String, dynamic>{
-      'overallScore': instance.overallScore,
-      'level': _$IntegrityLevelEnumMap[instance.level]!,
-      'calculatedAt': instance.calculatedAt.toIso8601String(),
-      'factors': instance.factors,
-      'alerts': instance.alerts,
-      'recommendation': instance.recommendation,
-      'requiresRecollection': instance.requiresRecollection,
-    };
+  _SampleIntegrityScore instance,
+) => <String, dynamic>{
+  'overallScore': instance.overallScore,
+  'level': _$IntegrityLevelEnumMap[instance.level]!,
+  'calculatedAt': instance.calculatedAt.toIso8601String(),
+  'factors': instance.factors,
+  'alerts': instance.alerts,
+  'recommendation': instance.recommendation,
+  'requiresRecollection': instance.requiresRecollection,
+};
 
 const _$IntegrityLevelEnumMap = {
   IntegrityLevel.high: 'high',
@@ -42,14 +41,14 @@ const _$IntegrityLevelEnumMap = {
 _IntegrityFactors _$IntegrityFactorsFromJson(Map<String, dynamic> json) =>
     _IntegrityFactors(
       transitDelayScore: (json['transitDelayScore'] as num).toDouble(),
-      temperatureComplianceScore:
-          (json['temperatureComplianceScore'] as num).toDouble(),
+      temperatureComplianceScore: (json['temperatureComplianceScore'] as num)
+          .toDouble(),
       handoverScore: (json['handoverScore'] as num).toDouble(),
       conditionScore: (json['conditionScore'] as num).toDouble(),
       timelinessScore: (json['timelinessScore'] as num).toDouble(),
       transitDelayMinutes: (json['transitDelayMinutes'] as num?)?.toInt(),
-      maxTemperatureDeviation:
-          (json['maxTemperatureDeviation'] as num?)?.toDouble(),
+      maxTemperatureDeviation: (json['maxTemperatureDeviation'] as num?)
+          ?.toDouble(),
       numberOfHandovers: (json['numberOfHandovers'] as num?)?.toInt(),
       totalTransitTime: (json['totalTransitTime'] as num?)?.toInt(),
     );

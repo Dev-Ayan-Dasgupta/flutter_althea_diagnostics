@@ -13,9 +13,11 @@ _ColdChainData _$ColdChainDataFromJson(Map<String, dynamic> json) =>
           .map((e) => TelemetryReading.fromJson(e as Map<String, dynamic>))
           .toList(),
       compliance: ColdChainCompliance.fromJson(
-          json['compliance'] as Map<String, dynamic>),
-      monitoringStartTime:
-          DateTime.parse(json['monitoringStartTime'] as String),
+        json['compliance'] as Map<String, dynamic>,
+      ),
+      monitoringStartTime: DateTime.parse(
+        json['monitoringStartTime'] as String,
+      ),
       monitoringEndTime: json['monitoringEndTime'] == null
           ? null
           : DateTime.parse(json['monitoringEndTime'] as String),
@@ -74,21 +76,22 @@ _ColdChainCompliance _$ColdChainComplianceFromJson(Map<String, dynamic> json) =>
       maxDeviation: (json['maxDeviation'] as num).toDouble(),
       totalExposureDuration: (json['totalExposureDuration'] as num).toInt(),
       cumulativeStress: CumulativeThermalStress.fromJson(
-          json['cumulativeStress'] as Map<String, dynamic>),
+        json['cumulativeStress'] as Map<String, dynamic>,
+      ),
     );
 
 Map<String, dynamic> _$ColdChainComplianceToJson(
-        _ColdChainCompliance instance) =>
-    <String, dynamic>{
-      'compliancePercentage': instance.compliancePercentage,
-      'totalReadings': instance.totalReadings,
-      'compliantReadings': instance.compliantReadings,
-      'breachCount': instance.breachCount,
-      'breaches': instance.breaches,
-      'maxDeviation': instance.maxDeviation,
-      'totalExposureDuration': instance.totalExposureDuration,
-      'cumulativeStress': instance.cumulativeStress,
-    };
+  _ColdChainCompliance instance,
+) => <String, dynamic>{
+  'compliancePercentage': instance.compliancePercentage,
+  'totalReadings': instance.totalReadings,
+  'compliantReadings': instance.compliantReadings,
+  'breachCount': instance.breachCount,
+  'breaches': instance.breaches,
+  'maxDeviation': instance.maxDeviation,
+  'totalExposureDuration': instance.totalExposureDuration,
+  'cumulativeStress': instance.cumulativeStress,
+};
 
 _TemperatureBreach _$TemperatureBreachFromJson(Map<String, dynamic> json) =>
     _TemperatureBreach(
@@ -117,17 +120,17 @@ const _$BreachSeverityEnumMap = {
 };
 
 _CumulativeThermalStress _$CumulativeThermalStressFromJson(
-        Map<String, dynamic> json) =>
-    _CumulativeThermalStress(
-      stressIndex: (json['stressIndex'] as num).toDouble(),
-      predictedDegradation: (json['predictedDegradation'] as num).toDouble(),
-      recommendation: json['recommendation'] as String?,
-    );
+  Map<String, dynamic> json,
+) => _CumulativeThermalStress(
+  stressIndex: (json['stressIndex'] as num).toDouble(),
+  predictedDegradation: (json['predictedDegradation'] as num).toDouble(),
+  recommendation: json['recommendation'] as String?,
+);
 
 Map<String, dynamic> _$CumulativeThermalStressToJson(
-        _CumulativeThermalStress instance) =>
-    <String, dynamic>{
-      'stressIndex': instance.stressIndex,
-      'predictedDegradation': instance.predictedDegradation,
-      'recommendation': instance.recommendation,
-    };
+  _CumulativeThermalStress instance,
+) => <String, dynamic>{
+  'stressIndex': instance.stressIndex,
+  'predictedDegradation': instance.predictedDegradation,
+  'recommendation': instance.recommendation,
+};

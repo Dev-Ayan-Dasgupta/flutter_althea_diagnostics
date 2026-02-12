@@ -16,7 +16,8 @@ _Phlebotomist _$PhlebotomistFromJson(Map<String, dynamic> json) =>
       currentLocation: json['currentLocation'] == null
           ? null
           : GeoLocation.fromJson(
-              json['currentLocation'] as Map<String, dynamic>),
+              json['currentLocation'] as Map<String, dynamic>,
+            ),
       activeSamplesCount: (json['activeSamplesCount'] as num).toInt(),
       batteryLevel: (json['batteryLevel'] as num).toDouble(),
       smartBagTemperature: (json['smartBagTemperature'] as num?)?.toDouble(),
