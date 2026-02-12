@@ -6,9 +6,9 @@ part of 'pre_analytical_risk.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$PreAnalyticalRiskAssessmentImpl _$$PreAnalyticalRiskAssessmentImplFromJson(
+_PreAnalyticalRiskAssessment _$PreAnalyticalRiskAssessmentFromJson(
         Map<String, dynamic> json) =>
-    _$PreAnalyticalRiskAssessmentImpl(
+    _PreAnalyticalRiskAssessment(
       riskScore: (json['riskScore'] as num).toDouble(),
       riskLevel: $enumDecode(_$RiskLevelEnumMap, json['riskLevel']),
       factors: (json['factors'] as List<dynamic>)
@@ -21,27 +21,17 @@ _$PreAnalyticalRiskAssessmentImpl _$$PreAnalyticalRiskAssessmentImplFromJson(
           (json['sampleViabilityProbability'] as num?)?.toDouble(),
     );
 
-Map<String, dynamic> _$$PreAnalyticalRiskAssessmentImplToJson(
-    _$PreAnalyticalRiskAssessmentImpl instance) {
-  final val = <String, dynamic>{
-    'riskScore': instance.riskScore,
-    'riskLevel': _$RiskLevelEnumMap[instance.riskLevel]!,
-    'factors': instance.factors.map((e) => e.toJson()).toList(),
-    'assessedAt': instance.assessedAt.toIso8601String(),
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('recommendation', instance.recommendation);
-  writeNotNull('requiresRecollection', instance.requiresRecollection);
-  writeNotNull(
-      'sampleViabilityProbability', instance.sampleViabilityProbability);
-  return val;
-}
+Map<String, dynamic> _$PreAnalyticalRiskAssessmentToJson(
+        _PreAnalyticalRiskAssessment instance) =>
+    <String, dynamic>{
+      'riskScore': instance.riskScore,
+      'riskLevel': _$RiskLevelEnumMap[instance.riskLevel]!,
+      'factors': instance.factors,
+      'assessedAt': instance.assessedAt.toIso8601String(),
+      'recommendation': instance.recommendation,
+      'requiresRecollection': instance.requiresRecollection,
+      'sampleViabilityProbability': instance.sampleViabilityProbability,
+    };
 
 const _$RiskLevelEnumMap = {
   RiskLevel.low: 'low',
@@ -50,8 +40,7 @@ const _$RiskLevelEnumMap = {
   RiskLevel.critical: 'critical',
 };
 
-_$RiskFactorImpl _$$RiskFactorImplFromJson(Map<String, dynamic> json) =>
-    _$RiskFactorImpl(
+_RiskFactor _$RiskFactorFromJson(Map<String, dynamic> json) => _RiskFactor(
       type: $enumDecode(_$RiskFactorTypeEnumMap, json['type']),
       impact: (json['impact'] as num).toDouble(),
       description: json['description'] as String,
@@ -59,23 +48,14 @@ _$RiskFactorImpl _$$RiskFactorImplFromJson(Map<String, dynamic> json) =>
       metadata: json['metadata'] as Map<String, dynamic>?,
     );
 
-Map<String, dynamic> _$$RiskFactorImplToJson(_$RiskFactorImpl instance) {
-  final val = <String, dynamic>{
-    'type': _$RiskFactorTypeEnumMap[instance.type]!,
-    'impact': instance.impact,
-    'description': instance.description,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('detected', instance.detected);
-  writeNotNull('metadata', instance.metadata);
-  return val;
-}
+Map<String, dynamic> _$RiskFactorToJson(_RiskFactor instance) =>
+    <String, dynamic>{
+      'type': _$RiskFactorTypeEnumMap[instance.type]!,
+      'impact': instance.impact,
+      'description': instance.description,
+      'detected': instance.detected,
+      'metadata': instance.metadata,
+    };
 
 const _$RiskFactorTypeEnumMap = {
   RiskFactorType.hemolysisRisk: 'hemolysisRisk',

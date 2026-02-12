@@ -6,8 +6,7 @@ part of 'lab_pulse.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$LabPulseImpl _$$LabPulseImplFromJson(Map<String, dynamic> json) =>
-    _$LabPulseImpl(
+_LabPulse _$LabPulseFromJson(Map<String, dynamic> json) => _LabPulse(
       samplesInTransit: (json['samplesInTransit'] as num).toInt(),
       samplesProcessing: (json['samplesProcessing'] as num).toInt(),
       samplesCompleted: (json['samplesCompleted'] as num).toInt(),
@@ -22,20 +21,18 @@ _$LabPulseImpl _$$LabPulseImplFromJson(Map<String, dynamic> json) =>
       timestamp: DateTime.parse(json['timestamp'] as String),
     );
 
-Map<String, dynamic> _$$LabPulseImplToJson(_$LabPulseImpl instance) =>
-    <String, dynamic>{
+Map<String, dynamic> _$LabPulseToJson(_LabPulse instance) => <String, dynamic>{
       'samplesInTransit': instance.samplesInTransit,
       'samplesProcessing': instance.samplesProcessing,
       'samplesCompleted': instance.samplesCompleted,
       'samplesRejected': instance.samplesRejected,
-      'tatAlerts': instance.tatAlerts.map((e) => e.toJson()).toList(),
-      'capacity': instance.capacity.toJson(),
-      'trends': instance.trends.map((e) => e.toJson()).toList(),
+      'tatAlerts': instance.tatAlerts,
+      'capacity': instance.capacity,
+      'trends': instance.trends,
       'timestamp': instance.timestamp.toIso8601String(),
     };
 
-_$TatAlertImpl _$$TatAlertImplFromJson(Map<String, dynamic> json) =>
-    _$TatAlertImpl(
+_TatAlert _$TatAlertFromJson(Map<String, dynamic> json) => _TatAlert(
       sampleId: json['sampleId'] as String,
       testName: json['testName'] as String,
       remainingMinutes: (json['remainingMinutes'] as num).toInt(),
@@ -43,8 +40,7 @@ _$TatAlertImpl _$$TatAlertImplFromJson(Map<String, dynamic> json) =>
       deadline: DateTime.parse(json['deadline'] as String),
     );
 
-Map<String, dynamic> _$$TatAlertImplToJson(_$TatAlertImpl instance) =>
-    <String, dynamic>{
+Map<String, dynamic> _$TatAlertToJson(_TatAlert instance) => <String, dynamic>{
       'sampleId': instance.sampleId,
       'testName': instance.testName,
       'remainingMinutes': instance.remainingMinutes,
@@ -58,8 +54,7 @@ const _$TatSeverityEnumMap = {
   TatSeverity.critical: 'critical',
 };
 
-_$LabCapacityImpl _$$LabCapacityImplFromJson(Map<String, dynamic> json) =>
-    _$LabCapacityImpl(
+_LabCapacity _$LabCapacityFromJson(Map<String, dynamic> json) => _LabCapacity(
       currentLoad: (json['currentLoad'] as num).toInt(),
       maxCapacity: (json['maxCapacity'] as num).toInt(),
       utilizationPercentage: (json['utilizationPercentage'] as num).toDouble(),
@@ -67,7 +62,7 @@ _$LabCapacityImpl _$$LabCapacityImplFromJson(Map<String, dynamic> json) =>
       totalAnalyzers: (json['totalAnalyzers'] as num).toInt(),
     );
 
-Map<String, dynamic> _$$LabCapacityImplToJson(_$LabCapacityImpl instance) =>
+Map<String, dynamic> _$LabCapacityToJson(_LabCapacity instance) =>
     <String, dynamic>{
       'currentLoad': instance.currentLoad,
       'maxCapacity': instance.maxCapacity,
@@ -76,16 +71,14 @@ Map<String, dynamic> _$$LabCapacityImplToJson(_$LabCapacityImpl instance) =>
       'totalAnalyzers': instance.totalAnalyzers,
     };
 
-_$SampleTrendDataImpl _$$SampleTrendDataImplFromJson(
-        Map<String, dynamic> json) =>
-    _$SampleTrendDataImpl(
+_SampleTrendData _$SampleTrendDataFromJson(Map<String, dynamic> json) =>
+    _SampleTrendData(
       timestamp: DateTime.parse(json['timestamp'] as String),
       inTransit: (json['inTransit'] as num).toInt(),
       processing: (json['processing'] as num).toInt(),
     );
 
-Map<String, dynamic> _$$SampleTrendDataImplToJson(
-        _$SampleTrendDataImpl instance) =>
+Map<String, dynamic> _$SampleTrendDataToJson(_SampleTrendData instance) =>
     <String, dynamic>{
       'timestamp': instance.timestamp.toIso8601String(),
       'inTransit': instance.inTransit,

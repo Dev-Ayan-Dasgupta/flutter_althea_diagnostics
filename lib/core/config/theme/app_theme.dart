@@ -123,12 +123,10 @@ class AppTheme {
         primary: AppColors.primary,
         secondary: AppColors.secondary,
         surface: AppColors.lightSurface,
-        background: AppColors.lightBackground,
         error: AppColors.critical,
         onPrimary: Colors.white,
         onSecondary: Colors.white,
         onSurface: AppColors.lightTextPrimary,
-        onBackground: AppColors.lightTextPrimary,
         onError: Colors.white,
       ),
       appBarTheme: AppBarTheme(
@@ -143,7 +141,7 @@ class AppTheme {
       cardTheme: CardThemeData(
         color: AppColors.lightSurface,
         elevation: 2,
-        shadowColor: Colors.black.withOpacity(0.1),
+        shadowColor: Colors.black.withValues(alpha: 0.1),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(12),
           side: const BorderSide(color: AppColors.lightBorder, width: 1),

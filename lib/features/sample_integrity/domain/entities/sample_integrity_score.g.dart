@@ -6,9 +6,9 @@ part of 'sample_integrity_score.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$SampleIntegrityScoreImpl _$$SampleIntegrityScoreImplFromJson(
+_SampleIntegrityScore _$SampleIntegrityScoreFromJson(
         Map<String, dynamic> json) =>
-    _$SampleIntegrityScoreImpl(
+    _SampleIntegrityScore(
       overallScore: (json['overallScore'] as num).toDouble(),
       level: $enumDecode(_$IntegrityLevelEnumMap, json['level']),
       calculatedAt: DateTime.parse(json['calculatedAt'] as String),
@@ -21,26 +21,17 @@ _$SampleIntegrityScoreImpl _$$SampleIntegrityScoreImplFromJson(
       requiresRecollection: json['requiresRecollection'] as bool?,
     );
 
-Map<String, dynamic> _$$SampleIntegrityScoreImplToJson(
-    _$SampleIntegrityScoreImpl instance) {
-  final val = <String, dynamic>{
-    'overallScore': instance.overallScore,
-    'level': _$IntegrityLevelEnumMap[instance.level]!,
-    'calculatedAt': instance.calculatedAt.toIso8601String(),
-    'factors': instance.factors.toJson(),
-    'alerts': instance.alerts.map((e) => e.toJson()).toList(),
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('recommendation', instance.recommendation);
-  writeNotNull('requiresRecollection', instance.requiresRecollection);
-  return val;
-}
+Map<String, dynamic> _$SampleIntegrityScoreToJson(
+        _SampleIntegrityScore instance) =>
+    <String, dynamic>{
+      'overallScore': instance.overallScore,
+      'level': _$IntegrityLevelEnumMap[instance.level]!,
+      'calculatedAt': instance.calculatedAt.toIso8601String(),
+      'factors': instance.factors,
+      'alerts': instance.alerts,
+      'recommendation': instance.recommendation,
+      'requiresRecollection': instance.requiresRecollection,
+    };
 
 const _$IntegrityLevelEnumMap = {
   IntegrityLevel.high: 'high',
@@ -48,9 +39,8 @@ const _$IntegrityLevelEnumMap = {
   IntegrityLevel.low: 'low',
 };
 
-_$IntegrityFactorsImpl _$$IntegrityFactorsImplFromJson(
-        Map<String, dynamic> json) =>
-    _$IntegrityFactorsImpl(
+_IntegrityFactors _$IntegrityFactorsFromJson(Map<String, dynamic> json) =>
+    _IntegrityFactors(
       transitDelayScore: (json['transitDelayScore'] as num).toDouble(),
       temperatureComplianceScore:
           (json['temperatureComplianceScore'] as num).toDouble(),
@@ -64,31 +54,21 @@ _$IntegrityFactorsImpl _$$IntegrityFactorsImplFromJson(
       totalTransitTime: (json['totalTransitTime'] as num?)?.toInt(),
     );
 
-Map<String, dynamic> _$$IntegrityFactorsImplToJson(
-    _$IntegrityFactorsImpl instance) {
-  final val = <String, dynamic>{
-    'transitDelayScore': instance.transitDelayScore,
-    'temperatureComplianceScore': instance.temperatureComplianceScore,
-    'handoverScore': instance.handoverScore,
-    'conditionScore': instance.conditionScore,
-    'timelinessScore': instance.timelinessScore,
-  };
+Map<String, dynamic> _$IntegrityFactorsToJson(_IntegrityFactors instance) =>
+    <String, dynamic>{
+      'transitDelayScore': instance.transitDelayScore,
+      'temperatureComplianceScore': instance.temperatureComplianceScore,
+      'handoverScore': instance.handoverScore,
+      'conditionScore': instance.conditionScore,
+      'timelinessScore': instance.timelinessScore,
+      'transitDelayMinutes': instance.transitDelayMinutes,
+      'maxTemperatureDeviation': instance.maxTemperatureDeviation,
+      'numberOfHandovers': instance.numberOfHandovers,
+      'totalTransitTime': instance.totalTransitTime,
+    };
 
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('transitDelayMinutes', instance.transitDelayMinutes);
-  writeNotNull('maxTemperatureDeviation', instance.maxTemperatureDeviation);
-  writeNotNull('numberOfHandovers', instance.numberOfHandovers);
-  writeNotNull('totalTransitTime', instance.totalTransitTime);
-  return val;
-}
-
-_$IntegrityAlertImpl _$$IntegrityAlertImplFromJson(Map<String, dynamic> json) =>
-    _$IntegrityAlertImpl(
+_IntegrityAlert _$IntegrityAlertFromJson(Map<String, dynamic> json) =>
+    _IntegrityAlert(
       severity: $enumDecode(_$AlertSeverityEnumMap, json['severity']),
       message: json['message'] as String,
       type: $enumDecode(_$AlertTypeEnumMap, json['type']),
@@ -96,24 +76,14 @@ _$IntegrityAlertImpl _$$IntegrityAlertImplFromJson(Map<String, dynamic> json) =>
       metadata: json['metadata'] as Map<String, dynamic>?,
     );
 
-Map<String, dynamic> _$$IntegrityAlertImplToJson(
-    _$IntegrityAlertImpl instance) {
-  final val = <String, dynamic>{
-    'severity': _$AlertSeverityEnumMap[instance.severity]!,
-    'message': instance.message,
-    'type': _$AlertTypeEnumMap[instance.type]!,
-    'timestamp': instance.timestamp.toIso8601String(),
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('metadata', instance.metadata);
-  return val;
-}
+Map<String, dynamic> _$IntegrityAlertToJson(_IntegrityAlert instance) =>
+    <String, dynamic>{
+      'severity': _$AlertSeverityEnumMap[instance.severity]!,
+      'message': instance.message,
+      'type': _$AlertTypeEnumMap[instance.type]!,
+      'timestamp': instance.timestamp.toIso8601String(),
+      'metadata': instance.metadata,
+    };
 
 const _$AlertSeverityEnumMap = {
   AlertSeverity.critical: 'critical',

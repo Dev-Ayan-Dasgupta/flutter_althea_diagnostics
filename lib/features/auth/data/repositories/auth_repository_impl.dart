@@ -139,7 +139,7 @@ class AuthRepositoryImpl implements AuthRepository {
     String? phoneNumber,
     String? avatarUrl,
   }) async {
-    return Left(Failure.server(message: 'Not implemented yet'));
+    return const Left(Failure.server(message: 'Not implemented yet'));
   }
 
   @override
@@ -147,12 +147,12 @@ class AuthRepositoryImpl implements AuthRepository {
     required String oldPassword,
     required String newPassword,
   }) async {
-    return Left(Failure.server(message: 'Not implemented yet'));
+    return const Left(Failure.server(message: 'Not implemented yet'));
   }
 
   @override
   Future<Either<Failure, void>> resetPassword(String email) async {
-    return Left(Failure.server(message: 'Not implemented yet'));
+    return const Left(Failure.server(message: 'Not implemented yet'));
   }
 
   @override

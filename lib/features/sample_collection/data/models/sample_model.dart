@@ -10,7 +10,7 @@ part 'sample_model.freezed.dart';
 part 'sample_model.g.dart';
 
 @freezed
-class SampleModel with _$SampleModel {
+abstract class SampleModel with _$SampleModel {
   const factory SampleModel({
     required String id,
     required String vialId,
@@ -208,7 +208,7 @@ extension SampleModelX on SampleModel {
 }
 
 @freezed
-class SampleConditionModel with _$SampleConditionModel {
+abstract class SampleConditionModel with _$SampleConditionModel {
   const factory SampleConditionModel({
     required bool isHemolyzed,
     required bool isClotted,
@@ -254,7 +254,7 @@ extension SampleConditionModelX on SampleConditionModel {
 }
 
 @freezed
-class SampleEventModel with _$SampleEventModel {
+abstract class SampleEventModel with _$SampleEventModel {
   const factory SampleEventModel({
     required String id,
     required String sampleId,
@@ -313,7 +313,7 @@ extension SampleEventModelX on SampleEventModel {
 }
 
 @freezed
-class GeoLocationModel with _$GeoLocationModel {
+abstract class GeoLocationModel with _$GeoLocationModel {
   const factory GeoLocationModel({
     required double latitude,
     required double longitude,
@@ -349,7 +349,7 @@ extension GeoLocationModelX on GeoLocationModel {
 }
 
 @freezed
-class EventMetadataModel with _$EventMetadataModel {
+abstract class EventMetadataModel with _$EventMetadataModel {
   const factory EventMetadataModel({
     double? temperature,
     double? humidity,
@@ -394,7 +394,7 @@ extension EventMetadataModelX on EventMetadataModel {
 }
 
 @freezed
-class BiometricVerificationModel with _$BiometricVerificationModel {
+abstract class BiometricVerificationModel with _$BiometricVerificationModel {
   const factory BiometricVerificationModel({
     required String verificationId,
     required String patientDeviceId,

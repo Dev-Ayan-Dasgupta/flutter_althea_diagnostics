@@ -6,16 +6,14 @@ part of 'lab_result_repository.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$ValidationIssueImpl _$$ValidationIssueImplFromJson(
-        Map<String, dynamic> json) =>
-    _$ValidationIssueImpl(
+_ValidationIssue _$ValidationIssueFromJson(Map<String, dynamic> json) =>
+    _ValidationIssue(
       field: json['field'] as String,
       message: json['message'] as String,
       severity: $enumDecode(_$ValidationSeverityEnumMap, json['severity']),
     );
 
-Map<String, dynamic> _$$ValidationIssueImplToJson(
-        _$ValidationIssueImpl instance) =>
+Map<String, dynamic> _$ValidationIssueToJson(_ValidationIssue instance) =>
     <String, dynamic>{
       'field': instance.field,
       'message': instance.message,

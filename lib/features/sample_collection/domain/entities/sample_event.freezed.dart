@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,42 +9,90 @@ part of 'sample_event.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
-
-SampleEvent _$SampleEventFromJson(Map<String, dynamic> json) {
-  return _SampleEvent.fromJson(json);
-}
 
 /// @nodoc
 mixin _$SampleEvent {
-  String get id => throw _privateConstructorUsedError;
-  String get sampleId => throw _privateConstructorUsedError;
-  SampleEventType get eventType => throw _privateConstructorUsedError;
-  String get actorId => throw _privateConstructorUsedError;
-  String get actorName => throw _privateConstructorUsedError;
-  ActorRole get actorRole => throw _privateConstructorUsedError;
-  DateTime get timestamp => throw _privateConstructorUsedError;
-  GeoLocation get location => throw _privateConstructorUsedError;
-  String get eventHash =>
-      throw _privateConstructorUsedError; // For immutable audit trail
-  String? get previousEventHash => throw _privateConstructorUsedError;
-  EventMetadata? get metadata => throw _privateConstructorUsedError;
-  String? get notes => throw _privateConstructorUsedError;
+  String get id;
+  String get sampleId;
+  SampleEventType get eventType;
+  String get actorId;
+  String get actorName;
+  ActorRole get actorRole;
+  DateTime get timestamp;
+  GeoLocation get location;
+  String get eventHash; // For immutable audit trail
+  String? get previousEventHash;
+  EventMetadata? get metadata;
+  String? get notes;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+  /// Create a copy of SampleEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
   $SampleEventCopyWith<SampleEvent> get copyWith =>
-      throw _privateConstructorUsedError;
+      _$SampleEventCopyWithImpl<SampleEvent>(this as SampleEvent, _$identity);
+
+  /// Serializes this SampleEvent to a JSON map.
+  Map<String, dynamic> toJson();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is SampleEvent &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.sampleId, sampleId) ||
+                other.sampleId == sampleId) &&
+            (identical(other.eventType, eventType) ||
+                other.eventType == eventType) &&
+            (identical(other.actorId, actorId) || other.actorId == actorId) &&
+            (identical(other.actorName, actorName) ||
+                other.actorName == actorName) &&
+            (identical(other.actorRole, actorRole) ||
+                other.actorRole == actorRole) &&
+            (identical(other.timestamp, timestamp) ||
+                other.timestamp == timestamp) &&
+            (identical(other.location, location) ||
+                other.location == location) &&
+            (identical(other.eventHash, eventHash) ||
+                other.eventHash == eventHash) &&
+            (identical(other.previousEventHash, previousEventHash) ||
+                other.previousEventHash == previousEventHash) &&
+            (identical(other.metadata, metadata) ||
+                other.metadata == metadata) &&
+            (identical(other.notes, notes) || other.notes == notes));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      sampleId,
+      eventType,
+      actorId,
+      actorName,
+      actorRole,
+      timestamp,
+      location,
+      eventHash,
+      previousEventHash,
+      metadata,
+      notes);
+
+  @override
+  String toString() {
+    return 'SampleEvent(id: $id, sampleId: $sampleId, eventType: $eventType, actorId: $actorId, actorName: $actorName, actorRole: $actorRole, timestamp: $timestamp, location: $location, eventHash: $eventHash, previousEventHash: $previousEventHash, metadata: $metadata, notes: $notes)';
+  }
 }
 
 /// @nodoc
-abstract class $SampleEventCopyWith<$Res> {
+abstract mixin class $SampleEventCopyWith<$Res> {
   factory $SampleEventCopyWith(
-          SampleEvent value, $Res Function(SampleEvent) then) =
-      _$SampleEventCopyWithImpl<$Res, SampleEvent>;
+          SampleEvent value, $Res Function(SampleEvent) _then) =
+      _$SampleEventCopyWithImpl;
   @useResult
   $Res call(
       {String id,
@@ -65,15 +113,14 @@ abstract class $SampleEventCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$SampleEventCopyWithImpl<$Res, $Val extends SampleEvent>
-    implements $SampleEventCopyWith<$Res> {
-  _$SampleEventCopyWithImpl(this._value, this._then);
+class _$SampleEventCopyWithImpl<$Res> implements $SampleEventCopyWith<$Res> {
+  _$SampleEventCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final SampleEvent _self;
+  final $Res Function(SampleEvent) _then;
 
+  /// Create a copy of SampleEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -90,188 +137,319 @@ class _$SampleEventCopyWithImpl<$Res, $Val extends SampleEvent>
     Object? metadata = freezed,
     Object? notes = freezed,
   }) {
-    return _then(_value.copyWith(
+    return _then(_self.copyWith(
       id: null == id
-          ? _value.id
+          ? _self.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
       sampleId: null == sampleId
-          ? _value.sampleId
+          ? _self.sampleId
           : sampleId // ignore: cast_nullable_to_non_nullable
               as String,
       eventType: null == eventType
-          ? _value.eventType
+          ? _self.eventType
           : eventType // ignore: cast_nullable_to_non_nullable
               as SampleEventType,
       actorId: null == actorId
-          ? _value.actorId
+          ? _self.actorId
           : actorId // ignore: cast_nullable_to_non_nullable
               as String,
       actorName: null == actorName
-          ? _value.actorName
+          ? _self.actorName
           : actorName // ignore: cast_nullable_to_non_nullable
               as String,
       actorRole: null == actorRole
-          ? _value.actorRole
+          ? _self.actorRole
           : actorRole // ignore: cast_nullable_to_non_nullable
               as ActorRole,
       timestamp: null == timestamp
-          ? _value.timestamp
+          ? _self.timestamp
           : timestamp // ignore: cast_nullable_to_non_nullable
               as DateTime,
       location: null == location
-          ? _value.location
+          ? _self.location
           : location // ignore: cast_nullable_to_non_nullable
               as GeoLocation,
       eventHash: null == eventHash
-          ? _value.eventHash
+          ? _self.eventHash
           : eventHash // ignore: cast_nullable_to_non_nullable
               as String,
       previousEventHash: freezed == previousEventHash
-          ? _value.previousEventHash
+          ? _self.previousEventHash
           : previousEventHash // ignore: cast_nullable_to_non_nullable
               as String?,
       metadata: freezed == metadata
-          ? _value.metadata
+          ? _self.metadata
           : metadata // ignore: cast_nullable_to_non_nullable
               as EventMetadata?,
       notes: freezed == notes
-          ? _value.notes
-          : notes // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $GeoLocationCopyWith<$Res> get location {
-    return $GeoLocationCopyWith<$Res>(_value.location, (value) {
-      return _then(_value.copyWith(location: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $EventMetadataCopyWith<$Res>? get metadata {
-    if (_value.metadata == null) {
-      return null;
-    }
-
-    return $EventMetadataCopyWith<$Res>(_value.metadata!, (value) {
-      return _then(_value.copyWith(metadata: value) as $Val);
-    });
-  }
-}
-
-/// @nodoc
-abstract class _$$SampleEventImplCopyWith<$Res>
-    implements $SampleEventCopyWith<$Res> {
-  factory _$$SampleEventImplCopyWith(
-          _$SampleEventImpl value, $Res Function(_$SampleEventImpl) then) =
-      __$$SampleEventImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {String id,
-      String sampleId,
-      SampleEventType eventType,
-      String actorId,
-      String actorName,
-      ActorRole actorRole,
-      DateTime timestamp,
-      GeoLocation location,
-      String eventHash,
-      String? previousEventHash,
-      EventMetadata? metadata,
-      String? notes});
-
-  @override
-  $GeoLocationCopyWith<$Res> get location;
-  @override
-  $EventMetadataCopyWith<$Res>? get metadata;
-}
-
-/// @nodoc
-class __$$SampleEventImplCopyWithImpl<$Res>
-    extends _$SampleEventCopyWithImpl<$Res, _$SampleEventImpl>
-    implements _$$SampleEventImplCopyWith<$Res> {
-  __$$SampleEventImplCopyWithImpl(
-      _$SampleEventImpl _value, $Res Function(_$SampleEventImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = null,
-    Object? sampleId = null,
-    Object? eventType = null,
-    Object? actorId = null,
-    Object? actorName = null,
-    Object? actorRole = null,
-    Object? timestamp = null,
-    Object? location = null,
-    Object? eventHash = null,
-    Object? previousEventHash = freezed,
-    Object? metadata = freezed,
-    Object? notes = freezed,
-  }) {
-    return _then(_$SampleEventImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      sampleId: null == sampleId
-          ? _value.sampleId
-          : sampleId // ignore: cast_nullable_to_non_nullable
-              as String,
-      eventType: null == eventType
-          ? _value.eventType
-          : eventType // ignore: cast_nullable_to_non_nullable
-              as SampleEventType,
-      actorId: null == actorId
-          ? _value.actorId
-          : actorId // ignore: cast_nullable_to_non_nullable
-              as String,
-      actorName: null == actorName
-          ? _value.actorName
-          : actorName // ignore: cast_nullable_to_non_nullable
-              as String,
-      actorRole: null == actorRole
-          ? _value.actorRole
-          : actorRole // ignore: cast_nullable_to_non_nullable
-              as ActorRole,
-      timestamp: null == timestamp
-          ? _value.timestamp
-          : timestamp // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      location: null == location
-          ? _value.location
-          : location // ignore: cast_nullable_to_non_nullable
-              as GeoLocation,
-      eventHash: null == eventHash
-          ? _value.eventHash
-          : eventHash // ignore: cast_nullable_to_non_nullable
-              as String,
-      previousEventHash: freezed == previousEventHash
-          ? _value.previousEventHash
-          : previousEventHash // ignore: cast_nullable_to_non_nullable
-              as String?,
-      metadata: freezed == metadata
-          ? _value.metadata
-          : metadata // ignore: cast_nullable_to_non_nullable
-              as EventMetadata?,
-      notes: freezed == notes
-          ? _value.notes
+          ? _self.notes
           : notes // ignore: cast_nullable_to_non_nullable
               as String?,
     ));
+  }
+
+  /// Create a copy of SampleEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $GeoLocationCopyWith<$Res> get location {
+    return $GeoLocationCopyWith<$Res>(_self.location, (value) {
+      return _then(_self.copyWith(location: value));
+    });
+  }
+
+  /// Create a copy of SampleEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $EventMetadataCopyWith<$Res>? get metadata {
+    if (_self.metadata == null) {
+      return null;
+    }
+
+    return $EventMetadataCopyWith<$Res>(_self.metadata!, (value) {
+      return _then(_self.copyWith(metadata: value));
+    });
+  }
+}
+
+/// Adds pattern-matching-related methods to [SampleEvent].
+extension SampleEventPatterns on SampleEvent {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_SampleEvent value)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _SampleEvent() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_SampleEvent value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _SampleEvent():
+        return $default(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_SampleEvent value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _SampleEvent() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(
+            String id,
+            String sampleId,
+            SampleEventType eventType,
+            String actorId,
+            String actorName,
+            ActorRole actorRole,
+            DateTime timestamp,
+            GeoLocation location,
+            String eventHash,
+            String? previousEventHash,
+            EventMetadata? metadata,
+            String? notes)?
+        $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _SampleEvent() when $default != null:
+        return $default(
+            _that.id,
+            _that.sampleId,
+            _that.eventType,
+            _that.actorId,
+            _that.actorName,
+            _that.actorRole,
+            _that.timestamp,
+            _that.location,
+            _that.eventHash,
+            _that.previousEventHash,
+            _that.metadata,
+            _that.notes);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(
+            String id,
+            String sampleId,
+            SampleEventType eventType,
+            String actorId,
+            String actorName,
+            ActorRole actorRole,
+            DateTime timestamp,
+            GeoLocation location,
+            String eventHash,
+            String? previousEventHash,
+            EventMetadata? metadata,
+            String? notes)
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _SampleEvent():
+        return $default(
+            _that.id,
+            _that.sampleId,
+            _that.eventType,
+            _that.actorId,
+            _that.actorName,
+            _that.actorRole,
+            _that.timestamp,
+            _that.location,
+            _that.eventHash,
+            _that.previousEventHash,
+            _that.metadata,
+            _that.notes);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(
+            String id,
+            String sampleId,
+            SampleEventType eventType,
+            String actorId,
+            String actorName,
+            ActorRole actorRole,
+            DateTime timestamp,
+            GeoLocation location,
+            String eventHash,
+            String? previousEventHash,
+            EventMetadata? metadata,
+            String? notes)?
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _SampleEvent() when $default != null:
+        return $default(
+            _that.id,
+            _that.sampleId,
+            _that.eventType,
+            _that.actorId,
+            _that.actorName,
+            _that.actorRole,
+            _that.timestamp,
+            _that.location,
+            _that.eventHash,
+            _that.previousEventHash,
+            _that.metadata,
+            _that.notes);
+      case _:
+        return null;
+    }
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$SampleEventImpl implements _SampleEvent {
-  const _$SampleEventImpl(
+class _SampleEvent implements SampleEvent {
+  const _SampleEvent(
       {required this.id,
       required this.sampleId,
       required this.eventType,
@@ -284,9 +462,8 @@ class _$SampleEventImpl implements _SampleEvent {
       this.previousEventHash,
       this.metadata,
       this.notes});
-
-  factory _$SampleEventImpl.fromJson(Map<String, dynamic> json) =>
-      _$$SampleEventImplFromJson(json);
+  factory _SampleEvent.fromJson(Map<String, dynamic> json) =>
+      _$SampleEventFromJson(json);
 
   @override
   final String id;
@@ -314,16 +491,26 @@ class _$SampleEventImpl implements _SampleEvent {
   @override
   final String? notes;
 
+  /// Create a copy of SampleEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String toString() {
-    return 'SampleEvent(id: $id, sampleId: $sampleId, eventType: $eventType, actorId: $actorId, actorName: $actorName, actorRole: $actorRole, timestamp: $timestamp, location: $location, eventHash: $eventHash, previousEventHash: $previousEventHash, metadata: $metadata, notes: $notes)';
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$SampleEventCopyWith<_SampleEvent> get copyWith =>
+      __$SampleEventCopyWithImpl<_SampleEvent>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$SampleEventToJson(
+      this,
+    );
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$SampleEventImpl &&
+            other is _SampleEvent &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.sampleId, sampleId) ||
                 other.sampleId == sampleId) &&
@@ -347,7 +534,7 @@ class _$SampleEventImpl implements _SampleEvent {
             (identical(other.notes, notes) || other.notes == notes));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -364,173 +551,211 @@ class _$SampleEventImpl implements _SampleEvent {
       metadata,
       notes);
 
-  @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
-  _$$SampleEventImplCopyWith<_$SampleEventImpl> get copyWith =>
-      __$$SampleEventImplCopyWithImpl<_$SampleEventImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$SampleEventImplToJson(
-      this,
-    );
+  String toString() {
+    return 'SampleEvent(id: $id, sampleId: $sampleId, eventType: $eventType, actorId: $actorId, actorName: $actorName, actorRole: $actorRole, timestamp: $timestamp, location: $location, eventHash: $eventHash, previousEventHash: $previousEventHash, metadata: $metadata, notes: $notes)';
   }
 }
 
-abstract class _SampleEvent implements SampleEvent {
-  const factory _SampleEvent(
-      {required final String id,
-      required final String sampleId,
-      required final SampleEventType eventType,
-      required final String actorId,
-      required final String actorName,
-      required final ActorRole actorRole,
-      required final DateTime timestamp,
-      required final GeoLocation location,
-      required final String eventHash,
-      final String? previousEventHash,
-      final EventMetadata? metadata,
-      final String? notes}) = _$SampleEventImpl;
+/// @nodoc
+abstract mixin class _$SampleEventCopyWith<$Res>
+    implements $SampleEventCopyWith<$Res> {
+  factory _$SampleEventCopyWith(
+          _SampleEvent value, $Res Function(_SampleEvent) _then) =
+      __$SampleEventCopyWithImpl;
+  @override
+  @useResult
+  $Res call(
+      {String id,
+      String sampleId,
+      SampleEventType eventType,
+      String actorId,
+      String actorName,
+      ActorRole actorRole,
+      DateTime timestamp,
+      GeoLocation location,
+      String eventHash,
+      String? previousEventHash,
+      EventMetadata? metadata,
+      String? notes});
 
-  factory _SampleEvent.fromJson(Map<String, dynamic> json) =
-      _$SampleEventImpl.fromJson;
-
   @override
-  String get id;
+  $GeoLocationCopyWith<$Res> get location;
   @override
-  String get sampleId;
-  @override
-  SampleEventType get eventType;
-  @override
-  String get actorId;
-  @override
-  String get actorName;
-  @override
-  ActorRole get actorRole;
-  @override
-  DateTime get timestamp;
-  @override
-  GeoLocation get location;
-  @override
-  String get eventHash;
-  @override // For immutable audit trail
-  String? get previousEventHash;
-  @override
-  EventMetadata? get metadata;
-  @override
-  String? get notes;
-  @override
-  @JsonKey(ignore: true)
-  _$$SampleEventImplCopyWith<_$SampleEventImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  $EventMetadataCopyWith<$Res>? get metadata;
 }
 
-EventMetadata _$EventMetadataFromJson(Map<String, dynamic> json) {
-  return _EventMetadata.fromJson(json);
+/// @nodoc
+class __$SampleEventCopyWithImpl<$Res> implements _$SampleEventCopyWith<$Res> {
+  __$SampleEventCopyWithImpl(this._self, this._then);
+
+  final _SampleEvent _self;
+  final $Res Function(_SampleEvent) _then;
+
+  /// Create a copy of SampleEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? id = null,
+    Object? sampleId = null,
+    Object? eventType = null,
+    Object? actorId = null,
+    Object? actorName = null,
+    Object? actorRole = null,
+    Object? timestamp = null,
+    Object? location = null,
+    Object? eventHash = null,
+    Object? previousEventHash = freezed,
+    Object? metadata = freezed,
+    Object? notes = freezed,
+  }) {
+    return _then(_SampleEvent(
+      id: null == id
+          ? _self.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      sampleId: null == sampleId
+          ? _self.sampleId
+          : sampleId // ignore: cast_nullable_to_non_nullable
+              as String,
+      eventType: null == eventType
+          ? _self.eventType
+          : eventType // ignore: cast_nullable_to_non_nullable
+              as SampleEventType,
+      actorId: null == actorId
+          ? _self.actorId
+          : actorId // ignore: cast_nullable_to_non_nullable
+              as String,
+      actorName: null == actorName
+          ? _self.actorName
+          : actorName // ignore: cast_nullable_to_non_nullable
+              as String,
+      actorRole: null == actorRole
+          ? _self.actorRole
+          : actorRole // ignore: cast_nullable_to_non_nullable
+              as ActorRole,
+      timestamp: null == timestamp
+          ? _self.timestamp
+          : timestamp // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      location: null == location
+          ? _self.location
+          : location // ignore: cast_nullable_to_non_nullable
+              as GeoLocation,
+      eventHash: null == eventHash
+          ? _self.eventHash
+          : eventHash // ignore: cast_nullable_to_non_nullable
+              as String,
+      previousEventHash: freezed == previousEventHash
+          ? _self.previousEventHash
+          : previousEventHash // ignore: cast_nullable_to_non_nullable
+              as String?,
+      metadata: freezed == metadata
+          ? _self.metadata
+          : metadata // ignore: cast_nullable_to_non_nullable
+              as EventMetadata?,
+      notes: freezed == notes
+          ? _self.notes
+          : notes // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+
+  /// Create a copy of SampleEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $GeoLocationCopyWith<$Res> get location {
+    return $GeoLocationCopyWith<$Res>(_self.location, (value) {
+      return _then(_self.copyWith(location: value));
+    });
+  }
+
+  /// Create a copy of SampleEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $EventMetadataCopyWith<$Res>? get metadata {
+    if (_self.metadata == null) {
+      return null;
+    }
+
+    return $EventMetadataCopyWith<$Res>(_self.metadata!, (value) {
+      return _then(_self.copyWith(metadata: value));
+    });
+  }
 }
 
 /// @nodoc
 mixin _$EventMetadata {
-  double? get temperature => throw _privateConstructorUsedError;
-  double? get humidity => throw _privateConstructorUsedError;
-  String? get deviceId => throw _privateConstructorUsedError;
-  String? get appVersion => throw _privateConstructorUsedError;
-  String? get bleDeviceId => throw _privateConstructorUsedError;
-  bool? get biometricSuccess => throw _privateConstructorUsedError;
-  String? get barcodeValue => throw _privateConstructorUsedError;
-  Map<String, dynamic>? get additionalData =>
-      throw _privateConstructorUsedError;
+  double? get temperature;
+  double? get humidity;
+  String? get deviceId;
+  String? get appVersion;
+  String? get bleDeviceId;
+  bool? get biometricSuccess;
+  String? get barcodeValue;
+  Map<String, dynamic>? get additionalData;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $EventMetadataCopyWith<EventMetadata> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $EventMetadataCopyWith<$Res> {
-  factory $EventMetadataCopyWith(
-          EventMetadata value, $Res Function(EventMetadata) then) =
-      _$EventMetadataCopyWithImpl<$Res, EventMetadata>;
-  @useResult
-  $Res call(
-      {double? temperature,
-      double? humidity,
-      String? deviceId,
-      String? appVersion,
-      String? bleDeviceId,
-      bool? biometricSuccess,
-      String? barcodeValue,
-      Map<String, dynamic>? additionalData});
-}
-
-/// @nodoc
-class _$EventMetadataCopyWithImpl<$Res, $Val extends EventMetadata>
-    implements $EventMetadataCopyWith<$Res> {
-  _$EventMetadataCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
+  /// Create a copy of EventMetadata
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @pragma('vm:prefer-inline')
+  $EventMetadataCopyWith<EventMetadata> get copyWith =>
+      _$EventMetadataCopyWithImpl<EventMetadata>(
+          this as EventMetadata, _$identity);
+
+  /// Serializes this EventMetadata to a JSON map.
+  Map<String, dynamic> toJson();
+
   @override
-  $Res call({
-    Object? temperature = freezed,
-    Object? humidity = freezed,
-    Object? deviceId = freezed,
-    Object? appVersion = freezed,
-    Object? bleDeviceId = freezed,
-    Object? biometricSuccess = freezed,
-    Object? barcodeValue = freezed,
-    Object? additionalData = freezed,
-  }) {
-    return _then(_value.copyWith(
-      temperature: freezed == temperature
-          ? _value.temperature
-          : temperature // ignore: cast_nullable_to_non_nullable
-              as double?,
-      humidity: freezed == humidity
-          ? _value.humidity
-          : humidity // ignore: cast_nullable_to_non_nullable
-              as double?,
-      deviceId: freezed == deviceId
-          ? _value.deviceId
-          : deviceId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      appVersion: freezed == appVersion
-          ? _value.appVersion
-          : appVersion // ignore: cast_nullable_to_non_nullable
-              as String?,
-      bleDeviceId: freezed == bleDeviceId
-          ? _value.bleDeviceId
-          : bleDeviceId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      biometricSuccess: freezed == biometricSuccess
-          ? _value.biometricSuccess
-          : biometricSuccess // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      barcodeValue: freezed == barcodeValue
-          ? _value.barcodeValue
-          : barcodeValue // ignore: cast_nullable_to_non_nullable
-              as String?,
-      additionalData: freezed == additionalData
-          ? _value.additionalData
-          : additionalData // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>?,
-    ) as $Val);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is EventMetadata &&
+            (identical(other.temperature, temperature) ||
+                other.temperature == temperature) &&
+            (identical(other.humidity, humidity) ||
+                other.humidity == humidity) &&
+            (identical(other.deviceId, deviceId) ||
+                other.deviceId == deviceId) &&
+            (identical(other.appVersion, appVersion) ||
+                other.appVersion == appVersion) &&
+            (identical(other.bleDeviceId, bleDeviceId) ||
+                other.bleDeviceId == bleDeviceId) &&
+            (identical(other.biometricSuccess, biometricSuccess) ||
+                other.biometricSuccess == biometricSuccess) &&
+            (identical(other.barcodeValue, barcodeValue) ||
+                other.barcodeValue == barcodeValue) &&
+            const DeepCollectionEquality()
+                .equals(other.additionalData, additionalData));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      temperature,
+      humidity,
+      deviceId,
+      appVersion,
+      bleDeviceId,
+      biometricSuccess,
+      barcodeValue,
+      const DeepCollectionEquality().hash(additionalData));
+
+  @override
+  String toString() {
+    return 'EventMetadata(temperature: $temperature, humidity: $humidity, deviceId: $deviceId, appVersion: $appVersion, bleDeviceId: $bleDeviceId, biometricSuccess: $biometricSuccess, barcodeValue: $barcodeValue, additionalData: $additionalData)';
   }
 }
 
 /// @nodoc
-abstract class _$$EventMetadataImplCopyWith<$Res>
-    implements $EventMetadataCopyWith<$Res> {
-  factory _$$EventMetadataImplCopyWith(
-          _$EventMetadataImpl value, $Res Function(_$EventMetadataImpl) then) =
-      __$$EventMetadataImplCopyWithImpl<$Res>;
-  @override
+abstract mixin class $EventMetadataCopyWith<$Res> {
+  factory $EventMetadataCopyWith(
+          EventMetadata value, $Res Function(EventMetadata) _then) =
+      _$EventMetadataCopyWithImpl;
   @useResult
   $Res call(
       {double? temperature,
@@ -544,13 +769,15 @@ abstract class _$$EventMetadataImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$EventMetadataImplCopyWithImpl<$Res>
-    extends _$EventMetadataCopyWithImpl<$Res, _$EventMetadataImpl>
-    implements _$$EventMetadataImplCopyWith<$Res> {
-  __$$EventMetadataImplCopyWithImpl(
-      _$EventMetadataImpl _value, $Res Function(_$EventMetadataImpl) _then)
-      : super(_value, _then);
+class _$EventMetadataCopyWithImpl<$Res>
+    implements $EventMetadataCopyWith<$Res> {
+  _$EventMetadataCopyWithImpl(this._self, this._then);
 
+  final EventMetadata _self;
+  final $Res Function(EventMetadata) _then;
+
+  /// Create a copy of EventMetadata
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -563,47 +790,255 @@ class __$$EventMetadataImplCopyWithImpl<$Res>
     Object? barcodeValue = freezed,
     Object? additionalData = freezed,
   }) {
-    return _then(_$EventMetadataImpl(
+    return _then(_self.copyWith(
       temperature: freezed == temperature
-          ? _value.temperature
+          ? _self.temperature
           : temperature // ignore: cast_nullable_to_non_nullable
               as double?,
       humidity: freezed == humidity
-          ? _value.humidity
+          ? _self.humidity
           : humidity // ignore: cast_nullable_to_non_nullable
               as double?,
       deviceId: freezed == deviceId
-          ? _value.deviceId
+          ? _self.deviceId
           : deviceId // ignore: cast_nullable_to_non_nullable
               as String?,
       appVersion: freezed == appVersion
-          ? _value.appVersion
+          ? _self.appVersion
           : appVersion // ignore: cast_nullable_to_non_nullable
               as String?,
       bleDeviceId: freezed == bleDeviceId
-          ? _value.bleDeviceId
+          ? _self.bleDeviceId
           : bleDeviceId // ignore: cast_nullable_to_non_nullable
               as String?,
       biometricSuccess: freezed == biometricSuccess
-          ? _value.biometricSuccess
+          ? _self.biometricSuccess
           : biometricSuccess // ignore: cast_nullable_to_non_nullable
               as bool?,
       barcodeValue: freezed == barcodeValue
-          ? _value.barcodeValue
+          ? _self.barcodeValue
           : barcodeValue // ignore: cast_nullable_to_non_nullable
               as String?,
       additionalData: freezed == additionalData
-          ? _value._additionalData
+          ? _self.additionalData
           : additionalData // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>?,
     ));
   }
 }
 
+/// Adds pattern-matching-related methods to [EventMetadata].
+extension EventMetadataPatterns on EventMetadata {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_EventMetadata value)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _EventMetadata() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_EventMetadata value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _EventMetadata():
+        return $default(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_EventMetadata value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _EventMetadata() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(
+            double? temperature,
+            double? humidity,
+            String? deviceId,
+            String? appVersion,
+            String? bleDeviceId,
+            bool? biometricSuccess,
+            String? barcodeValue,
+            Map<String, dynamic>? additionalData)?
+        $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _EventMetadata() when $default != null:
+        return $default(
+            _that.temperature,
+            _that.humidity,
+            _that.deviceId,
+            _that.appVersion,
+            _that.bleDeviceId,
+            _that.biometricSuccess,
+            _that.barcodeValue,
+            _that.additionalData);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(
+            double? temperature,
+            double? humidity,
+            String? deviceId,
+            String? appVersion,
+            String? bleDeviceId,
+            bool? biometricSuccess,
+            String? barcodeValue,
+            Map<String, dynamic>? additionalData)
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _EventMetadata():
+        return $default(
+            _that.temperature,
+            _that.humidity,
+            _that.deviceId,
+            _that.appVersion,
+            _that.bleDeviceId,
+            _that.biometricSuccess,
+            _that.barcodeValue,
+            _that.additionalData);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(
+            double? temperature,
+            double? humidity,
+            String? deviceId,
+            String? appVersion,
+            String? bleDeviceId,
+            bool? biometricSuccess,
+            String? barcodeValue,
+            Map<String, dynamic>? additionalData)?
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _EventMetadata() when $default != null:
+        return $default(
+            _that.temperature,
+            _that.humidity,
+            _that.deviceId,
+            _that.appVersion,
+            _that.bleDeviceId,
+            _that.biometricSuccess,
+            _that.barcodeValue,
+            _that.additionalData);
+      case _:
+        return null;
+    }
+  }
+}
+
 /// @nodoc
 @JsonSerializable()
-class _$EventMetadataImpl implements _EventMetadata {
-  const _$EventMetadataImpl(
+class _EventMetadata implements EventMetadata {
+  const _EventMetadata(
       {this.temperature,
       this.humidity,
       this.deviceId,
@@ -613,9 +1048,8 @@ class _$EventMetadataImpl implements _EventMetadata {
       this.barcodeValue,
       final Map<String, dynamic>? additionalData})
       : _additionalData = additionalData;
-
-  factory _$EventMetadataImpl.fromJson(Map<String, dynamic> json) =>
-      _$$EventMetadataImplFromJson(json);
+  factory _EventMetadata.fromJson(Map<String, dynamic> json) =>
+      _$EventMetadataFromJson(json);
 
   @override
   final double? temperature;
@@ -641,16 +1075,26 @@ class _$EventMetadataImpl implements _EventMetadata {
     return EqualUnmodifiableMapView(value);
   }
 
+  /// Create a copy of EventMetadata
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String toString() {
-    return 'EventMetadata(temperature: $temperature, humidity: $humidity, deviceId: $deviceId, appVersion: $appVersion, bleDeviceId: $bleDeviceId, biometricSuccess: $biometricSuccess, barcodeValue: $barcodeValue, additionalData: $additionalData)';
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$EventMetadataCopyWith<_EventMetadata> get copyWith =>
+      __$EventMetadataCopyWithImpl<_EventMetadata>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$EventMetadataToJson(
+      this,
+    );
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$EventMetadataImpl &&
+            other is _EventMetadata &&
             (identical(other.temperature, temperature) ||
                 other.temperature == temperature) &&
             (identical(other.humidity, humidity) ||
@@ -669,7 +1113,7 @@ class _$EventMetadataImpl implements _EventMetadata {
                 .equals(other._additionalData, _additionalData));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -682,224 +1126,113 @@ class _$EventMetadataImpl implements _EventMetadata {
       barcodeValue,
       const DeepCollectionEquality().hash(_additionalData));
 
-  @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
-  _$$EventMetadataImplCopyWith<_$EventMetadataImpl> get copyWith =>
-      __$$EventMetadataImplCopyWithImpl<_$EventMetadataImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$EventMetadataImplToJson(
-      this,
-    );
-  }
-}
-
-abstract class _EventMetadata implements EventMetadata {
-  const factory _EventMetadata(
-      {final double? temperature,
-      final double? humidity,
-      final String? deviceId,
-      final String? appVersion,
-      final String? bleDeviceId,
-      final bool? biometricSuccess,
-      final String? barcodeValue,
-      final Map<String, dynamic>? additionalData}) = _$EventMetadataImpl;
-
-  factory _EventMetadata.fromJson(Map<String, dynamic> json) =
-      _$EventMetadataImpl.fromJson;
-
-  @override
-  double? get temperature;
-  @override
-  double? get humidity;
-  @override
-  String? get deviceId;
-  @override
-  String? get appVersion;
-  @override
-  String? get bleDeviceId;
-  @override
-  bool? get biometricSuccess;
-  @override
-  String? get barcodeValue;
-  @override
-  Map<String, dynamic>? get additionalData;
-  @override
-  @JsonKey(ignore: true)
-  _$$EventMetadataImplCopyWith<_$EventMetadataImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-GeoLocation _$GeoLocationFromJson(Map<String, dynamic> json) {
-  return _GeoLocation.fromJson(json);
-}
-
-/// @nodoc
-mixin _$GeoLocation {
-  double get latitude => throw _privateConstructorUsedError;
-  double get longitude => throw _privateConstructorUsedError;
-  double? get altitude => throw _privateConstructorUsedError;
-  double? get accuracy => throw _privateConstructorUsedError;
-  DateTime? get timestamp => throw _privateConstructorUsedError;
-
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $GeoLocationCopyWith<GeoLocation> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $GeoLocationCopyWith<$Res> {
-  factory $GeoLocationCopyWith(
-          GeoLocation value, $Res Function(GeoLocation) then) =
-      _$GeoLocationCopyWithImpl<$Res, GeoLocation>;
-  @useResult
-  $Res call(
-      {double latitude,
-      double longitude,
-      double? altitude,
-      double? accuracy,
-      DateTime? timestamp});
-}
-
-/// @nodoc
-class _$GeoLocationCopyWithImpl<$Res, $Val extends GeoLocation>
-    implements $GeoLocationCopyWith<$Res> {
-  _$GeoLocationCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? latitude = null,
-    Object? longitude = null,
-    Object? altitude = freezed,
-    Object? accuracy = freezed,
-    Object? timestamp = freezed,
-  }) {
-    return _then(_value.copyWith(
-      latitude: null == latitude
-          ? _value.latitude
-          : latitude // ignore: cast_nullable_to_non_nullable
-              as double,
-      longitude: null == longitude
-          ? _value.longitude
-          : longitude // ignore: cast_nullable_to_non_nullable
-              as double,
-      altitude: freezed == altitude
-          ? _value.altitude
-          : altitude // ignore: cast_nullable_to_non_nullable
-              as double?,
-      accuracy: freezed == accuracy
-          ? _value.accuracy
-          : accuracy // ignore: cast_nullable_to_non_nullable
-              as double?,
-      timestamp: freezed == timestamp
-          ? _value.timestamp
-          : timestamp // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-    ) as $Val);
+  String toString() {
+    return 'EventMetadata(temperature: $temperature, humidity: $humidity, deviceId: $deviceId, appVersion: $appVersion, bleDeviceId: $bleDeviceId, biometricSuccess: $biometricSuccess, barcodeValue: $barcodeValue, additionalData: $additionalData)';
   }
 }
 
 /// @nodoc
-abstract class _$$GeoLocationImplCopyWith<$Res>
-    implements $GeoLocationCopyWith<$Res> {
-  factory _$$GeoLocationImplCopyWith(
-          _$GeoLocationImpl value, $Res Function(_$GeoLocationImpl) then) =
-      __$$GeoLocationImplCopyWithImpl<$Res>;
+abstract mixin class _$EventMetadataCopyWith<$Res>
+    implements $EventMetadataCopyWith<$Res> {
+  factory _$EventMetadataCopyWith(
+          _EventMetadata value, $Res Function(_EventMetadata) _then) =
+      __$EventMetadataCopyWithImpl;
   @override
   @useResult
   $Res call(
-      {double latitude,
-      double longitude,
-      double? altitude,
-      double? accuracy,
-      DateTime? timestamp});
+      {double? temperature,
+      double? humidity,
+      String? deviceId,
+      String? appVersion,
+      String? bleDeviceId,
+      bool? biometricSuccess,
+      String? barcodeValue,
+      Map<String, dynamic>? additionalData});
 }
 
 /// @nodoc
-class __$$GeoLocationImplCopyWithImpl<$Res>
-    extends _$GeoLocationCopyWithImpl<$Res, _$GeoLocationImpl>
-    implements _$$GeoLocationImplCopyWith<$Res> {
-  __$$GeoLocationImplCopyWithImpl(
-      _$GeoLocationImpl _value, $Res Function(_$GeoLocationImpl) _then)
-      : super(_value, _then);
+class __$EventMetadataCopyWithImpl<$Res>
+    implements _$EventMetadataCopyWith<$Res> {
+  __$EventMetadataCopyWithImpl(this._self, this._then);
 
-  @pragma('vm:prefer-inline')
+  final _EventMetadata _self;
+  final $Res Function(_EventMetadata) _then;
+
+  /// Create a copy of EventMetadata
+  /// with the given fields replaced by the non-null parameter values.
   @override
+  @pragma('vm:prefer-inline')
   $Res call({
-    Object? latitude = null,
-    Object? longitude = null,
-    Object? altitude = freezed,
-    Object? accuracy = freezed,
-    Object? timestamp = freezed,
+    Object? temperature = freezed,
+    Object? humidity = freezed,
+    Object? deviceId = freezed,
+    Object? appVersion = freezed,
+    Object? bleDeviceId = freezed,
+    Object? biometricSuccess = freezed,
+    Object? barcodeValue = freezed,
+    Object? additionalData = freezed,
   }) {
-    return _then(_$GeoLocationImpl(
-      latitude: null == latitude
-          ? _value.latitude
-          : latitude // ignore: cast_nullable_to_non_nullable
-              as double,
-      longitude: null == longitude
-          ? _value.longitude
-          : longitude // ignore: cast_nullable_to_non_nullable
-              as double,
-      altitude: freezed == altitude
-          ? _value.altitude
-          : altitude // ignore: cast_nullable_to_non_nullable
+    return _then(_EventMetadata(
+      temperature: freezed == temperature
+          ? _self.temperature
+          : temperature // ignore: cast_nullable_to_non_nullable
               as double?,
-      accuracy: freezed == accuracy
-          ? _value.accuracy
-          : accuracy // ignore: cast_nullable_to_non_nullable
+      humidity: freezed == humidity
+          ? _self.humidity
+          : humidity // ignore: cast_nullable_to_non_nullable
               as double?,
-      timestamp: freezed == timestamp
-          ? _value.timestamp
-          : timestamp // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+      deviceId: freezed == deviceId
+          ? _self.deviceId
+          : deviceId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      appVersion: freezed == appVersion
+          ? _self.appVersion
+          : appVersion // ignore: cast_nullable_to_non_nullable
+              as String?,
+      bleDeviceId: freezed == bleDeviceId
+          ? _self.bleDeviceId
+          : bleDeviceId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      biometricSuccess: freezed == biometricSuccess
+          ? _self.biometricSuccess
+          : biometricSuccess // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      barcodeValue: freezed == barcodeValue
+          ? _self.barcodeValue
+          : barcodeValue // ignore: cast_nullable_to_non_nullable
+              as String?,
+      additionalData: freezed == additionalData
+          ? _self._additionalData
+          : additionalData // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>?,
     ));
   }
 }
 
 /// @nodoc
-@JsonSerializable()
-class _$GeoLocationImpl implements _GeoLocation {
-  const _$GeoLocationImpl(
-      {required this.latitude,
-      required this.longitude,
-      this.altitude,
-      this.accuracy,
-      this.timestamp});
+mixin _$GeoLocation {
+  double get latitude;
+  double get longitude;
+  double? get altitude;
+  double? get accuracy;
+  DateTime? get timestamp;
 
-  factory _$GeoLocationImpl.fromJson(Map<String, dynamic> json) =>
-      _$$GeoLocationImplFromJson(json);
+  /// Create a copy of GeoLocation
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $GeoLocationCopyWith<GeoLocation> get copyWith =>
+      _$GeoLocationCopyWithImpl<GeoLocation>(this as GeoLocation, _$identity);
 
-  @override
-  final double latitude;
-  @override
-  final double longitude;
-  @override
-  final double? altitude;
-  @override
-  final double? accuracy;
-  @override
-  final DateTime? timestamp;
-
-  @override
-  String toString() {
-    return 'GeoLocation(latitude: $latitude, longitude: $longitude, altitude: $altitude, accuracy: $accuracy, timestamp: $timestamp)';
-  }
+  /// Serializes this GeoLocation to a JSON map.
+  Map<String, dynamic> toJson();
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$GeoLocationImpl &&
+            other is GeoLocation &&
             (identical(other.latitude, latitude) ||
                 other.latitude == latitude) &&
             (identical(other.longitude, longitude) ||
@@ -912,48 +1245,363 @@ class _$GeoLocationImpl implements _GeoLocation {
                 other.timestamp == timestamp));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, latitude, longitude, altitude, accuracy, timestamp);
 
-  @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
-  _$$GeoLocationImplCopyWith<_$GeoLocationImpl> get copyWith =>
-      __$$GeoLocationImplCopyWithImpl<_$GeoLocationImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$GeoLocationImplToJson(
-      this,
-    );
+  String toString() {
+    return 'GeoLocation(latitude: $latitude, longitude: $longitude, altitude: $altitude, accuracy: $accuracy, timestamp: $timestamp)';
   }
 }
 
-abstract class _GeoLocation implements GeoLocation {
-  const factory _GeoLocation(
-      {required final double latitude,
-      required final double longitude,
-      final double? altitude,
-      final double? accuracy,
-      final DateTime? timestamp}) = _$GeoLocationImpl;
-
-  factory _GeoLocation.fromJson(Map<String, dynamic> json) =
-      _$GeoLocationImpl.fromJson;
-
-  @override
-  double get latitude;
-  @override
-  double get longitude;
-  @override
-  double? get altitude;
-  @override
-  double? get accuracy;
-  @override
-  DateTime? get timestamp;
-  @override
-  @JsonKey(ignore: true)
-  _$$GeoLocationImplCopyWith<_$GeoLocationImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+/// @nodoc
+abstract mixin class $GeoLocationCopyWith<$Res> {
+  factory $GeoLocationCopyWith(
+          GeoLocation value, $Res Function(GeoLocation) _then) =
+      _$GeoLocationCopyWithImpl;
+  @useResult
+  $Res call(
+      {double latitude,
+      double longitude,
+      double? altitude,
+      double? accuracy,
+      DateTime? timestamp});
 }
+
+/// @nodoc
+class _$GeoLocationCopyWithImpl<$Res> implements $GeoLocationCopyWith<$Res> {
+  _$GeoLocationCopyWithImpl(this._self, this._then);
+
+  final GeoLocation _self;
+  final $Res Function(GeoLocation) _then;
+
+  /// Create a copy of GeoLocation
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? latitude = null,
+    Object? longitude = null,
+    Object? altitude = freezed,
+    Object? accuracy = freezed,
+    Object? timestamp = freezed,
+  }) {
+    return _then(_self.copyWith(
+      latitude: null == latitude
+          ? _self.latitude
+          : latitude // ignore: cast_nullable_to_non_nullable
+              as double,
+      longitude: null == longitude
+          ? _self.longitude
+          : longitude // ignore: cast_nullable_to_non_nullable
+              as double,
+      altitude: freezed == altitude
+          ? _self.altitude
+          : altitude // ignore: cast_nullable_to_non_nullable
+              as double?,
+      accuracy: freezed == accuracy
+          ? _self.accuracy
+          : accuracy // ignore: cast_nullable_to_non_nullable
+              as double?,
+      timestamp: freezed == timestamp
+          ? _self.timestamp
+          : timestamp // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+    ));
+  }
+}
+
+/// Adds pattern-matching-related methods to [GeoLocation].
+extension GeoLocationPatterns on GeoLocation {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_GeoLocation value)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _GeoLocation() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_GeoLocation value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _GeoLocation():
+        return $default(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_GeoLocation value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _GeoLocation() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(double latitude, double longitude, double? altitude,
+            double? accuracy, DateTime? timestamp)?
+        $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _GeoLocation() when $default != null:
+        return $default(_that.latitude, _that.longitude, _that.altitude,
+            _that.accuracy, _that.timestamp);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(double latitude, double longitude, double? altitude,
+            double? accuracy, DateTime? timestamp)
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _GeoLocation():
+        return $default(_that.latitude, _that.longitude, _that.altitude,
+            _that.accuracy, _that.timestamp);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(double latitude, double longitude, double? altitude,
+            double? accuracy, DateTime? timestamp)?
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _GeoLocation() when $default != null:
+        return $default(_that.latitude, _that.longitude, _that.altitude,
+            _that.accuracy, _that.timestamp);
+      case _:
+        return null;
+    }
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _GeoLocation implements GeoLocation {
+  const _GeoLocation(
+      {required this.latitude,
+      required this.longitude,
+      this.altitude,
+      this.accuracy,
+      this.timestamp});
+  factory _GeoLocation.fromJson(Map<String, dynamic> json) =>
+      _$GeoLocationFromJson(json);
+
+  @override
+  final double latitude;
+  @override
+  final double longitude;
+  @override
+  final double? altitude;
+  @override
+  final double? accuracy;
+  @override
+  final DateTime? timestamp;
+
+  /// Create a copy of GeoLocation
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$GeoLocationCopyWith<_GeoLocation> get copyWith =>
+      __$GeoLocationCopyWithImpl<_GeoLocation>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$GeoLocationToJson(
+      this,
+    );
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _GeoLocation &&
+            (identical(other.latitude, latitude) ||
+                other.latitude == latitude) &&
+            (identical(other.longitude, longitude) ||
+                other.longitude == longitude) &&
+            (identical(other.altitude, altitude) ||
+                other.altitude == altitude) &&
+            (identical(other.accuracy, accuracy) ||
+                other.accuracy == accuracy) &&
+            (identical(other.timestamp, timestamp) ||
+                other.timestamp == timestamp));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, latitude, longitude, altitude, accuracy, timestamp);
+
+  @override
+  String toString() {
+    return 'GeoLocation(latitude: $latitude, longitude: $longitude, altitude: $altitude, accuracy: $accuracy, timestamp: $timestamp)';
+  }
+}
+
+/// @nodoc
+abstract mixin class _$GeoLocationCopyWith<$Res>
+    implements $GeoLocationCopyWith<$Res> {
+  factory _$GeoLocationCopyWith(
+          _GeoLocation value, $Res Function(_GeoLocation) _then) =
+      __$GeoLocationCopyWithImpl;
+  @override
+  @useResult
+  $Res call(
+      {double latitude,
+      double longitude,
+      double? altitude,
+      double? accuracy,
+      DateTime? timestamp});
+}
+
+/// @nodoc
+class __$GeoLocationCopyWithImpl<$Res> implements _$GeoLocationCopyWith<$Res> {
+  __$GeoLocationCopyWithImpl(this._self, this._then);
+
+  final _GeoLocation _self;
+  final $Res Function(_GeoLocation) _then;
+
+  /// Create a copy of GeoLocation
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? latitude = null,
+    Object? longitude = null,
+    Object? altitude = freezed,
+    Object? accuracy = freezed,
+    Object? timestamp = freezed,
+  }) {
+    return _then(_GeoLocation(
+      latitude: null == latitude
+          ? _self.latitude
+          : latitude // ignore: cast_nullable_to_non_nullable
+              as double,
+      longitude: null == longitude
+          ? _self.longitude
+          : longitude // ignore: cast_nullable_to_non_nullable
+              as double,
+      altitude: freezed == altitude
+          ? _self.altitude
+          : altitude // ignore: cast_nullable_to_non_nullable
+              as double?,
+      accuracy: freezed == accuracy
+          ? _self.accuracy
+          : accuracy // ignore: cast_nullable_to_non_nullable
+              as double?,
+      timestamp: freezed == timestamp
+          ? _self.timestamp
+          : timestamp // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+    ));
+  }
+}
+
+// dart format on

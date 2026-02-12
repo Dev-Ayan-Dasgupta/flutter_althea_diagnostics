@@ -6,8 +6,7 @@ part of 'sample_event.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$SampleEventImpl _$$SampleEventImplFromJson(Map<String, dynamic> json) =>
-    _$SampleEventImpl(
+_SampleEvent _$SampleEventFromJson(Map<String, dynamic> json) => _SampleEvent(
       id: json['id'] as String,
       sampleId: json['sampleId'] as String,
       eventType: $enumDecode(_$SampleEventTypeEnumMap, json['eventType']),
@@ -24,30 +23,21 @@ _$SampleEventImpl _$$SampleEventImplFromJson(Map<String, dynamic> json) =>
       notes: json['notes'] as String?,
     );
 
-Map<String, dynamic> _$$SampleEventImplToJson(_$SampleEventImpl instance) {
-  final val = <String, dynamic>{
-    'id': instance.id,
-    'sampleId': instance.sampleId,
-    'eventType': _$SampleEventTypeEnumMap[instance.eventType]!,
-    'actorId': instance.actorId,
-    'actorName': instance.actorName,
-    'actorRole': _$ActorRoleEnumMap[instance.actorRole]!,
-    'timestamp': instance.timestamp.toIso8601String(),
-    'location': instance.location.toJson(),
-    'eventHash': instance.eventHash,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('previousEventHash', instance.previousEventHash);
-  writeNotNull('metadata', instance.metadata?.toJson());
-  writeNotNull('notes', instance.notes);
-  return val;
-}
+Map<String, dynamic> _$SampleEventToJson(_SampleEvent instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'sampleId': instance.sampleId,
+      'eventType': _$SampleEventTypeEnumMap[instance.eventType]!,
+      'actorId': instance.actorId,
+      'actorName': instance.actorName,
+      'actorRole': _$ActorRoleEnumMap[instance.actorRole]!,
+      'timestamp': instance.timestamp.toIso8601String(),
+      'location': instance.location,
+      'eventHash': instance.eventHash,
+      'previousEventHash': instance.previousEventHash,
+      'metadata': instance.metadata,
+      'notes': instance.notes,
+    };
 
 const _$SampleEventTypeEnumMap = {
   SampleEventType.collected: 'collected',
@@ -78,8 +68,8 @@ const _$ActorRoleEnumMap = {
   ActorRole.system: 'system',
 };
 
-_$EventMetadataImpl _$$EventMetadataImplFromJson(Map<String, dynamic> json) =>
-    _$EventMetadataImpl(
+_EventMetadata _$EventMetadataFromJson(Map<String, dynamic> json) =>
+    _EventMetadata(
       temperature: (json['temperature'] as num?)?.toDouble(),
       humidity: (json['humidity'] as num?)?.toDouble(),
       deviceId: json['deviceId'] as String?,
@@ -90,28 +80,19 @@ _$EventMetadataImpl _$$EventMetadataImplFromJson(Map<String, dynamic> json) =>
       additionalData: json['additionalData'] as Map<String, dynamic>?,
     );
 
-Map<String, dynamic> _$$EventMetadataImplToJson(_$EventMetadataImpl instance) {
-  final val = <String, dynamic>{};
+Map<String, dynamic> _$EventMetadataToJson(_EventMetadata instance) =>
+    <String, dynamic>{
+      'temperature': instance.temperature,
+      'humidity': instance.humidity,
+      'deviceId': instance.deviceId,
+      'appVersion': instance.appVersion,
+      'bleDeviceId': instance.bleDeviceId,
+      'biometricSuccess': instance.biometricSuccess,
+      'barcodeValue': instance.barcodeValue,
+      'additionalData': instance.additionalData,
+    };
 
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('temperature', instance.temperature);
-  writeNotNull('humidity', instance.humidity);
-  writeNotNull('deviceId', instance.deviceId);
-  writeNotNull('appVersion', instance.appVersion);
-  writeNotNull('bleDeviceId', instance.bleDeviceId);
-  writeNotNull('biometricSuccess', instance.biometricSuccess);
-  writeNotNull('barcodeValue', instance.barcodeValue);
-  writeNotNull('additionalData', instance.additionalData);
-  return val;
-}
-
-_$GeoLocationImpl _$$GeoLocationImplFromJson(Map<String, dynamic> json) =>
-    _$GeoLocationImpl(
+_GeoLocation _$GeoLocationFromJson(Map<String, dynamic> json) => _GeoLocation(
       latitude: (json['latitude'] as num).toDouble(),
       longitude: (json['longitude'] as num).toDouble(),
       altitude: (json['altitude'] as num?)?.toDouble(),
@@ -121,20 +102,11 @@ _$GeoLocationImpl _$$GeoLocationImplFromJson(Map<String, dynamic> json) =>
           : DateTime.parse(json['timestamp'] as String),
     );
 
-Map<String, dynamic> _$$GeoLocationImplToJson(_$GeoLocationImpl instance) {
-  final val = <String, dynamic>{
-    'latitude': instance.latitude,
-    'longitude': instance.longitude,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('altitude', instance.altitude);
-  writeNotNull('accuracy', instance.accuracy);
-  writeNotNull('timestamp', instance.timestamp?.toIso8601String());
-  return val;
-}
+Map<String, dynamic> _$GeoLocationToJson(_GeoLocation instance) =>
+    <String, dynamic>{
+      'latitude': instance.latitude,
+      'longitude': instance.longitude,
+      'altitude': instance.altitude,
+      'accuracy': instance.accuracy,
+      'timestamp': instance.timestamp?.toIso8601String(),
+    };

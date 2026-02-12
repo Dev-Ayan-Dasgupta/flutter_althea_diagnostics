@@ -6,8 +6,7 @@ part of 'sample_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$SampleModelImpl _$$SampleModelImplFromJson(Map<String, dynamic> json) =>
-    _$SampleModelImpl(
+_SampleModel _$SampleModelFromJson(Map<String, dynamic> json) => _SampleModel(
       id: json['id'] as String,
       vialId: json['vialId'] as String,
       patientAbhaId: json['patientAbhaId'] as String,
@@ -54,48 +53,38 @@ _$SampleModelImpl _$$SampleModelImplFromJson(Map<String, dynamic> json) =>
       updatedAt: json['updatedAt'] as String?,
     );
 
-Map<String, dynamic> _$$SampleModelImplToJson(_$SampleModelImpl instance) {
-  final val = <String, dynamic>{
-    'id': instance.id,
-    'vialId': instance.vialId,
-    'patientAbhaId': instance.patientAbhaId,
-    'patientName': instance.patientName,
-    'orderId': instance.orderId,
-    'testIds': instance.testIds,
-    'status': instance.status,
-    'collectionTime': instance.collectionTime,
-    'integrityScore': instance.integrityScore.toJson(),
-    'chainOfCustody': instance.chainOfCustody.map((e) => e.toJson()).toList(),
-  };
+Map<String, dynamic> _$SampleModelToJson(_SampleModel instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'vialId': instance.vialId,
+      'patientAbhaId': instance.patientAbhaId,
+      'patientName': instance.patientName,
+      'orderId': instance.orderId,
+      'testIds': instance.testIds,
+      'status': instance.status,
+      'collectionTime': instance.collectionTime,
+      'integrityScore': instance.integrityScore,
+      'chainOfCustody': instance.chainOfCustody,
+      'phlebotomistId': instance.phlebotomistId,
+      'phlebotomistName': instance.phlebotomistName,
+      'labId': instance.labId,
+      'labName': instance.labName,
+      'reachedLabTime': instance.reachedLabTime,
+      'processingStartTime': instance.processingStartTime,
+      'processingEndTime': instance.processingEndTime,
+      'coldChainData': instance.coldChainData,
+      'biometricVerification': instance.biometricVerification,
+      'preAnalyticalRisk': instance.preAnalyticalRisk,
+      'condition': instance.condition,
+      'notes': instance.notes,
+      'imageUrls': instance.imageUrls,
+      'createdAt': instance.createdAt,
+      'updatedAt': instance.updatedAt,
+    };
 
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('phlebotomistId', instance.phlebotomistId);
-  writeNotNull('phlebotomistName', instance.phlebotomistName);
-  writeNotNull('labId', instance.labId);
-  writeNotNull('labName', instance.labName);
-  writeNotNull('reachedLabTime', instance.reachedLabTime);
-  writeNotNull('processingStartTime', instance.processingStartTime);
-  writeNotNull('processingEndTime', instance.processingEndTime);
-  writeNotNull('coldChainData', instance.coldChainData?.toJson());
-  writeNotNull(
-      'biometricVerification', instance.biometricVerification?.toJson());
-  writeNotNull('preAnalyticalRisk', instance.preAnalyticalRisk?.toJson());
-  writeNotNull('condition', instance.condition?.toJson());
-  writeNotNull('notes', instance.notes);
-  val['imageUrls'] = instance.imageUrls;
-  val['createdAt'] = instance.createdAt;
-  writeNotNull('updatedAt', instance.updatedAt);
-  return val;
-}
-
-_$SampleConditionModelImpl _$$SampleConditionModelImplFromJson(
+_SampleConditionModel _$SampleConditionModelFromJson(
         Map<String, dynamic> json) =>
-    _$SampleConditionModelImpl(
+    _SampleConditionModel(
       isHemolyzed: json['isHemolyzed'] as bool,
       isClotted: json['isClotted'] as bool,
       isLipemic: json['isLipemic'] as bool,
@@ -105,30 +94,20 @@ _$SampleConditionModelImpl _$$SampleConditionModelImplFromJson(
       notes: json['notes'] as String?,
     );
 
-Map<String, dynamic> _$$SampleConditionModelImplToJson(
-    _$SampleConditionModelImpl instance) {
-  final val = <String, dynamic>{
-    'isHemolyzed': instance.isHemolyzed,
-    'isClotted': instance.isClotted,
-    'isLipemic': instance.isLipemic,
-    'isIcteric': instance.isIcteric,
-    'volumeStatus': instance.volumeStatus,
-    'containerIntegrity': instance.containerIntegrity,
-  };
+Map<String, dynamic> _$SampleConditionModelToJson(
+        _SampleConditionModel instance) =>
+    <String, dynamic>{
+      'isHemolyzed': instance.isHemolyzed,
+      'isClotted': instance.isClotted,
+      'isLipemic': instance.isLipemic,
+      'isIcteric': instance.isIcteric,
+      'volumeStatus': instance.volumeStatus,
+      'containerIntegrity': instance.containerIntegrity,
+      'notes': instance.notes,
+    };
 
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('notes', instance.notes);
-  return val;
-}
-
-_$SampleEventModelImpl _$$SampleEventModelImplFromJson(
-        Map<String, dynamic> json) =>
-    _$SampleEventModelImpl(
+_SampleEventModel _$SampleEventModelFromJson(Map<String, dynamic> json) =>
+    _SampleEventModel(
       id: json['id'] as String,
       sampleId: json['sampleId'] as String,
       eventType: json['eventType'] as String,
@@ -147,35 +126,24 @@ _$SampleEventModelImpl _$$SampleEventModelImplFromJson(
       notes: json['notes'] as String?,
     );
 
-Map<String, dynamic> _$$SampleEventModelImplToJson(
-    _$SampleEventModelImpl instance) {
-  final val = <String, dynamic>{
-    'id': instance.id,
-    'sampleId': instance.sampleId,
-    'eventType': instance.eventType,
-    'actorId': instance.actorId,
-    'actorName': instance.actorName,
-    'actorRole': instance.actorRole,
-    'timestamp': instance.timestamp,
-    'location': instance.location.toJson(),
-    'eventHash': instance.eventHash,
-  };
+Map<String, dynamic> _$SampleEventModelToJson(_SampleEventModel instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'sampleId': instance.sampleId,
+      'eventType': instance.eventType,
+      'actorId': instance.actorId,
+      'actorName': instance.actorName,
+      'actorRole': instance.actorRole,
+      'timestamp': instance.timestamp,
+      'location': instance.location,
+      'eventHash': instance.eventHash,
+      'previousEventHash': instance.previousEventHash,
+      'metadata': instance.metadata,
+      'notes': instance.notes,
+    };
 
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('previousEventHash', instance.previousEventHash);
-  writeNotNull('metadata', instance.metadata?.toJson());
-  writeNotNull('notes', instance.notes);
-  return val;
-}
-
-_$GeoLocationModelImpl _$$GeoLocationModelImplFromJson(
-        Map<String, dynamic> json) =>
-    _$GeoLocationModelImpl(
+_GeoLocationModel _$GeoLocationModelFromJson(Map<String, dynamic> json) =>
+    _GeoLocationModel(
       latitude: (json['latitude'] as num).toDouble(),
       longitude: (json['longitude'] as num).toDouble(),
       altitude: (json['altitude'] as num?)?.toDouble(),
@@ -183,28 +151,17 @@ _$GeoLocationModelImpl _$$GeoLocationModelImplFromJson(
       timestamp: json['timestamp'] as String?,
     );
 
-Map<String, dynamic> _$$GeoLocationModelImplToJson(
-    _$GeoLocationModelImpl instance) {
-  final val = <String, dynamic>{
-    'latitude': instance.latitude,
-    'longitude': instance.longitude,
-  };
+Map<String, dynamic> _$GeoLocationModelToJson(_GeoLocationModel instance) =>
+    <String, dynamic>{
+      'latitude': instance.latitude,
+      'longitude': instance.longitude,
+      'altitude': instance.altitude,
+      'accuracy': instance.accuracy,
+      'timestamp': instance.timestamp,
+    };
 
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('altitude', instance.altitude);
-  writeNotNull('accuracy', instance.accuracy);
-  writeNotNull('timestamp', instance.timestamp);
-  return val;
-}
-
-_$EventMetadataModelImpl _$$EventMetadataModelImplFromJson(
-        Map<String, dynamic> json) =>
-    _$EventMetadataModelImpl(
+_EventMetadataModel _$EventMetadataModelFromJson(Map<String, dynamic> json) =>
+    _EventMetadataModel(
       temperature: (json['temperature'] as num?)?.toDouble(),
       humidity: (json['humidity'] as num?)?.toDouble(),
       deviceId: json['deviceId'] as String?,
@@ -215,30 +172,21 @@ _$EventMetadataModelImpl _$$EventMetadataModelImplFromJson(
       additionalData: json['additionalData'] as Map<String, dynamic>?,
     );
 
-Map<String, dynamic> _$$EventMetadataModelImplToJson(
-    _$EventMetadataModelImpl instance) {
-  final val = <String, dynamic>{};
+Map<String, dynamic> _$EventMetadataModelToJson(_EventMetadataModel instance) =>
+    <String, dynamic>{
+      'temperature': instance.temperature,
+      'humidity': instance.humidity,
+      'deviceId': instance.deviceId,
+      'appVersion': instance.appVersion,
+      'bleDeviceId': instance.bleDeviceId,
+      'biometricSuccess': instance.biometricSuccess,
+      'barcodeValue': instance.barcodeValue,
+      'additionalData': instance.additionalData,
+    };
 
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('temperature', instance.temperature);
-  writeNotNull('humidity', instance.humidity);
-  writeNotNull('deviceId', instance.deviceId);
-  writeNotNull('appVersion', instance.appVersion);
-  writeNotNull('bleDeviceId', instance.bleDeviceId);
-  writeNotNull('biometricSuccess', instance.biometricSuccess);
-  writeNotNull('barcodeValue', instance.barcodeValue);
-  writeNotNull('additionalData', instance.additionalData);
-  return val;
-}
-
-_$BiometricVerificationModelImpl _$$BiometricVerificationModelImplFromJson(
+_BiometricVerificationModel _$BiometricVerificationModelFromJson(
         Map<String, dynamic> json) =>
-    _$BiometricVerificationModelImpl(
+    _BiometricVerificationModel(
       verificationId: json['verificationId'] as String,
       patientDeviceId: json['patientDeviceId'] as String,
       phlebotomistDeviceId: json['phlebotomistDeviceId'] as String,
@@ -253,26 +201,17 @@ _$BiometricVerificationModelImpl _$$BiometricVerificationModelImplFromJson(
           : GeoLocationModel.fromJson(json['location'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$BiometricVerificationModelImplToJson(
-    _$BiometricVerificationModelImpl instance) {
-  final val = <String, dynamic>{
-    'verificationId': instance.verificationId,
-    'patientDeviceId': instance.patientDeviceId,
-    'phlebotomistDeviceId': instance.phlebotomistDeviceId,
-    'timestamp': instance.timestamp,
-    'success': instance.success,
-    'proximityDistance': instance.proximityDistance,
-    'signalStrength': instance.signalStrength,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('failureReason', instance.failureReason);
-  writeNotNull('attemptCount', instance.attemptCount);
-  writeNotNull('location', instance.location?.toJson());
-  return val;
-}
+Map<String, dynamic> _$BiometricVerificationModelToJson(
+        _BiometricVerificationModel instance) =>
+    <String, dynamic>{
+      'verificationId': instance.verificationId,
+      'patientDeviceId': instance.patientDeviceId,
+      'phlebotomistDeviceId': instance.phlebotomistDeviceId,
+      'timestamp': instance.timestamp,
+      'success': instance.success,
+      'proximityDistance': instance.proximityDistance,
+      'signalStrength': instance.signalStrength,
+      'failureReason': instance.failureReason,
+      'attemptCount': instance.attemptCount,
+      'location': instance.location,
+    };

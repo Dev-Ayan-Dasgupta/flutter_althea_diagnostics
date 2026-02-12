@@ -6,8 +6,7 @@ part of 'lab_result.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$LabResultImpl _$$LabResultImplFromJson(Map<String, dynamic> json) =>
-    _$LabResultImpl(
+_LabResult _$LabResultFromJson(Map<String, dynamic> json) => _LabResult(
       id: json['id'] as String,
       sampleId: json['sampleId'] as String,
       patientAbhaId: json['patientAbhaId'] as String,
@@ -34,34 +33,25 @@ _$LabResultImpl _$$LabResultImplFromJson(Map<String, dynamic> json) =>
           : DateTime.parse(json['abhaPushTime'] as String),
     );
 
-Map<String, dynamic> _$$LabResultImplToJson(_$LabResultImpl instance) {
-  final val = <String, dynamic>{
-    'id': instance.id,
-    'sampleId': instance.sampleId,
-    'patientAbhaId': instance.patientAbhaId,
-    'orderId': instance.orderId,
-    'testResults': instance.testResults.map((e) => e.toJson()).toList(),
-    'status': _$ResultStatusEnumMap[instance.status]!,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('pathologistId', instance.pathologistId);
-  writeNotNull('pathologistName', instance.pathologistName);
-  writeNotNull('clinicalInterpretation', instance.clinicalInterpretation);
-  writeNotNull('digitalSignature', instance.digitalSignature);
-  writeNotNull('signedOffAt', instance.signedOffAt?.toIso8601String());
-  val['createdAt'] = instance.createdAt.toIso8601String();
-  writeNotNull('updatedAt', instance.updatedAt?.toIso8601String());
-  writeNotNull('pdfUrl', instance.pdfUrl);
-  writeNotNull('pushedToAbha', instance.pushedToAbha);
-  writeNotNull('abhaPushTime', instance.abhaPushTime?.toIso8601String());
-  return val;
-}
+Map<String, dynamic> _$LabResultToJson(_LabResult instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'sampleId': instance.sampleId,
+      'patientAbhaId': instance.patientAbhaId,
+      'orderId': instance.orderId,
+      'testResults': instance.testResults,
+      'status': _$ResultStatusEnumMap[instance.status]!,
+      'pathologistId': instance.pathologistId,
+      'pathologistName': instance.pathologistName,
+      'clinicalInterpretation': instance.clinicalInterpretation,
+      'digitalSignature': instance.digitalSignature,
+      'signedOffAt': instance.signedOffAt?.toIso8601String(),
+      'createdAt': instance.createdAt.toIso8601String(),
+      'updatedAt': instance.updatedAt?.toIso8601String(),
+      'pdfUrl': instance.pdfUrl,
+      'pushedToAbha': instance.pushedToAbha,
+      'abhaPushTime': instance.abhaPushTime?.toIso8601String(),
+    };
 
 const _$ResultStatusEnumMap = {
   ResultStatus.pending: 'pending',
@@ -72,8 +62,7 @@ const _$ResultStatusEnumMap = {
   ResultStatus.dispatched: 'dispatched',
 };
 
-_$TestResultImpl _$$TestResultImplFromJson(Map<String, dynamic> json) =>
-    _$TestResultImpl(
+_TestResult _$TestResultFromJson(Map<String, dynamic> json) => _TestResult(
       testId: json['testId'] as String,
       testName: json['testName'] as String,
       loincCode: json['loincCode'] as String,
@@ -87,29 +76,19 @@ _$TestResultImpl _$$TestResultImplFromJson(Map<String, dynamic> json) =>
           : DateTime.parse(json['analyzedAt'] as String),
     );
 
-Map<String, dynamic> _$$TestResultImplToJson(_$TestResultImpl instance) {
-  final val = <String, dynamic>{
-    'testId': instance.testId,
-    'testName': instance.testName,
-    'loincCode': instance.loincCode,
-    'parameters': instance.parameters.map((e) => e.toJson()).toList(),
-  };
+Map<String, dynamic> _$TestResultToJson(_TestResult instance) =>
+    <String, dynamic>{
+      'testId': instance.testId,
+      'testName': instance.testName,
+      'loincCode': instance.loincCode,
+      'parameters': instance.parameters,
+      'methodology': instance.methodology,
+      'specimenType': instance.specimenType,
+      'analyzedAt': instance.analyzedAt?.toIso8601String(),
+    };
 
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('methodology', instance.methodology);
-  writeNotNull('specimenType', instance.specimenType);
-  writeNotNull('analyzedAt', instance.analyzedAt?.toIso8601String());
-  return val;
-}
-
-_$ParameterResultImpl _$$ParameterResultImplFromJson(
-        Map<String, dynamic> json) =>
-    _$ParameterResultImpl(
+_ParameterResult _$ParameterResultFromJson(Map<String, dynamic> json) =>
+    _ParameterResult(
       parameterId: json['parameterId'] as String,
       parameterName: json['parameterName'] as String,
       loincCode: json['loincCode'] as String,
@@ -127,31 +106,21 @@ _$ParameterResultImpl _$$ParameterResultImplFromJson(
       isVerified: json['isVerified'] as bool?,
     );
 
-Map<String, dynamic> _$$ParameterResultImplToJson(
-    _$ParameterResultImpl instance) {
-  final val = <String, dynamic>{
-    'parameterId': instance.parameterId,
-    'parameterName': instance.parameterName,
-    'loincCode': instance.loincCode,
-    'value': instance.value.toJson(),
-    'unit': instance.unit,
-    'referenceRange': instance.referenceRange.toJson(),
-    'flag': _$ResultFlagEnumMap[instance.flag]!,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('notes', instance.notes);
-  writeNotNull('historicalValues', instance.historicalValues);
-  writeNotNull('requiresDoubleEntry', instance.requiresDoubleEntry);
-  writeNotNull('verifiedValue', instance.verifiedValue);
-  writeNotNull('isVerified', instance.isVerified);
-  return val;
-}
+Map<String, dynamic> _$ParameterResultToJson(_ParameterResult instance) =>
+    <String, dynamic>{
+      'parameterId': instance.parameterId,
+      'parameterName': instance.parameterName,
+      'loincCode': instance.loincCode,
+      'value': instance.value,
+      'unit': instance.unit,
+      'referenceRange': instance.referenceRange,
+      'flag': _$ResultFlagEnumMap[instance.flag]!,
+      'notes': instance.notes,
+      'historicalValues': instance.historicalValues,
+      'requiresDoubleEntry': instance.requiresDoubleEntry,
+      'verifiedValue': instance.verifiedValue,
+      'isVerified': instance.isVerified,
+    };
 
 const _$ResultFlagEnumMap = {
   ResultFlag.normal: 'normal',
@@ -163,78 +132,63 @@ const _$ResultFlagEnumMap = {
   ResultFlag.abnormal: 'abnormal',
 };
 
-_$NumericResultValueImpl _$$NumericResultValueImplFromJson(
-        Map<String, dynamic> json) =>
-    _$NumericResultValueImpl(
+NumericResultValue _$NumericResultValueFromJson(Map<String, dynamic> json) =>
+    NumericResultValue(
       value: (json['value'] as num).toDouble(),
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$NumericResultValueImplToJson(
-        _$NumericResultValueImpl instance) =>
+Map<String, dynamic> _$NumericResultValueToJson(NumericResultValue instance) =>
     <String, dynamic>{
       'value': instance.value,
       'runtimeType': instance.$type,
     };
 
-_$TextResultValueImpl _$$TextResultValueImplFromJson(
-        Map<String, dynamic> json) =>
-    _$TextResultValueImpl(
+TextResultValue _$TextResultValueFromJson(Map<String, dynamic> json) =>
+    TextResultValue(
       value: json['value'] as String,
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$TextResultValueImplToJson(
-        _$TextResultValueImpl instance) =>
+Map<String, dynamic> _$TextResultValueToJson(TextResultValue instance) =>
     <String, dynamic>{
       'value': instance.value,
       'runtimeType': instance.$type,
     };
 
-_$RangeResultValueImpl _$$RangeResultValueImplFromJson(
-        Map<String, dynamic> json) =>
-    _$RangeResultValueImpl(
+RangeResultValue _$RangeResultValueFromJson(Map<String, dynamic> json) =>
+    RangeResultValue(
       min: (json['min'] as num).toDouble(),
       max: (json['max'] as num).toDouble(),
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$RangeResultValueImplToJson(
-        _$RangeResultValueImpl instance) =>
+Map<String, dynamic> _$RangeResultValueToJson(RangeResultValue instance) =>
     <String, dynamic>{
       'min': instance.min,
       'max': instance.max,
       'runtimeType': instance.$type,
     };
 
-_$QualitativeResultValueImpl _$$QualitativeResultValueImplFromJson(
+QualitativeResultValue _$QualitativeResultValueFromJson(
         Map<String, dynamic> json) =>
-    _$QualitativeResultValueImpl(
+    QualitativeResultValue(
       value: json['value'] as String,
       options:
           (json['options'] as List<dynamic>?)?.map((e) => e as String).toList(),
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$QualitativeResultValueImplToJson(
-    _$QualitativeResultValueImpl instance) {
-  final val = <String, dynamic>{
-    'value': instance.value,
-  };
+Map<String, dynamic> _$QualitativeResultValueToJson(
+        QualitativeResultValue instance) =>
+    <String, dynamic>{
+      'value': instance.value,
+      'options': instance.options,
+      'runtimeType': instance.$type,
+    };
 
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('options', instance.options);
-  val['runtimeType'] = instance.$type;
-  return val;
-}
-
-_$ReferenceRangeImpl _$$ReferenceRangeImplFromJson(Map<String, dynamic> json) =>
-    _$ReferenceRangeImpl(
+_ReferenceRange _$ReferenceRangeFromJson(Map<String, dynamic> json) =>
+    _ReferenceRange(
       min: (json['min'] as num?)?.toDouble(),
       max: (json['max'] as num?)?.toDouble(),
       textRange: json['textRange'] as String?,
@@ -243,21 +197,12 @@ _$ReferenceRangeImpl _$$ReferenceRangeImplFromJson(Map<String, dynamic> json) =>
       condition: json['condition'] as String?,
     );
 
-Map<String, dynamic> _$$ReferenceRangeImplToJson(
-    _$ReferenceRangeImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('min', instance.min);
-  writeNotNull('max', instance.max);
-  writeNotNull('textRange', instance.textRange);
-  val['ageGroup'] = instance.ageGroup;
-  val['gender'] = instance.gender;
-  writeNotNull('condition', instance.condition);
-  return val;
-}
+Map<String, dynamic> _$ReferenceRangeToJson(_ReferenceRange instance) =>
+    <String, dynamic>{
+      'min': instance.min,
+      'max': instance.max,
+      'textRange': instance.textRange,
+      'ageGroup': instance.ageGroup,
+      'gender': instance.gender,
+      'condition': instance.condition,
+    };

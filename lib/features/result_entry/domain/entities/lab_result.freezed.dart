@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,170 +9,104 @@ part of 'lab_result.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
-
-LabResult _$LabResultFromJson(Map<String, dynamic> json) {
-  return _LabResult.fromJson(json);
-}
 
 /// @nodoc
 mixin _$LabResult {
-  String get id => throw _privateConstructorUsedError;
-  String get sampleId => throw _privateConstructorUsedError;
-  String get patientAbhaId => throw _privateConstructorUsedError;
-  String get orderId => throw _privateConstructorUsedError;
-  List<TestResult> get testResults => throw _privateConstructorUsedError;
-  ResultStatus get status => throw _privateConstructorUsedError;
-  String? get pathologistId => throw _privateConstructorUsedError;
-  String? get pathologistName => throw _privateConstructorUsedError;
-  String? get clinicalInterpretation => throw _privateConstructorUsedError;
-  String? get digitalSignature => throw _privateConstructorUsedError;
-  DateTime? get signedOffAt => throw _privateConstructorUsedError;
-  DateTime get createdAt => throw _privateConstructorUsedError;
-  DateTime? get updatedAt => throw _privateConstructorUsedError;
-  String? get pdfUrl => throw _privateConstructorUsedError;
-  bool? get pushedToAbha => throw _privateConstructorUsedError;
-  DateTime? get abhaPushTime => throw _privateConstructorUsedError;
+  String get id;
+  String get sampleId;
+  String get patientAbhaId;
+  String get orderId;
+  List<TestResult> get testResults;
+  ResultStatus get status;
+  String? get pathologistId;
+  String? get pathologistName;
+  String? get clinicalInterpretation;
+  String? get digitalSignature;
+  DateTime? get signedOffAt;
+  DateTime get createdAt;
+  DateTime? get updatedAt;
+  String? get pdfUrl;
+  bool? get pushedToAbha;
+  DateTime? get abhaPushTime;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $LabResultCopyWith<LabResult> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $LabResultCopyWith<$Res> {
-  factory $LabResultCopyWith(LabResult value, $Res Function(LabResult) then) =
-      _$LabResultCopyWithImpl<$Res, LabResult>;
-  @useResult
-  $Res call(
-      {String id,
-      String sampleId,
-      String patientAbhaId,
-      String orderId,
-      List<TestResult> testResults,
-      ResultStatus status,
-      String? pathologistId,
-      String? pathologistName,
-      String? clinicalInterpretation,
-      String? digitalSignature,
-      DateTime? signedOffAt,
-      DateTime createdAt,
-      DateTime? updatedAt,
-      String? pdfUrl,
-      bool? pushedToAbha,
-      DateTime? abhaPushTime});
-}
-
-/// @nodoc
-class _$LabResultCopyWithImpl<$Res, $Val extends LabResult>
-    implements $LabResultCopyWith<$Res> {
-  _$LabResultCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
+  /// Create a copy of LabResult
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @pragma('vm:prefer-inline')
+  $LabResultCopyWith<LabResult> get copyWith =>
+      _$LabResultCopyWithImpl<LabResult>(this as LabResult, _$identity);
+
+  /// Serializes this LabResult to a JSON map.
+  Map<String, dynamic> toJson();
+
   @override
-  $Res call({
-    Object? id = null,
-    Object? sampleId = null,
-    Object? patientAbhaId = null,
-    Object? orderId = null,
-    Object? testResults = null,
-    Object? status = null,
-    Object? pathologistId = freezed,
-    Object? pathologistName = freezed,
-    Object? clinicalInterpretation = freezed,
-    Object? digitalSignature = freezed,
-    Object? signedOffAt = freezed,
-    Object? createdAt = null,
-    Object? updatedAt = freezed,
-    Object? pdfUrl = freezed,
-    Object? pushedToAbha = freezed,
-    Object? abhaPushTime = freezed,
-  }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      sampleId: null == sampleId
-          ? _value.sampleId
-          : sampleId // ignore: cast_nullable_to_non_nullable
-              as String,
-      patientAbhaId: null == patientAbhaId
-          ? _value.patientAbhaId
-          : patientAbhaId // ignore: cast_nullable_to_non_nullable
-              as String,
-      orderId: null == orderId
-          ? _value.orderId
-          : orderId // ignore: cast_nullable_to_non_nullable
-              as String,
-      testResults: null == testResults
-          ? _value.testResults
-          : testResults // ignore: cast_nullable_to_non_nullable
-              as List<TestResult>,
-      status: null == status
-          ? _value.status
-          : status // ignore: cast_nullable_to_non_nullable
-              as ResultStatus,
-      pathologistId: freezed == pathologistId
-          ? _value.pathologistId
-          : pathologistId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      pathologistName: freezed == pathologistName
-          ? _value.pathologistName
-          : pathologistName // ignore: cast_nullable_to_non_nullable
-              as String?,
-      clinicalInterpretation: freezed == clinicalInterpretation
-          ? _value.clinicalInterpretation
-          : clinicalInterpretation // ignore: cast_nullable_to_non_nullable
-              as String?,
-      digitalSignature: freezed == digitalSignature
-          ? _value.digitalSignature
-          : digitalSignature // ignore: cast_nullable_to_non_nullable
-              as String?,
-      signedOffAt: freezed == signedOffAt
-          ? _value.signedOffAt
-          : signedOffAt // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      createdAt: null == createdAt
-          ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      updatedAt: freezed == updatedAt
-          ? _value.updatedAt
-          : updatedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      pdfUrl: freezed == pdfUrl
-          ? _value.pdfUrl
-          : pdfUrl // ignore: cast_nullable_to_non_nullable
-              as String?,
-      pushedToAbha: freezed == pushedToAbha
-          ? _value.pushedToAbha
-          : pushedToAbha // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      abhaPushTime: freezed == abhaPushTime
-          ? _value.abhaPushTime
-          : abhaPushTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-    ) as $Val);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is LabResult &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.sampleId, sampleId) ||
+                other.sampleId == sampleId) &&
+            (identical(other.patientAbhaId, patientAbhaId) ||
+                other.patientAbhaId == patientAbhaId) &&
+            (identical(other.orderId, orderId) || other.orderId == orderId) &&
+            const DeepCollectionEquality()
+                .equals(other.testResults, testResults) &&
+            (identical(other.status, status) || other.status == status) &&
+            (identical(other.pathologistId, pathologistId) ||
+                other.pathologistId == pathologistId) &&
+            (identical(other.pathologistName, pathologistName) ||
+                other.pathologistName == pathologistName) &&
+            (identical(other.clinicalInterpretation, clinicalInterpretation) ||
+                other.clinicalInterpretation == clinicalInterpretation) &&
+            (identical(other.digitalSignature, digitalSignature) ||
+                other.digitalSignature == digitalSignature) &&
+            (identical(other.signedOffAt, signedOffAt) ||
+                other.signedOffAt == signedOffAt) &&
+            (identical(other.createdAt, createdAt) ||
+                other.createdAt == createdAt) &&
+            (identical(other.updatedAt, updatedAt) ||
+                other.updatedAt == updatedAt) &&
+            (identical(other.pdfUrl, pdfUrl) || other.pdfUrl == pdfUrl) &&
+            (identical(other.pushedToAbha, pushedToAbha) ||
+                other.pushedToAbha == pushedToAbha) &&
+            (identical(other.abhaPushTime, abhaPushTime) ||
+                other.abhaPushTime == abhaPushTime));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      sampleId,
+      patientAbhaId,
+      orderId,
+      const DeepCollectionEquality().hash(testResults),
+      status,
+      pathologistId,
+      pathologistName,
+      clinicalInterpretation,
+      digitalSignature,
+      signedOffAt,
+      createdAt,
+      updatedAt,
+      pdfUrl,
+      pushedToAbha,
+      abhaPushTime);
+
+  @override
+  String toString() {
+    return 'LabResult(id: $id, sampleId: $sampleId, patientAbhaId: $patientAbhaId, orderId: $orderId, testResults: $testResults, status: $status, pathologistId: $pathologistId, pathologistName: $pathologistName, clinicalInterpretation: $clinicalInterpretation, digitalSignature: $digitalSignature, signedOffAt: $signedOffAt, createdAt: $createdAt, updatedAt: $updatedAt, pdfUrl: $pdfUrl, pushedToAbha: $pushedToAbha, abhaPushTime: $abhaPushTime)';
   }
 }
 
 /// @nodoc
-abstract class _$$LabResultImplCopyWith<$Res>
-    implements $LabResultCopyWith<$Res> {
-  factory _$$LabResultImplCopyWith(
-          _$LabResultImpl value, $Res Function(_$LabResultImpl) then) =
-      __$$LabResultImplCopyWithImpl<$Res>;
-  @override
+abstract mixin class $LabResultCopyWith<$Res> {
+  factory $LabResultCopyWith(LabResult value, $Res Function(LabResult) _then) =
+      _$LabResultCopyWithImpl;
   @useResult
   $Res call(
       {String id,
@@ -194,13 +128,14 @@ abstract class _$$LabResultImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$LabResultImplCopyWithImpl<$Res>
-    extends _$LabResultCopyWithImpl<$Res, _$LabResultImpl>
-    implements _$$LabResultImplCopyWith<$Res> {
-  __$$LabResultImplCopyWithImpl(
-      _$LabResultImpl _value, $Res Function(_$LabResultImpl) _then)
-      : super(_value, _then);
+class _$LabResultCopyWithImpl<$Res> implements $LabResultCopyWith<$Res> {
+  _$LabResultCopyWithImpl(this._self, this._then);
 
+  final LabResult _self;
+  final $Res Function(LabResult) _then;
+
+  /// Create a copy of LabResult
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -221,79 +156,335 @@ class __$$LabResultImplCopyWithImpl<$Res>
     Object? pushedToAbha = freezed,
     Object? abhaPushTime = freezed,
   }) {
-    return _then(_$LabResultImpl(
+    return _then(_self.copyWith(
       id: null == id
-          ? _value.id
+          ? _self.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
       sampleId: null == sampleId
-          ? _value.sampleId
+          ? _self.sampleId
           : sampleId // ignore: cast_nullable_to_non_nullable
               as String,
       patientAbhaId: null == patientAbhaId
-          ? _value.patientAbhaId
+          ? _self.patientAbhaId
           : patientAbhaId // ignore: cast_nullable_to_non_nullable
               as String,
       orderId: null == orderId
-          ? _value.orderId
+          ? _self.orderId
           : orderId // ignore: cast_nullable_to_non_nullable
               as String,
       testResults: null == testResults
-          ? _value._testResults
+          ? _self.testResults
           : testResults // ignore: cast_nullable_to_non_nullable
               as List<TestResult>,
       status: null == status
-          ? _value.status
+          ? _self.status
           : status // ignore: cast_nullable_to_non_nullable
               as ResultStatus,
       pathologistId: freezed == pathologistId
-          ? _value.pathologistId
+          ? _self.pathologistId
           : pathologistId // ignore: cast_nullable_to_non_nullable
               as String?,
       pathologistName: freezed == pathologistName
-          ? _value.pathologistName
+          ? _self.pathologistName
           : pathologistName // ignore: cast_nullable_to_non_nullable
               as String?,
       clinicalInterpretation: freezed == clinicalInterpretation
-          ? _value.clinicalInterpretation
+          ? _self.clinicalInterpretation
           : clinicalInterpretation // ignore: cast_nullable_to_non_nullable
               as String?,
       digitalSignature: freezed == digitalSignature
-          ? _value.digitalSignature
+          ? _self.digitalSignature
           : digitalSignature // ignore: cast_nullable_to_non_nullable
               as String?,
       signedOffAt: freezed == signedOffAt
-          ? _value.signedOffAt
+          ? _self.signedOffAt
           : signedOffAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
       createdAt: null == createdAt
-          ? _value.createdAt
+          ? _self.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as DateTime,
       updatedAt: freezed == updatedAt
-          ? _value.updatedAt
+          ? _self.updatedAt
           : updatedAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
       pdfUrl: freezed == pdfUrl
-          ? _value.pdfUrl
+          ? _self.pdfUrl
           : pdfUrl // ignore: cast_nullable_to_non_nullable
               as String?,
       pushedToAbha: freezed == pushedToAbha
-          ? _value.pushedToAbha
+          ? _self.pushedToAbha
           : pushedToAbha // ignore: cast_nullable_to_non_nullable
               as bool?,
       abhaPushTime: freezed == abhaPushTime
-          ? _value.abhaPushTime
+          ? _self.abhaPushTime
           : abhaPushTime // ignore: cast_nullable_to_non_nullable
               as DateTime?,
     ));
   }
 }
 
+/// Adds pattern-matching-related methods to [LabResult].
+extension LabResultPatterns on LabResult {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_LabResult value)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _LabResult() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_LabResult value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _LabResult():
+        return $default(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_LabResult value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _LabResult() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(
+            String id,
+            String sampleId,
+            String patientAbhaId,
+            String orderId,
+            List<TestResult> testResults,
+            ResultStatus status,
+            String? pathologistId,
+            String? pathologistName,
+            String? clinicalInterpretation,
+            String? digitalSignature,
+            DateTime? signedOffAt,
+            DateTime createdAt,
+            DateTime? updatedAt,
+            String? pdfUrl,
+            bool? pushedToAbha,
+            DateTime? abhaPushTime)?
+        $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _LabResult() when $default != null:
+        return $default(
+            _that.id,
+            _that.sampleId,
+            _that.patientAbhaId,
+            _that.orderId,
+            _that.testResults,
+            _that.status,
+            _that.pathologistId,
+            _that.pathologistName,
+            _that.clinicalInterpretation,
+            _that.digitalSignature,
+            _that.signedOffAt,
+            _that.createdAt,
+            _that.updatedAt,
+            _that.pdfUrl,
+            _that.pushedToAbha,
+            _that.abhaPushTime);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(
+            String id,
+            String sampleId,
+            String patientAbhaId,
+            String orderId,
+            List<TestResult> testResults,
+            ResultStatus status,
+            String? pathologistId,
+            String? pathologistName,
+            String? clinicalInterpretation,
+            String? digitalSignature,
+            DateTime? signedOffAt,
+            DateTime createdAt,
+            DateTime? updatedAt,
+            String? pdfUrl,
+            bool? pushedToAbha,
+            DateTime? abhaPushTime)
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _LabResult():
+        return $default(
+            _that.id,
+            _that.sampleId,
+            _that.patientAbhaId,
+            _that.orderId,
+            _that.testResults,
+            _that.status,
+            _that.pathologistId,
+            _that.pathologistName,
+            _that.clinicalInterpretation,
+            _that.digitalSignature,
+            _that.signedOffAt,
+            _that.createdAt,
+            _that.updatedAt,
+            _that.pdfUrl,
+            _that.pushedToAbha,
+            _that.abhaPushTime);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(
+            String id,
+            String sampleId,
+            String patientAbhaId,
+            String orderId,
+            List<TestResult> testResults,
+            ResultStatus status,
+            String? pathologistId,
+            String? pathologistName,
+            String? clinicalInterpretation,
+            String? digitalSignature,
+            DateTime? signedOffAt,
+            DateTime createdAt,
+            DateTime? updatedAt,
+            String? pdfUrl,
+            bool? pushedToAbha,
+            DateTime? abhaPushTime)?
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _LabResult() when $default != null:
+        return $default(
+            _that.id,
+            _that.sampleId,
+            _that.patientAbhaId,
+            _that.orderId,
+            _that.testResults,
+            _that.status,
+            _that.pathologistId,
+            _that.pathologistName,
+            _that.clinicalInterpretation,
+            _that.digitalSignature,
+            _that.signedOffAt,
+            _that.createdAt,
+            _that.updatedAt,
+            _that.pdfUrl,
+            _that.pushedToAbha,
+            _that.abhaPushTime);
+      case _:
+        return null;
+    }
+  }
+}
+
 /// @nodoc
 @JsonSerializable()
-class _$LabResultImpl implements _LabResult {
-  const _$LabResultImpl(
+class _LabResult implements LabResult {
+  const _LabResult(
       {required this.id,
       required this.sampleId,
       required this.patientAbhaId,
@@ -311,9 +502,8 @@ class _$LabResultImpl implements _LabResult {
       this.pushedToAbha,
       this.abhaPushTime})
       : _testResults = testResults;
-
-  factory _$LabResultImpl.fromJson(Map<String, dynamic> json) =>
-      _$$LabResultImplFromJson(json);
+  factory _LabResult.fromJson(Map<String, dynamic> json) =>
+      _$LabResultFromJson(json);
 
   @override
   final String id;
@@ -354,16 +544,26 @@ class _$LabResultImpl implements _LabResult {
   @override
   final DateTime? abhaPushTime;
 
+  /// Create a copy of LabResult
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String toString() {
-    return 'LabResult(id: $id, sampleId: $sampleId, patientAbhaId: $patientAbhaId, orderId: $orderId, testResults: $testResults, status: $status, pathologistId: $pathologistId, pathologistName: $pathologistName, clinicalInterpretation: $clinicalInterpretation, digitalSignature: $digitalSignature, signedOffAt: $signedOffAt, createdAt: $createdAt, updatedAt: $updatedAt, pdfUrl: $pdfUrl, pushedToAbha: $pushedToAbha, abhaPushTime: $abhaPushTime)';
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$LabResultCopyWith<_LabResult> get copyWith =>
+      __$LabResultCopyWithImpl<_LabResult>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$LabResultToJson(
+      this,
+    );
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$LabResultImpl &&
+            other is _LabResult &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.sampleId, sampleId) ||
                 other.sampleId == sampleId) &&
@@ -394,7 +594,7 @@ class _$LabResultImpl implements _LabResult {
                 other.abhaPushTime == abhaPushTime));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -415,245 +615,470 @@ class _$LabResultImpl implements _LabResult {
       pushedToAbha,
       abhaPushTime);
 
-  @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
-  _$$LabResultImplCopyWith<_$LabResultImpl> get copyWith =>
-      __$$LabResultImplCopyWithImpl<_$LabResultImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$LabResultImplToJson(
-      this,
-    );
+  String toString() {
+    return 'LabResult(id: $id, sampleId: $sampleId, patientAbhaId: $patientAbhaId, orderId: $orderId, testResults: $testResults, status: $status, pathologistId: $pathologistId, pathologistName: $pathologistName, clinicalInterpretation: $clinicalInterpretation, digitalSignature: $digitalSignature, signedOffAt: $signedOffAt, createdAt: $createdAt, updatedAt: $updatedAt, pdfUrl: $pdfUrl, pushedToAbha: $pushedToAbha, abhaPushTime: $abhaPushTime)';
   }
 }
 
-abstract class _LabResult implements LabResult {
-  const factory _LabResult(
-      {required final String id,
-      required final String sampleId,
-      required final String patientAbhaId,
-      required final String orderId,
-      required final List<TestResult> testResults,
-      required final ResultStatus status,
-      final String? pathologistId,
-      final String? pathologistName,
-      final String? clinicalInterpretation,
-      final String? digitalSignature,
-      final DateTime? signedOffAt,
-      required final DateTime createdAt,
-      final DateTime? updatedAt,
-      final String? pdfUrl,
-      final bool? pushedToAbha,
-      final DateTime? abhaPushTime}) = _$LabResultImpl;
-
-  factory _LabResult.fromJson(Map<String, dynamic> json) =
-      _$LabResultImpl.fromJson;
-
-  @override
-  String get id;
-  @override
-  String get sampleId;
-  @override
-  String get patientAbhaId;
-  @override
-  String get orderId;
-  @override
-  List<TestResult> get testResults;
-  @override
-  ResultStatus get status;
-  @override
-  String? get pathologistId;
-  @override
-  String? get pathologistName;
-  @override
-  String? get clinicalInterpretation;
-  @override
-  String? get digitalSignature;
-  @override
-  DateTime? get signedOffAt;
-  @override
-  DateTime get createdAt;
-  @override
-  DateTime? get updatedAt;
-  @override
-  String? get pdfUrl;
-  @override
-  bool? get pushedToAbha;
-  @override
-  DateTime? get abhaPushTime;
-  @override
-  @JsonKey(ignore: true)
-  _$$LabResultImplCopyWith<_$LabResultImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-TestResult _$TestResultFromJson(Map<String, dynamic> json) {
-  return _TestResult.fromJson(json);
-}
-
 /// @nodoc
-mixin _$TestResult {
-  String get testId => throw _privateConstructorUsedError;
-  String get testName => throw _privateConstructorUsedError;
-  String get loincCode =>
-      throw _privateConstructorUsedError; // LOINC standard code
-  List<ParameterResult> get parameters => throw _privateConstructorUsedError;
-  String? get methodology => throw _privateConstructorUsedError;
-  String? get specimenType => throw _privateConstructorUsedError;
-  DateTime? get analyzedAt => throw _privateConstructorUsedError;
-
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $TestResultCopyWith<TestResult> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $TestResultCopyWith<$Res> {
-  factory $TestResultCopyWith(
-          TestResult value, $Res Function(TestResult) then) =
-      _$TestResultCopyWithImpl<$Res, TestResult>;
+abstract mixin class _$LabResultCopyWith<$Res>
+    implements $LabResultCopyWith<$Res> {
+  factory _$LabResultCopyWith(
+          _LabResult value, $Res Function(_LabResult) _then) =
+      __$LabResultCopyWithImpl;
+  @override
   @useResult
   $Res call(
-      {String testId,
-      String testName,
-      String loincCode,
-      List<ParameterResult> parameters,
-      String? methodology,
-      String? specimenType,
-      DateTime? analyzedAt});
+      {String id,
+      String sampleId,
+      String patientAbhaId,
+      String orderId,
+      List<TestResult> testResults,
+      ResultStatus status,
+      String? pathologistId,
+      String? pathologistName,
+      String? clinicalInterpretation,
+      String? digitalSignature,
+      DateTime? signedOffAt,
+      DateTime createdAt,
+      DateTime? updatedAt,
+      String? pdfUrl,
+      bool? pushedToAbha,
+      DateTime? abhaPushTime});
 }
 
 /// @nodoc
-class _$TestResultCopyWithImpl<$Res, $Val extends TestResult>
-    implements $TestResultCopyWith<$Res> {
-  _$TestResultCopyWithImpl(this._value, this._then);
+class __$LabResultCopyWithImpl<$Res> implements _$LabResultCopyWith<$Res> {
+  __$LabResultCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final _LabResult _self;
+  final $Res Function(_LabResult) _then;
 
-  @pragma('vm:prefer-inline')
+  /// Create a copy of LabResult
+  /// with the given fields replaced by the non-null parameter values.
   @override
+  @pragma('vm:prefer-inline')
   $Res call({
-    Object? testId = null,
-    Object? testName = null,
-    Object? loincCode = null,
-    Object? parameters = null,
-    Object? methodology = freezed,
-    Object? specimenType = freezed,
-    Object? analyzedAt = freezed,
+    Object? id = null,
+    Object? sampleId = null,
+    Object? patientAbhaId = null,
+    Object? orderId = null,
+    Object? testResults = null,
+    Object? status = null,
+    Object? pathologistId = freezed,
+    Object? pathologistName = freezed,
+    Object? clinicalInterpretation = freezed,
+    Object? digitalSignature = freezed,
+    Object? signedOffAt = freezed,
+    Object? createdAt = null,
+    Object? updatedAt = freezed,
+    Object? pdfUrl = freezed,
+    Object? pushedToAbha = freezed,
+    Object? abhaPushTime = freezed,
   }) {
-    return _then(_value.copyWith(
-      testId: null == testId
-          ? _value.testId
-          : testId // ignore: cast_nullable_to_non_nullable
+    return _then(_LabResult(
+      id: null == id
+          ? _self.id
+          : id // ignore: cast_nullable_to_non_nullable
               as String,
-      testName: null == testName
-          ? _value.testName
-          : testName // ignore: cast_nullable_to_non_nullable
+      sampleId: null == sampleId
+          ? _self.sampleId
+          : sampleId // ignore: cast_nullable_to_non_nullable
               as String,
-      loincCode: null == loincCode
-          ? _value.loincCode
-          : loincCode // ignore: cast_nullable_to_non_nullable
+      patientAbhaId: null == patientAbhaId
+          ? _self.patientAbhaId
+          : patientAbhaId // ignore: cast_nullable_to_non_nullable
               as String,
-      parameters: null == parameters
-          ? _value.parameters
-          : parameters // ignore: cast_nullable_to_non_nullable
-              as List<ParameterResult>,
-      methodology: freezed == methodology
-          ? _value.methodology
-          : methodology // ignore: cast_nullable_to_non_nullable
+      orderId: null == orderId
+          ? _self.orderId
+          : orderId // ignore: cast_nullable_to_non_nullable
+              as String,
+      testResults: null == testResults
+          ? _self._testResults
+          : testResults // ignore: cast_nullable_to_non_nullable
+              as List<TestResult>,
+      status: null == status
+          ? _self.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as ResultStatus,
+      pathologistId: freezed == pathologistId
+          ? _self.pathologistId
+          : pathologistId // ignore: cast_nullable_to_non_nullable
               as String?,
-      specimenType: freezed == specimenType
-          ? _value.specimenType
-          : specimenType // ignore: cast_nullable_to_non_nullable
+      pathologistName: freezed == pathologistName
+          ? _self.pathologistName
+          : pathologistName // ignore: cast_nullable_to_non_nullable
               as String?,
-      analyzedAt: freezed == analyzedAt
-          ? _value.analyzedAt
-          : analyzedAt // ignore: cast_nullable_to_non_nullable
+      clinicalInterpretation: freezed == clinicalInterpretation
+          ? _self.clinicalInterpretation
+          : clinicalInterpretation // ignore: cast_nullable_to_non_nullable
+              as String?,
+      digitalSignature: freezed == digitalSignature
+          ? _self.digitalSignature
+          : digitalSignature // ignore: cast_nullable_to_non_nullable
+              as String?,
+      signedOffAt: freezed == signedOffAt
+          ? _self.signedOffAt
+          : signedOffAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-    ) as $Val);
-  }
-}
-
-/// @nodoc
-abstract class _$$TestResultImplCopyWith<$Res>
-    implements $TestResultCopyWith<$Res> {
-  factory _$$TestResultImplCopyWith(
-          _$TestResultImpl value, $Res Function(_$TestResultImpl) then) =
-      __$$TestResultImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {String testId,
-      String testName,
-      String loincCode,
-      List<ParameterResult> parameters,
-      String? methodology,
-      String? specimenType,
-      DateTime? analyzedAt});
-}
-
-/// @nodoc
-class __$$TestResultImplCopyWithImpl<$Res>
-    extends _$TestResultCopyWithImpl<$Res, _$TestResultImpl>
-    implements _$$TestResultImplCopyWith<$Res> {
-  __$$TestResultImplCopyWithImpl(
-      _$TestResultImpl _value, $Res Function(_$TestResultImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? testId = null,
-    Object? testName = null,
-    Object? loincCode = null,
-    Object? parameters = null,
-    Object? methodology = freezed,
-    Object? specimenType = freezed,
-    Object? analyzedAt = freezed,
-  }) {
-    return _then(_$TestResultImpl(
-      testId: null == testId
-          ? _value.testId
-          : testId // ignore: cast_nullable_to_non_nullable
-              as String,
-      testName: null == testName
-          ? _value.testName
-          : testName // ignore: cast_nullable_to_non_nullable
-              as String,
-      loincCode: null == loincCode
-          ? _value.loincCode
-          : loincCode // ignore: cast_nullable_to_non_nullable
-              as String,
-      parameters: null == parameters
-          ? _value._parameters
-          : parameters // ignore: cast_nullable_to_non_nullable
-              as List<ParameterResult>,
-      methodology: freezed == methodology
-          ? _value.methodology
-          : methodology // ignore: cast_nullable_to_non_nullable
+      createdAt: null == createdAt
+          ? _self.createdAt
+          : createdAt // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      updatedAt: freezed == updatedAt
+          ? _self.updatedAt
+          : updatedAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      pdfUrl: freezed == pdfUrl
+          ? _self.pdfUrl
+          : pdfUrl // ignore: cast_nullable_to_non_nullable
               as String?,
-      specimenType: freezed == specimenType
-          ? _value.specimenType
-          : specimenType // ignore: cast_nullable_to_non_nullable
-              as String?,
-      analyzedAt: freezed == analyzedAt
-          ? _value.analyzedAt
-          : analyzedAt // ignore: cast_nullable_to_non_nullable
+      pushedToAbha: freezed == pushedToAbha
+          ? _self.pushedToAbha
+          : pushedToAbha // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      abhaPushTime: freezed == abhaPushTime
+          ? _self.abhaPushTime
+          : abhaPushTime // ignore: cast_nullable_to_non_nullable
               as DateTime?,
     ));
   }
 }
 
 /// @nodoc
+mixin _$TestResult {
+  String get testId;
+  String get testName;
+  String get loincCode; // LOINC standard code
+  List<ParameterResult> get parameters;
+  String? get methodology;
+  String? get specimenType;
+  DateTime? get analyzedAt;
+
+  /// Create a copy of TestResult
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $TestResultCopyWith<TestResult> get copyWith =>
+      _$TestResultCopyWithImpl<TestResult>(this as TestResult, _$identity);
+
+  /// Serializes this TestResult to a JSON map.
+  Map<String, dynamic> toJson();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is TestResult &&
+            (identical(other.testId, testId) || other.testId == testId) &&
+            (identical(other.testName, testName) ||
+                other.testName == testName) &&
+            (identical(other.loincCode, loincCode) ||
+                other.loincCode == loincCode) &&
+            const DeepCollectionEquality()
+                .equals(other.parameters, parameters) &&
+            (identical(other.methodology, methodology) ||
+                other.methodology == methodology) &&
+            (identical(other.specimenType, specimenType) ||
+                other.specimenType == specimenType) &&
+            (identical(other.analyzedAt, analyzedAt) ||
+                other.analyzedAt == analyzedAt));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      testId,
+      testName,
+      loincCode,
+      const DeepCollectionEquality().hash(parameters),
+      methodology,
+      specimenType,
+      analyzedAt);
+
+  @override
+  String toString() {
+    return 'TestResult(testId: $testId, testName: $testName, loincCode: $loincCode, parameters: $parameters, methodology: $methodology, specimenType: $specimenType, analyzedAt: $analyzedAt)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $TestResultCopyWith<$Res> {
+  factory $TestResultCopyWith(
+          TestResult value, $Res Function(TestResult) _then) =
+      _$TestResultCopyWithImpl;
+  @useResult
+  $Res call(
+      {String testId,
+      String testName,
+      String loincCode,
+      List<ParameterResult> parameters,
+      String? methodology,
+      String? specimenType,
+      DateTime? analyzedAt});
+}
+
+/// @nodoc
+class _$TestResultCopyWithImpl<$Res> implements $TestResultCopyWith<$Res> {
+  _$TestResultCopyWithImpl(this._self, this._then);
+
+  final TestResult _self;
+  final $Res Function(TestResult) _then;
+
+  /// Create a copy of TestResult
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? testId = null,
+    Object? testName = null,
+    Object? loincCode = null,
+    Object? parameters = null,
+    Object? methodology = freezed,
+    Object? specimenType = freezed,
+    Object? analyzedAt = freezed,
+  }) {
+    return _then(_self.copyWith(
+      testId: null == testId
+          ? _self.testId
+          : testId // ignore: cast_nullable_to_non_nullable
+              as String,
+      testName: null == testName
+          ? _self.testName
+          : testName // ignore: cast_nullable_to_non_nullable
+              as String,
+      loincCode: null == loincCode
+          ? _self.loincCode
+          : loincCode // ignore: cast_nullable_to_non_nullable
+              as String,
+      parameters: null == parameters
+          ? _self.parameters
+          : parameters // ignore: cast_nullable_to_non_nullable
+              as List<ParameterResult>,
+      methodology: freezed == methodology
+          ? _self.methodology
+          : methodology // ignore: cast_nullable_to_non_nullable
+              as String?,
+      specimenType: freezed == specimenType
+          ? _self.specimenType
+          : specimenType // ignore: cast_nullable_to_non_nullable
+              as String?,
+      analyzedAt: freezed == analyzedAt
+          ? _self.analyzedAt
+          : analyzedAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+    ));
+  }
+}
+
+/// Adds pattern-matching-related methods to [TestResult].
+extension TestResultPatterns on TestResult {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_TestResult value)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _TestResult() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_TestResult value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _TestResult():
+        return $default(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_TestResult value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _TestResult() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(
+            String testId,
+            String testName,
+            String loincCode,
+            List<ParameterResult> parameters,
+            String? methodology,
+            String? specimenType,
+            DateTime? analyzedAt)?
+        $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _TestResult() when $default != null:
+        return $default(
+            _that.testId,
+            _that.testName,
+            _that.loincCode,
+            _that.parameters,
+            _that.methodology,
+            _that.specimenType,
+            _that.analyzedAt);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(
+            String testId,
+            String testName,
+            String loincCode,
+            List<ParameterResult> parameters,
+            String? methodology,
+            String? specimenType,
+            DateTime? analyzedAt)
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _TestResult():
+        return $default(
+            _that.testId,
+            _that.testName,
+            _that.loincCode,
+            _that.parameters,
+            _that.methodology,
+            _that.specimenType,
+            _that.analyzedAt);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(
+            String testId,
+            String testName,
+            String loincCode,
+            List<ParameterResult> parameters,
+            String? methodology,
+            String? specimenType,
+            DateTime? analyzedAt)?
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _TestResult() when $default != null:
+        return $default(
+            _that.testId,
+            _that.testName,
+            _that.loincCode,
+            _that.parameters,
+            _that.methodology,
+            _that.specimenType,
+            _that.analyzedAt);
+      case _:
+        return null;
+    }
+  }
+}
+
+/// @nodoc
 @JsonSerializable()
-class _$TestResultImpl implements _TestResult {
-  const _$TestResultImpl(
+class _TestResult implements TestResult {
+  const _TestResult(
       {required this.testId,
       required this.testName,
       required this.loincCode,
@@ -662,9 +1087,8 @@ class _$TestResultImpl implements _TestResult {
       this.specimenType,
       this.analyzedAt})
       : _parameters = parameters;
-
-  factory _$TestResultImpl.fromJson(Map<String, dynamic> json) =>
-      _$$TestResultImplFromJson(json);
+  factory _TestResult.fromJson(Map<String, dynamic> json) =>
+      _$TestResultFromJson(json);
 
   @override
   final String testId;
@@ -689,16 +1113,26 @@ class _$TestResultImpl implements _TestResult {
   @override
   final DateTime? analyzedAt;
 
+  /// Create a copy of TestResult
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String toString() {
-    return 'TestResult(testId: $testId, testName: $testName, loincCode: $loincCode, parameters: $parameters, methodology: $methodology, specimenType: $specimenType, analyzedAt: $analyzedAt)';
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$TestResultCopyWith<_TestResult> get copyWith =>
+      __$TestResultCopyWithImpl<_TestResult>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$TestResultToJson(
+      this,
+    );
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$TestResultImpl &&
+            other is _TestResult &&
             (identical(other.testId, testId) || other.testId == testId) &&
             (identical(other.testName, testName) ||
                 other.testName == testName) &&
@@ -714,7 +1148,7 @@ class _$TestResultImpl implements _TestResult {
                 other.analyzedAt == analyzedAt));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -726,307 +1160,518 @@ class _$TestResultImpl implements _TestResult {
       specimenType,
       analyzedAt);
 
-  @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
-  _$$TestResultImplCopyWith<_$TestResultImpl> get copyWith =>
-      __$$TestResultImplCopyWithImpl<_$TestResultImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$TestResultImplToJson(
-      this,
-    );
-  }
-}
-
-abstract class _TestResult implements TestResult {
-  const factory _TestResult(
-      {required final String testId,
-      required final String testName,
-      required final String loincCode,
-      required final List<ParameterResult> parameters,
-      final String? methodology,
-      final String? specimenType,
-      final DateTime? analyzedAt}) = _$TestResultImpl;
-
-  factory _TestResult.fromJson(Map<String, dynamic> json) =
-      _$TestResultImpl.fromJson;
-
-  @override
-  String get testId;
-  @override
-  String get testName;
-  @override
-  String get loincCode;
-  @override // LOINC standard code
-  List<ParameterResult> get parameters;
-  @override
-  String? get methodology;
-  @override
-  String? get specimenType;
-  @override
-  DateTime? get analyzedAt;
-  @override
-  @JsonKey(ignore: true)
-  _$$TestResultImplCopyWith<_$TestResultImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-ParameterResult _$ParameterResultFromJson(Map<String, dynamic> json) {
-  return _ParameterResult.fromJson(json);
-}
-
-/// @nodoc
-mixin _$ParameterResult {
-  String get parameterId => throw _privateConstructorUsedError;
-  String get parameterName => throw _privateConstructorUsedError;
-  String get loincCode => throw _privateConstructorUsedError;
-  ResultValue get value => throw _privateConstructorUsedError;
-  String get unit => throw _privateConstructorUsedError;
-  ReferenceRange get referenceRange => throw _privateConstructorUsedError;
-  ResultFlag get flag => throw _privateConstructorUsedError;
-  String? get notes => throw _privateConstructorUsedError;
-  List<double>? get historicalValues =>
-      throw _privateConstructorUsedError; // For sparkline
-  bool? get requiresDoubleEntry => throw _privateConstructorUsedError;
-  String? get verifiedValue => throw _privateConstructorUsedError;
-  bool? get isVerified => throw _privateConstructorUsedError;
-
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $ParameterResultCopyWith<ParameterResult> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $ParameterResultCopyWith<$Res> {
-  factory $ParameterResultCopyWith(
-          ParameterResult value, $Res Function(ParameterResult) then) =
-      _$ParameterResultCopyWithImpl<$Res, ParameterResult>;
-  @useResult
-  $Res call(
-      {String parameterId,
-      String parameterName,
-      String loincCode,
-      ResultValue value,
-      String unit,
-      ReferenceRange referenceRange,
-      ResultFlag flag,
-      String? notes,
-      List<double>? historicalValues,
-      bool? requiresDoubleEntry,
-      String? verifiedValue,
-      bool? isVerified});
-
-  $ResultValueCopyWith<$Res> get value;
-  $ReferenceRangeCopyWith<$Res> get referenceRange;
-}
-
-/// @nodoc
-class _$ParameterResultCopyWithImpl<$Res, $Val extends ParameterResult>
-    implements $ParameterResultCopyWith<$Res> {
-  _$ParameterResultCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? parameterId = null,
-    Object? parameterName = null,
-    Object? loincCode = null,
-    Object? value = null,
-    Object? unit = null,
-    Object? referenceRange = null,
-    Object? flag = null,
-    Object? notes = freezed,
-    Object? historicalValues = freezed,
-    Object? requiresDoubleEntry = freezed,
-    Object? verifiedValue = freezed,
-    Object? isVerified = freezed,
-  }) {
-    return _then(_value.copyWith(
-      parameterId: null == parameterId
-          ? _value.parameterId
-          : parameterId // ignore: cast_nullable_to_non_nullable
-              as String,
-      parameterName: null == parameterName
-          ? _value.parameterName
-          : parameterName // ignore: cast_nullable_to_non_nullable
-              as String,
-      loincCode: null == loincCode
-          ? _value.loincCode
-          : loincCode // ignore: cast_nullable_to_non_nullable
-              as String,
-      value: null == value
-          ? _value.value
-          : value // ignore: cast_nullable_to_non_nullable
-              as ResultValue,
-      unit: null == unit
-          ? _value.unit
-          : unit // ignore: cast_nullable_to_non_nullable
-              as String,
-      referenceRange: null == referenceRange
-          ? _value.referenceRange
-          : referenceRange // ignore: cast_nullable_to_non_nullable
-              as ReferenceRange,
-      flag: null == flag
-          ? _value.flag
-          : flag // ignore: cast_nullable_to_non_nullable
-              as ResultFlag,
-      notes: freezed == notes
-          ? _value.notes
-          : notes // ignore: cast_nullable_to_non_nullable
-              as String?,
-      historicalValues: freezed == historicalValues
-          ? _value.historicalValues
-          : historicalValues // ignore: cast_nullable_to_non_nullable
-              as List<double>?,
-      requiresDoubleEntry: freezed == requiresDoubleEntry
-          ? _value.requiresDoubleEntry
-          : requiresDoubleEntry // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      verifiedValue: freezed == verifiedValue
-          ? _value.verifiedValue
-          : verifiedValue // ignore: cast_nullable_to_non_nullable
-              as String?,
-      isVerified: freezed == isVerified
-          ? _value.isVerified
-          : isVerified // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ) as $Val);
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $ResultValueCopyWith<$Res> get value {
-    return $ResultValueCopyWith<$Res>(_value.value, (value) {
-      return _then(_value.copyWith(value: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $ReferenceRangeCopyWith<$Res> get referenceRange {
-    return $ReferenceRangeCopyWith<$Res>(_value.referenceRange, (value) {
-      return _then(_value.copyWith(referenceRange: value) as $Val);
-    });
+  String toString() {
+    return 'TestResult(testId: $testId, testName: $testName, loincCode: $loincCode, parameters: $parameters, methodology: $methodology, specimenType: $specimenType, analyzedAt: $analyzedAt)';
   }
 }
 
 /// @nodoc
-abstract class _$$ParameterResultImplCopyWith<$Res>
-    implements $ParameterResultCopyWith<$Res> {
-  factory _$$ParameterResultImplCopyWith(_$ParameterResultImpl value,
-          $Res Function(_$ParameterResultImpl) then) =
-      __$$ParameterResultImplCopyWithImpl<$Res>;
+abstract mixin class _$TestResultCopyWith<$Res>
+    implements $TestResultCopyWith<$Res> {
+  factory _$TestResultCopyWith(
+          _TestResult value, $Res Function(_TestResult) _then) =
+      __$TestResultCopyWithImpl;
   @override
   @useResult
   $Res call(
-      {String parameterId,
-      String parameterName,
+      {String testId,
+      String testName,
       String loincCode,
-      ResultValue value,
-      String unit,
-      ReferenceRange referenceRange,
-      ResultFlag flag,
-      String? notes,
-      List<double>? historicalValues,
-      bool? requiresDoubleEntry,
-      String? verifiedValue,
-      bool? isVerified});
-
-  @override
-  $ResultValueCopyWith<$Res> get value;
-  @override
-  $ReferenceRangeCopyWith<$Res> get referenceRange;
+      List<ParameterResult> parameters,
+      String? methodology,
+      String? specimenType,
+      DateTime? analyzedAt});
 }
 
 /// @nodoc
-class __$$ParameterResultImplCopyWithImpl<$Res>
-    extends _$ParameterResultCopyWithImpl<$Res, _$ParameterResultImpl>
-    implements _$$ParameterResultImplCopyWith<$Res> {
-  __$$ParameterResultImplCopyWithImpl(
-      _$ParameterResultImpl _value, $Res Function(_$ParameterResultImpl) _then)
-      : super(_value, _then);
+class __$TestResultCopyWithImpl<$Res> implements _$TestResultCopyWith<$Res> {
+  __$TestResultCopyWithImpl(this._self, this._then);
 
-  @pragma('vm:prefer-inline')
+  final _TestResult _self;
+  final $Res Function(_TestResult) _then;
+
+  /// Create a copy of TestResult
+  /// with the given fields replaced by the non-null parameter values.
   @override
+  @pragma('vm:prefer-inline')
   $Res call({
-    Object? parameterId = null,
-    Object? parameterName = null,
+    Object? testId = null,
+    Object? testName = null,
     Object? loincCode = null,
-    Object? value = null,
-    Object? unit = null,
-    Object? referenceRange = null,
-    Object? flag = null,
-    Object? notes = freezed,
-    Object? historicalValues = freezed,
-    Object? requiresDoubleEntry = freezed,
-    Object? verifiedValue = freezed,
-    Object? isVerified = freezed,
+    Object? parameters = null,
+    Object? methodology = freezed,
+    Object? specimenType = freezed,
+    Object? analyzedAt = freezed,
   }) {
-    return _then(_$ParameterResultImpl(
-      parameterId: null == parameterId
-          ? _value.parameterId
-          : parameterId // ignore: cast_nullable_to_non_nullable
+    return _then(_TestResult(
+      testId: null == testId
+          ? _self.testId
+          : testId // ignore: cast_nullable_to_non_nullable
               as String,
-      parameterName: null == parameterName
-          ? _value.parameterName
-          : parameterName // ignore: cast_nullable_to_non_nullable
+      testName: null == testName
+          ? _self.testName
+          : testName // ignore: cast_nullable_to_non_nullable
               as String,
       loincCode: null == loincCode
-          ? _value.loincCode
+          ? _self.loincCode
           : loincCode // ignore: cast_nullable_to_non_nullable
               as String,
-      value: null == value
-          ? _value.value
-          : value // ignore: cast_nullable_to_non_nullable
-              as ResultValue,
-      unit: null == unit
-          ? _value.unit
-          : unit // ignore: cast_nullable_to_non_nullable
-              as String,
-      referenceRange: null == referenceRange
-          ? _value.referenceRange
-          : referenceRange // ignore: cast_nullable_to_non_nullable
-              as ReferenceRange,
-      flag: null == flag
-          ? _value.flag
-          : flag // ignore: cast_nullable_to_non_nullable
-              as ResultFlag,
-      notes: freezed == notes
-          ? _value.notes
-          : notes // ignore: cast_nullable_to_non_nullable
+      parameters: null == parameters
+          ? _self._parameters
+          : parameters // ignore: cast_nullable_to_non_nullable
+              as List<ParameterResult>,
+      methodology: freezed == methodology
+          ? _self.methodology
+          : methodology // ignore: cast_nullable_to_non_nullable
               as String?,
-      historicalValues: freezed == historicalValues
-          ? _value._historicalValues
-          : historicalValues // ignore: cast_nullable_to_non_nullable
-              as List<double>?,
-      requiresDoubleEntry: freezed == requiresDoubleEntry
-          ? _value.requiresDoubleEntry
-          : requiresDoubleEntry // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      verifiedValue: freezed == verifiedValue
-          ? _value.verifiedValue
-          : verifiedValue // ignore: cast_nullable_to_non_nullable
+      specimenType: freezed == specimenType
+          ? _self.specimenType
+          : specimenType // ignore: cast_nullable_to_non_nullable
               as String?,
-      isVerified: freezed == isVerified
-          ? _value.isVerified
-          : isVerified // ignore: cast_nullable_to_non_nullable
-              as bool?,
+      analyzedAt: freezed == analyzedAt
+          ? _self.analyzedAt
+          : analyzedAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
     ));
   }
 }
 
 /// @nodoc
+mixin _$ParameterResult {
+  String get parameterId;
+  String get parameterName;
+  String get loincCode;
+  ResultValue get value;
+  String get unit;
+  ReferenceRange get referenceRange;
+  ResultFlag get flag;
+  String? get notes;
+  List<double>? get historicalValues; // For sparkline
+  bool? get requiresDoubleEntry;
+  String? get verifiedValue;
+  bool? get isVerified;
+
+  /// Create a copy of ParameterResult
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $ParameterResultCopyWith<ParameterResult> get copyWith =>
+      _$ParameterResultCopyWithImpl<ParameterResult>(
+          this as ParameterResult, _$identity);
+
+  /// Serializes this ParameterResult to a JSON map.
+  Map<String, dynamic> toJson();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is ParameterResult &&
+            (identical(other.parameterId, parameterId) ||
+                other.parameterId == parameterId) &&
+            (identical(other.parameterName, parameterName) ||
+                other.parameterName == parameterName) &&
+            (identical(other.loincCode, loincCode) ||
+                other.loincCode == loincCode) &&
+            (identical(other.value, value) || other.value == value) &&
+            (identical(other.unit, unit) || other.unit == unit) &&
+            (identical(other.referenceRange, referenceRange) ||
+                other.referenceRange == referenceRange) &&
+            (identical(other.flag, flag) || other.flag == flag) &&
+            (identical(other.notes, notes) || other.notes == notes) &&
+            const DeepCollectionEquality()
+                .equals(other.historicalValues, historicalValues) &&
+            (identical(other.requiresDoubleEntry, requiresDoubleEntry) ||
+                other.requiresDoubleEntry == requiresDoubleEntry) &&
+            (identical(other.verifiedValue, verifiedValue) ||
+                other.verifiedValue == verifiedValue) &&
+            (identical(other.isVerified, isVerified) ||
+                other.isVerified == isVerified));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      parameterId,
+      parameterName,
+      loincCode,
+      value,
+      unit,
+      referenceRange,
+      flag,
+      notes,
+      const DeepCollectionEquality().hash(historicalValues),
+      requiresDoubleEntry,
+      verifiedValue,
+      isVerified);
+
+  @override
+  String toString() {
+    return 'ParameterResult(parameterId: $parameterId, parameterName: $parameterName, loincCode: $loincCode, value: $value, unit: $unit, referenceRange: $referenceRange, flag: $flag, notes: $notes, historicalValues: $historicalValues, requiresDoubleEntry: $requiresDoubleEntry, verifiedValue: $verifiedValue, isVerified: $isVerified)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $ParameterResultCopyWith<$Res> {
+  factory $ParameterResultCopyWith(
+          ParameterResult value, $Res Function(ParameterResult) _then) =
+      _$ParameterResultCopyWithImpl;
+  @useResult
+  $Res call(
+      {String parameterId,
+      String parameterName,
+      String loincCode,
+      ResultValue value,
+      String unit,
+      ReferenceRange referenceRange,
+      ResultFlag flag,
+      String? notes,
+      List<double>? historicalValues,
+      bool? requiresDoubleEntry,
+      String? verifiedValue,
+      bool? isVerified});
+
+  $ResultValueCopyWith<$Res> get value;
+  $ReferenceRangeCopyWith<$Res> get referenceRange;
+}
+
+/// @nodoc
+class _$ParameterResultCopyWithImpl<$Res>
+    implements $ParameterResultCopyWith<$Res> {
+  _$ParameterResultCopyWithImpl(this._self, this._then);
+
+  final ParameterResult _self;
+  final $Res Function(ParameterResult) _then;
+
+  /// Create a copy of ParameterResult
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? parameterId = null,
+    Object? parameterName = null,
+    Object? loincCode = null,
+    Object? value = null,
+    Object? unit = null,
+    Object? referenceRange = null,
+    Object? flag = null,
+    Object? notes = freezed,
+    Object? historicalValues = freezed,
+    Object? requiresDoubleEntry = freezed,
+    Object? verifiedValue = freezed,
+    Object? isVerified = freezed,
+  }) {
+    return _then(_self.copyWith(
+      parameterId: null == parameterId
+          ? _self.parameterId
+          : parameterId // ignore: cast_nullable_to_non_nullable
+              as String,
+      parameterName: null == parameterName
+          ? _self.parameterName
+          : parameterName // ignore: cast_nullable_to_non_nullable
+              as String,
+      loincCode: null == loincCode
+          ? _self.loincCode
+          : loincCode // ignore: cast_nullable_to_non_nullable
+              as String,
+      value: null == value
+          ? _self.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as ResultValue,
+      unit: null == unit
+          ? _self.unit
+          : unit // ignore: cast_nullable_to_non_nullable
+              as String,
+      referenceRange: null == referenceRange
+          ? _self.referenceRange
+          : referenceRange // ignore: cast_nullable_to_non_nullable
+              as ReferenceRange,
+      flag: null == flag
+          ? _self.flag
+          : flag // ignore: cast_nullable_to_non_nullable
+              as ResultFlag,
+      notes: freezed == notes
+          ? _self.notes
+          : notes // ignore: cast_nullable_to_non_nullable
+              as String?,
+      historicalValues: freezed == historicalValues
+          ? _self.historicalValues
+          : historicalValues // ignore: cast_nullable_to_non_nullable
+              as List<double>?,
+      requiresDoubleEntry: freezed == requiresDoubleEntry
+          ? _self.requiresDoubleEntry
+          : requiresDoubleEntry // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      verifiedValue: freezed == verifiedValue
+          ? _self.verifiedValue
+          : verifiedValue // ignore: cast_nullable_to_non_nullable
+              as String?,
+      isVerified: freezed == isVerified
+          ? _self.isVerified
+          : isVerified // ignore: cast_nullable_to_non_nullable
+              as bool?,
+    ));
+  }
+
+  /// Create a copy of ParameterResult
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $ResultValueCopyWith<$Res> get value {
+    return $ResultValueCopyWith<$Res>(_self.value, (value) {
+      return _then(_self.copyWith(value: value));
+    });
+  }
+
+  /// Create a copy of ParameterResult
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $ReferenceRangeCopyWith<$Res> get referenceRange {
+    return $ReferenceRangeCopyWith<$Res>(_self.referenceRange, (value) {
+      return _then(_self.copyWith(referenceRange: value));
+    });
+  }
+}
+
+/// Adds pattern-matching-related methods to [ParameterResult].
+extension ParameterResultPatterns on ParameterResult {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_ParameterResult value)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _ParameterResult() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_ParameterResult value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _ParameterResult():
+        return $default(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_ParameterResult value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _ParameterResult() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(
+            String parameterId,
+            String parameterName,
+            String loincCode,
+            ResultValue value,
+            String unit,
+            ReferenceRange referenceRange,
+            ResultFlag flag,
+            String? notes,
+            List<double>? historicalValues,
+            bool? requiresDoubleEntry,
+            String? verifiedValue,
+            bool? isVerified)?
+        $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _ParameterResult() when $default != null:
+        return $default(
+            _that.parameterId,
+            _that.parameterName,
+            _that.loincCode,
+            _that.value,
+            _that.unit,
+            _that.referenceRange,
+            _that.flag,
+            _that.notes,
+            _that.historicalValues,
+            _that.requiresDoubleEntry,
+            _that.verifiedValue,
+            _that.isVerified);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(
+            String parameterId,
+            String parameterName,
+            String loincCode,
+            ResultValue value,
+            String unit,
+            ReferenceRange referenceRange,
+            ResultFlag flag,
+            String? notes,
+            List<double>? historicalValues,
+            bool? requiresDoubleEntry,
+            String? verifiedValue,
+            bool? isVerified)
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _ParameterResult():
+        return $default(
+            _that.parameterId,
+            _that.parameterName,
+            _that.loincCode,
+            _that.value,
+            _that.unit,
+            _that.referenceRange,
+            _that.flag,
+            _that.notes,
+            _that.historicalValues,
+            _that.requiresDoubleEntry,
+            _that.verifiedValue,
+            _that.isVerified);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(
+            String parameterId,
+            String parameterName,
+            String loincCode,
+            ResultValue value,
+            String unit,
+            ReferenceRange referenceRange,
+            ResultFlag flag,
+            String? notes,
+            List<double>? historicalValues,
+            bool? requiresDoubleEntry,
+            String? verifiedValue,
+            bool? isVerified)?
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _ParameterResult() when $default != null:
+        return $default(
+            _that.parameterId,
+            _that.parameterName,
+            _that.loincCode,
+            _that.value,
+            _that.unit,
+            _that.referenceRange,
+            _that.flag,
+            _that.notes,
+            _that.historicalValues,
+            _that.requiresDoubleEntry,
+            _that.verifiedValue,
+            _that.isVerified);
+      case _:
+        return null;
+    }
+  }
+}
+
+/// @nodoc
 @JsonSerializable()
-class _$ParameterResultImpl implements _ParameterResult {
-  const _$ParameterResultImpl(
+class _ParameterResult implements ParameterResult {
+  const _ParameterResult(
       {required this.parameterId,
       required this.parameterName,
       required this.loincCode,
@@ -1040,9 +1685,8 @@ class _$ParameterResultImpl implements _ParameterResult {
       this.verifiedValue,
       this.isVerified})
       : _historicalValues = historicalValues;
-
-  factory _$ParameterResultImpl.fromJson(Map<String, dynamic> json) =>
-      _$$ParameterResultImplFromJson(json);
+  factory _ParameterResult.fromJson(Map<String, dynamic> json) =>
+      _$ParameterResultFromJson(json);
 
   @override
   final String parameterId;
@@ -1079,16 +1723,26 @@ class _$ParameterResultImpl implements _ParameterResult {
   @override
   final bool? isVerified;
 
+  /// Create a copy of ParameterResult
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String toString() {
-    return 'ParameterResult(parameterId: $parameterId, parameterName: $parameterName, loincCode: $loincCode, value: $value, unit: $unit, referenceRange: $referenceRange, flag: $flag, notes: $notes, historicalValues: $historicalValues, requiresDoubleEntry: $requiresDoubleEntry, verifiedValue: $verifiedValue, isVerified: $isVerified)';
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$ParameterResultCopyWith<_ParameterResult> get copyWith =>
+      __$ParameterResultCopyWithImpl<_ParameterResult>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$ParameterResultToJson(
+      this,
+    );
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ParameterResultImpl &&
+            other is _ParameterResult &&
             (identical(other.parameterId, parameterId) ||
                 other.parameterId == parameterId) &&
             (identical(other.parameterName, parameterName) ||
@@ -1111,7 +1765,7 @@ class _$ParameterResultImpl implements _ParameterResult {
                 other.isVerified == isVerified));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -1128,67 +1782,137 @@ class _$ParameterResultImpl implements _ParameterResult {
       verifiedValue,
       isVerified);
 
-  @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
-  _$$ParameterResultImplCopyWith<_$ParameterResultImpl> get copyWith =>
-      __$$ParameterResultImplCopyWithImpl<_$ParameterResultImpl>(
-          this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$ParameterResultImplToJson(
-      this,
-    );
+  String toString() {
+    return 'ParameterResult(parameterId: $parameterId, parameterName: $parameterName, loincCode: $loincCode, value: $value, unit: $unit, referenceRange: $referenceRange, flag: $flag, notes: $notes, historicalValues: $historicalValues, requiresDoubleEntry: $requiresDoubleEntry, verifiedValue: $verifiedValue, isVerified: $isVerified)';
   }
 }
 
-abstract class _ParameterResult implements ParameterResult {
-  const factory _ParameterResult(
-      {required final String parameterId,
-      required final String parameterName,
-      required final String loincCode,
-      required final ResultValue value,
-      required final String unit,
-      required final ReferenceRange referenceRange,
-      required final ResultFlag flag,
-      final String? notes,
-      final List<double>? historicalValues,
-      final bool? requiresDoubleEntry,
-      final String? verifiedValue,
-      final bool? isVerified}) = _$ParameterResultImpl;
+/// @nodoc
+abstract mixin class _$ParameterResultCopyWith<$Res>
+    implements $ParameterResultCopyWith<$Res> {
+  factory _$ParameterResultCopyWith(
+          _ParameterResult value, $Res Function(_ParameterResult) _then) =
+      __$ParameterResultCopyWithImpl;
+  @override
+  @useResult
+  $Res call(
+      {String parameterId,
+      String parameterName,
+      String loincCode,
+      ResultValue value,
+      String unit,
+      ReferenceRange referenceRange,
+      ResultFlag flag,
+      String? notes,
+      List<double>? historicalValues,
+      bool? requiresDoubleEntry,
+      String? verifiedValue,
+      bool? isVerified});
 
-  factory _ParameterResult.fromJson(Map<String, dynamic> json) =
-      _$ParameterResultImpl.fromJson;
+  @override
+  $ResultValueCopyWith<$Res> get value;
+  @override
+  $ReferenceRangeCopyWith<$Res> get referenceRange;
+}
 
+/// @nodoc
+class __$ParameterResultCopyWithImpl<$Res>
+    implements _$ParameterResultCopyWith<$Res> {
+  __$ParameterResultCopyWithImpl(this._self, this._then);
+
+  final _ParameterResult _self;
+  final $Res Function(_ParameterResult) _then;
+
+  /// Create a copy of ParameterResult
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String get parameterId;
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? parameterId = null,
+    Object? parameterName = null,
+    Object? loincCode = null,
+    Object? value = null,
+    Object? unit = null,
+    Object? referenceRange = null,
+    Object? flag = null,
+    Object? notes = freezed,
+    Object? historicalValues = freezed,
+    Object? requiresDoubleEntry = freezed,
+    Object? verifiedValue = freezed,
+    Object? isVerified = freezed,
+  }) {
+    return _then(_ParameterResult(
+      parameterId: null == parameterId
+          ? _self.parameterId
+          : parameterId // ignore: cast_nullable_to_non_nullable
+              as String,
+      parameterName: null == parameterName
+          ? _self.parameterName
+          : parameterName // ignore: cast_nullable_to_non_nullable
+              as String,
+      loincCode: null == loincCode
+          ? _self.loincCode
+          : loincCode // ignore: cast_nullable_to_non_nullable
+              as String,
+      value: null == value
+          ? _self.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as ResultValue,
+      unit: null == unit
+          ? _self.unit
+          : unit // ignore: cast_nullable_to_non_nullable
+              as String,
+      referenceRange: null == referenceRange
+          ? _self.referenceRange
+          : referenceRange // ignore: cast_nullable_to_non_nullable
+              as ReferenceRange,
+      flag: null == flag
+          ? _self.flag
+          : flag // ignore: cast_nullable_to_non_nullable
+              as ResultFlag,
+      notes: freezed == notes
+          ? _self.notes
+          : notes // ignore: cast_nullable_to_non_nullable
+              as String?,
+      historicalValues: freezed == historicalValues
+          ? _self._historicalValues
+          : historicalValues // ignore: cast_nullable_to_non_nullable
+              as List<double>?,
+      requiresDoubleEntry: freezed == requiresDoubleEntry
+          ? _self.requiresDoubleEntry
+          : requiresDoubleEntry // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      verifiedValue: freezed == verifiedValue
+          ? _self.verifiedValue
+          : verifiedValue // ignore: cast_nullable_to_non_nullable
+              as String?,
+      isVerified: freezed == isVerified
+          ? _self.isVerified
+          : isVerified // ignore: cast_nullable_to_non_nullable
+              as bool?,
+    ));
+  }
+
+  /// Create a copy of ParameterResult
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String get parameterName;
+  @pragma('vm:prefer-inline')
+  $ResultValueCopyWith<$Res> get value {
+    return $ResultValueCopyWith<$Res>(_self.value, (value) {
+      return _then(_self.copyWith(value: value));
+    });
+  }
+
+  /// Create a copy of ParameterResult
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String get loincCode;
-  @override
-  ResultValue get value;
-  @override
-  String get unit;
-  @override
-  ReferenceRange get referenceRange;
-  @override
-  ResultFlag get flag;
-  @override
-  String? get notes;
-  @override
-  List<double>? get historicalValues;
-  @override // For sparkline
-  bool? get requiresDoubleEntry;
-  @override
-  String? get verifiedValue;
-  @override
-  bool? get isVerified;
-  @override
-  @JsonKey(ignore: true)
-  _$$ParameterResultImplCopyWith<_$ParameterResultImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  @pragma('vm:prefer-inline')
+  $ReferenceRangeCopyWith<$Res> get referenceRange {
+    return $ReferenceRangeCopyWith<$Res>(_self.referenceRange, (value) {
+      return _then(_self.copyWith(referenceRange: value));
+    });
+  }
 }
 
 ResultValue _$ResultValueFromJson(Map<String, dynamic> json) {
@@ -1210,47 +1934,44 @@ ResultValue _$ResultValueFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ResultValue {
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(double value) numeric,
-    required TResult Function(String value) text,
-    required TResult Function(double min, double max) range,
-    required TResult Function(String value, List<String>? options) qualitative,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(double value)? numeric,
-    TResult? Function(String value)? text,
-    TResult? Function(double min, double max)? range,
-    TResult? Function(String value, List<String>? options)? qualitative,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(double value)? numeric,
-    TResult Function(String value)? text,
-    TResult Function(double min, double max)? range,
-    TResult Function(String value, List<String>? options)? qualitative,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(NumericResultValue value) numeric,
-    required TResult Function(TextResultValue value) text,
-    required TResult Function(RangeResultValue value) range,
-    required TResult Function(QualitativeResultValue value) qualitative,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(NumericResultValue value)? numeric,
-    TResult? Function(TextResultValue value)? text,
-    TResult? Function(RangeResultValue value)? range,
-    TResult? Function(QualitativeResultValue value)? qualitative,
-  }) =>
-      throw _privateConstructorUsedError;
+  /// Serializes this ResultValue to a JSON map.
+  Map<String, dynamic> toJson();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is ResultValue);
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  String toString() {
+    return 'ResultValue()';
+  }
+}
+
+/// @nodoc
+class $ResultValueCopyWith<$Res> {
+  $ResultValueCopyWith(ResultValue _, $Res Function(ResultValue) __);
+}
+
+/// Adds pattern-matching-related methods to [ResultValue].
+extension ResultValuePatterns on ResultValue {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(NumericResultValue value)? numeric,
@@ -1258,54 +1979,268 @@ mixin _$ResultValue {
     TResult Function(RangeResultValue value)? range,
     TResult Function(QualitativeResultValue value)? qualitative,
     required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  }) {
+    final _that = this;
+    switch (_that) {
+      case NumericResultValue() when numeric != null:
+        return numeric(_that);
+      case TextResultValue() when text != null:
+        return text(_that);
+      case RangeResultValue() when range != null:
+        return range(_that);
+      case QualitativeResultValue() when qualitative != null:
+        return qualitative(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(NumericResultValue value) numeric,
+    required TResult Function(TextResultValue value) text,
+    required TResult Function(RangeResultValue value) range,
+    required TResult Function(QualitativeResultValue value) qualitative,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case NumericResultValue():
+        return numeric(_that);
+      case TextResultValue():
+        return text(_that);
+      case RangeResultValue():
+        return range(_that);
+      case QualitativeResultValue():
+        return qualitative(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(NumericResultValue value)? numeric,
+    TResult? Function(TextResultValue value)? text,
+    TResult? Function(RangeResultValue value)? range,
+    TResult? Function(QualitativeResultValue value)? qualitative,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case NumericResultValue() when numeric != null:
+        return numeric(_that);
+      case TextResultValue() when text != null:
+        return text(_that);
+      case RangeResultValue() when range != null:
+        return range(_that);
+      case QualitativeResultValue() when qualitative != null:
+        return qualitative(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(double value)? numeric,
+    TResult Function(String value)? text,
+    TResult Function(double min, double max)? range,
+    TResult Function(String value, List<String>? options)? qualitative,
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case NumericResultValue() when numeric != null:
+        return numeric(_that.value);
+      case TextResultValue() when text != null:
+        return text(_that.value);
+      case RangeResultValue() when range != null:
+        return range(_that.min, _that.max);
+      case QualitativeResultValue() when qualitative != null:
+        return qualitative(_that.value, _that.options);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(double value) numeric,
+    required TResult Function(String value) text,
+    required TResult Function(double min, double max) range,
+    required TResult Function(String value, List<String>? options) qualitative,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case NumericResultValue():
+        return numeric(_that.value);
+      case TextResultValue():
+        return text(_that.value);
+      case RangeResultValue():
+        return range(_that.min, _that.max);
+      case QualitativeResultValue():
+        return qualitative(_that.value, _that.options);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(double value)? numeric,
+    TResult? Function(String value)? text,
+    TResult? Function(double min, double max)? range,
+    TResult? Function(String value, List<String>? options)? qualitative,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case NumericResultValue() when numeric != null:
+        return numeric(_that.value);
+      case TextResultValue() when text != null:
+        return text(_that.value);
+      case RangeResultValue() when range != null:
+        return range(_that.min, _that.max);
+      case QualitativeResultValue() when qualitative != null:
+        return qualitative(_that.value, _that.options);
+      case _:
+        return null;
+    }
+  }
 }
 
 /// @nodoc
-abstract class $ResultValueCopyWith<$Res> {
-  factory $ResultValueCopyWith(
-          ResultValue value, $Res Function(ResultValue) then) =
-      _$ResultValueCopyWithImpl<$Res, ResultValue>;
+@JsonSerializable()
+class NumericResultValue implements ResultValue {
+  const NumericResultValue({required this.value, final String? $type})
+      : $type = $type ?? 'numeric';
+  factory NumericResultValue.fromJson(Map<String, dynamic> json) =>
+      _$NumericResultValueFromJson(json);
+
+  final double value;
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
+
+  /// Create a copy of ResultValue
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $NumericResultValueCopyWith<NumericResultValue> get copyWith =>
+      _$NumericResultValueCopyWithImpl<NumericResultValue>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$NumericResultValueToJson(
+      this,
+    );
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is NumericResultValue &&
+            (identical(other.value, value) || other.value == value));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, value);
+
+  @override
+  String toString() {
+    return 'ResultValue.numeric(value: $value)';
+  }
 }
 
 /// @nodoc
-class _$ResultValueCopyWithImpl<$Res, $Val extends ResultValue>
+abstract mixin class $NumericResultValueCopyWith<$Res>
     implements $ResultValueCopyWith<$Res> {
-  _$ResultValueCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-}
-
-/// @nodoc
-abstract class _$$NumericResultValueImplCopyWith<$Res> {
-  factory _$$NumericResultValueImplCopyWith(_$NumericResultValueImpl value,
-          $Res Function(_$NumericResultValueImpl) then) =
-      __$$NumericResultValueImplCopyWithImpl<$Res>;
+  factory $NumericResultValueCopyWith(
+          NumericResultValue value, $Res Function(NumericResultValue) _then) =
+      _$NumericResultValueCopyWithImpl;
   @useResult
   $Res call({double value});
 }
 
 /// @nodoc
-class __$$NumericResultValueImplCopyWithImpl<$Res>
-    extends _$ResultValueCopyWithImpl<$Res, _$NumericResultValueImpl>
-    implements _$$NumericResultValueImplCopyWith<$Res> {
-  __$$NumericResultValueImplCopyWithImpl(_$NumericResultValueImpl _value,
-      $Res Function(_$NumericResultValueImpl) _then)
-      : super(_value, _then);
+class _$NumericResultValueCopyWithImpl<$Res>
+    implements $NumericResultValueCopyWith<$Res> {
+  _$NumericResultValueCopyWithImpl(this._self, this._then);
 
+  final NumericResultValue _self;
+  final $Res Function(NumericResultValue) _then;
+
+  /// Create a copy of ResultValue
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
-  @override
   $Res call({
     Object? value = null,
   }) {
-    return _then(_$NumericResultValueImpl(
+    return _then(NumericResultValue(
       value: null == value
-          ? _value.value
+          ? _self.value
           : value // ignore: cast_nullable_to_non_nullable
               as double,
     ));
@@ -1314,163 +2249,76 @@ class __$$NumericResultValueImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$NumericResultValueImpl implements NumericResultValue {
-  const _$NumericResultValueImpl({required this.value, final String? $type})
-      : $type = $type ?? 'numeric';
+class TextResultValue implements ResultValue {
+  const TextResultValue({required this.value, final String? $type})
+      : $type = $type ?? 'text';
+  factory TextResultValue.fromJson(Map<String, dynamic> json) =>
+      _$TextResultValueFromJson(json);
 
-  factory _$NumericResultValueImpl.fromJson(Map<String, dynamic> json) =>
-      _$$NumericResultValueImplFromJson(json);
-
-  @override
-  final double value;
+  final String value;
 
   @JsonKey(name: 'runtimeType')
   final String $type;
 
+  /// Create a copy of ResultValue
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $TextResultValueCopyWith<TextResultValue> get copyWith =>
+      _$TextResultValueCopyWithImpl<TextResultValue>(this, _$identity);
+
   @override
-  String toString() {
-    return 'ResultValue.numeric(value: $value)';
+  Map<String, dynamic> toJson() {
+    return _$TextResultValueToJson(
+      this,
+    );
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$NumericResultValueImpl &&
+            other is TextResultValue &&
             (identical(other.value, value) || other.value == value));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, value);
 
-  @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
-  _$$NumericResultValueImplCopyWith<_$NumericResultValueImpl> get copyWith =>
-      __$$NumericResultValueImplCopyWithImpl<_$NumericResultValueImpl>(
-          this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(double value) numeric,
-    required TResult Function(String value) text,
-    required TResult Function(double min, double max) range,
-    required TResult Function(String value, List<String>? options) qualitative,
-  }) {
-    return numeric(value);
+  String toString() {
+    return 'ResultValue.text(value: $value)';
   }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(double value)? numeric,
-    TResult? Function(String value)? text,
-    TResult? Function(double min, double max)? range,
-    TResult? Function(String value, List<String>? options)? qualitative,
-  }) {
-    return numeric?.call(value);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(double value)? numeric,
-    TResult Function(String value)? text,
-    TResult Function(double min, double max)? range,
-    TResult Function(String value, List<String>? options)? qualitative,
-    required TResult orElse(),
-  }) {
-    if (numeric != null) {
-      return numeric(value);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(NumericResultValue value) numeric,
-    required TResult Function(TextResultValue value) text,
-    required TResult Function(RangeResultValue value) range,
-    required TResult Function(QualitativeResultValue value) qualitative,
-  }) {
-    return numeric(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(NumericResultValue value)? numeric,
-    TResult? Function(TextResultValue value)? text,
-    TResult? Function(RangeResultValue value)? range,
-    TResult? Function(QualitativeResultValue value)? qualitative,
-  }) {
-    return numeric?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(NumericResultValue value)? numeric,
-    TResult Function(TextResultValue value)? text,
-    TResult Function(RangeResultValue value)? range,
-    TResult Function(QualitativeResultValue value)? qualitative,
-    required TResult orElse(),
-  }) {
-    if (numeric != null) {
-      return numeric(this);
-    }
-    return orElse();
-  }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$NumericResultValueImplToJson(
-      this,
-    );
-  }
-}
-
-abstract class NumericResultValue implements ResultValue {
-  const factory NumericResultValue({required final double value}) =
-      _$NumericResultValueImpl;
-
-  factory NumericResultValue.fromJson(Map<String, dynamic> json) =
-      _$NumericResultValueImpl.fromJson;
-
-  double get value;
-  @JsonKey(ignore: true)
-  _$$NumericResultValueImplCopyWith<_$NumericResultValueImpl> get copyWith =>
-      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$TextResultValueImplCopyWith<$Res> {
-  factory _$$TextResultValueImplCopyWith(_$TextResultValueImpl value,
-          $Res Function(_$TextResultValueImpl) then) =
-      __$$TextResultValueImplCopyWithImpl<$Res>;
+abstract mixin class $TextResultValueCopyWith<$Res>
+    implements $ResultValueCopyWith<$Res> {
+  factory $TextResultValueCopyWith(
+          TextResultValue value, $Res Function(TextResultValue) _then) =
+      _$TextResultValueCopyWithImpl;
   @useResult
   $Res call({String value});
 }
 
 /// @nodoc
-class __$$TextResultValueImplCopyWithImpl<$Res>
-    extends _$ResultValueCopyWithImpl<$Res, _$TextResultValueImpl>
-    implements _$$TextResultValueImplCopyWith<$Res> {
-  __$$TextResultValueImplCopyWithImpl(
-      _$TextResultValueImpl _value, $Res Function(_$TextResultValueImpl) _then)
-      : super(_value, _then);
+class _$TextResultValueCopyWithImpl<$Res>
+    implements $TextResultValueCopyWith<$Res> {
+  _$TextResultValueCopyWithImpl(this._self, this._then);
 
+  final TextResultValue _self;
+  final $Res Function(TextResultValue) _then;
+
+  /// Create a copy of ResultValue
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
-  @override
   $Res call({
     Object? value = null,
   }) {
-    return _then(_$TextResultValueImpl(
+    return _then(TextResultValue(
       value: null == value
-          ? _value.value
+          ? _self.value
           : value // ignore: cast_nullable_to_non_nullable
               as String,
     ));
@@ -1479,168 +2327,84 @@ class __$$TextResultValueImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$TextResultValueImpl implements TextResultValue {
-  const _$TextResultValueImpl({required this.value, final String? $type})
-      : $type = $type ?? 'text';
+class RangeResultValue implements ResultValue {
+  const RangeResultValue(
+      {required this.min, required this.max, final String? $type})
+      : $type = $type ?? 'range';
+  factory RangeResultValue.fromJson(Map<String, dynamic> json) =>
+      _$RangeResultValueFromJson(json);
 
-  factory _$TextResultValueImpl.fromJson(Map<String, dynamic> json) =>
-      _$$TextResultValueImplFromJson(json);
-
-  @override
-  final String value;
+  final double min;
+  final double max;
 
   @JsonKey(name: 'runtimeType')
   final String $type;
 
+  /// Create a copy of ResultValue
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $RangeResultValueCopyWith<RangeResultValue> get copyWith =>
+      _$RangeResultValueCopyWithImpl<RangeResultValue>(this, _$identity);
+
   @override
-  String toString() {
-    return 'ResultValue.text(value: $value)';
+  Map<String, dynamic> toJson() {
+    return _$RangeResultValueToJson(
+      this,
+    );
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$TextResultValueImpl &&
-            (identical(other.value, value) || other.value == value));
+            other is RangeResultValue &&
+            (identical(other.min, min) || other.min == min) &&
+            (identical(other.max, max) || other.max == max));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, value);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$TextResultValueImplCopyWith<_$TextResultValueImpl> get copyWith =>
-      __$$TextResultValueImplCopyWithImpl<_$TextResultValueImpl>(
-          this, _$identity);
+  int get hashCode => Object.hash(runtimeType, min, max);
 
   @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(double value) numeric,
-    required TResult Function(String value) text,
-    required TResult Function(double min, double max) range,
-    required TResult Function(String value, List<String>? options) qualitative,
-  }) {
-    return text(value);
+  String toString() {
+    return 'ResultValue.range(min: $min, max: $max)';
   }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(double value)? numeric,
-    TResult? Function(String value)? text,
-    TResult? Function(double min, double max)? range,
-    TResult? Function(String value, List<String>? options)? qualitative,
-  }) {
-    return text?.call(value);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(double value)? numeric,
-    TResult Function(String value)? text,
-    TResult Function(double min, double max)? range,
-    TResult Function(String value, List<String>? options)? qualitative,
-    required TResult orElse(),
-  }) {
-    if (text != null) {
-      return text(value);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(NumericResultValue value) numeric,
-    required TResult Function(TextResultValue value) text,
-    required TResult Function(RangeResultValue value) range,
-    required TResult Function(QualitativeResultValue value) qualitative,
-  }) {
-    return text(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(NumericResultValue value)? numeric,
-    TResult? Function(TextResultValue value)? text,
-    TResult? Function(RangeResultValue value)? range,
-    TResult? Function(QualitativeResultValue value)? qualitative,
-  }) {
-    return text?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(NumericResultValue value)? numeric,
-    TResult Function(TextResultValue value)? text,
-    TResult Function(RangeResultValue value)? range,
-    TResult Function(QualitativeResultValue value)? qualitative,
-    required TResult orElse(),
-  }) {
-    if (text != null) {
-      return text(this);
-    }
-    return orElse();
-  }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$TextResultValueImplToJson(
-      this,
-    );
-  }
-}
-
-abstract class TextResultValue implements ResultValue {
-  const factory TextResultValue({required final String value}) =
-      _$TextResultValueImpl;
-
-  factory TextResultValue.fromJson(Map<String, dynamic> json) =
-      _$TextResultValueImpl.fromJson;
-
-  String get value;
-  @JsonKey(ignore: true)
-  _$$TextResultValueImplCopyWith<_$TextResultValueImpl> get copyWith =>
-      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$RangeResultValueImplCopyWith<$Res> {
-  factory _$$RangeResultValueImplCopyWith(_$RangeResultValueImpl value,
-          $Res Function(_$RangeResultValueImpl) then) =
-      __$$RangeResultValueImplCopyWithImpl<$Res>;
+abstract mixin class $RangeResultValueCopyWith<$Res>
+    implements $ResultValueCopyWith<$Res> {
+  factory $RangeResultValueCopyWith(
+          RangeResultValue value, $Res Function(RangeResultValue) _then) =
+      _$RangeResultValueCopyWithImpl;
   @useResult
   $Res call({double min, double max});
 }
 
 /// @nodoc
-class __$$RangeResultValueImplCopyWithImpl<$Res>
-    extends _$ResultValueCopyWithImpl<$Res, _$RangeResultValueImpl>
-    implements _$$RangeResultValueImplCopyWith<$Res> {
-  __$$RangeResultValueImplCopyWithImpl(_$RangeResultValueImpl _value,
-      $Res Function(_$RangeResultValueImpl) _then)
-      : super(_value, _then);
+class _$RangeResultValueCopyWithImpl<$Res>
+    implements $RangeResultValueCopyWith<$Res> {
+  _$RangeResultValueCopyWithImpl(this._self, this._then);
 
+  final RangeResultValue _self;
+  final $Res Function(RangeResultValue) _then;
+
+  /// Create a copy of ResultValue
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
-  @override
   $Res call({
     Object? min = null,
     Object? max = null,
   }) {
-    return _then(_$RangeResultValueImpl(
+    return _then(RangeResultValue(
       min: null == min
-          ? _value.min
+          ? _self.min
           : min // ignore: cast_nullable_to_non_nullable
               as double,
       max: null == max
-          ? _value.max
+          ? _self.max
           : max // ignore: cast_nullable_to_non_nullable
               as double,
     ));
@@ -1649,197 +2413,16 @@ class __$$RangeResultValueImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$RangeResultValueImpl implements RangeResultValue {
-  const _$RangeResultValueImpl(
-      {required this.min, required this.max, final String? $type})
-      : $type = $type ?? 'range';
-
-  factory _$RangeResultValueImpl.fromJson(Map<String, dynamic> json) =>
-      _$$RangeResultValueImplFromJson(json);
-
-  @override
-  final double min;
-  @override
-  final double max;
-
-  @JsonKey(name: 'runtimeType')
-  final String $type;
-
-  @override
-  String toString() {
-    return 'ResultValue.range(min: $min, max: $max)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$RangeResultValueImpl &&
-            (identical(other.min, min) || other.min == min) &&
-            (identical(other.max, max) || other.max == max));
-  }
-
-  @JsonKey(ignore: true)
-  @override
-  int get hashCode => Object.hash(runtimeType, min, max);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$RangeResultValueImplCopyWith<_$RangeResultValueImpl> get copyWith =>
-      __$$RangeResultValueImplCopyWithImpl<_$RangeResultValueImpl>(
-          this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(double value) numeric,
-    required TResult Function(String value) text,
-    required TResult Function(double min, double max) range,
-    required TResult Function(String value, List<String>? options) qualitative,
-  }) {
-    return range(min, max);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(double value)? numeric,
-    TResult? Function(String value)? text,
-    TResult? Function(double min, double max)? range,
-    TResult? Function(String value, List<String>? options)? qualitative,
-  }) {
-    return range?.call(min, max);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(double value)? numeric,
-    TResult Function(String value)? text,
-    TResult Function(double min, double max)? range,
-    TResult Function(String value, List<String>? options)? qualitative,
-    required TResult orElse(),
-  }) {
-    if (range != null) {
-      return range(min, max);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(NumericResultValue value) numeric,
-    required TResult Function(TextResultValue value) text,
-    required TResult Function(RangeResultValue value) range,
-    required TResult Function(QualitativeResultValue value) qualitative,
-  }) {
-    return range(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(NumericResultValue value)? numeric,
-    TResult? Function(TextResultValue value)? text,
-    TResult? Function(RangeResultValue value)? range,
-    TResult? Function(QualitativeResultValue value)? qualitative,
-  }) {
-    return range?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(NumericResultValue value)? numeric,
-    TResult Function(TextResultValue value)? text,
-    TResult Function(RangeResultValue value)? range,
-    TResult Function(QualitativeResultValue value)? qualitative,
-    required TResult orElse(),
-  }) {
-    if (range != null) {
-      return range(this);
-    }
-    return orElse();
-  }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$RangeResultValueImplToJson(
-      this,
-    );
-  }
-}
-
-abstract class RangeResultValue implements ResultValue {
-  const factory RangeResultValue(
-      {required final double min,
-      required final double max}) = _$RangeResultValueImpl;
-
-  factory RangeResultValue.fromJson(Map<String, dynamic> json) =
-      _$RangeResultValueImpl.fromJson;
-
-  double get min;
-  double get max;
-  @JsonKey(ignore: true)
-  _$$RangeResultValueImplCopyWith<_$RangeResultValueImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$QualitativeResultValueImplCopyWith<$Res> {
-  factory _$$QualitativeResultValueImplCopyWith(
-          _$QualitativeResultValueImpl value,
-          $Res Function(_$QualitativeResultValueImpl) then) =
-      __$$QualitativeResultValueImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({String value, List<String>? options});
-}
-
-/// @nodoc
-class __$$QualitativeResultValueImplCopyWithImpl<$Res>
-    extends _$ResultValueCopyWithImpl<$Res, _$QualitativeResultValueImpl>
-    implements _$$QualitativeResultValueImplCopyWith<$Res> {
-  __$$QualitativeResultValueImplCopyWithImpl(
-      _$QualitativeResultValueImpl _value,
-      $Res Function(_$QualitativeResultValueImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? value = null,
-    Object? options = freezed,
-  }) {
-    return _then(_$QualitativeResultValueImpl(
-      value: null == value
-          ? _value.value
-          : value // ignore: cast_nullable_to_non_nullable
-              as String,
-      options: freezed == options
-          ? _value._options
-          : options // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
-    ));
-  }
-}
-
-/// @nodoc
-@JsonSerializable()
-class _$QualitativeResultValueImpl implements QualitativeResultValue {
-  const _$QualitativeResultValueImpl(
+class QualitativeResultValue implements ResultValue {
+  const QualitativeResultValue(
       {required this.value, final List<String>? options, final String? $type})
       : _options = options,
         $type = $type ?? 'qualitative';
+  factory QualitativeResultValue.fromJson(Map<String, dynamic> json) =>
+      _$QualitativeResultValueFromJson(json);
 
-  factory _$QualitativeResultValueImpl.fromJson(Map<String, dynamic> json) =>
-      _$$QualitativeResultValueImplFromJson(json);
-
-  @override
   final String value;
   final List<String>? _options;
-  @override
   List<String>? get options {
     final value = _options;
     if (value == null) return null;
@@ -1851,219 +2434,131 @@ class _$QualitativeResultValueImpl implements QualitativeResultValue {
   @JsonKey(name: 'runtimeType')
   final String $type;
 
+  /// Create a copy of ResultValue
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $QualitativeResultValueCopyWith<QualitativeResultValue> get copyWith =>
+      _$QualitativeResultValueCopyWithImpl<QualitativeResultValue>(
+          this, _$identity);
+
   @override
-  String toString() {
-    return 'ResultValue.qualitative(value: $value, options: $options)';
+  Map<String, dynamic> toJson() {
+    return _$QualitativeResultValueToJson(
+      this,
+    );
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$QualitativeResultValueImpl &&
+            other is QualitativeResultValue &&
             (identical(other.value, value) || other.value == value) &&
             const DeepCollectionEquality().equals(other._options, _options));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, value, const DeepCollectionEquality().hash(_options));
 
-  @JsonKey(ignore: true)
   @override
+  String toString() {
+    return 'ResultValue.qualitative(value: $value, options: $options)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $QualitativeResultValueCopyWith<$Res>
+    implements $ResultValueCopyWith<$Res> {
+  factory $QualitativeResultValueCopyWith(QualitativeResultValue value,
+          $Res Function(QualitativeResultValue) _then) =
+      _$QualitativeResultValueCopyWithImpl;
+  @useResult
+  $Res call({String value, List<String>? options});
+}
+
+/// @nodoc
+class _$QualitativeResultValueCopyWithImpl<$Res>
+    implements $QualitativeResultValueCopyWith<$Res> {
+  _$QualitativeResultValueCopyWithImpl(this._self, this._then);
+
+  final QualitativeResultValue _self;
+  final $Res Function(QualitativeResultValue) _then;
+
+  /// Create a copy of ResultValue
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
-  _$$QualitativeResultValueImplCopyWith<_$QualitativeResultValueImpl>
-      get copyWith => __$$QualitativeResultValueImplCopyWithImpl<
-          _$QualitativeResultValueImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(double value) numeric,
-    required TResult Function(String value) text,
-    required TResult Function(double min, double max) range,
-    required TResult Function(String value, List<String>? options) qualitative,
+  $Res call({
+    Object? value = null,
+    Object? options = freezed,
   }) {
-    return qualitative(value, options);
+    return _then(QualitativeResultValue(
+      value: null == value
+          ? _self.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as String,
+      options: freezed == options
+          ? _self._options
+          : options // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
+    ));
   }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(double value)? numeric,
-    TResult? Function(String value)? text,
-    TResult? Function(double min, double max)? range,
-    TResult? Function(String value, List<String>? options)? qualitative,
-  }) {
-    return qualitative?.call(value, options);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(double value)? numeric,
-    TResult Function(String value)? text,
-    TResult Function(double min, double max)? range,
-    TResult Function(String value, List<String>? options)? qualitative,
-    required TResult orElse(),
-  }) {
-    if (qualitative != null) {
-      return qualitative(value, options);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(NumericResultValue value) numeric,
-    required TResult Function(TextResultValue value) text,
-    required TResult Function(RangeResultValue value) range,
-    required TResult Function(QualitativeResultValue value) qualitative,
-  }) {
-    return qualitative(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(NumericResultValue value)? numeric,
-    TResult? Function(TextResultValue value)? text,
-    TResult? Function(RangeResultValue value)? range,
-    TResult? Function(QualitativeResultValue value)? qualitative,
-  }) {
-    return qualitative?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(NumericResultValue value)? numeric,
-    TResult Function(TextResultValue value)? text,
-    TResult Function(RangeResultValue value)? range,
-    TResult Function(QualitativeResultValue value)? qualitative,
-    required TResult orElse(),
-  }) {
-    if (qualitative != null) {
-      return qualitative(this);
-    }
-    return orElse();
-  }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$QualitativeResultValueImplToJson(
-      this,
-    );
-  }
-}
-
-abstract class QualitativeResultValue implements ResultValue {
-  const factory QualitativeResultValue(
-      {required final String value,
-      final List<String>? options}) = _$QualitativeResultValueImpl;
-
-  factory QualitativeResultValue.fromJson(Map<String, dynamic> json) =
-      _$QualitativeResultValueImpl.fromJson;
-
-  String get value;
-  List<String>? get options;
-  @JsonKey(ignore: true)
-  _$$QualitativeResultValueImplCopyWith<_$QualitativeResultValueImpl>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-ReferenceRange _$ReferenceRangeFromJson(Map<String, dynamic> json) {
-  return _ReferenceRange.fromJson(json);
 }
 
 /// @nodoc
 mixin _$ReferenceRange {
-  double? get min => throw _privateConstructorUsedError;
-  double? get max => throw _privateConstructorUsedError;
-  String? get textRange => throw _privateConstructorUsedError;
-  String get ageGroup => throw _privateConstructorUsedError;
-  String get gender => throw _privateConstructorUsedError;
-  String? get condition => throw _privateConstructorUsedError;
+  double? get min;
+  double? get max;
+  String? get textRange;
+  String get ageGroup;
+  String get gender;
+  String? get condition;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $ReferenceRangeCopyWith<ReferenceRange> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $ReferenceRangeCopyWith<$Res> {
-  factory $ReferenceRangeCopyWith(
-          ReferenceRange value, $Res Function(ReferenceRange) then) =
-      _$ReferenceRangeCopyWithImpl<$Res, ReferenceRange>;
-  @useResult
-  $Res call(
-      {double? min,
-      double? max,
-      String? textRange,
-      String ageGroup,
-      String gender,
-      String? condition});
-}
-
-/// @nodoc
-class _$ReferenceRangeCopyWithImpl<$Res, $Val extends ReferenceRange>
-    implements $ReferenceRangeCopyWith<$Res> {
-  _$ReferenceRangeCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
+  /// Create a copy of ReferenceRange
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @pragma('vm:prefer-inline')
+  $ReferenceRangeCopyWith<ReferenceRange> get copyWith =>
+      _$ReferenceRangeCopyWithImpl<ReferenceRange>(
+          this as ReferenceRange, _$identity);
+
+  /// Serializes this ReferenceRange to a JSON map.
+  Map<String, dynamic> toJson();
+
   @override
-  $Res call({
-    Object? min = freezed,
-    Object? max = freezed,
-    Object? textRange = freezed,
-    Object? ageGroup = null,
-    Object? gender = null,
-    Object? condition = freezed,
-  }) {
-    return _then(_value.copyWith(
-      min: freezed == min
-          ? _value.min
-          : min // ignore: cast_nullable_to_non_nullable
-              as double?,
-      max: freezed == max
-          ? _value.max
-          : max // ignore: cast_nullable_to_non_nullable
-              as double?,
-      textRange: freezed == textRange
-          ? _value.textRange
-          : textRange // ignore: cast_nullable_to_non_nullable
-              as String?,
-      ageGroup: null == ageGroup
-          ? _value.ageGroup
-          : ageGroup // ignore: cast_nullable_to_non_nullable
-              as String,
-      gender: null == gender
-          ? _value.gender
-          : gender // ignore: cast_nullable_to_non_nullable
-              as String,
-      condition: freezed == condition
-          ? _value.condition
-          : condition // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is ReferenceRange &&
+            (identical(other.min, min) || other.min == min) &&
+            (identical(other.max, max) || other.max == max) &&
+            (identical(other.textRange, textRange) ||
+                other.textRange == textRange) &&
+            (identical(other.ageGroup, ageGroup) ||
+                other.ageGroup == ageGroup) &&
+            (identical(other.gender, gender) || other.gender == gender) &&
+            (identical(other.condition, condition) ||
+                other.condition == condition));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, min, max, textRange, ageGroup, gender, condition);
+
+  @override
+  String toString() {
+    return 'ReferenceRange(min: $min, max: $max, textRange: $textRange, ageGroup: $ageGroup, gender: $gender, condition: $condition)';
   }
 }
 
 /// @nodoc
-abstract class _$$ReferenceRangeImplCopyWith<$Res>
-    implements $ReferenceRangeCopyWith<$Res> {
-  factory _$$ReferenceRangeImplCopyWith(_$ReferenceRangeImpl value,
-          $Res Function(_$ReferenceRangeImpl) then) =
-      __$$ReferenceRangeImplCopyWithImpl<$Res>;
-  @override
+abstract mixin class $ReferenceRangeCopyWith<$Res> {
+  factory $ReferenceRangeCopyWith(
+          ReferenceRange value, $Res Function(ReferenceRange) _then) =
+      _$ReferenceRangeCopyWithImpl;
   @useResult
   $Res call(
       {double? min,
@@ -2075,13 +2570,15 @@ abstract class _$$ReferenceRangeImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$ReferenceRangeImplCopyWithImpl<$Res>
-    extends _$ReferenceRangeCopyWithImpl<$Res, _$ReferenceRangeImpl>
-    implements _$$ReferenceRangeImplCopyWith<$Res> {
-  __$$ReferenceRangeImplCopyWithImpl(
-      _$ReferenceRangeImpl _value, $Res Function(_$ReferenceRangeImpl) _then)
-      : super(_value, _then);
+class _$ReferenceRangeCopyWithImpl<$Res>
+    implements $ReferenceRangeCopyWith<$Res> {
+  _$ReferenceRangeCopyWithImpl(this._self, this._then);
 
+  final ReferenceRange _self;
+  final $Res Function(ReferenceRange) _then;
+
+  /// Create a copy of ReferenceRange
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2092,48 +2589,213 @@ class __$$ReferenceRangeImplCopyWithImpl<$Res>
     Object? gender = null,
     Object? condition = freezed,
   }) {
-    return _then(_$ReferenceRangeImpl(
+    return _then(_self.copyWith(
       min: freezed == min
-          ? _value.min
+          ? _self.min
           : min // ignore: cast_nullable_to_non_nullable
               as double?,
       max: freezed == max
-          ? _value.max
+          ? _self.max
           : max // ignore: cast_nullable_to_non_nullable
               as double?,
       textRange: freezed == textRange
-          ? _value.textRange
+          ? _self.textRange
           : textRange // ignore: cast_nullable_to_non_nullable
               as String?,
       ageGroup: null == ageGroup
-          ? _value.ageGroup
+          ? _self.ageGroup
           : ageGroup // ignore: cast_nullable_to_non_nullable
               as String,
       gender: null == gender
-          ? _value.gender
+          ? _self.gender
           : gender // ignore: cast_nullable_to_non_nullable
               as String,
       condition: freezed == condition
-          ? _value.condition
+          ? _self.condition
           : condition // ignore: cast_nullable_to_non_nullable
               as String?,
     ));
   }
 }
 
+/// Adds pattern-matching-related methods to [ReferenceRange].
+extension ReferenceRangePatterns on ReferenceRange {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_ReferenceRange value)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _ReferenceRange() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_ReferenceRange value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _ReferenceRange():
+        return $default(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_ReferenceRange value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _ReferenceRange() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(double? min, double? max, String? textRange,
+            String ageGroup, String gender, String? condition)?
+        $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _ReferenceRange() when $default != null:
+        return $default(_that.min, _that.max, _that.textRange, _that.ageGroup,
+            _that.gender, _that.condition);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(double? min, double? max, String? textRange,
+            String ageGroup, String gender, String? condition)
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _ReferenceRange():
+        return $default(_that.min, _that.max, _that.textRange, _that.ageGroup,
+            _that.gender, _that.condition);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(double? min, double? max, String? textRange,
+            String ageGroup, String gender, String? condition)?
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _ReferenceRange() when $default != null:
+        return $default(_that.min, _that.max, _that.textRange, _that.ageGroup,
+            _that.gender, _that.condition);
+      case _:
+        return null;
+    }
+  }
+}
+
 /// @nodoc
 @JsonSerializable()
-class _$ReferenceRangeImpl implements _ReferenceRange {
-  const _$ReferenceRangeImpl(
+class _ReferenceRange implements ReferenceRange {
+  const _ReferenceRange(
       {this.min,
       this.max,
       this.textRange,
       required this.ageGroup,
       required this.gender,
       this.condition});
-
-  factory _$ReferenceRangeImpl.fromJson(Map<String, dynamic> json) =>
-      _$$ReferenceRangeImplFromJson(json);
+  factory _ReferenceRange.fromJson(Map<String, dynamic> json) =>
+      _$ReferenceRangeFromJson(json);
 
   @override
   final double? min;
@@ -2148,16 +2810,26 @@ class _$ReferenceRangeImpl implements _ReferenceRange {
   @override
   final String? condition;
 
+  /// Create a copy of ReferenceRange
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String toString() {
-    return 'ReferenceRange(min: $min, max: $max, textRange: $textRange, ageGroup: $ageGroup, gender: $gender, condition: $condition)';
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$ReferenceRangeCopyWith<_ReferenceRange> get copyWith =>
+      __$ReferenceRangeCopyWithImpl<_ReferenceRange>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$ReferenceRangeToJson(
+      this,
+    );
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ReferenceRangeImpl &&
+            other is _ReferenceRange &&
             (identical(other.min, min) || other.min == min) &&
             (identical(other.max, max) || other.max == max) &&
             (identical(other.textRange, textRange) ||
@@ -2169,52 +2841,81 @@ class _$ReferenceRangeImpl implements _ReferenceRange {
                 other.condition == condition));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, min, max, textRange, ageGroup, gender, condition);
 
-  @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
-  _$$ReferenceRangeImplCopyWith<_$ReferenceRangeImpl> get copyWith =>
-      __$$ReferenceRangeImplCopyWithImpl<_$ReferenceRangeImpl>(
-          this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$ReferenceRangeImplToJson(
-      this,
-    );
+  String toString() {
+    return 'ReferenceRange(min: $min, max: $max, textRange: $textRange, ageGroup: $ageGroup, gender: $gender, condition: $condition)';
   }
 }
 
-abstract class _ReferenceRange implements ReferenceRange {
-  const factory _ReferenceRange(
-      {final double? min,
-      final double? max,
-      final String? textRange,
-      required final String ageGroup,
-      required final String gender,
-      final String? condition}) = _$ReferenceRangeImpl;
-
-  factory _ReferenceRange.fromJson(Map<String, dynamic> json) =
-      _$ReferenceRangeImpl.fromJson;
-
+/// @nodoc
+abstract mixin class _$ReferenceRangeCopyWith<$Res>
+    implements $ReferenceRangeCopyWith<$Res> {
+  factory _$ReferenceRangeCopyWith(
+          _ReferenceRange value, $Res Function(_ReferenceRange) _then) =
+      __$ReferenceRangeCopyWithImpl;
   @override
-  double? get min;
-  @override
-  double? get max;
-  @override
-  String? get textRange;
-  @override
-  String get ageGroup;
-  @override
-  String get gender;
-  @override
-  String? get condition;
-  @override
-  @JsonKey(ignore: true)
-  _$$ReferenceRangeImplCopyWith<_$ReferenceRangeImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  @useResult
+  $Res call(
+      {double? min,
+      double? max,
+      String? textRange,
+      String ageGroup,
+      String gender,
+      String? condition});
 }
+
+/// @nodoc
+class __$ReferenceRangeCopyWithImpl<$Res>
+    implements _$ReferenceRangeCopyWith<$Res> {
+  __$ReferenceRangeCopyWithImpl(this._self, this._then);
+
+  final _ReferenceRange _self;
+  final $Res Function(_ReferenceRange) _then;
+
+  /// Create a copy of ReferenceRange
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? min = freezed,
+    Object? max = freezed,
+    Object? textRange = freezed,
+    Object? ageGroup = null,
+    Object? gender = null,
+    Object? condition = freezed,
+  }) {
+    return _then(_ReferenceRange(
+      min: freezed == min
+          ? _self.min
+          : min // ignore: cast_nullable_to_non_nullable
+              as double?,
+      max: freezed == max
+          ? _self.max
+          : max // ignore: cast_nullable_to_non_nullable
+              as double?,
+      textRange: freezed == textRange
+          ? _self.textRange
+          : textRange // ignore: cast_nullable_to_non_nullable
+              as String?,
+      ageGroup: null == ageGroup
+          ? _self.ageGroup
+          : ageGroup // ignore: cast_nullable_to_non_nullable
+              as String,
+      gender: null == gender
+          ? _self.gender
+          : gender // ignore: cast_nullable_to_non_nullable
+              as String,
+      condition: freezed == condition
+          ? _self.condition
+          : condition // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+// dart format on

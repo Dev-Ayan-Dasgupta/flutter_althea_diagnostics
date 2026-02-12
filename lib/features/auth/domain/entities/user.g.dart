@@ -6,7 +6,7 @@ part of 'user.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$UserImpl _$$UserImplFromJson(Map<String, dynamic> json) => _$UserImpl(
+_User _$UserFromJson(Map<String, dynamic> json) => _User(
       id: json['id'] as String,
       name: json['name'] as String,
       email: json['email'] as String,
@@ -24,29 +24,19 @@ _$UserImpl _$$UserImplFromJson(Map<String, dynamic> json) => _$UserImpl(
           : DateTime.parse(json['lastLoginAt'] as String),
     );
 
-Map<String, dynamic> _$$UserImplToJson(_$UserImpl instance) {
-  final val = <String, dynamic>{
-    'id': instance.id,
-    'name': instance.name,
-    'email': instance.email,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('phoneNumber', instance.phoneNumber);
-  writeNotNull('avatarUrl', instance.avatarUrl);
-  val['role'] = _$UserRoleEnumMap[instance.role]!;
-  val['labId'] = instance.labId;
-  writeNotNull('labName', instance.labName);
-  val['permissions'] = instance.permissions;
-  val['createdAt'] = instance.createdAt.toIso8601String();
-  writeNotNull('lastLoginAt', instance.lastLoginAt?.toIso8601String());
-  return val;
-}
+Map<String, dynamic> _$UserToJson(_User instance) => <String, dynamic>{
+      'id': instance.id,
+      'name': instance.name,
+      'email': instance.email,
+      'phoneNumber': instance.phoneNumber,
+      'avatarUrl': instance.avatarUrl,
+      'role': _$UserRoleEnumMap[instance.role]!,
+      'labId': instance.labId,
+      'labName': instance.labName,
+      'permissions': instance.permissions,
+      'createdAt': instance.createdAt.toIso8601String(),
+      'lastLoginAt': instance.lastLoginAt?.toIso8601String(),
+    };
 
 const _$UserRoleEnumMap = {
   UserRole.labManager: 'labManager',

@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,111 +9,75 @@ part of 'pre_analytical_risk_model.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
-
-PreAnalyticalRiskModel _$PreAnalyticalRiskModelFromJson(
-    Map<String, dynamic> json) {
-  return _PreAnalyticalRiskModel.fromJson(json);
-}
 
 /// @nodoc
 mixin _$PreAnalyticalRiskModel {
-  double get riskScore => throw _privateConstructorUsedError;
-  String get riskLevel => throw _privateConstructorUsedError;
-  List<RiskFactorModel> get factors => throw _privateConstructorUsedError;
-  String get assessedAt => throw _privateConstructorUsedError;
-  String? get recommendation => throw _privateConstructorUsedError;
-  bool? get requiresRecollection => throw _privateConstructorUsedError;
-  double? get sampleViabilityProbability => throw _privateConstructorUsedError;
+  double get riskScore;
+  String get riskLevel;
+  List<RiskFactorModel> get factors;
+  String get assessedAt;
+  String? get recommendation;
+  bool? get requiresRecollection;
+  double? get sampleViabilityProbability;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $PreAnalyticalRiskModelCopyWith<PreAnalyticalRiskModel> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $PreAnalyticalRiskModelCopyWith<$Res> {
-  factory $PreAnalyticalRiskModelCopyWith(PreAnalyticalRiskModel value,
-          $Res Function(PreAnalyticalRiskModel) then) =
-      _$PreAnalyticalRiskModelCopyWithImpl<$Res, PreAnalyticalRiskModel>;
-  @useResult
-  $Res call(
-      {double riskScore,
-      String riskLevel,
-      List<RiskFactorModel> factors,
-      String assessedAt,
-      String? recommendation,
-      bool? requiresRecollection,
-      double? sampleViabilityProbability});
-}
-
-/// @nodoc
-class _$PreAnalyticalRiskModelCopyWithImpl<$Res,
-        $Val extends PreAnalyticalRiskModel>
-    implements $PreAnalyticalRiskModelCopyWith<$Res> {
-  _$PreAnalyticalRiskModelCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
+  /// Create a copy of PreAnalyticalRiskModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @pragma('vm:prefer-inline')
+  $PreAnalyticalRiskModelCopyWith<PreAnalyticalRiskModel> get copyWith =>
+      _$PreAnalyticalRiskModelCopyWithImpl<PreAnalyticalRiskModel>(
+          this as PreAnalyticalRiskModel, _$identity);
+
+  /// Serializes this PreAnalyticalRiskModel to a JSON map.
+  Map<String, dynamic> toJson();
+
   @override
-  $Res call({
-    Object? riskScore = null,
-    Object? riskLevel = null,
-    Object? factors = null,
-    Object? assessedAt = null,
-    Object? recommendation = freezed,
-    Object? requiresRecollection = freezed,
-    Object? sampleViabilityProbability = freezed,
-  }) {
-    return _then(_value.copyWith(
-      riskScore: null == riskScore
-          ? _value.riskScore
-          : riskScore // ignore: cast_nullable_to_non_nullable
-              as double,
-      riskLevel: null == riskLevel
-          ? _value.riskLevel
-          : riskLevel // ignore: cast_nullable_to_non_nullable
-              as String,
-      factors: null == factors
-          ? _value.factors
-          : factors // ignore: cast_nullable_to_non_nullable
-              as List<RiskFactorModel>,
-      assessedAt: null == assessedAt
-          ? _value.assessedAt
-          : assessedAt // ignore: cast_nullable_to_non_nullable
-              as String,
-      recommendation: freezed == recommendation
-          ? _value.recommendation
-          : recommendation // ignore: cast_nullable_to_non_nullable
-              as String?,
-      requiresRecollection: freezed == requiresRecollection
-          ? _value.requiresRecollection
-          : requiresRecollection // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      sampleViabilityProbability: freezed == sampleViabilityProbability
-          ? _value.sampleViabilityProbability
-          : sampleViabilityProbability // ignore: cast_nullable_to_non_nullable
-              as double?,
-    ) as $Val);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is PreAnalyticalRiskModel &&
+            (identical(other.riskScore, riskScore) ||
+                other.riskScore == riskScore) &&
+            (identical(other.riskLevel, riskLevel) ||
+                other.riskLevel == riskLevel) &&
+            const DeepCollectionEquality().equals(other.factors, factors) &&
+            (identical(other.assessedAt, assessedAt) ||
+                other.assessedAt == assessedAt) &&
+            (identical(other.recommendation, recommendation) ||
+                other.recommendation == recommendation) &&
+            (identical(other.requiresRecollection, requiresRecollection) ||
+                other.requiresRecollection == requiresRecollection) &&
+            (identical(other.sampleViabilityProbability,
+                    sampleViabilityProbability) ||
+                other.sampleViabilityProbability ==
+                    sampleViabilityProbability));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      riskScore,
+      riskLevel,
+      const DeepCollectionEquality().hash(factors),
+      assessedAt,
+      recommendation,
+      requiresRecollection,
+      sampleViabilityProbability);
+
+  @override
+  String toString() {
+    return 'PreAnalyticalRiskModel(riskScore: $riskScore, riskLevel: $riskLevel, factors: $factors, assessedAt: $assessedAt, recommendation: $recommendation, requiresRecollection: $requiresRecollection, sampleViabilityProbability: $sampleViabilityProbability)';
   }
 }
 
 /// @nodoc
-abstract class _$$PreAnalyticalRiskModelImplCopyWith<$Res>
-    implements $PreAnalyticalRiskModelCopyWith<$Res> {
-  factory _$$PreAnalyticalRiskModelImplCopyWith(
-          _$PreAnalyticalRiskModelImpl value,
-          $Res Function(_$PreAnalyticalRiskModelImpl) then) =
-      __$$PreAnalyticalRiskModelImplCopyWithImpl<$Res>;
-  @override
+abstract mixin class $PreAnalyticalRiskModelCopyWith<$Res> {
+  factory $PreAnalyticalRiskModelCopyWith(PreAnalyticalRiskModel value,
+          $Res Function(PreAnalyticalRiskModel) _then) =
+      _$PreAnalyticalRiskModelCopyWithImpl;
   @useResult
   $Res call(
       {double riskScore,
@@ -126,15 +90,15 @@ abstract class _$$PreAnalyticalRiskModelImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$PreAnalyticalRiskModelImplCopyWithImpl<$Res>
-    extends _$PreAnalyticalRiskModelCopyWithImpl<$Res,
-        _$PreAnalyticalRiskModelImpl>
-    implements _$$PreAnalyticalRiskModelImplCopyWith<$Res> {
-  __$$PreAnalyticalRiskModelImplCopyWithImpl(
-      _$PreAnalyticalRiskModelImpl _value,
-      $Res Function(_$PreAnalyticalRiskModelImpl) _then)
-      : super(_value, _then);
+class _$PreAnalyticalRiskModelCopyWithImpl<$Res>
+    implements $PreAnalyticalRiskModelCopyWith<$Res> {
+  _$PreAnalyticalRiskModelCopyWithImpl(this._self, this._then);
 
+  final PreAnalyticalRiskModel _self;
+  final $Res Function(PreAnalyticalRiskModel) _then;
+
+  /// Create a copy of PreAnalyticalRiskModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -146,43 +110,245 @@ class __$$PreAnalyticalRiskModelImplCopyWithImpl<$Res>
     Object? requiresRecollection = freezed,
     Object? sampleViabilityProbability = freezed,
   }) {
-    return _then(_$PreAnalyticalRiskModelImpl(
+    return _then(_self.copyWith(
       riskScore: null == riskScore
-          ? _value.riskScore
+          ? _self.riskScore
           : riskScore // ignore: cast_nullable_to_non_nullable
               as double,
       riskLevel: null == riskLevel
-          ? _value.riskLevel
+          ? _self.riskLevel
           : riskLevel // ignore: cast_nullable_to_non_nullable
               as String,
       factors: null == factors
-          ? _value._factors
+          ? _self.factors
           : factors // ignore: cast_nullable_to_non_nullable
               as List<RiskFactorModel>,
       assessedAt: null == assessedAt
-          ? _value.assessedAt
+          ? _self.assessedAt
           : assessedAt // ignore: cast_nullable_to_non_nullable
               as String,
       recommendation: freezed == recommendation
-          ? _value.recommendation
+          ? _self.recommendation
           : recommendation // ignore: cast_nullable_to_non_nullable
               as String?,
       requiresRecollection: freezed == requiresRecollection
-          ? _value.requiresRecollection
+          ? _self.requiresRecollection
           : requiresRecollection // ignore: cast_nullable_to_non_nullable
               as bool?,
       sampleViabilityProbability: freezed == sampleViabilityProbability
-          ? _value.sampleViabilityProbability
+          ? _self.sampleViabilityProbability
           : sampleViabilityProbability // ignore: cast_nullable_to_non_nullable
               as double?,
     ));
   }
 }
 
+/// Adds pattern-matching-related methods to [PreAnalyticalRiskModel].
+extension PreAnalyticalRiskModelPatterns on PreAnalyticalRiskModel {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_PreAnalyticalRiskModel value)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _PreAnalyticalRiskModel() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_PreAnalyticalRiskModel value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _PreAnalyticalRiskModel():
+        return $default(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_PreAnalyticalRiskModel value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _PreAnalyticalRiskModel() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(
+            double riskScore,
+            String riskLevel,
+            List<RiskFactorModel> factors,
+            String assessedAt,
+            String? recommendation,
+            bool? requiresRecollection,
+            double? sampleViabilityProbability)?
+        $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _PreAnalyticalRiskModel() when $default != null:
+        return $default(
+            _that.riskScore,
+            _that.riskLevel,
+            _that.factors,
+            _that.assessedAt,
+            _that.recommendation,
+            _that.requiresRecollection,
+            _that.sampleViabilityProbability);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(
+            double riskScore,
+            String riskLevel,
+            List<RiskFactorModel> factors,
+            String assessedAt,
+            String? recommendation,
+            bool? requiresRecollection,
+            double? sampleViabilityProbability)
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _PreAnalyticalRiskModel():
+        return $default(
+            _that.riskScore,
+            _that.riskLevel,
+            _that.factors,
+            _that.assessedAt,
+            _that.recommendation,
+            _that.requiresRecollection,
+            _that.sampleViabilityProbability);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(
+            double riskScore,
+            String riskLevel,
+            List<RiskFactorModel> factors,
+            String assessedAt,
+            String? recommendation,
+            bool? requiresRecollection,
+            double? sampleViabilityProbability)?
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _PreAnalyticalRiskModel() when $default != null:
+        return $default(
+            _that.riskScore,
+            _that.riskLevel,
+            _that.factors,
+            _that.assessedAt,
+            _that.recommendation,
+            _that.requiresRecollection,
+            _that.sampleViabilityProbability);
+      case _:
+        return null;
+    }
+  }
+}
+
 /// @nodoc
 @JsonSerializable()
-class _$PreAnalyticalRiskModelImpl implements _PreAnalyticalRiskModel {
-  const _$PreAnalyticalRiskModelImpl(
+class _PreAnalyticalRiskModel implements PreAnalyticalRiskModel {
+  const _PreAnalyticalRiskModel(
       {required this.riskScore,
       required this.riskLevel,
       required final List<RiskFactorModel> factors,
@@ -191,9 +357,8 @@ class _$PreAnalyticalRiskModelImpl implements _PreAnalyticalRiskModel {
       this.requiresRecollection,
       this.sampleViabilityProbability})
       : _factors = factors;
-
-  factory _$PreAnalyticalRiskModelImpl.fromJson(Map<String, dynamic> json) =>
-      _$$PreAnalyticalRiskModelImplFromJson(json);
+  factory _PreAnalyticalRiskModel.fromJson(Map<String, dynamic> json) =>
+      _$PreAnalyticalRiskModelFromJson(json);
 
   @override
   final double riskScore;
@@ -216,16 +381,27 @@ class _$PreAnalyticalRiskModelImpl implements _PreAnalyticalRiskModel {
   @override
   final double? sampleViabilityProbability;
 
+  /// Create a copy of PreAnalyticalRiskModel
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String toString() {
-    return 'PreAnalyticalRiskModel(riskScore: $riskScore, riskLevel: $riskLevel, factors: $factors, assessedAt: $assessedAt, recommendation: $recommendation, requiresRecollection: $requiresRecollection, sampleViabilityProbability: $sampleViabilityProbability)';
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$PreAnalyticalRiskModelCopyWith<_PreAnalyticalRiskModel> get copyWith =>
+      __$PreAnalyticalRiskModelCopyWithImpl<_PreAnalyticalRiskModel>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$PreAnalyticalRiskModelToJson(
+      this,
+    );
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$PreAnalyticalRiskModelImpl &&
+            other is _PreAnalyticalRiskModel &&
             (identical(other.riskScore, riskScore) ||
                 other.riskScore == riskScore) &&
             (identical(other.riskLevel, riskLevel) ||
@@ -243,7 +419,7 @@ class _$PreAnalyticalRiskModelImpl implements _PreAnalyticalRiskModel {
                     sampleViabilityProbability));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -255,137 +431,133 @@ class _$PreAnalyticalRiskModelImpl implements _PreAnalyticalRiskModel {
       requiresRecollection,
       sampleViabilityProbability);
 
-  @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
-  _$$PreAnalyticalRiskModelImplCopyWith<_$PreAnalyticalRiskModelImpl>
-      get copyWith => __$$PreAnalyticalRiskModelImplCopyWithImpl<
-          _$PreAnalyticalRiskModelImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$PreAnalyticalRiskModelImplToJson(
-      this,
-    );
+  String toString() {
+    return 'PreAnalyticalRiskModel(riskScore: $riskScore, riskLevel: $riskLevel, factors: $factors, assessedAt: $assessedAt, recommendation: $recommendation, requiresRecollection: $requiresRecollection, sampleViabilityProbability: $sampleViabilityProbability)';
   }
 }
 
-abstract class _PreAnalyticalRiskModel implements PreAnalyticalRiskModel {
-  const factory _PreAnalyticalRiskModel(
-      {required final double riskScore,
-      required final String riskLevel,
-      required final List<RiskFactorModel> factors,
-      required final String assessedAt,
-      final String? recommendation,
-      final bool? requiresRecollection,
-      final double? sampleViabilityProbability}) = _$PreAnalyticalRiskModelImpl;
-
-  factory _PreAnalyticalRiskModel.fromJson(Map<String, dynamic> json) =
-      _$PreAnalyticalRiskModelImpl.fromJson;
-
+/// @nodoc
+abstract mixin class _$PreAnalyticalRiskModelCopyWith<$Res>
+    implements $PreAnalyticalRiskModelCopyWith<$Res> {
+  factory _$PreAnalyticalRiskModelCopyWith(_PreAnalyticalRiskModel value,
+          $Res Function(_PreAnalyticalRiskModel) _then) =
+      __$PreAnalyticalRiskModelCopyWithImpl;
   @override
-  double get riskScore;
-  @override
-  String get riskLevel;
-  @override
-  List<RiskFactorModel> get factors;
-  @override
-  String get assessedAt;
-  @override
-  String? get recommendation;
-  @override
-  bool? get requiresRecollection;
-  @override
-  double? get sampleViabilityProbability;
-  @override
-  @JsonKey(ignore: true)
-  _$$PreAnalyticalRiskModelImplCopyWith<_$PreAnalyticalRiskModelImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  @useResult
+  $Res call(
+      {double riskScore,
+      String riskLevel,
+      List<RiskFactorModel> factors,
+      String assessedAt,
+      String? recommendation,
+      bool? requiresRecollection,
+      double? sampleViabilityProbability});
 }
 
-RiskFactorModel _$RiskFactorModelFromJson(Map<String, dynamic> json) {
-  return _RiskFactorModel.fromJson(json);
+/// @nodoc
+class __$PreAnalyticalRiskModelCopyWithImpl<$Res>
+    implements _$PreAnalyticalRiskModelCopyWith<$Res> {
+  __$PreAnalyticalRiskModelCopyWithImpl(this._self, this._then);
+
+  final _PreAnalyticalRiskModel _self;
+  final $Res Function(_PreAnalyticalRiskModel) _then;
+
+  /// Create a copy of PreAnalyticalRiskModel
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? riskScore = null,
+    Object? riskLevel = null,
+    Object? factors = null,
+    Object? assessedAt = null,
+    Object? recommendation = freezed,
+    Object? requiresRecollection = freezed,
+    Object? sampleViabilityProbability = freezed,
+  }) {
+    return _then(_PreAnalyticalRiskModel(
+      riskScore: null == riskScore
+          ? _self.riskScore
+          : riskScore // ignore: cast_nullable_to_non_nullable
+              as double,
+      riskLevel: null == riskLevel
+          ? _self.riskLevel
+          : riskLevel // ignore: cast_nullable_to_non_nullable
+              as String,
+      factors: null == factors
+          ? _self._factors
+          : factors // ignore: cast_nullable_to_non_nullable
+              as List<RiskFactorModel>,
+      assessedAt: null == assessedAt
+          ? _self.assessedAt
+          : assessedAt // ignore: cast_nullable_to_non_nullable
+              as String,
+      recommendation: freezed == recommendation
+          ? _self.recommendation
+          : recommendation // ignore: cast_nullable_to_non_nullable
+              as String?,
+      requiresRecollection: freezed == requiresRecollection
+          ? _self.requiresRecollection
+          : requiresRecollection // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      sampleViabilityProbability: freezed == sampleViabilityProbability
+          ? _self.sampleViabilityProbability
+          : sampleViabilityProbability // ignore: cast_nullable_to_non_nullable
+              as double?,
+    ));
+  }
 }
 
 /// @nodoc
 mixin _$RiskFactorModel {
-  String get type => throw _privateConstructorUsedError;
-  double get impact => throw _privateConstructorUsedError;
-  String get description => throw _privateConstructorUsedError;
-  bool? get detected => throw _privateConstructorUsedError;
-  Map<String, dynamic>? get metadata => throw _privateConstructorUsedError;
+  String get type;
+  double get impact;
+  String get description;
+  bool? get detected;
+  Map<String, dynamic>? get metadata;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $RiskFactorModelCopyWith<RiskFactorModel> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $RiskFactorModelCopyWith<$Res> {
-  factory $RiskFactorModelCopyWith(
-          RiskFactorModel value, $Res Function(RiskFactorModel) then) =
-      _$RiskFactorModelCopyWithImpl<$Res, RiskFactorModel>;
-  @useResult
-  $Res call(
-      {String type,
-      double impact,
-      String description,
-      bool? detected,
-      Map<String, dynamic>? metadata});
-}
-
-/// @nodoc
-class _$RiskFactorModelCopyWithImpl<$Res, $Val extends RiskFactorModel>
-    implements $RiskFactorModelCopyWith<$Res> {
-  _$RiskFactorModelCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
+  /// Create a copy of RiskFactorModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @pragma('vm:prefer-inline')
+  $RiskFactorModelCopyWith<RiskFactorModel> get copyWith =>
+      _$RiskFactorModelCopyWithImpl<RiskFactorModel>(
+          this as RiskFactorModel, _$identity);
+
+  /// Serializes this RiskFactorModel to a JSON map.
+  Map<String, dynamic> toJson();
+
   @override
-  $Res call({
-    Object? type = null,
-    Object? impact = null,
-    Object? description = null,
-    Object? detected = freezed,
-    Object? metadata = freezed,
-  }) {
-    return _then(_value.copyWith(
-      type: null == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as String,
-      impact: null == impact
-          ? _value.impact
-          : impact // ignore: cast_nullable_to_non_nullable
-              as double,
-      description: null == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as String,
-      detected: freezed == detected
-          ? _value.detected
-          : detected // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      metadata: freezed == metadata
-          ? _value.metadata
-          : metadata // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>?,
-    ) as $Val);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is RiskFactorModel &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.impact, impact) || other.impact == impact) &&
+            (identical(other.description, description) ||
+                other.description == description) &&
+            (identical(other.detected, detected) ||
+                other.detected == detected) &&
+            const DeepCollectionEquality().equals(other.metadata, metadata));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, type, impact, description,
+      detected, const DeepCollectionEquality().hash(metadata));
+
+  @override
+  String toString() {
+    return 'RiskFactorModel(type: $type, impact: $impact, description: $description, detected: $detected, metadata: $metadata)';
   }
 }
 
 /// @nodoc
-abstract class _$$RiskFactorModelImplCopyWith<$Res>
-    implements $RiskFactorModelCopyWith<$Res> {
-  factory _$$RiskFactorModelImplCopyWith(_$RiskFactorModelImpl value,
-          $Res Function(_$RiskFactorModelImpl) then) =
-      __$$RiskFactorModelImplCopyWithImpl<$Res>;
-  @override
+abstract mixin class $RiskFactorModelCopyWith<$Res> {
+  factory $RiskFactorModelCopyWith(
+          RiskFactorModel value, $Res Function(RiskFactorModel) _then) =
+      _$RiskFactorModelCopyWithImpl;
   @useResult
   $Res call(
       {String type,
@@ -396,13 +568,15 @@ abstract class _$$RiskFactorModelImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$RiskFactorModelImplCopyWithImpl<$Res>
-    extends _$RiskFactorModelCopyWithImpl<$Res, _$RiskFactorModelImpl>
-    implements _$$RiskFactorModelImplCopyWith<$Res> {
-  __$$RiskFactorModelImplCopyWithImpl(
-      _$RiskFactorModelImpl _value, $Res Function(_$RiskFactorModelImpl) _then)
-      : super(_value, _then);
+class _$RiskFactorModelCopyWithImpl<$Res>
+    implements $RiskFactorModelCopyWith<$Res> {
+  _$RiskFactorModelCopyWithImpl(this._self, this._then);
 
+  final RiskFactorModel _self;
+  final $Res Function(RiskFactorModel) _then;
+
+  /// Create a copy of RiskFactorModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -412,44 +586,209 @@ class __$$RiskFactorModelImplCopyWithImpl<$Res>
     Object? detected = freezed,
     Object? metadata = freezed,
   }) {
-    return _then(_$RiskFactorModelImpl(
+    return _then(_self.copyWith(
       type: null == type
-          ? _value.type
+          ? _self.type
           : type // ignore: cast_nullable_to_non_nullable
               as String,
       impact: null == impact
-          ? _value.impact
+          ? _self.impact
           : impact // ignore: cast_nullable_to_non_nullable
               as double,
       description: null == description
-          ? _value.description
+          ? _self.description
           : description // ignore: cast_nullable_to_non_nullable
               as String,
       detected: freezed == detected
-          ? _value.detected
+          ? _self.detected
           : detected // ignore: cast_nullable_to_non_nullable
               as bool?,
       metadata: freezed == metadata
-          ? _value._metadata
+          ? _self.metadata
           : metadata // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>?,
     ));
   }
 }
 
+/// Adds pattern-matching-related methods to [RiskFactorModel].
+extension RiskFactorModelPatterns on RiskFactorModel {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_RiskFactorModel value)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _RiskFactorModel() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_RiskFactorModel value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _RiskFactorModel():
+        return $default(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_RiskFactorModel value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _RiskFactorModel() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(String type, double impact, String description,
+            bool? detected, Map<String, dynamic>? metadata)?
+        $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _RiskFactorModel() when $default != null:
+        return $default(_that.type, _that.impact, _that.description,
+            _that.detected, _that.metadata);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(String type, double impact, String description,
+            bool? detected, Map<String, dynamic>? metadata)
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _RiskFactorModel():
+        return $default(_that.type, _that.impact, _that.description,
+            _that.detected, _that.metadata);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(String type, double impact, String description,
+            bool? detected, Map<String, dynamic>? metadata)?
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _RiskFactorModel() when $default != null:
+        return $default(_that.type, _that.impact, _that.description,
+            _that.detected, _that.metadata);
+      case _:
+        return null;
+    }
+  }
+}
+
 /// @nodoc
 @JsonSerializable()
-class _$RiskFactorModelImpl implements _RiskFactorModel {
-  const _$RiskFactorModelImpl(
+class _RiskFactorModel implements RiskFactorModel {
+  const _RiskFactorModel(
       {required this.type,
       required this.impact,
       required this.description,
       this.detected,
       final Map<String, dynamic>? metadata})
       : _metadata = metadata;
-
-  factory _$RiskFactorModelImpl.fromJson(Map<String, dynamic> json) =>
-      _$$RiskFactorModelImplFromJson(json);
+  factory _RiskFactorModel.fromJson(Map<String, dynamic> json) =>
+      _$RiskFactorModelFromJson(json);
 
   @override
   final String type;
@@ -469,16 +808,26 @@ class _$RiskFactorModelImpl implements _RiskFactorModel {
     return EqualUnmodifiableMapView(value);
   }
 
+  /// Create a copy of RiskFactorModel
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String toString() {
-    return 'RiskFactorModel(type: $type, impact: $impact, description: $description, detected: $detected, metadata: $metadata)';
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$RiskFactorModelCopyWith<_RiskFactorModel> get copyWith =>
+      __$RiskFactorModelCopyWithImpl<_RiskFactorModel>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$RiskFactorModelToJson(
+      this,
+    );
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$RiskFactorModelImpl &&
+            other is _RiskFactorModel &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.impact, impact) || other.impact == impact) &&
             (identical(other.description, description) ||
@@ -488,49 +837,75 @@ class _$RiskFactorModelImpl implements _RiskFactorModel {
             const DeepCollectionEquality().equals(other._metadata, _metadata));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, type, impact, description,
       detected, const DeepCollectionEquality().hash(_metadata));
 
-  @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
-  _$$RiskFactorModelImplCopyWith<_$RiskFactorModelImpl> get copyWith =>
-      __$$RiskFactorModelImplCopyWithImpl<_$RiskFactorModelImpl>(
-          this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$RiskFactorModelImplToJson(
-      this,
-    );
+  String toString() {
+    return 'RiskFactorModel(type: $type, impact: $impact, description: $description, detected: $detected, metadata: $metadata)';
   }
 }
 
-abstract class _RiskFactorModel implements RiskFactorModel {
-  const factory _RiskFactorModel(
-      {required final String type,
-      required final double impact,
-      required final String description,
-      final bool? detected,
-      final Map<String, dynamic>? metadata}) = _$RiskFactorModelImpl;
-
-  factory _RiskFactorModel.fromJson(Map<String, dynamic> json) =
-      _$RiskFactorModelImpl.fromJson;
-
+/// @nodoc
+abstract mixin class _$RiskFactorModelCopyWith<$Res>
+    implements $RiskFactorModelCopyWith<$Res> {
+  factory _$RiskFactorModelCopyWith(
+          _RiskFactorModel value, $Res Function(_RiskFactorModel) _then) =
+      __$RiskFactorModelCopyWithImpl;
   @override
-  String get type;
-  @override
-  double get impact;
-  @override
-  String get description;
-  @override
-  bool? get detected;
-  @override
-  Map<String, dynamic>? get metadata;
-  @override
-  @JsonKey(ignore: true)
-  _$$RiskFactorModelImplCopyWith<_$RiskFactorModelImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  @useResult
+  $Res call(
+      {String type,
+      double impact,
+      String description,
+      bool? detected,
+      Map<String, dynamic>? metadata});
 }
+
+/// @nodoc
+class __$RiskFactorModelCopyWithImpl<$Res>
+    implements _$RiskFactorModelCopyWith<$Res> {
+  __$RiskFactorModelCopyWithImpl(this._self, this._then);
+
+  final _RiskFactorModel _self;
+  final $Res Function(_RiskFactorModel) _then;
+
+  /// Create a copy of RiskFactorModel
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? type = null,
+    Object? impact = null,
+    Object? description = null,
+    Object? detected = freezed,
+    Object? metadata = freezed,
+  }) {
+    return _then(_RiskFactorModel(
+      type: null == type
+          ? _self.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as String,
+      impact: null == impact
+          ? _self.impact
+          : impact // ignore: cast_nullable_to_non_nullable
+              as double,
+      description: null == description
+          ? _self.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String,
+      detected: freezed == detected
+          ? _self.detected
+          : detected // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      metadata: freezed == metadata
+          ? _self._metadata
+          : metadata // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>?,
+    ));
+  }
+}
+
+// dart format on

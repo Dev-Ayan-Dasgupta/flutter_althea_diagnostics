@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,36 +9,74 @@ part of 'lab_pulse.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
-
-LabPulse _$LabPulseFromJson(Map<String, dynamic> json) {
-  return _LabPulse.fromJson(json);
-}
 
 /// @nodoc
 mixin _$LabPulse {
-  int get samplesInTransit => throw _privateConstructorUsedError;
-  int get samplesProcessing => throw _privateConstructorUsedError;
-  int get samplesCompleted => throw _privateConstructorUsedError;
-  int get samplesRejected => throw _privateConstructorUsedError;
-  List<TatAlert> get tatAlerts => throw _privateConstructorUsedError;
-  LabCapacity get capacity => throw _privateConstructorUsedError;
-  List<SampleTrendData> get trends => throw _privateConstructorUsedError;
-  DateTime get timestamp => throw _privateConstructorUsedError;
+  int get samplesInTransit;
+  int get samplesProcessing;
+  int get samplesCompleted;
+  int get samplesRejected;
+  List<TatAlert> get tatAlerts;
+  LabCapacity get capacity;
+  List<SampleTrendData> get trends;
+  DateTime get timestamp;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+  /// Create a copy of LabPulse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
   $LabPulseCopyWith<LabPulse> get copyWith =>
-      throw _privateConstructorUsedError;
+      _$LabPulseCopyWithImpl<LabPulse>(this as LabPulse, _$identity);
+
+  /// Serializes this LabPulse to a JSON map.
+  Map<String, dynamic> toJson();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is LabPulse &&
+            (identical(other.samplesInTransit, samplesInTransit) ||
+                other.samplesInTransit == samplesInTransit) &&
+            (identical(other.samplesProcessing, samplesProcessing) ||
+                other.samplesProcessing == samplesProcessing) &&
+            (identical(other.samplesCompleted, samplesCompleted) ||
+                other.samplesCompleted == samplesCompleted) &&
+            (identical(other.samplesRejected, samplesRejected) ||
+                other.samplesRejected == samplesRejected) &&
+            const DeepCollectionEquality().equals(other.tatAlerts, tatAlerts) &&
+            (identical(other.capacity, capacity) ||
+                other.capacity == capacity) &&
+            const DeepCollectionEquality().equals(other.trends, trends) &&
+            (identical(other.timestamp, timestamp) ||
+                other.timestamp == timestamp));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      samplesInTransit,
+      samplesProcessing,
+      samplesCompleted,
+      samplesRejected,
+      const DeepCollectionEquality().hash(tatAlerts),
+      capacity,
+      const DeepCollectionEquality().hash(trends),
+      timestamp);
+
+  @override
+  String toString() {
+    return 'LabPulse(samplesInTransit: $samplesInTransit, samplesProcessing: $samplesProcessing, samplesCompleted: $samplesCompleted, samplesRejected: $samplesRejected, tatAlerts: $tatAlerts, capacity: $capacity, trends: $trends, timestamp: $timestamp)';
+  }
 }
 
 /// @nodoc
-abstract class $LabPulseCopyWith<$Res> {
-  factory $LabPulseCopyWith(LabPulse value, $Res Function(LabPulse) then) =
-      _$LabPulseCopyWithImpl<$Res, LabPulse>;
+abstract mixin class $LabPulseCopyWith<$Res> {
+  factory $LabPulseCopyWith(LabPulse value, $Res Function(LabPulse) _then) =
+      _$LabPulseCopyWithImpl;
   @useResult
   $Res call(
       {int samplesInTransit,
@@ -54,15 +92,14 @@ abstract class $LabPulseCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$LabPulseCopyWithImpl<$Res, $Val extends LabPulse>
-    implements $LabPulseCopyWith<$Res> {
-  _$LabPulseCopyWithImpl(this._value, this._then);
+class _$LabPulseCopyWithImpl<$Res> implements $LabPulseCopyWith<$Res> {
+  _$LabPulseCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final LabPulse _self;
+  final $Res Function(LabPulse) _then;
 
+  /// Create a copy of LabPulse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -75,134 +112,265 @@ class _$LabPulseCopyWithImpl<$Res, $Val extends LabPulse>
     Object? trends = null,
     Object? timestamp = null,
   }) {
-    return _then(_value.copyWith(
+    return _then(_self.copyWith(
       samplesInTransit: null == samplesInTransit
-          ? _value.samplesInTransit
+          ? _self.samplesInTransit
           : samplesInTransit // ignore: cast_nullable_to_non_nullable
               as int,
       samplesProcessing: null == samplesProcessing
-          ? _value.samplesProcessing
+          ? _self.samplesProcessing
           : samplesProcessing // ignore: cast_nullable_to_non_nullable
               as int,
       samplesCompleted: null == samplesCompleted
-          ? _value.samplesCompleted
+          ? _self.samplesCompleted
           : samplesCompleted // ignore: cast_nullable_to_non_nullable
               as int,
       samplesRejected: null == samplesRejected
-          ? _value.samplesRejected
+          ? _self.samplesRejected
           : samplesRejected // ignore: cast_nullable_to_non_nullable
               as int,
       tatAlerts: null == tatAlerts
-          ? _value.tatAlerts
+          ? _self.tatAlerts
           : tatAlerts // ignore: cast_nullable_to_non_nullable
               as List<TatAlert>,
       capacity: null == capacity
-          ? _value.capacity
+          ? _self.capacity
           : capacity // ignore: cast_nullable_to_non_nullable
               as LabCapacity,
       trends: null == trends
-          ? _value.trends
+          ? _self.trends
           : trends // ignore: cast_nullable_to_non_nullable
               as List<SampleTrendData>,
       timestamp: null == timestamp
-          ? _value.timestamp
+          ? _self.timestamp
           : timestamp // ignore: cast_nullable_to_non_nullable
               as DateTime,
-    ) as $Val);
+    ));
   }
 
+  /// Create a copy of LabPulse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $LabCapacityCopyWith<$Res> get capacity {
-    return $LabCapacityCopyWith<$Res>(_value.capacity, (value) {
-      return _then(_value.copyWith(capacity: value) as $Val);
+    return $LabCapacityCopyWith<$Res>(_self.capacity, (value) {
+      return _then(_self.copyWith(capacity: value));
     });
   }
 }
 
-/// @nodoc
-abstract class _$$LabPulseImplCopyWith<$Res>
-    implements $LabPulseCopyWith<$Res> {
-  factory _$$LabPulseImplCopyWith(
-          _$LabPulseImpl value, $Res Function(_$LabPulseImpl) then) =
-      __$$LabPulseImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {int samplesInTransit,
-      int samplesProcessing,
-      int samplesCompleted,
-      int samplesRejected,
-      List<TatAlert> tatAlerts,
-      LabCapacity capacity,
-      List<SampleTrendData> trends,
-      DateTime timestamp});
+/// Adds pattern-matching-related methods to [LabPulse].
+extension LabPulsePatterns on LabPulse {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
 
-  @override
-  $LabCapacityCopyWith<$Res> get capacity;
-}
-
-/// @nodoc
-class __$$LabPulseImplCopyWithImpl<$Res>
-    extends _$LabPulseCopyWithImpl<$Res, _$LabPulseImpl>
-    implements _$$LabPulseImplCopyWith<$Res> {
-  __$$LabPulseImplCopyWithImpl(
-      _$LabPulseImpl _value, $Res Function(_$LabPulseImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? samplesInTransit = null,
-    Object? samplesProcessing = null,
-    Object? samplesCompleted = null,
-    Object? samplesRejected = null,
-    Object? tatAlerts = null,
-    Object? capacity = null,
-    Object? trends = null,
-    Object? timestamp = null,
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_LabPulse value)? $default, {
+    required TResult orElse(),
   }) {
-    return _then(_$LabPulseImpl(
-      samplesInTransit: null == samplesInTransit
-          ? _value.samplesInTransit
-          : samplesInTransit // ignore: cast_nullable_to_non_nullable
-              as int,
-      samplesProcessing: null == samplesProcessing
-          ? _value.samplesProcessing
-          : samplesProcessing // ignore: cast_nullable_to_non_nullable
-              as int,
-      samplesCompleted: null == samplesCompleted
-          ? _value.samplesCompleted
-          : samplesCompleted // ignore: cast_nullable_to_non_nullable
-              as int,
-      samplesRejected: null == samplesRejected
-          ? _value.samplesRejected
-          : samplesRejected // ignore: cast_nullable_to_non_nullable
-              as int,
-      tatAlerts: null == tatAlerts
-          ? _value._tatAlerts
-          : tatAlerts // ignore: cast_nullable_to_non_nullable
-              as List<TatAlert>,
-      capacity: null == capacity
-          ? _value.capacity
-          : capacity // ignore: cast_nullable_to_non_nullable
-              as LabCapacity,
-      trends: null == trends
-          ? _value._trends
-          : trends // ignore: cast_nullable_to_non_nullable
-              as List<SampleTrendData>,
-      timestamp: null == timestamp
-          ? _value.timestamp
-          : timestamp // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-    ));
+    final _that = this;
+    switch (_that) {
+      case _LabPulse() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_LabPulse value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _LabPulse():
+        return $default(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_LabPulse value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _LabPulse() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(
+            int samplesInTransit,
+            int samplesProcessing,
+            int samplesCompleted,
+            int samplesRejected,
+            List<TatAlert> tatAlerts,
+            LabCapacity capacity,
+            List<SampleTrendData> trends,
+            DateTime timestamp)?
+        $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _LabPulse() when $default != null:
+        return $default(
+            _that.samplesInTransit,
+            _that.samplesProcessing,
+            _that.samplesCompleted,
+            _that.samplesRejected,
+            _that.tatAlerts,
+            _that.capacity,
+            _that.trends,
+            _that.timestamp);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(
+            int samplesInTransit,
+            int samplesProcessing,
+            int samplesCompleted,
+            int samplesRejected,
+            List<TatAlert> tatAlerts,
+            LabCapacity capacity,
+            List<SampleTrendData> trends,
+            DateTime timestamp)
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _LabPulse():
+        return $default(
+            _that.samplesInTransit,
+            _that.samplesProcessing,
+            _that.samplesCompleted,
+            _that.samplesRejected,
+            _that.tatAlerts,
+            _that.capacity,
+            _that.trends,
+            _that.timestamp);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(
+            int samplesInTransit,
+            int samplesProcessing,
+            int samplesCompleted,
+            int samplesRejected,
+            List<TatAlert> tatAlerts,
+            LabCapacity capacity,
+            List<SampleTrendData> trends,
+            DateTime timestamp)?
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _LabPulse() when $default != null:
+        return $default(
+            _that.samplesInTransit,
+            _that.samplesProcessing,
+            _that.samplesCompleted,
+            _that.samplesRejected,
+            _that.tatAlerts,
+            _that.capacity,
+            _that.trends,
+            _that.timestamp);
+      case _:
+        return null;
+    }
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$LabPulseImpl implements _LabPulse {
-  const _$LabPulseImpl(
+class _LabPulse implements LabPulse {
+  const _LabPulse(
       {required this.samplesInTransit,
       required this.samplesProcessing,
       required this.samplesCompleted,
@@ -213,9 +381,8 @@ class _$LabPulseImpl implements _LabPulse {
       required this.timestamp})
       : _tatAlerts = tatAlerts,
         _trends = trends;
-
-  factory _$LabPulseImpl.fromJson(Map<String, dynamic> json) =>
-      _$$LabPulseImplFromJson(json);
+  factory _LabPulse.fromJson(Map<String, dynamic> json) =>
+      _$LabPulseFromJson(json);
 
   @override
   final int samplesInTransit;
@@ -246,16 +413,26 @@ class _$LabPulseImpl implements _LabPulse {
   @override
   final DateTime timestamp;
 
+  /// Create a copy of LabPulse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String toString() {
-    return 'LabPulse(samplesInTransit: $samplesInTransit, samplesProcessing: $samplesProcessing, samplesCompleted: $samplesCompleted, samplesRejected: $samplesRejected, tatAlerts: $tatAlerts, capacity: $capacity, trends: $trends, timestamp: $timestamp)';
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$LabPulseCopyWith<_LabPulse> get copyWith =>
+      __$LabPulseCopyWithImpl<_LabPulse>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$LabPulseToJson(
+      this,
+    );
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$LabPulseImpl &&
+            other is _LabPulse &&
             (identical(other.samplesInTransit, samplesInTransit) ||
                 other.samplesInTransit == samplesInTransit) &&
             (identical(other.samplesProcessing, samplesProcessing) ||
@@ -273,7 +450,7 @@ class _$LabPulseImpl implements _LabPulse {
                 other.timestamp == timestamp));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -286,223 +463,124 @@ class _$LabPulseImpl implements _LabPulse {
       const DeepCollectionEquality().hash(_trends),
       timestamp);
 
-  @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
-  _$$LabPulseImplCopyWith<_$LabPulseImpl> get copyWith =>
-      __$$LabPulseImplCopyWithImpl<_$LabPulseImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$LabPulseImplToJson(
-      this,
-    );
+  String toString() {
+    return 'LabPulse(samplesInTransit: $samplesInTransit, samplesProcessing: $samplesProcessing, samplesCompleted: $samplesCompleted, samplesRejected: $samplesRejected, tatAlerts: $tatAlerts, capacity: $capacity, trends: $trends, timestamp: $timestamp)';
   }
 }
 
-abstract class _LabPulse implements LabPulse {
-  const factory _LabPulse(
-      {required final int samplesInTransit,
-      required final int samplesProcessing,
-      required final int samplesCompleted,
-      required final int samplesRejected,
-      required final List<TatAlert> tatAlerts,
-      required final LabCapacity capacity,
-      required final List<SampleTrendData> trends,
-      required final DateTime timestamp}) = _$LabPulseImpl;
+/// @nodoc
+abstract mixin class _$LabPulseCopyWith<$Res>
+    implements $LabPulseCopyWith<$Res> {
+  factory _$LabPulseCopyWith(_LabPulse value, $Res Function(_LabPulse) _then) =
+      __$LabPulseCopyWithImpl;
+  @override
+  @useResult
+  $Res call(
+      {int samplesInTransit,
+      int samplesProcessing,
+      int samplesCompleted,
+      int samplesRejected,
+      List<TatAlert> tatAlerts,
+      LabCapacity capacity,
+      List<SampleTrendData> trends,
+      DateTime timestamp});
 
-  factory _LabPulse.fromJson(Map<String, dynamic> json) =
-      _$LabPulseImpl.fromJson;
-
   @override
-  int get samplesInTransit;
-  @override
-  int get samplesProcessing;
-  @override
-  int get samplesCompleted;
-  @override
-  int get samplesRejected;
-  @override
-  List<TatAlert> get tatAlerts;
-  @override
-  LabCapacity get capacity;
-  @override
-  List<SampleTrendData> get trends;
-  @override
-  DateTime get timestamp;
-  @override
-  @JsonKey(ignore: true)
-  _$$LabPulseImplCopyWith<_$LabPulseImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  $LabCapacityCopyWith<$Res> get capacity;
 }
 
-TatAlert _$TatAlertFromJson(Map<String, dynamic> json) {
-  return _TatAlert.fromJson(json);
+/// @nodoc
+class __$LabPulseCopyWithImpl<$Res> implements _$LabPulseCopyWith<$Res> {
+  __$LabPulseCopyWithImpl(this._self, this._then);
+
+  final _LabPulse _self;
+  final $Res Function(_LabPulse) _then;
+
+  /// Create a copy of LabPulse
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? samplesInTransit = null,
+    Object? samplesProcessing = null,
+    Object? samplesCompleted = null,
+    Object? samplesRejected = null,
+    Object? tatAlerts = null,
+    Object? capacity = null,
+    Object? trends = null,
+    Object? timestamp = null,
+  }) {
+    return _then(_LabPulse(
+      samplesInTransit: null == samplesInTransit
+          ? _self.samplesInTransit
+          : samplesInTransit // ignore: cast_nullable_to_non_nullable
+              as int,
+      samplesProcessing: null == samplesProcessing
+          ? _self.samplesProcessing
+          : samplesProcessing // ignore: cast_nullable_to_non_nullable
+              as int,
+      samplesCompleted: null == samplesCompleted
+          ? _self.samplesCompleted
+          : samplesCompleted // ignore: cast_nullable_to_non_nullable
+              as int,
+      samplesRejected: null == samplesRejected
+          ? _self.samplesRejected
+          : samplesRejected // ignore: cast_nullable_to_non_nullable
+              as int,
+      tatAlerts: null == tatAlerts
+          ? _self._tatAlerts
+          : tatAlerts // ignore: cast_nullable_to_non_nullable
+              as List<TatAlert>,
+      capacity: null == capacity
+          ? _self.capacity
+          : capacity // ignore: cast_nullable_to_non_nullable
+              as LabCapacity,
+      trends: null == trends
+          ? _self._trends
+          : trends // ignore: cast_nullable_to_non_nullable
+              as List<SampleTrendData>,
+      timestamp: null == timestamp
+          ? _self.timestamp
+          : timestamp // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+    ));
+  }
+
+  /// Create a copy of LabPulse
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $LabCapacityCopyWith<$Res> get capacity {
+    return $LabCapacityCopyWith<$Res>(_self.capacity, (value) {
+      return _then(_self.copyWith(capacity: value));
+    });
+  }
 }
 
 /// @nodoc
 mixin _$TatAlert {
-  String get sampleId => throw _privateConstructorUsedError;
-  String get testName => throw _privateConstructorUsedError;
-  int get remainingMinutes => throw _privateConstructorUsedError;
-  TatSeverity get severity => throw _privateConstructorUsedError;
-  DateTime get deadline => throw _privateConstructorUsedError;
+  String get sampleId;
+  String get testName;
+  int get remainingMinutes;
+  TatSeverity get severity;
+  DateTime get deadline;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+  /// Create a copy of TatAlert
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
   $TatAlertCopyWith<TatAlert> get copyWith =>
-      throw _privateConstructorUsedError;
-}
+      _$TatAlertCopyWithImpl<TatAlert>(this as TatAlert, _$identity);
 
-/// @nodoc
-abstract class $TatAlertCopyWith<$Res> {
-  factory $TatAlertCopyWith(TatAlert value, $Res Function(TatAlert) then) =
-      _$TatAlertCopyWithImpl<$Res, TatAlert>;
-  @useResult
-  $Res call(
-      {String sampleId,
-      String testName,
-      int remainingMinutes,
-      TatSeverity severity,
-      DateTime deadline});
-}
-
-/// @nodoc
-class _$TatAlertCopyWithImpl<$Res, $Val extends TatAlert>
-    implements $TatAlertCopyWith<$Res> {
-  _$TatAlertCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? sampleId = null,
-    Object? testName = null,
-    Object? remainingMinutes = null,
-    Object? severity = null,
-    Object? deadline = null,
-  }) {
-    return _then(_value.copyWith(
-      sampleId: null == sampleId
-          ? _value.sampleId
-          : sampleId // ignore: cast_nullable_to_non_nullable
-              as String,
-      testName: null == testName
-          ? _value.testName
-          : testName // ignore: cast_nullable_to_non_nullable
-              as String,
-      remainingMinutes: null == remainingMinutes
-          ? _value.remainingMinutes
-          : remainingMinutes // ignore: cast_nullable_to_non_nullable
-              as int,
-      severity: null == severity
-          ? _value.severity
-          : severity // ignore: cast_nullable_to_non_nullable
-              as TatSeverity,
-      deadline: null == deadline
-          ? _value.deadline
-          : deadline // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-    ) as $Val);
-  }
-}
-
-/// @nodoc
-abstract class _$$TatAlertImplCopyWith<$Res>
-    implements $TatAlertCopyWith<$Res> {
-  factory _$$TatAlertImplCopyWith(
-          _$TatAlertImpl value, $Res Function(_$TatAlertImpl) then) =
-      __$$TatAlertImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {String sampleId,
-      String testName,
-      int remainingMinutes,
-      TatSeverity severity,
-      DateTime deadline});
-}
-
-/// @nodoc
-class __$$TatAlertImplCopyWithImpl<$Res>
-    extends _$TatAlertCopyWithImpl<$Res, _$TatAlertImpl>
-    implements _$$TatAlertImplCopyWith<$Res> {
-  __$$TatAlertImplCopyWithImpl(
-      _$TatAlertImpl _value, $Res Function(_$TatAlertImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? sampleId = null,
-    Object? testName = null,
-    Object? remainingMinutes = null,
-    Object? severity = null,
-    Object? deadline = null,
-  }) {
-    return _then(_$TatAlertImpl(
-      sampleId: null == sampleId
-          ? _value.sampleId
-          : sampleId // ignore: cast_nullable_to_non_nullable
-              as String,
-      testName: null == testName
-          ? _value.testName
-          : testName // ignore: cast_nullable_to_non_nullable
-              as String,
-      remainingMinutes: null == remainingMinutes
-          ? _value.remainingMinutes
-          : remainingMinutes // ignore: cast_nullable_to_non_nullable
-              as int,
-      severity: null == severity
-          ? _value.severity
-          : severity // ignore: cast_nullable_to_non_nullable
-              as TatSeverity,
-      deadline: null == deadline
-          ? _value.deadline
-          : deadline // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-    ));
-  }
-}
-
-/// @nodoc
-@JsonSerializable()
-class _$TatAlertImpl implements _TatAlert {
-  const _$TatAlertImpl(
-      {required this.sampleId,
-      required this.testName,
-      required this.remainingMinutes,
-      required this.severity,
-      required this.deadline});
-
-  factory _$TatAlertImpl.fromJson(Map<String, dynamic> json) =>
-      _$$TatAlertImplFromJson(json);
-
-  @override
-  final String sampleId;
-  @override
-  final String testName;
-  @override
-  final int remainingMinutes;
-  @override
-  final TatSeverity severity;
-  @override
-  final DateTime deadline;
-
-  @override
-  String toString() {
-    return 'TatAlert(sampleId: $sampleId, testName: $testName, remainingMinutes: $remainingMinutes, severity: $severity, deadline: $deadline)';
-  }
+  /// Serializes this TatAlert to a JSON map.
+  Map<String, dynamic> toJson();
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$TatAlertImpl &&
+            other is TatAlert &&
             (identical(other.sampleId, sampleId) ||
                 other.sampleId == sampleId) &&
             (identical(other.testName, testName) ||
@@ -515,220 +593,386 @@ class _$TatAlertImpl implements _TatAlert {
                 other.deadline == deadline));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, sampleId, testName, remainingMinutes, severity, deadline);
 
-  @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
-  _$$TatAlertImplCopyWith<_$TatAlertImpl> get copyWith =>
-      __$$TatAlertImplCopyWithImpl<_$TatAlertImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$TatAlertImplToJson(
-      this,
-    );
-  }
-}
-
-abstract class _TatAlert implements TatAlert {
-  const factory _TatAlert(
-      {required final String sampleId,
-      required final String testName,
-      required final int remainingMinutes,
-      required final TatSeverity severity,
-      required final DateTime deadline}) = _$TatAlertImpl;
-
-  factory _TatAlert.fromJson(Map<String, dynamic> json) =
-      _$TatAlertImpl.fromJson;
-
-  @override
-  String get sampleId;
-  @override
-  String get testName;
-  @override
-  int get remainingMinutes;
-  @override
-  TatSeverity get severity;
-  @override
-  DateTime get deadline;
-  @override
-  @JsonKey(ignore: true)
-  _$$TatAlertImplCopyWith<_$TatAlertImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-LabCapacity _$LabCapacityFromJson(Map<String, dynamic> json) {
-  return _LabCapacity.fromJson(json);
-}
-
-/// @nodoc
-mixin _$LabCapacity {
-  int get currentLoad => throw _privateConstructorUsedError;
-  int get maxCapacity => throw _privateConstructorUsedError;
-  double get utilizationPercentage => throw _privateConstructorUsedError;
-  int get availableAnalyzers => throw _privateConstructorUsedError;
-  int get totalAnalyzers => throw _privateConstructorUsedError;
-
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $LabCapacityCopyWith<LabCapacity> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $LabCapacityCopyWith<$Res> {
-  factory $LabCapacityCopyWith(
-          LabCapacity value, $Res Function(LabCapacity) then) =
-      _$LabCapacityCopyWithImpl<$Res, LabCapacity>;
-  @useResult
-  $Res call(
-      {int currentLoad,
-      int maxCapacity,
-      double utilizationPercentage,
-      int availableAnalyzers,
-      int totalAnalyzers});
-}
-
-/// @nodoc
-class _$LabCapacityCopyWithImpl<$Res, $Val extends LabCapacity>
-    implements $LabCapacityCopyWith<$Res> {
-  _$LabCapacityCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? currentLoad = null,
-    Object? maxCapacity = null,
-    Object? utilizationPercentage = null,
-    Object? availableAnalyzers = null,
-    Object? totalAnalyzers = null,
-  }) {
-    return _then(_value.copyWith(
-      currentLoad: null == currentLoad
-          ? _value.currentLoad
-          : currentLoad // ignore: cast_nullable_to_non_nullable
-              as int,
-      maxCapacity: null == maxCapacity
-          ? _value.maxCapacity
-          : maxCapacity // ignore: cast_nullable_to_non_nullable
-              as int,
-      utilizationPercentage: null == utilizationPercentage
-          ? _value.utilizationPercentage
-          : utilizationPercentage // ignore: cast_nullable_to_non_nullable
-              as double,
-      availableAnalyzers: null == availableAnalyzers
-          ? _value.availableAnalyzers
-          : availableAnalyzers // ignore: cast_nullable_to_non_nullable
-              as int,
-      totalAnalyzers: null == totalAnalyzers
-          ? _value.totalAnalyzers
-          : totalAnalyzers // ignore: cast_nullable_to_non_nullable
-              as int,
-    ) as $Val);
+  String toString() {
+    return 'TatAlert(sampleId: $sampleId, testName: $testName, remainingMinutes: $remainingMinutes, severity: $severity, deadline: $deadline)';
   }
 }
 
 /// @nodoc
-abstract class _$$LabCapacityImplCopyWith<$Res>
-    implements $LabCapacityCopyWith<$Res> {
-  factory _$$LabCapacityImplCopyWith(
-          _$LabCapacityImpl value, $Res Function(_$LabCapacityImpl) then) =
-      __$$LabCapacityImplCopyWithImpl<$Res>;
-  @override
+abstract mixin class $TatAlertCopyWith<$Res> {
+  factory $TatAlertCopyWith(TatAlert value, $Res Function(TatAlert) _then) =
+      _$TatAlertCopyWithImpl;
   @useResult
   $Res call(
-      {int currentLoad,
-      int maxCapacity,
-      double utilizationPercentage,
-      int availableAnalyzers,
-      int totalAnalyzers});
+      {String sampleId,
+      String testName,
+      int remainingMinutes,
+      TatSeverity severity,
+      DateTime deadline});
 }
 
 /// @nodoc
-class __$$LabCapacityImplCopyWithImpl<$Res>
-    extends _$LabCapacityCopyWithImpl<$Res, _$LabCapacityImpl>
-    implements _$$LabCapacityImplCopyWith<$Res> {
-  __$$LabCapacityImplCopyWithImpl(
-      _$LabCapacityImpl _value, $Res Function(_$LabCapacityImpl) _then)
-      : super(_value, _then);
+class _$TatAlertCopyWithImpl<$Res> implements $TatAlertCopyWith<$Res> {
+  _$TatAlertCopyWithImpl(this._self, this._then);
 
+  final TatAlert _self;
+  final $Res Function(TatAlert) _then;
+
+  /// Create a copy of TatAlert
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? currentLoad = null,
-    Object? maxCapacity = null,
-    Object? utilizationPercentage = null,
-    Object? availableAnalyzers = null,
-    Object? totalAnalyzers = null,
+    Object? sampleId = null,
+    Object? testName = null,
+    Object? remainingMinutes = null,
+    Object? severity = null,
+    Object? deadline = null,
   }) {
-    return _then(_$LabCapacityImpl(
-      currentLoad: null == currentLoad
-          ? _value.currentLoad
-          : currentLoad // ignore: cast_nullable_to_non_nullable
+    return _then(_self.copyWith(
+      sampleId: null == sampleId
+          ? _self.sampleId
+          : sampleId // ignore: cast_nullable_to_non_nullable
+              as String,
+      testName: null == testName
+          ? _self.testName
+          : testName // ignore: cast_nullable_to_non_nullable
+              as String,
+      remainingMinutes: null == remainingMinutes
+          ? _self.remainingMinutes
+          : remainingMinutes // ignore: cast_nullable_to_non_nullable
               as int,
-      maxCapacity: null == maxCapacity
-          ? _value.maxCapacity
-          : maxCapacity // ignore: cast_nullable_to_non_nullable
-              as int,
-      utilizationPercentage: null == utilizationPercentage
-          ? _value.utilizationPercentage
-          : utilizationPercentage // ignore: cast_nullable_to_non_nullable
-              as double,
-      availableAnalyzers: null == availableAnalyzers
-          ? _value.availableAnalyzers
-          : availableAnalyzers // ignore: cast_nullable_to_non_nullable
-              as int,
-      totalAnalyzers: null == totalAnalyzers
-          ? _value.totalAnalyzers
-          : totalAnalyzers // ignore: cast_nullable_to_non_nullable
-              as int,
+      severity: null == severity
+          ? _self.severity
+          : severity // ignore: cast_nullable_to_non_nullable
+              as TatSeverity,
+      deadline: null == deadline
+          ? _self.deadline
+          : deadline // ignore: cast_nullable_to_non_nullable
+              as DateTime,
     ));
+  }
+}
+
+/// Adds pattern-matching-related methods to [TatAlert].
+extension TatAlertPatterns on TatAlert {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_TatAlert value)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _TatAlert() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_TatAlert value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _TatAlert():
+        return $default(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_TatAlert value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _TatAlert() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(String sampleId, String testName, int remainingMinutes,
+            TatSeverity severity, DateTime deadline)?
+        $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _TatAlert() when $default != null:
+        return $default(_that.sampleId, _that.testName, _that.remainingMinutes,
+            _that.severity, _that.deadline);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(String sampleId, String testName, int remainingMinutes,
+            TatSeverity severity, DateTime deadline)
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _TatAlert():
+        return $default(_that.sampleId, _that.testName, _that.remainingMinutes,
+            _that.severity, _that.deadline);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(String sampleId, String testName, int remainingMinutes,
+            TatSeverity severity, DateTime deadline)?
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _TatAlert() when $default != null:
+        return $default(_that.sampleId, _that.testName, _that.remainingMinutes,
+            _that.severity, _that.deadline);
+      case _:
+        return null;
+    }
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$LabCapacityImpl implements _LabCapacity {
-  const _$LabCapacityImpl(
-      {required this.currentLoad,
-      required this.maxCapacity,
-      required this.utilizationPercentage,
-      required this.availableAnalyzers,
-      required this.totalAnalyzers});
-
-  factory _$LabCapacityImpl.fromJson(Map<String, dynamic> json) =>
-      _$$LabCapacityImplFromJson(json);
-
-  @override
-  final int currentLoad;
-  @override
-  final int maxCapacity;
-  @override
-  final double utilizationPercentage;
-  @override
-  final int availableAnalyzers;
-  @override
-  final int totalAnalyzers;
+class _TatAlert implements TatAlert {
+  const _TatAlert(
+      {required this.sampleId,
+      required this.testName,
+      required this.remainingMinutes,
+      required this.severity,
+      required this.deadline});
+  factory _TatAlert.fromJson(Map<String, dynamic> json) =>
+      _$TatAlertFromJson(json);
 
   @override
-  String toString() {
-    return 'LabCapacity(currentLoad: $currentLoad, maxCapacity: $maxCapacity, utilizationPercentage: $utilizationPercentage, availableAnalyzers: $availableAnalyzers, totalAnalyzers: $totalAnalyzers)';
+  final String sampleId;
+  @override
+  final String testName;
+  @override
+  final int remainingMinutes;
+  @override
+  final TatSeverity severity;
+  @override
+  final DateTime deadline;
+
+  /// Create a copy of TatAlert
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$TatAlertCopyWith<_TatAlert> get copyWith =>
+      __$TatAlertCopyWithImpl<_TatAlert>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$TatAlertToJson(
+      this,
+    );
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$LabCapacityImpl &&
+            other is _TatAlert &&
+            (identical(other.sampleId, sampleId) ||
+                other.sampleId == sampleId) &&
+            (identical(other.testName, testName) ||
+                other.testName == testName) &&
+            (identical(other.remainingMinutes, remainingMinutes) ||
+                other.remainingMinutes == remainingMinutes) &&
+            (identical(other.severity, severity) ||
+                other.severity == severity) &&
+            (identical(other.deadline, deadline) ||
+                other.deadline == deadline));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, sampleId, testName, remainingMinutes, severity, deadline);
+
+  @override
+  String toString() {
+    return 'TatAlert(sampleId: $sampleId, testName: $testName, remainingMinutes: $remainingMinutes, severity: $severity, deadline: $deadline)';
+  }
+}
+
+/// @nodoc
+abstract mixin class _$TatAlertCopyWith<$Res>
+    implements $TatAlertCopyWith<$Res> {
+  factory _$TatAlertCopyWith(_TatAlert value, $Res Function(_TatAlert) _then) =
+      __$TatAlertCopyWithImpl;
+  @override
+  @useResult
+  $Res call(
+      {String sampleId,
+      String testName,
+      int remainingMinutes,
+      TatSeverity severity,
+      DateTime deadline});
+}
+
+/// @nodoc
+class __$TatAlertCopyWithImpl<$Res> implements _$TatAlertCopyWith<$Res> {
+  __$TatAlertCopyWithImpl(this._self, this._then);
+
+  final _TatAlert _self;
+  final $Res Function(_TatAlert) _then;
+
+  /// Create a copy of TatAlert
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? sampleId = null,
+    Object? testName = null,
+    Object? remainingMinutes = null,
+    Object? severity = null,
+    Object? deadline = null,
+  }) {
+    return _then(_TatAlert(
+      sampleId: null == sampleId
+          ? _self.sampleId
+          : sampleId // ignore: cast_nullable_to_non_nullable
+              as String,
+      testName: null == testName
+          ? _self.testName
+          : testName // ignore: cast_nullable_to_non_nullable
+              as String,
+      remainingMinutes: null == remainingMinutes
+          ? _self.remainingMinutes
+          : remainingMinutes // ignore: cast_nullable_to_non_nullable
+              as int,
+      severity: null == severity
+          ? _self.severity
+          : severity // ignore: cast_nullable_to_non_nullable
+              as TatSeverity,
+      deadline: null == deadline
+          ? _self.deadline
+          : deadline // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+    ));
+  }
+}
+
+/// @nodoc
+mixin _$LabCapacity {
+  int get currentLoad;
+  int get maxCapacity;
+  double get utilizationPercentage;
+  int get availableAnalyzers;
+  int get totalAnalyzers;
+
+  /// Create a copy of LabCapacity
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $LabCapacityCopyWith<LabCapacity> get copyWith =>
+      _$LabCapacityCopyWithImpl<LabCapacity>(this as LabCapacity, _$identity);
+
+  /// Serializes this LabCapacity to a JSON map.
+  Map<String, dynamic> toJson();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is LabCapacity &&
             (identical(other.currentLoad, currentLoad) ||
                 other.currentLoad == currentLoad) &&
             (identical(other.maxCapacity, maxCapacity) ||
@@ -741,182 +985,411 @@ class _$LabCapacityImpl implements _LabCapacity {
                 other.totalAnalyzers == totalAnalyzers));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, currentLoad, maxCapacity,
       utilizationPercentage, availableAnalyzers, totalAnalyzers);
 
-  @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
-  _$$LabCapacityImplCopyWith<_$LabCapacityImpl> get copyWith =>
-      __$$LabCapacityImplCopyWithImpl<_$LabCapacityImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$LabCapacityImplToJson(
-      this,
-    );
-  }
-}
-
-abstract class _LabCapacity implements LabCapacity {
-  const factory _LabCapacity(
-      {required final int currentLoad,
-      required final int maxCapacity,
-      required final double utilizationPercentage,
-      required final int availableAnalyzers,
-      required final int totalAnalyzers}) = _$LabCapacityImpl;
-
-  factory _LabCapacity.fromJson(Map<String, dynamic> json) =
-      _$LabCapacityImpl.fromJson;
-
-  @override
-  int get currentLoad;
-  @override
-  int get maxCapacity;
-  @override
-  double get utilizationPercentage;
-  @override
-  int get availableAnalyzers;
-  @override
-  int get totalAnalyzers;
-  @override
-  @JsonKey(ignore: true)
-  _$$LabCapacityImplCopyWith<_$LabCapacityImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-SampleTrendData _$SampleTrendDataFromJson(Map<String, dynamic> json) {
-  return _SampleTrendData.fromJson(json);
-}
-
-/// @nodoc
-mixin _$SampleTrendData {
-  DateTime get timestamp => throw _privateConstructorUsedError;
-  int get inTransit => throw _privateConstructorUsedError;
-  int get processing => throw _privateConstructorUsedError;
-
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $SampleTrendDataCopyWith<SampleTrendData> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $SampleTrendDataCopyWith<$Res> {
-  factory $SampleTrendDataCopyWith(
-          SampleTrendData value, $Res Function(SampleTrendData) then) =
-      _$SampleTrendDataCopyWithImpl<$Res, SampleTrendData>;
-  @useResult
-  $Res call({DateTime timestamp, int inTransit, int processing});
-}
-
-/// @nodoc
-class _$SampleTrendDataCopyWithImpl<$Res, $Val extends SampleTrendData>
-    implements $SampleTrendDataCopyWith<$Res> {
-  _$SampleTrendDataCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? timestamp = null,
-    Object? inTransit = null,
-    Object? processing = null,
-  }) {
-    return _then(_value.copyWith(
-      timestamp: null == timestamp
-          ? _value.timestamp
-          : timestamp // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      inTransit: null == inTransit
-          ? _value.inTransit
-          : inTransit // ignore: cast_nullable_to_non_nullable
-              as int,
-      processing: null == processing
-          ? _value.processing
-          : processing // ignore: cast_nullable_to_non_nullable
-              as int,
-    ) as $Val);
+  String toString() {
+    return 'LabCapacity(currentLoad: $currentLoad, maxCapacity: $maxCapacity, utilizationPercentage: $utilizationPercentage, availableAnalyzers: $availableAnalyzers, totalAnalyzers: $totalAnalyzers)';
   }
 }
 
 /// @nodoc
-abstract class _$$SampleTrendDataImplCopyWith<$Res>
-    implements $SampleTrendDataCopyWith<$Res> {
-  factory _$$SampleTrendDataImplCopyWith(_$SampleTrendDataImpl value,
-          $Res Function(_$SampleTrendDataImpl) then) =
-      __$$SampleTrendDataImplCopyWithImpl<$Res>;
-  @override
+abstract mixin class $LabCapacityCopyWith<$Res> {
+  factory $LabCapacityCopyWith(
+          LabCapacity value, $Res Function(LabCapacity) _then) =
+      _$LabCapacityCopyWithImpl;
   @useResult
-  $Res call({DateTime timestamp, int inTransit, int processing});
+  $Res call(
+      {int currentLoad,
+      int maxCapacity,
+      double utilizationPercentage,
+      int availableAnalyzers,
+      int totalAnalyzers});
 }
 
 /// @nodoc
-class __$$SampleTrendDataImplCopyWithImpl<$Res>
-    extends _$SampleTrendDataCopyWithImpl<$Res, _$SampleTrendDataImpl>
-    implements _$$SampleTrendDataImplCopyWith<$Res> {
-  __$$SampleTrendDataImplCopyWithImpl(
-      _$SampleTrendDataImpl _value, $Res Function(_$SampleTrendDataImpl) _then)
-      : super(_value, _then);
+class _$LabCapacityCopyWithImpl<$Res> implements $LabCapacityCopyWith<$Res> {
+  _$LabCapacityCopyWithImpl(this._self, this._then);
 
+  final LabCapacity _self;
+  final $Res Function(LabCapacity) _then;
+
+  /// Create a copy of LabCapacity
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? timestamp = null,
-    Object? inTransit = null,
-    Object? processing = null,
+    Object? currentLoad = null,
+    Object? maxCapacity = null,
+    Object? utilizationPercentage = null,
+    Object? availableAnalyzers = null,
+    Object? totalAnalyzers = null,
   }) {
-    return _then(_$SampleTrendDataImpl(
-      timestamp: null == timestamp
-          ? _value.timestamp
-          : timestamp // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      inTransit: null == inTransit
-          ? _value.inTransit
-          : inTransit // ignore: cast_nullable_to_non_nullable
+    return _then(_self.copyWith(
+      currentLoad: null == currentLoad
+          ? _self.currentLoad
+          : currentLoad // ignore: cast_nullable_to_non_nullable
               as int,
-      processing: null == processing
-          ? _value.processing
-          : processing // ignore: cast_nullable_to_non_nullable
+      maxCapacity: null == maxCapacity
+          ? _self.maxCapacity
+          : maxCapacity // ignore: cast_nullable_to_non_nullable
+              as int,
+      utilizationPercentage: null == utilizationPercentage
+          ? _self.utilizationPercentage
+          : utilizationPercentage // ignore: cast_nullable_to_non_nullable
+              as double,
+      availableAnalyzers: null == availableAnalyzers
+          ? _self.availableAnalyzers
+          : availableAnalyzers // ignore: cast_nullable_to_non_nullable
+              as int,
+      totalAnalyzers: null == totalAnalyzers
+          ? _self.totalAnalyzers
+          : totalAnalyzers // ignore: cast_nullable_to_non_nullable
               as int,
     ));
   }
 }
 
+/// Adds pattern-matching-related methods to [LabCapacity].
+extension LabCapacityPatterns on LabCapacity {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_LabCapacity value)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _LabCapacity() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_LabCapacity value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _LabCapacity():
+        return $default(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_LabCapacity value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _LabCapacity() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(
+            int currentLoad,
+            int maxCapacity,
+            double utilizationPercentage,
+            int availableAnalyzers,
+            int totalAnalyzers)?
+        $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _LabCapacity() when $default != null:
+        return $default(
+            _that.currentLoad,
+            _that.maxCapacity,
+            _that.utilizationPercentage,
+            _that.availableAnalyzers,
+            _that.totalAnalyzers);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(
+            int currentLoad,
+            int maxCapacity,
+            double utilizationPercentage,
+            int availableAnalyzers,
+            int totalAnalyzers)
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _LabCapacity():
+        return $default(
+            _that.currentLoad,
+            _that.maxCapacity,
+            _that.utilizationPercentage,
+            _that.availableAnalyzers,
+            _that.totalAnalyzers);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(
+            int currentLoad,
+            int maxCapacity,
+            double utilizationPercentage,
+            int availableAnalyzers,
+            int totalAnalyzers)?
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _LabCapacity() when $default != null:
+        return $default(
+            _that.currentLoad,
+            _that.maxCapacity,
+            _that.utilizationPercentage,
+            _that.availableAnalyzers,
+            _that.totalAnalyzers);
+      case _:
+        return null;
+    }
+  }
+}
+
 /// @nodoc
 @JsonSerializable()
-class _$SampleTrendDataImpl implements _SampleTrendData {
-  const _$SampleTrendDataImpl(
-      {required this.timestamp,
-      required this.inTransit,
-      required this.processing});
-
-  factory _$SampleTrendDataImpl.fromJson(Map<String, dynamic> json) =>
-      _$$SampleTrendDataImplFromJson(json);
-
-  @override
-  final DateTime timestamp;
-  @override
-  final int inTransit;
-  @override
-  final int processing;
+class _LabCapacity implements LabCapacity {
+  const _LabCapacity(
+      {required this.currentLoad,
+      required this.maxCapacity,
+      required this.utilizationPercentage,
+      required this.availableAnalyzers,
+      required this.totalAnalyzers});
+  factory _LabCapacity.fromJson(Map<String, dynamic> json) =>
+      _$LabCapacityFromJson(json);
 
   @override
-  String toString() {
-    return 'SampleTrendData(timestamp: $timestamp, inTransit: $inTransit, processing: $processing)';
+  final int currentLoad;
+  @override
+  final int maxCapacity;
+  @override
+  final double utilizationPercentage;
+  @override
+  final int availableAnalyzers;
+  @override
+  final int totalAnalyzers;
+
+  /// Create a copy of LabCapacity
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$LabCapacityCopyWith<_LabCapacity> get copyWith =>
+      __$LabCapacityCopyWithImpl<_LabCapacity>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$LabCapacityToJson(
+      this,
+    );
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$SampleTrendDataImpl &&
+            other is _LabCapacity &&
+            (identical(other.currentLoad, currentLoad) ||
+                other.currentLoad == currentLoad) &&
+            (identical(other.maxCapacity, maxCapacity) ||
+                other.maxCapacity == maxCapacity) &&
+            (identical(other.utilizationPercentage, utilizationPercentage) ||
+                other.utilizationPercentage == utilizationPercentage) &&
+            (identical(other.availableAnalyzers, availableAnalyzers) ||
+                other.availableAnalyzers == availableAnalyzers) &&
+            (identical(other.totalAnalyzers, totalAnalyzers) ||
+                other.totalAnalyzers == totalAnalyzers));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, currentLoad, maxCapacity,
+      utilizationPercentage, availableAnalyzers, totalAnalyzers);
+
+  @override
+  String toString() {
+    return 'LabCapacity(currentLoad: $currentLoad, maxCapacity: $maxCapacity, utilizationPercentage: $utilizationPercentage, availableAnalyzers: $availableAnalyzers, totalAnalyzers: $totalAnalyzers)';
+  }
+}
+
+/// @nodoc
+abstract mixin class _$LabCapacityCopyWith<$Res>
+    implements $LabCapacityCopyWith<$Res> {
+  factory _$LabCapacityCopyWith(
+          _LabCapacity value, $Res Function(_LabCapacity) _then) =
+      __$LabCapacityCopyWithImpl;
+  @override
+  @useResult
+  $Res call(
+      {int currentLoad,
+      int maxCapacity,
+      double utilizationPercentage,
+      int availableAnalyzers,
+      int totalAnalyzers});
+}
+
+/// @nodoc
+class __$LabCapacityCopyWithImpl<$Res> implements _$LabCapacityCopyWith<$Res> {
+  __$LabCapacityCopyWithImpl(this._self, this._then);
+
+  final _LabCapacity _self;
+  final $Res Function(_LabCapacity) _then;
+
+  /// Create a copy of LabCapacity
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? currentLoad = null,
+    Object? maxCapacity = null,
+    Object? utilizationPercentage = null,
+    Object? availableAnalyzers = null,
+    Object? totalAnalyzers = null,
+  }) {
+    return _then(_LabCapacity(
+      currentLoad: null == currentLoad
+          ? _self.currentLoad
+          : currentLoad // ignore: cast_nullable_to_non_nullable
+              as int,
+      maxCapacity: null == maxCapacity
+          ? _self.maxCapacity
+          : maxCapacity // ignore: cast_nullable_to_non_nullable
+              as int,
+      utilizationPercentage: null == utilizationPercentage
+          ? _self.utilizationPercentage
+          : utilizationPercentage // ignore: cast_nullable_to_non_nullable
+              as double,
+      availableAnalyzers: null == availableAnalyzers
+          ? _self.availableAnalyzers
+          : availableAnalyzers // ignore: cast_nullable_to_non_nullable
+              as int,
+      totalAnalyzers: null == totalAnalyzers
+          ? _self.totalAnalyzers
+          : totalAnalyzers // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+mixin _$SampleTrendData {
+  DateTime get timestamp;
+  int get inTransit;
+  int get processing;
+
+  /// Create a copy of SampleTrendData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $SampleTrendDataCopyWith<SampleTrendData> get copyWith =>
+      _$SampleTrendDataCopyWithImpl<SampleTrendData>(
+          this as SampleTrendData, _$identity);
+
+  /// Serializes this SampleTrendData to a JSON map.
+  Map<String, dynamic> toJson();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is SampleTrendData &&
             (identical(other.timestamp, timestamp) ||
                 other.timestamp == timestamp) &&
             (identical(other.inTransit, inTransit) ||
@@ -925,43 +1398,319 @@ class _$SampleTrendDataImpl implements _SampleTrendData {
                 other.processing == processing));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, timestamp, inTransit, processing);
 
-  @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
-  _$$SampleTrendDataImplCopyWith<_$SampleTrendDataImpl> get copyWith =>
-      __$$SampleTrendDataImplCopyWithImpl<_$SampleTrendDataImpl>(
-          this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$SampleTrendDataImplToJson(
-      this,
-    );
+  String toString() {
+    return 'SampleTrendData(timestamp: $timestamp, inTransit: $inTransit, processing: $processing)';
   }
 }
 
-abstract class _SampleTrendData implements SampleTrendData {
-  const factory _SampleTrendData(
-      {required final DateTime timestamp,
-      required final int inTransit,
-      required final int processing}) = _$SampleTrendDataImpl;
-
-  factory _SampleTrendData.fromJson(Map<String, dynamic> json) =
-      _$SampleTrendDataImpl.fromJson;
-
-  @override
-  DateTime get timestamp;
-  @override
-  int get inTransit;
-  @override
-  int get processing;
-  @override
-  @JsonKey(ignore: true)
-  _$$SampleTrendDataImplCopyWith<_$SampleTrendDataImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+/// @nodoc
+abstract mixin class $SampleTrendDataCopyWith<$Res> {
+  factory $SampleTrendDataCopyWith(
+          SampleTrendData value, $Res Function(SampleTrendData) _then) =
+      _$SampleTrendDataCopyWithImpl;
+  @useResult
+  $Res call({DateTime timestamp, int inTransit, int processing});
 }
+
+/// @nodoc
+class _$SampleTrendDataCopyWithImpl<$Res>
+    implements $SampleTrendDataCopyWith<$Res> {
+  _$SampleTrendDataCopyWithImpl(this._self, this._then);
+
+  final SampleTrendData _self;
+  final $Res Function(SampleTrendData) _then;
+
+  /// Create a copy of SampleTrendData
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? timestamp = null,
+    Object? inTransit = null,
+    Object? processing = null,
+  }) {
+    return _then(_self.copyWith(
+      timestamp: null == timestamp
+          ? _self.timestamp
+          : timestamp // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      inTransit: null == inTransit
+          ? _self.inTransit
+          : inTransit // ignore: cast_nullable_to_non_nullable
+              as int,
+      processing: null == processing
+          ? _self.processing
+          : processing // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// Adds pattern-matching-related methods to [SampleTrendData].
+extension SampleTrendDataPatterns on SampleTrendData {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_SampleTrendData value)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _SampleTrendData() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_SampleTrendData value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _SampleTrendData():
+        return $default(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_SampleTrendData value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _SampleTrendData() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(DateTime timestamp, int inTransit, int processing)?
+        $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _SampleTrendData() when $default != null:
+        return $default(_that.timestamp, _that.inTransit, _that.processing);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(DateTime timestamp, int inTransit, int processing)
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _SampleTrendData():
+        return $default(_that.timestamp, _that.inTransit, _that.processing);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(DateTime timestamp, int inTransit, int processing)?
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _SampleTrendData() when $default != null:
+        return $default(_that.timestamp, _that.inTransit, _that.processing);
+      case _:
+        return null;
+    }
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _SampleTrendData implements SampleTrendData {
+  const _SampleTrendData(
+      {required this.timestamp,
+      required this.inTransit,
+      required this.processing});
+  factory _SampleTrendData.fromJson(Map<String, dynamic> json) =>
+      _$SampleTrendDataFromJson(json);
+
+  @override
+  final DateTime timestamp;
+  @override
+  final int inTransit;
+  @override
+  final int processing;
+
+  /// Create a copy of SampleTrendData
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$SampleTrendDataCopyWith<_SampleTrendData> get copyWith =>
+      __$SampleTrendDataCopyWithImpl<_SampleTrendData>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$SampleTrendDataToJson(
+      this,
+    );
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _SampleTrendData &&
+            (identical(other.timestamp, timestamp) ||
+                other.timestamp == timestamp) &&
+            (identical(other.inTransit, inTransit) ||
+                other.inTransit == inTransit) &&
+            (identical(other.processing, processing) ||
+                other.processing == processing));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, timestamp, inTransit, processing);
+
+  @override
+  String toString() {
+    return 'SampleTrendData(timestamp: $timestamp, inTransit: $inTransit, processing: $processing)';
+  }
+}
+
+/// @nodoc
+abstract mixin class _$SampleTrendDataCopyWith<$Res>
+    implements $SampleTrendDataCopyWith<$Res> {
+  factory _$SampleTrendDataCopyWith(
+          _SampleTrendData value, $Res Function(_SampleTrendData) _then) =
+      __$SampleTrendDataCopyWithImpl;
+  @override
+  @useResult
+  $Res call({DateTime timestamp, int inTransit, int processing});
+}
+
+/// @nodoc
+class __$SampleTrendDataCopyWithImpl<$Res>
+    implements _$SampleTrendDataCopyWith<$Res> {
+  __$SampleTrendDataCopyWithImpl(this._self, this._then);
+
+  final _SampleTrendData _self;
+  final $Res Function(_SampleTrendData) _then;
+
+  /// Create a copy of SampleTrendData
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? timestamp = null,
+    Object? inTransit = null,
+    Object? processing = null,
+  }) {
+    return _then(_SampleTrendData(
+      timestamp: null == timestamp
+          ? _self.timestamp
+          : timestamp // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      inTransit: null == inTransit
+          ? _self.inTransit
+          : inTransit // ignore: cast_nullable_to_non_nullable
+              as int,
+      processing: null == processing
+          ? _self.processing
+          : processing // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+// dart format on

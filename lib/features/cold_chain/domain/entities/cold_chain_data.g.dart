@@ -6,8 +6,8 @@ part of 'cold_chain_data.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$ColdChainDataImpl _$$ColdChainDataImplFromJson(Map<String, dynamic> json) =>
-    _$ColdChainDataImpl(
+_ColdChainData _$ColdChainDataFromJson(Map<String, dynamic> json) =>
+    _ColdChainData(
       sampleId: json['sampleId'] as String,
       readings: (json['readings'] as List<dynamic>)
           .map((e) => TelemetryReading.fromJson(e as Map<String, dynamic>))
@@ -23,30 +23,19 @@ _$ColdChainDataImpl _$$ColdChainDataImplFromJson(Map<String, dynamic> json) =>
       isManualLogging: json['isManualLogging'] as bool?,
     );
 
-Map<String, dynamic> _$$ColdChainDataImplToJson(_$ColdChainDataImpl instance) {
-  final val = <String, dynamic>{
-    'sampleId': instance.sampleId,
-    'readings': instance.readings.map((e) => e.toJson()).toList(),
-    'compliance': instance.compliance.toJson(),
-    'monitoringStartTime': instance.monitoringStartTime.toIso8601String(),
-  };
+Map<String, dynamic> _$ColdChainDataToJson(_ColdChainData instance) =>
+    <String, dynamic>{
+      'sampleId': instance.sampleId,
+      'readings': instance.readings,
+      'compliance': instance.compliance,
+      'monitoringStartTime': instance.monitoringStartTime.toIso8601String(),
+      'monitoringEndTime': instance.monitoringEndTime?.toIso8601String(),
+      'smartBagId': instance.smartBagId,
+      'isManualLogging': instance.isManualLogging,
+    };
 
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull(
-      'monitoringEndTime', instance.monitoringEndTime?.toIso8601String());
-  writeNotNull('smartBagId', instance.smartBagId);
-  writeNotNull('isManualLogging', instance.isManualLogging);
-  return val;
-}
-
-_$TelemetryReadingImpl _$$TelemetryReadingImplFromJson(
-        Map<String, dynamic> json) =>
-    _$TelemetryReadingImpl(
+_TelemetryReading _$TelemetryReadingFromJson(Map<String, dynamic> json) =>
+    _TelemetryReading(
       timestamp: DateTime.parse(json['timestamp'] as String),
       temperature: (json['temperature'] as num).toDouble(),
       humidity: (json['humidity'] as num?)?.toDouble(),
@@ -60,32 +49,21 @@ _$TelemetryReadingImpl _$$TelemetryReadingImplFromJson(
       deviceId: json['deviceId'] as String?,
     );
 
-Map<String, dynamic> _$$TelemetryReadingImplToJson(
-    _$TelemetryReadingImpl instance) {
-  final val = <String, dynamic>{
-    'timestamp': instance.timestamp.toIso8601String(),
-    'temperature': instance.temperature,
-  };
+Map<String, dynamic> _$TelemetryReadingToJson(_TelemetryReading instance) =>
+    <String, dynamic>{
+      'timestamp': instance.timestamp.toIso8601String(),
+      'temperature': instance.temperature,
+      'humidity': instance.humidity,
+      'shockDetected': instance.shockDetected,
+      'tiltDetected': instance.tiltDetected,
+      'lidOpenDetected': instance.lidOpenDetected,
+      'batteryLevel': instance.batteryLevel,
+      'location': instance.location,
+      'deviceId': instance.deviceId,
+    };
 
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('humidity', instance.humidity);
-  writeNotNull('shockDetected', instance.shockDetected);
-  writeNotNull('tiltDetected', instance.tiltDetected);
-  writeNotNull('lidOpenDetected', instance.lidOpenDetected);
-  writeNotNull('batteryLevel', instance.batteryLevel);
-  writeNotNull('location', instance.location?.toJson());
-  writeNotNull('deviceId', instance.deviceId);
-  return val;
-}
-
-_$ColdChainComplianceImpl _$$ColdChainComplianceImplFromJson(
-        Map<String, dynamic> json) =>
-    _$ColdChainComplianceImpl(
+_ColdChainCompliance _$ColdChainComplianceFromJson(Map<String, dynamic> json) =>
+    _ColdChainCompliance(
       compliancePercentage: (json['compliancePercentage'] as num).toDouble(),
       totalReadings: (json['totalReadings'] as num).toInt(),
       compliantReadings: (json['compliantReadings'] as num).toInt(),
@@ -99,22 +77,21 @@ _$ColdChainComplianceImpl _$$ColdChainComplianceImplFromJson(
           json['cumulativeStress'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$ColdChainComplianceImplToJson(
-        _$ColdChainComplianceImpl instance) =>
+Map<String, dynamic> _$ColdChainComplianceToJson(
+        _ColdChainCompliance instance) =>
     <String, dynamic>{
       'compliancePercentage': instance.compliancePercentage,
       'totalReadings': instance.totalReadings,
       'compliantReadings': instance.compliantReadings,
       'breachCount': instance.breachCount,
-      'breaches': instance.breaches.map((e) => e.toJson()).toList(),
+      'breaches': instance.breaches,
       'maxDeviation': instance.maxDeviation,
       'totalExposureDuration': instance.totalExposureDuration,
-      'cumulativeStress': instance.cumulativeStress.toJson(),
+      'cumulativeStress': instance.cumulativeStress,
     };
 
-_$TemperatureBreachImpl _$$TemperatureBreachImplFromJson(
-        Map<String, dynamic> json) =>
-    _$TemperatureBreachImpl(
+_TemperatureBreach _$TemperatureBreachFromJson(Map<String, dynamic> json) =>
+    _TemperatureBreach(
       startTime: DateTime.parse(json['startTime'] as String),
       endTime: DateTime.parse(json['endTime'] as String),
       peakTemperature: (json['peakTemperature'] as num).toDouble(),
@@ -123,25 +100,15 @@ _$TemperatureBreachImpl _$$TemperatureBreachImplFromJson(
       notes: json['notes'] as String?,
     );
 
-Map<String, dynamic> _$$TemperatureBreachImplToJson(
-    _$TemperatureBreachImpl instance) {
-  final val = <String, dynamic>{
-    'startTime': instance.startTime.toIso8601String(),
-    'endTime': instance.endTime.toIso8601String(),
-    'peakTemperature': instance.peakTemperature,
-    'durationSeconds': instance.durationSeconds,
-    'severity': _$BreachSeverityEnumMap[instance.severity]!,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('notes', instance.notes);
-  return val;
-}
+Map<String, dynamic> _$TemperatureBreachToJson(_TemperatureBreach instance) =>
+    <String, dynamic>{
+      'startTime': instance.startTime.toIso8601String(),
+      'endTime': instance.endTime.toIso8601String(),
+      'peakTemperature': instance.peakTemperature,
+      'durationSeconds': instance.durationSeconds,
+      'severity': _$BreachSeverityEnumMap[instance.severity]!,
+      'notes': instance.notes,
+    };
 
 const _$BreachSeverityEnumMap = {
   BreachSeverity.minor: 'minor',
@@ -149,27 +116,18 @@ const _$BreachSeverityEnumMap = {
   BreachSeverity.severe: 'severe',
 };
 
-_$CumulativeThermalStressImpl _$$CumulativeThermalStressImplFromJson(
+_CumulativeThermalStress _$CumulativeThermalStressFromJson(
         Map<String, dynamic> json) =>
-    _$CumulativeThermalStressImpl(
+    _CumulativeThermalStress(
       stressIndex: (json['stressIndex'] as num).toDouble(),
       predictedDegradation: (json['predictedDegradation'] as num).toDouble(),
       recommendation: json['recommendation'] as String?,
     );
 
-Map<String, dynamic> _$$CumulativeThermalStressImplToJson(
-    _$CumulativeThermalStressImpl instance) {
-  final val = <String, dynamic>{
-    'stressIndex': instance.stressIndex,
-    'predictedDegradation': instance.predictedDegradation,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('recommendation', instance.recommendation);
-  return val;
-}
+Map<String, dynamic> _$CumulativeThermalStressToJson(
+        _CumulativeThermalStress instance) =>
+    <String, dynamic>{
+      'stressIndex': instance.stressIndex,
+      'predictedDegradation': instance.predictedDegradation,
+      'recommendation': instance.recommendation,
+    };

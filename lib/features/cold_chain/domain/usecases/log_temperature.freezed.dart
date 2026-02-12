@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,169 +9,29 @@ part of 'log_temperature.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$LogTemperatureParams {
-  String get sampleId => throw _privateConstructorUsedError;
-  double get temperature => throw _privateConstructorUsedError;
-  double? get humidity => throw _privateConstructorUsedError;
-  GeoLocation get location => throw _privateConstructorUsedError;
+  String get sampleId;
+  double get temperature;
+  double? get humidity;
+  GeoLocation get location;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of LogTemperatureParams
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
   $LogTemperatureParamsCopyWith<LogTemperatureParams> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $LogTemperatureParamsCopyWith<$Res> {
-  factory $LogTemperatureParamsCopyWith(LogTemperatureParams value,
-          $Res Function(LogTemperatureParams) then) =
-      _$LogTemperatureParamsCopyWithImpl<$Res, LogTemperatureParams>;
-  @useResult
-  $Res call(
-      {String sampleId,
-      double temperature,
-      double? humidity,
-      GeoLocation location});
-
-  $GeoLocationCopyWith<$Res> get location;
-}
-
-/// @nodoc
-class _$LogTemperatureParamsCopyWithImpl<$Res,
-        $Val extends LogTemperatureParams>
-    implements $LogTemperatureParamsCopyWith<$Res> {
-  _$LogTemperatureParamsCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? sampleId = null,
-    Object? temperature = null,
-    Object? humidity = freezed,
-    Object? location = null,
-  }) {
-    return _then(_value.copyWith(
-      sampleId: null == sampleId
-          ? _value.sampleId
-          : sampleId // ignore: cast_nullable_to_non_nullable
-              as String,
-      temperature: null == temperature
-          ? _value.temperature
-          : temperature // ignore: cast_nullable_to_non_nullable
-              as double,
-      humidity: freezed == humidity
-          ? _value.humidity
-          : humidity // ignore: cast_nullable_to_non_nullable
-              as double?,
-      location: null == location
-          ? _value.location
-          : location // ignore: cast_nullable_to_non_nullable
-              as GeoLocation,
-    ) as $Val);
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $GeoLocationCopyWith<$Res> get location {
-    return $GeoLocationCopyWith<$Res>(_value.location, (value) {
-      return _then(_value.copyWith(location: value) as $Val);
-    });
-  }
-}
-
-/// @nodoc
-abstract class _$$LogTemperatureParamsImplCopyWith<$Res>
-    implements $LogTemperatureParamsCopyWith<$Res> {
-  factory _$$LogTemperatureParamsImplCopyWith(_$LogTemperatureParamsImpl value,
-          $Res Function(_$LogTemperatureParamsImpl) then) =
-      __$$LogTemperatureParamsImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {String sampleId,
-      double temperature,
-      double? humidity,
-      GeoLocation location});
-
-  @override
-  $GeoLocationCopyWith<$Res> get location;
-}
-
-/// @nodoc
-class __$$LogTemperatureParamsImplCopyWithImpl<$Res>
-    extends _$LogTemperatureParamsCopyWithImpl<$Res, _$LogTemperatureParamsImpl>
-    implements _$$LogTemperatureParamsImplCopyWith<$Res> {
-  __$$LogTemperatureParamsImplCopyWithImpl(_$LogTemperatureParamsImpl _value,
-      $Res Function(_$LogTemperatureParamsImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? sampleId = null,
-    Object? temperature = null,
-    Object? humidity = freezed,
-    Object? location = null,
-  }) {
-    return _then(_$LogTemperatureParamsImpl(
-      sampleId: null == sampleId
-          ? _value.sampleId
-          : sampleId // ignore: cast_nullable_to_non_nullable
-              as String,
-      temperature: null == temperature
-          ? _value.temperature
-          : temperature // ignore: cast_nullable_to_non_nullable
-              as double,
-      humidity: freezed == humidity
-          ? _value.humidity
-          : humidity // ignore: cast_nullable_to_non_nullable
-              as double?,
-      location: null == location
-          ? _value.location
-          : location // ignore: cast_nullable_to_non_nullable
-              as GeoLocation,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$LogTemperatureParamsImpl implements _LogTemperatureParams {
-  const _$LogTemperatureParamsImpl(
-      {required this.sampleId,
-      required this.temperature,
-      this.humidity,
-      required this.location});
-
-  @override
-  final String sampleId;
-  @override
-  final double temperature;
-  @override
-  final double? humidity;
-  @override
-  final GeoLocation location;
-
-  @override
-  String toString() {
-    return 'LogTemperatureParams(sampleId: $sampleId, temperature: $temperature, humidity: $humidity, location: $location)';
-  }
+      _$LogTemperatureParamsCopyWithImpl<LogTemperatureParams>(
+          this as LogTemperatureParams, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$LogTemperatureParamsImpl &&
+            other is LogTemperatureParams &&
             (identical(other.sampleId, sampleId) ||
                 other.sampleId == sampleId) &&
             (identical(other.temperature, temperature) ||
@@ -186,32 +46,359 @@ class _$LogTemperatureParamsImpl implements _LogTemperatureParams {
   int get hashCode =>
       Object.hash(runtimeType, sampleId, temperature, humidity, location);
 
-  @JsonKey(ignore: true)
+  @override
+  String toString() {
+    return 'LogTemperatureParams(sampleId: $sampleId, temperature: $temperature, humidity: $humidity, location: $location)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $LogTemperatureParamsCopyWith<$Res> {
+  factory $LogTemperatureParamsCopyWith(LogTemperatureParams value,
+          $Res Function(LogTemperatureParams) _then) =
+      _$LogTemperatureParamsCopyWithImpl;
+  @useResult
+  $Res call(
+      {String sampleId,
+      double temperature,
+      double? humidity,
+      GeoLocation location});
+
+  $GeoLocationCopyWith<$Res> get location;
+}
+
+/// @nodoc
+class _$LogTemperatureParamsCopyWithImpl<$Res>
+    implements $LogTemperatureParamsCopyWith<$Res> {
+  _$LogTemperatureParamsCopyWithImpl(this._self, this._then);
+
+  final LogTemperatureParams _self;
+  final $Res Function(LogTemperatureParams) _then;
+
+  /// Create a copy of LogTemperatureParams
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? sampleId = null,
+    Object? temperature = null,
+    Object? humidity = freezed,
+    Object? location = null,
+  }) {
+    return _then(_self.copyWith(
+      sampleId: null == sampleId
+          ? _self.sampleId
+          : sampleId // ignore: cast_nullable_to_non_nullable
+              as String,
+      temperature: null == temperature
+          ? _self.temperature
+          : temperature // ignore: cast_nullable_to_non_nullable
+              as double,
+      humidity: freezed == humidity
+          ? _self.humidity
+          : humidity // ignore: cast_nullable_to_non_nullable
+              as double?,
+      location: null == location
+          ? _self.location
+          : location // ignore: cast_nullable_to_non_nullable
+              as GeoLocation,
+    ));
+  }
+
+  /// Create a copy of LogTemperatureParams
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  _$$LogTemperatureParamsImplCopyWith<_$LogTemperatureParamsImpl>
-      get copyWith =>
-          __$$LogTemperatureParamsImplCopyWithImpl<_$LogTemperatureParamsImpl>(
-              this, _$identity);
+  $GeoLocationCopyWith<$Res> get location {
+    return $GeoLocationCopyWith<$Res>(_self.location, (value) {
+      return _then(_self.copyWith(location: value));
+    });
+  }
 }
 
-abstract class _LogTemperatureParams implements LogTemperatureParams {
-  const factory _LogTemperatureParams(
-      {required final String sampleId,
-      required final double temperature,
-      final double? humidity,
-      required final GeoLocation location}) = _$LogTemperatureParamsImpl;
+/// Adds pattern-matching-related methods to [LogTemperatureParams].
+extension LogTemperatureParamsPatterns on LogTemperatureParams {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_LogTemperatureParams value)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _LogTemperatureParams() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_LogTemperatureParams value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _LogTemperatureParams():
+        return $default(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_LogTemperatureParams value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _LogTemperatureParams() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(String sampleId, double temperature, double? humidity,
+            GeoLocation location)?
+        $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _LogTemperatureParams() when $default != null:
+        return $default(
+            _that.sampleId, _that.temperature, _that.humidity, _that.location);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(String sampleId, double temperature, double? humidity,
+            GeoLocation location)
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _LogTemperatureParams():
+        return $default(
+            _that.sampleId, _that.temperature, _that.humidity, _that.location);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(String sampleId, double temperature, double? humidity,
+            GeoLocation location)?
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _LogTemperatureParams() when $default != null:
+        return $default(
+            _that.sampleId, _that.temperature, _that.humidity, _that.location);
+      case _:
+        return null;
+    }
+  }
+}
+
+/// @nodoc
+
+class _LogTemperatureParams implements LogTemperatureParams {
+  const _LogTemperatureParams(
+      {required this.sampleId,
+      required this.temperature,
+      this.humidity,
+      required this.location});
 
   @override
-  String get sampleId;
+  final String sampleId;
   @override
-  double get temperature;
+  final double temperature;
   @override
-  double? get humidity;
+  final double? humidity;
   @override
-  GeoLocation get location;
+  final GeoLocation location;
+
+  /// Create a copy of LogTemperatureParams
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$LogTemperatureParamsImplCopyWith<_$LogTemperatureParamsImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$LogTemperatureParamsCopyWith<_LogTemperatureParams> get copyWith =>
+      __$LogTemperatureParamsCopyWithImpl<_LogTemperatureParams>(
+          this, _$identity);
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _LogTemperatureParams &&
+            (identical(other.sampleId, sampleId) ||
+                other.sampleId == sampleId) &&
+            (identical(other.temperature, temperature) ||
+                other.temperature == temperature) &&
+            (identical(other.humidity, humidity) ||
+                other.humidity == humidity) &&
+            (identical(other.location, location) ||
+                other.location == location));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, sampleId, temperature, humidity, location);
+
+  @override
+  String toString() {
+    return 'LogTemperatureParams(sampleId: $sampleId, temperature: $temperature, humidity: $humidity, location: $location)';
+  }
 }
+
+/// @nodoc
+abstract mixin class _$LogTemperatureParamsCopyWith<$Res>
+    implements $LogTemperatureParamsCopyWith<$Res> {
+  factory _$LogTemperatureParamsCopyWith(_LogTemperatureParams value,
+          $Res Function(_LogTemperatureParams) _then) =
+      __$LogTemperatureParamsCopyWithImpl;
+  @override
+  @useResult
+  $Res call(
+      {String sampleId,
+      double temperature,
+      double? humidity,
+      GeoLocation location});
+
+  @override
+  $GeoLocationCopyWith<$Res> get location;
+}
+
+/// @nodoc
+class __$LogTemperatureParamsCopyWithImpl<$Res>
+    implements _$LogTemperatureParamsCopyWith<$Res> {
+  __$LogTemperatureParamsCopyWithImpl(this._self, this._then);
+
+  final _LogTemperatureParams _self;
+  final $Res Function(_LogTemperatureParams) _then;
+
+  /// Create a copy of LogTemperatureParams
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? sampleId = null,
+    Object? temperature = null,
+    Object? humidity = freezed,
+    Object? location = null,
+  }) {
+    return _then(_LogTemperatureParams(
+      sampleId: null == sampleId
+          ? _self.sampleId
+          : sampleId // ignore: cast_nullable_to_non_nullable
+              as String,
+      temperature: null == temperature
+          ? _self.temperature
+          : temperature // ignore: cast_nullable_to_non_nullable
+              as double,
+      humidity: freezed == humidity
+          ? _self.humidity
+          : humidity // ignore: cast_nullable_to_non_nullable
+              as double?,
+      location: null == location
+          ? _self.location
+          : location // ignore: cast_nullable_to_non_nullable
+              as GeoLocation,
+    ));
+  }
+
+  /// Create a copy of LogTemperatureParams
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $GeoLocationCopyWith<$Res> get location {
+    return $GeoLocationCopyWith<$Res>(_self.location, (value) {
+      return _then(_self.copyWith(location: value));
+    });
+  }
+}
+
+// dart format on

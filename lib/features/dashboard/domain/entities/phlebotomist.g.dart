@@ -6,8 +6,8 @@ part of 'phlebotomist.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$PhlebotomistImpl _$$PhlebotomistImplFromJson(Map<String, dynamic> json) =>
-    _$PhlebotomistImpl(
+_Phlebotomist _$PhlebotomistFromJson(Map<String, dynamic> json) =>
+    _Phlebotomist(
       id: json['id'] as String,
       name: json['name'] as String,
       phoneNumber: json['phoneNumber'] as String,
@@ -37,34 +37,25 @@ _$PhlebotomistImpl _$$PhlebotomistImplFromJson(Map<String, dynamic> json) =>
           : DateTime.parse(json['shiftEndTime'] as String),
     );
 
-Map<String, dynamic> _$$PhlebotomistImplToJson(_$PhlebotomistImpl instance) {
-  final val = <String, dynamic>{
-    'id': instance.id,
-    'name': instance.name,
-    'phoneNumber': instance.phoneNumber,
-    'email': instance.email,
-    'status': _$PhlebotomistStatusEnumMap[instance.status]!,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('currentLocation', instance.currentLocation?.toJson());
-  val['activeSamplesCount'] = instance.activeSamplesCount;
-  val['batteryLevel'] = instance.batteryLevel;
-  writeNotNull('smartBagTemperature', instance.smartBagTemperature);
-  writeNotNull('deviceId', instance.deviceId);
-  writeNotNull('avatarUrl', instance.avatarUrl);
-  val['certifications'] = instance.certifications;
-  val['stats'] = instance.stats.toJson();
-  writeNotNull('lastActiveAt', instance.lastActiveAt?.toIso8601String());
-  writeNotNull('shiftStartTime', instance.shiftStartTime?.toIso8601String());
-  writeNotNull('shiftEndTime', instance.shiftEndTime?.toIso8601String());
-  return val;
-}
+Map<String, dynamic> _$PhlebotomistToJson(_Phlebotomist instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'name': instance.name,
+      'phoneNumber': instance.phoneNumber,
+      'email': instance.email,
+      'status': _$PhlebotomistStatusEnumMap[instance.status]!,
+      'currentLocation': instance.currentLocation,
+      'activeSamplesCount': instance.activeSamplesCount,
+      'batteryLevel': instance.batteryLevel,
+      'smartBagTemperature': instance.smartBagTemperature,
+      'deviceId': instance.deviceId,
+      'avatarUrl': instance.avatarUrl,
+      'certifications': instance.certifications,
+      'stats': instance.stats,
+      'lastActiveAt': instance.lastActiveAt?.toIso8601String(),
+      'shiftStartTime': instance.shiftStartTime?.toIso8601String(),
+      'shiftEndTime': instance.shiftEndTime?.toIso8601String(),
+    };
 
 const _$PhlebotomistStatusEnumMap = {
   PhlebotomistStatus.available: 'available',
@@ -75,9 +66,8 @@ const _$PhlebotomistStatusEnumMap = {
   PhlebotomistStatus.offline: 'offline',
 };
 
-_$PhlebotomistStatsImpl _$$PhlebotomistStatsImplFromJson(
-        Map<String, dynamic> json) =>
-    _$PhlebotomistStatsImpl(
+_PhlebotomistStats _$PhlebotomistStatsFromJson(Map<String, dynamic> json) =>
+    _PhlebotomistStats(
       totalCollections: (json['totalCollections'] as num).toInt(),
       todayCollections: (json['todayCollections'] as num).toInt(),
       averageCollectionTime: (json['averageCollectionTime'] as num).toDouble(),
@@ -86,8 +76,7 @@ _$PhlebotomistStatsImpl _$$PhlebotomistStatsImplFromJson(
       averageIntegrityScore: (json['averageIntegrityScore'] as num).toDouble(),
     );
 
-Map<String, dynamic> _$$PhlebotomistStatsImplToJson(
-        _$PhlebotomistStatsImpl instance) =>
+Map<String, dynamic> _$PhlebotomistStatsToJson(_PhlebotomistStats instance) =>
     <String, dynamic>{
       'totalCollections': instance.totalCollections,
       'todayCollections': instance.todayCollections,

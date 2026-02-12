@@ -6,9 +6,9 @@ part of 'pre_analytical_risk_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$PreAnalyticalRiskModelImpl _$$PreAnalyticalRiskModelImplFromJson(
+_PreAnalyticalRiskModel _$PreAnalyticalRiskModelFromJson(
         Map<String, dynamic> json) =>
-    _$PreAnalyticalRiskModelImpl(
+    _PreAnalyticalRiskModel(
       riskScore: (json['riskScore'] as num).toDouble(),
       riskLevel: json['riskLevel'] as String,
       factors: (json['factors'] as List<dynamic>)
@@ -21,31 +21,20 @@ _$PreAnalyticalRiskModelImpl _$$PreAnalyticalRiskModelImplFromJson(
           (json['sampleViabilityProbability'] as num?)?.toDouble(),
     );
 
-Map<String, dynamic> _$$PreAnalyticalRiskModelImplToJson(
-    _$PreAnalyticalRiskModelImpl instance) {
-  final val = <String, dynamic>{
-    'riskScore': instance.riskScore,
-    'riskLevel': instance.riskLevel,
-    'factors': instance.factors.map((e) => e.toJson()).toList(),
-    'assessedAt': instance.assessedAt,
-  };
+Map<String, dynamic> _$PreAnalyticalRiskModelToJson(
+        _PreAnalyticalRiskModel instance) =>
+    <String, dynamic>{
+      'riskScore': instance.riskScore,
+      'riskLevel': instance.riskLevel,
+      'factors': instance.factors,
+      'assessedAt': instance.assessedAt,
+      'recommendation': instance.recommendation,
+      'requiresRecollection': instance.requiresRecollection,
+      'sampleViabilityProbability': instance.sampleViabilityProbability,
+    };
 
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('recommendation', instance.recommendation);
-  writeNotNull('requiresRecollection', instance.requiresRecollection);
-  writeNotNull(
-      'sampleViabilityProbability', instance.sampleViabilityProbability);
-  return val;
-}
-
-_$RiskFactorModelImpl _$$RiskFactorModelImplFromJson(
-        Map<String, dynamic> json) =>
-    _$RiskFactorModelImpl(
+_RiskFactorModel _$RiskFactorModelFromJson(Map<String, dynamic> json) =>
+    _RiskFactorModel(
       type: json['type'] as String,
       impact: (json['impact'] as num).toDouble(),
       description: json['description'] as String,
@@ -53,21 +42,11 @@ _$RiskFactorModelImpl _$$RiskFactorModelImplFromJson(
       metadata: json['metadata'] as Map<String, dynamic>?,
     );
 
-Map<String, dynamic> _$$RiskFactorModelImplToJson(
-    _$RiskFactorModelImpl instance) {
-  final val = <String, dynamic>{
-    'type': instance.type,
-    'impact': instance.impact,
-    'description': instance.description,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('detected', instance.detected);
-  writeNotNull('metadata', instance.metadata);
-  return val;
-}
+Map<String, dynamic> _$RiskFactorModelToJson(_RiskFactorModel instance) =>
+    <String, dynamic>{
+      'type': instance.type,
+      'impact': instance.impact,
+      'description': instance.description,
+      'detected': instance.detected,
+      'metadata': instance.metadata,
+    };

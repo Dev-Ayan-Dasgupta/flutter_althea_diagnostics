@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,37 +9,71 @@ part of 'sample_integrity_score_model.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
-
-SampleIntegrityScoreModel _$SampleIntegrityScoreModelFromJson(
-    Map<String, dynamic> json) {
-  return _SampleIntegrityScoreModel.fromJson(json);
-}
 
 /// @nodoc
 mixin _$SampleIntegrityScoreModel {
-  double get overallScore => throw _privateConstructorUsedError;
-  String get level => throw _privateConstructorUsedError;
-  String get calculatedAt => throw _privateConstructorUsedError;
-  IntegrityFactorsModel get factors => throw _privateConstructorUsedError;
-  List<IntegrityAlertModel> get alerts => throw _privateConstructorUsedError;
-  String? get recommendation => throw _privateConstructorUsedError;
-  bool? get requiresRecollection => throw _privateConstructorUsedError;
+  double get overallScore;
+  String get level;
+  String get calculatedAt;
+  IntegrityFactorsModel get factors;
+  List<IntegrityAlertModel> get alerts;
+  String? get recommendation;
+  bool? get requiresRecollection;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+  /// Create a copy of SampleIntegrityScoreModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
   $SampleIntegrityScoreModelCopyWith<SampleIntegrityScoreModel> get copyWith =>
-      throw _privateConstructorUsedError;
+      _$SampleIntegrityScoreModelCopyWithImpl<SampleIntegrityScoreModel>(
+          this as SampleIntegrityScoreModel, _$identity);
+
+  /// Serializes this SampleIntegrityScoreModel to a JSON map.
+  Map<String, dynamic> toJson();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is SampleIntegrityScoreModel &&
+            (identical(other.overallScore, overallScore) ||
+                other.overallScore == overallScore) &&
+            (identical(other.level, level) || other.level == level) &&
+            (identical(other.calculatedAt, calculatedAt) ||
+                other.calculatedAt == calculatedAt) &&
+            (identical(other.factors, factors) || other.factors == factors) &&
+            const DeepCollectionEquality().equals(other.alerts, alerts) &&
+            (identical(other.recommendation, recommendation) ||
+                other.recommendation == recommendation) &&
+            (identical(other.requiresRecollection, requiresRecollection) ||
+                other.requiresRecollection == requiresRecollection));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      overallScore,
+      level,
+      calculatedAt,
+      factors,
+      const DeepCollectionEquality().hash(alerts),
+      recommendation,
+      requiresRecollection);
+
+  @override
+  String toString() {
+    return 'SampleIntegrityScoreModel(overallScore: $overallScore, level: $level, calculatedAt: $calculatedAt, factors: $factors, alerts: $alerts, recommendation: $recommendation, requiresRecollection: $requiresRecollection)';
+  }
 }
 
 /// @nodoc
-abstract class $SampleIntegrityScoreModelCopyWith<$Res> {
+abstract mixin class $SampleIntegrityScoreModelCopyWith<$Res> {
   factory $SampleIntegrityScoreModelCopyWith(SampleIntegrityScoreModel value,
-          $Res Function(SampleIntegrityScoreModel) then) =
-      _$SampleIntegrityScoreModelCopyWithImpl<$Res, SampleIntegrityScoreModel>;
+          $Res Function(SampleIntegrityScoreModel) _then) =
+      _$SampleIntegrityScoreModelCopyWithImpl;
   @useResult
   $Res call(
       {double overallScore,
@@ -54,16 +88,15 @@ abstract class $SampleIntegrityScoreModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$SampleIntegrityScoreModelCopyWithImpl<$Res,
-        $Val extends SampleIntegrityScoreModel>
+class _$SampleIntegrityScoreModelCopyWithImpl<$Res>
     implements $SampleIntegrityScoreModelCopyWith<$Res> {
-  _$SampleIntegrityScoreModelCopyWithImpl(this._value, this._then);
+  _$SampleIntegrityScoreModelCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final SampleIntegrityScoreModel _self;
+  final $Res Function(SampleIntegrityScoreModel) _then;
 
+  /// Create a copy of SampleIntegrityScoreModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -75,127 +108,255 @@ class _$SampleIntegrityScoreModelCopyWithImpl<$Res,
     Object? recommendation = freezed,
     Object? requiresRecollection = freezed,
   }) {
-    return _then(_value.copyWith(
+    return _then(_self.copyWith(
       overallScore: null == overallScore
-          ? _value.overallScore
+          ? _self.overallScore
           : overallScore // ignore: cast_nullable_to_non_nullable
               as double,
       level: null == level
-          ? _value.level
+          ? _self.level
           : level // ignore: cast_nullable_to_non_nullable
               as String,
       calculatedAt: null == calculatedAt
-          ? _value.calculatedAt
+          ? _self.calculatedAt
           : calculatedAt // ignore: cast_nullable_to_non_nullable
               as String,
       factors: null == factors
-          ? _value.factors
+          ? _self.factors
           : factors // ignore: cast_nullable_to_non_nullable
               as IntegrityFactorsModel,
       alerts: null == alerts
-          ? _value.alerts
+          ? _self.alerts
           : alerts // ignore: cast_nullable_to_non_nullable
               as List<IntegrityAlertModel>,
       recommendation: freezed == recommendation
-          ? _value.recommendation
+          ? _self.recommendation
           : recommendation // ignore: cast_nullable_to_non_nullable
               as String?,
       requiresRecollection: freezed == requiresRecollection
-          ? _value.requiresRecollection
+          ? _self.requiresRecollection
           : requiresRecollection // ignore: cast_nullable_to_non_nullable
               as bool?,
-    ) as $Val);
+    ));
   }
 
+  /// Create a copy of SampleIntegrityScoreModel
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $IntegrityFactorsModelCopyWith<$Res> get factors {
-    return $IntegrityFactorsModelCopyWith<$Res>(_value.factors, (value) {
-      return _then(_value.copyWith(factors: value) as $Val);
+    return $IntegrityFactorsModelCopyWith<$Res>(_self.factors, (value) {
+      return _then(_self.copyWith(factors: value));
     });
   }
 }
 
-/// @nodoc
-abstract class _$$SampleIntegrityScoreModelImplCopyWith<$Res>
-    implements $SampleIntegrityScoreModelCopyWith<$Res> {
-  factory _$$SampleIntegrityScoreModelImplCopyWith(
-          _$SampleIntegrityScoreModelImpl value,
-          $Res Function(_$SampleIntegrityScoreModelImpl) then) =
-      __$$SampleIntegrityScoreModelImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {double overallScore,
-      String level,
-      String calculatedAt,
-      IntegrityFactorsModel factors,
-      List<IntegrityAlertModel> alerts,
-      String? recommendation,
-      bool? requiresRecollection});
+/// Adds pattern-matching-related methods to [SampleIntegrityScoreModel].
+extension SampleIntegrityScoreModelPatterns on SampleIntegrityScoreModel {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
 
-  @override
-  $IntegrityFactorsModelCopyWith<$Res> get factors;
-}
-
-/// @nodoc
-class __$$SampleIntegrityScoreModelImplCopyWithImpl<$Res>
-    extends _$SampleIntegrityScoreModelCopyWithImpl<$Res,
-        _$SampleIntegrityScoreModelImpl>
-    implements _$$SampleIntegrityScoreModelImplCopyWith<$Res> {
-  __$$SampleIntegrityScoreModelImplCopyWithImpl(
-      _$SampleIntegrityScoreModelImpl _value,
-      $Res Function(_$SampleIntegrityScoreModelImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? overallScore = null,
-    Object? level = null,
-    Object? calculatedAt = null,
-    Object? factors = null,
-    Object? alerts = null,
-    Object? recommendation = freezed,
-    Object? requiresRecollection = freezed,
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_SampleIntegrityScoreModel value)? $default, {
+    required TResult orElse(),
   }) {
-    return _then(_$SampleIntegrityScoreModelImpl(
-      overallScore: null == overallScore
-          ? _value.overallScore
-          : overallScore // ignore: cast_nullable_to_non_nullable
-              as double,
-      level: null == level
-          ? _value.level
-          : level // ignore: cast_nullable_to_non_nullable
-              as String,
-      calculatedAt: null == calculatedAt
-          ? _value.calculatedAt
-          : calculatedAt // ignore: cast_nullable_to_non_nullable
-              as String,
-      factors: null == factors
-          ? _value.factors
-          : factors // ignore: cast_nullable_to_non_nullable
-              as IntegrityFactorsModel,
-      alerts: null == alerts
-          ? _value._alerts
-          : alerts // ignore: cast_nullable_to_non_nullable
-              as List<IntegrityAlertModel>,
-      recommendation: freezed == recommendation
-          ? _value.recommendation
-          : recommendation // ignore: cast_nullable_to_non_nullable
-              as String?,
-      requiresRecollection: freezed == requiresRecollection
-          ? _value.requiresRecollection
-          : requiresRecollection // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ));
+    final _that = this;
+    switch (_that) {
+      case _SampleIntegrityScoreModel() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_SampleIntegrityScoreModel value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _SampleIntegrityScoreModel():
+        return $default(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_SampleIntegrityScoreModel value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _SampleIntegrityScoreModel() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(
+            double overallScore,
+            String level,
+            String calculatedAt,
+            IntegrityFactorsModel factors,
+            List<IntegrityAlertModel> alerts,
+            String? recommendation,
+            bool? requiresRecollection)?
+        $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _SampleIntegrityScoreModel() when $default != null:
+        return $default(
+            _that.overallScore,
+            _that.level,
+            _that.calculatedAt,
+            _that.factors,
+            _that.alerts,
+            _that.recommendation,
+            _that.requiresRecollection);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(
+            double overallScore,
+            String level,
+            String calculatedAt,
+            IntegrityFactorsModel factors,
+            List<IntegrityAlertModel> alerts,
+            String? recommendation,
+            bool? requiresRecollection)
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _SampleIntegrityScoreModel():
+        return $default(
+            _that.overallScore,
+            _that.level,
+            _that.calculatedAt,
+            _that.factors,
+            _that.alerts,
+            _that.recommendation,
+            _that.requiresRecollection);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(
+            double overallScore,
+            String level,
+            String calculatedAt,
+            IntegrityFactorsModel factors,
+            List<IntegrityAlertModel> alerts,
+            String? recommendation,
+            bool? requiresRecollection)?
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _SampleIntegrityScoreModel() when $default != null:
+        return $default(
+            _that.overallScore,
+            _that.level,
+            _that.calculatedAt,
+            _that.factors,
+            _that.alerts,
+            _that.recommendation,
+            _that.requiresRecollection);
+      case _:
+        return null;
+    }
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$SampleIntegrityScoreModelImpl implements _SampleIntegrityScoreModel {
-  const _$SampleIntegrityScoreModelImpl(
+class _SampleIntegrityScoreModel implements SampleIntegrityScoreModel {
+  const _SampleIntegrityScoreModel(
       {required this.overallScore,
       required this.level,
       required this.calculatedAt,
@@ -204,9 +365,8 @@ class _$SampleIntegrityScoreModelImpl implements _SampleIntegrityScoreModel {
       this.recommendation,
       this.requiresRecollection})
       : _alerts = alerts;
-
-  factory _$SampleIntegrityScoreModelImpl.fromJson(Map<String, dynamic> json) =>
-      _$$SampleIntegrityScoreModelImplFromJson(json);
+  factory _SampleIntegrityScoreModel.fromJson(Map<String, dynamic> json) =>
+      _$SampleIntegrityScoreModelFromJson(json);
 
   @override
   final double overallScore;
@@ -229,16 +389,28 @@ class _$SampleIntegrityScoreModelImpl implements _SampleIntegrityScoreModel {
   @override
   final bool? requiresRecollection;
 
+  /// Create a copy of SampleIntegrityScoreModel
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String toString() {
-    return 'SampleIntegrityScoreModel(overallScore: $overallScore, level: $level, calculatedAt: $calculatedAt, factors: $factors, alerts: $alerts, recommendation: $recommendation, requiresRecollection: $requiresRecollection)';
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$SampleIntegrityScoreModelCopyWith<_SampleIntegrityScoreModel>
+      get copyWith =>
+          __$SampleIntegrityScoreModelCopyWithImpl<_SampleIntegrityScoreModel>(
+              this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$SampleIntegrityScoreModelToJson(
+      this,
+    );
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$SampleIntegrityScoreModelImpl &&
+            other is _SampleIntegrityScoreModel &&
             (identical(other.overallScore, overallScore) ||
                 other.overallScore == overallScore) &&
             (identical(other.level, level) || other.level == level) &&
@@ -252,7 +424,7 @@ class _$SampleIntegrityScoreModelImpl implements _SampleIntegrityScoreModel {
                 other.requiresRecollection == requiresRecollection));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -264,290 +436,125 @@ class _$SampleIntegrityScoreModelImpl implements _SampleIntegrityScoreModel {
       recommendation,
       requiresRecollection);
 
-  @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
-  _$$SampleIntegrityScoreModelImplCopyWith<_$SampleIntegrityScoreModelImpl>
-      get copyWith => __$$SampleIntegrityScoreModelImplCopyWithImpl<
-          _$SampleIntegrityScoreModelImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$SampleIntegrityScoreModelImplToJson(
-      this,
-    );
+  String toString() {
+    return 'SampleIntegrityScoreModel(overallScore: $overallScore, level: $level, calculatedAt: $calculatedAt, factors: $factors, alerts: $alerts, recommendation: $recommendation, requiresRecollection: $requiresRecollection)';
   }
 }
 
-abstract class _SampleIntegrityScoreModel implements SampleIntegrityScoreModel {
-  const factory _SampleIntegrityScoreModel(
-      {required final double overallScore,
-      required final String level,
-      required final String calculatedAt,
-      required final IntegrityFactorsModel factors,
-      required final List<IntegrityAlertModel> alerts,
-      final String? recommendation,
-      final bool? requiresRecollection}) = _$SampleIntegrityScoreModelImpl;
+/// @nodoc
+abstract mixin class _$SampleIntegrityScoreModelCopyWith<$Res>
+    implements $SampleIntegrityScoreModelCopyWith<$Res> {
+  factory _$SampleIntegrityScoreModelCopyWith(_SampleIntegrityScoreModel value,
+          $Res Function(_SampleIntegrityScoreModel) _then) =
+      __$SampleIntegrityScoreModelCopyWithImpl;
+  @override
+  @useResult
+  $Res call(
+      {double overallScore,
+      String level,
+      String calculatedAt,
+      IntegrityFactorsModel factors,
+      List<IntegrityAlertModel> alerts,
+      String? recommendation,
+      bool? requiresRecollection});
 
-  factory _SampleIntegrityScoreModel.fromJson(Map<String, dynamic> json) =
-      _$SampleIntegrityScoreModelImpl.fromJson;
-
   @override
-  double get overallScore;
-  @override
-  String get level;
-  @override
-  String get calculatedAt;
-  @override
-  IntegrityFactorsModel get factors;
-  @override
-  List<IntegrityAlertModel> get alerts;
-  @override
-  String? get recommendation;
-  @override
-  bool? get requiresRecollection;
-  @override
-  @JsonKey(ignore: true)
-  _$$SampleIntegrityScoreModelImplCopyWith<_$SampleIntegrityScoreModelImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  $IntegrityFactorsModelCopyWith<$Res> get factors;
 }
 
-IntegrityFactorsModel _$IntegrityFactorsModelFromJson(
-    Map<String, dynamic> json) {
-  return _IntegrityFactorsModel.fromJson(json);
+/// @nodoc
+class __$SampleIntegrityScoreModelCopyWithImpl<$Res>
+    implements _$SampleIntegrityScoreModelCopyWith<$Res> {
+  __$SampleIntegrityScoreModelCopyWithImpl(this._self, this._then);
+
+  final _SampleIntegrityScoreModel _self;
+  final $Res Function(_SampleIntegrityScoreModel) _then;
+
+  /// Create a copy of SampleIntegrityScoreModel
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? overallScore = null,
+    Object? level = null,
+    Object? calculatedAt = null,
+    Object? factors = null,
+    Object? alerts = null,
+    Object? recommendation = freezed,
+    Object? requiresRecollection = freezed,
+  }) {
+    return _then(_SampleIntegrityScoreModel(
+      overallScore: null == overallScore
+          ? _self.overallScore
+          : overallScore // ignore: cast_nullable_to_non_nullable
+              as double,
+      level: null == level
+          ? _self.level
+          : level // ignore: cast_nullable_to_non_nullable
+              as String,
+      calculatedAt: null == calculatedAt
+          ? _self.calculatedAt
+          : calculatedAt // ignore: cast_nullable_to_non_nullable
+              as String,
+      factors: null == factors
+          ? _self.factors
+          : factors // ignore: cast_nullable_to_non_nullable
+              as IntegrityFactorsModel,
+      alerts: null == alerts
+          ? _self._alerts
+          : alerts // ignore: cast_nullable_to_non_nullable
+              as List<IntegrityAlertModel>,
+      recommendation: freezed == recommendation
+          ? _self.recommendation
+          : recommendation // ignore: cast_nullable_to_non_nullable
+              as String?,
+      requiresRecollection: freezed == requiresRecollection
+          ? _self.requiresRecollection
+          : requiresRecollection // ignore: cast_nullable_to_non_nullable
+              as bool?,
+    ));
+  }
+
+  /// Create a copy of SampleIntegrityScoreModel
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $IntegrityFactorsModelCopyWith<$Res> get factors {
+    return $IntegrityFactorsModelCopyWith<$Res>(_self.factors, (value) {
+      return _then(_self.copyWith(factors: value));
+    });
+  }
 }
 
 /// @nodoc
 mixin _$IntegrityFactorsModel {
-  double get transitDelayScore => throw _privateConstructorUsedError;
-  double get temperatureComplianceScore => throw _privateConstructorUsedError;
-  double get handoverScore => throw _privateConstructorUsedError;
-  double get conditionScore => throw _privateConstructorUsedError;
-  double get timelinessScore => throw _privateConstructorUsedError;
-  int? get transitDelayMinutes => throw _privateConstructorUsedError;
-  double? get maxTemperatureDeviation => throw _privateConstructorUsedError;
-  int? get numberOfHandovers => throw _privateConstructorUsedError;
-  int? get totalTransitTime => throw _privateConstructorUsedError;
+  double get transitDelayScore;
+  double get temperatureComplianceScore;
+  double get handoverScore;
+  double get conditionScore;
+  double get timelinessScore;
+  int? get transitDelayMinutes;
+  double? get maxTemperatureDeviation;
+  int? get numberOfHandovers;
+  int? get totalTransitTime;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+  /// Create a copy of IntegrityFactorsModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
   $IntegrityFactorsModelCopyWith<IntegrityFactorsModel> get copyWith =>
-      throw _privateConstructorUsedError;
-}
+      _$IntegrityFactorsModelCopyWithImpl<IntegrityFactorsModel>(
+          this as IntegrityFactorsModel, _$identity);
 
-/// @nodoc
-abstract class $IntegrityFactorsModelCopyWith<$Res> {
-  factory $IntegrityFactorsModelCopyWith(IntegrityFactorsModel value,
-          $Res Function(IntegrityFactorsModel) then) =
-      _$IntegrityFactorsModelCopyWithImpl<$Res, IntegrityFactorsModel>;
-  @useResult
-  $Res call(
-      {double transitDelayScore,
-      double temperatureComplianceScore,
-      double handoverScore,
-      double conditionScore,
-      double timelinessScore,
-      int? transitDelayMinutes,
-      double? maxTemperatureDeviation,
-      int? numberOfHandovers,
-      int? totalTransitTime});
-}
-
-/// @nodoc
-class _$IntegrityFactorsModelCopyWithImpl<$Res,
-        $Val extends IntegrityFactorsModel>
-    implements $IntegrityFactorsModelCopyWith<$Res> {
-  _$IntegrityFactorsModelCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? transitDelayScore = null,
-    Object? temperatureComplianceScore = null,
-    Object? handoverScore = null,
-    Object? conditionScore = null,
-    Object? timelinessScore = null,
-    Object? transitDelayMinutes = freezed,
-    Object? maxTemperatureDeviation = freezed,
-    Object? numberOfHandovers = freezed,
-    Object? totalTransitTime = freezed,
-  }) {
-    return _then(_value.copyWith(
-      transitDelayScore: null == transitDelayScore
-          ? _value.transitDelayScore
-          : transitDelayScore // ignore: cast_nullable_to_non_nullable
-              as double,
-      temperatureComplianceScore: null == temperatureComplianceScore
-          ? _value.temperatureComplianceScore
-          : temperatureComplianceScore // ignore: cast_nullable_to_non_nullable
-              as double,
-      handoverScore: null == handoverScore
-          ? _value.handoverScore
-          : handoverScore // ignore: cast_nullable_to_non_nullable
-              as double,
-      conditionScore: null == conditionScore
-          ? _value.conditionScore
-          : conditionScore // ignore: cast_nullable_to_non_nullable
-              as double,
-      timelinessScore: null == timelinessScore
-          ? _value.timelinessScore
-          : timelinessScore // ignore: cast_nullable_to_non_nullable
-              as double,
-      transitDelayMinutes: freezed == transitDelayMinutes
-          ? _value.transitDelayMinutes
-          : transitDelayMinutes // ignore: cast_nullable_to_non_nullable
-              as int?,
-      maxTemperatureDeviation: freezed == maxTemperatureDeviation
-          ? _value.maxTemperatureDeviation
-          : maxTemperatureDeviation // ignore: cast_nullable_to_non_nullable
-              as double?,
-      numberOfHandovers: freezed == numberOfHandovers
-          ? _value.numberOfHandovers
-          : numberOfHandovers // ignore: cast_nullable_to_non_nullable
-              as int?,
-      totalTransitTime: freezed == totalTransitTime
-          ? _value.totalTransitTime
-          : totalTransitTime // ignore: cast_nullable_to_non_nullable
-              as int?,
-    ) as $Val);
-  }
-}
-
-/// @nodoc
-abstract class _$$IntegrityFactorsModelImplCopyWith<$Res>
-    implements $IntegrityFactorsModelCopyWith<$Res> {
-  factory _$$IntegrityFactorsModelImplCopyWith(
-          _$IntegrityFactorsModelImpl value,
-          $Res Function(_$IntegrityFactorsModelImpl) then) =
-      __$$IntegrityFactorsModelImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {double transitDelayScore,
-      double temperatureComplianceScore,
-      double handoverScore,
-      double conditionScore,
-      double timelinessScore,
-      int? transitDelayMinutes,
-      double? maxTemperatureDeviation,
-      int? numberOfHandovers,
-      int? totalTransitTime});
-}
-
-/// @nodoc
-class __$$IntegrityFactorsModelImplCopyWithImpl<$Res>
-    extends _$IntegrityFactorsModelCopyWithImpl<$Res,
-        _$IntegrityFactorsModelImpl>
-    implements _$$IntegrityFactorsModelImplCopyWith<$Res> {
-  __$$IntegrityFactorsModelImplCopyWithImpl(_$IntegrityFactorsModelImpl _value,
-      $Res Function(_$IntegrityFactorsModelImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? transitDelayScore = null,
-    Object? temperatureComplianceScore = null,
-    Object? handoverScore = null,
-    Object? conditionScore = null,
-    Object? timelinessScore = null,
-    Object? transitDelayMinutes = freezed,
-    Object? maxTemperatureDeviation = freezed,
-    Object? numberOfHandovers = freezed,
-    Object? totalTransitTime = freezed,
-  }) {
-    return _then(_$IntegrityFactorsModelImpl(
-      transitDelayScore: null == transitDelayScore
-          ? _value.transitDelayScore
-          : transitDelayScore // ignore: cast_nullable_to_non_nullable
-              as double,
-      temperatureComplianceScore: null == temperatureComplianceScore
-          ? _value.temperatureComplianceScore
-          : temperatureComplianceScore // ignore: cast_nullable_to_non_nullable
-              as double,
-      handoverScore: null == handoverScore
-          ? _value.handoverScore
-          : handoverScore // ignore: cast_nullable_to_non_nullable
-              as double,
-      conditionScore: null == conditionScore
-          ? _value.conditionScore
-          : conditionScore // ignore: cast_nullable_to_non_nullable
-              as double,
-      timelinessScore: null == timelinessScore
-          ? _value.timelinessScore
-          : timelinessScore // ignore: cast_nullable_to_non_nullable
-              as double,
-      transitDelayMinutes: freezed == transitDelayMinutes
-          ? _value.transitDelayMinutes
-          : transitDelayMinutes // ignore: cast_nullable_to_non_nullable
-              as int?,
-      maxTemperatureDeviation: freezed == maxTemperatureDeviation
-          ? _value.maxTemperatureDeviation
-          : maxTemperatureDeviation // ignore: cast_nullable_to_non_nullable
-              as double?,
-      numberOfHandovers: freezed == numberOfHandovers
-          ? _value.numberOfHandovers
-          : numberOfHandovers // ignore: cast_nullable_to_non_nullable
-              as int?,
-      totalTransitTime: freezed == totalTransitTime
-          ? _value.totalTransitTime
-          : totalTransitTime // ignore: cast_nullable_to_non_nullable
-              as int?,
-    ));
-  }
-}
-
-/// @nodoc
-@JsonSerializable()
-class _$IntegrityFactorsModelImpl implements _IntegrityFactorsModel {
-  const _$IntegrityFactorsModelImpl(
-      {required this.transitDelayScore,
-      required this.temperatureComplianceScore,
-      required this.handoverScore,
-      required this.conditionScore,
-      required this.timelinessScore,
-      this.transitDelayMinutes,
-      this.maxTemperatureDeviation,
-      this.numberOfHandovers,
-      this.totalTransitTime});
-
-  factory _$IntegrityFactorsModelImpl.fromJson(Map<String, dynamic> json) =>
-      _$$IntegrityFactorsModelImplFromJson(json);
-
-  @override
-  final double transitDelayScore;
-  @override
-  final double temperatureComplianceScore;
-  @override
-  final double handoverScore;
-  @override
-  final double conditionScore;
-  @override
-  final double timelinessScore;
-  @override
-  final int? transitDelayMinutes;
-  @override
-  final double? maxTemperatureDeviation;
-  @override
-  final int? numberOfHandovers;
-  @override
-  final int? totalTransitTime;
-
-  @override
-  String toString() {
-    return 'IntegrityFactorsModel(transitDelayScore: $transitDelayScore, temperatureComplianceScore: $temperatureComplianceScore, handoverScore: $handoverScore, conditionScore: $conditionScore, timelinessScore: $timelinessScore, transitDelayMinutes: $transitDelayMinutes, maxTemperatureDeviation: $maxTemperatureDeviation, numberOfHandovers: $numberOfHandovers, totalTransitTime: $totalTransitTime)';
-  }
+  /// Serializes this IntegrityFactorsModel to a JSON map.
+  Map<String, dynamic> toJson();
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$IntegrityFactorsModelImpl &&
+            other is IntegrityFactorsModel &&
             (identical(other.transitDelayScore, transitDelayScore) ||
                 other.transitDelayScore == transitDelayScore) &&
             (identical(other.temperatureComplianceScore,
@@ -571,7 +578,7 @@ class _$IntegrityFactorsModelImpl implements _IntegrityFactorsModel {
                 other.totalTransitTime == totalTransitTime));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -585,143 +592,540 @@ class _$IntegrityFactorsModelImpl implements _IntegrityFactorsModel {
       numberOfHandovers,
       totalTransitTime);
 
-  @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
-  _$$IntegrityFactorsModelImplCopyWith<_$IntegrityFactorsModelImpl>
-      get copyWith => __$$IntegrityFactorsModelImplCopyWithImpl<
-          _$IntegrityFactorsModelImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$IntegrityFactorsModelImplToJson(
-      this,
-    );
+  String toString() {
+    return 'IntegrityFactorsModel(transitDelayScore: $transitDelayScore, temperatureComplianceScore: $temperatureComplianceScore, handoverScore: $handoverScore, conditionScore: $conditionScore, timelinessScore: $timelinessScore, transitDelayMinutes: $transitDelayMinutes, maxTemperatureDeviation: $maxTemperatureDeviation, numberOfHandovers: $numberOfHandovers, totalTransitTime: $totalTransitTime)';
   }
 }
 
-abstract class _IntegrityFactorsModel implements IntegrityFactorsModel {
-  const factory _IntegrityFactorsModel(
-      {required final double transitDelayScore,
-      required final double temperatureComplianceScore,
-      required final double handoverScore,
-      required final double conditionScore,
-      required final double timelinessScore,
-      final int? transitDelayMinutes,
-      final double? maxTemperatureDeviation,
-      final int? numberOfHandovers,
-      final int? totalTransitTime}) = _$IntegrityFactorsModelImpl;
-
-  factory _IntegrityFactorsModel.fromJson(Map<String, dynamic> json) =
-      _$IntegrityFactorsModelImpl.fromJson;
-
-  @override
-  double get transitDelayScore;
-  @override
-  double get temperatureComplianceScore;
-  @override
-  double get handoverScore;
-  @override
-  double get conditionScore;
-  @override
-  double get timelinessScore;
-  @override
-  int? get transitDelayMinutes;
-  @override
-  double? get maxTemperatureDeviation;
-  @override
-  int? get numberOfHandovers;
-  @override
-  int? get totalTransitTime;
-  @override
-  @JsonKey(ignore: true)
-  _$$IntegrityFactorsModelImplCopyWith<_$IntegrityFactorsModelImpl>
-      get copyWith => throw _privateConstructorUsedError;
+/// @nodoc
+abstract mixin class $IntegrityFactorsModelCopyWith<$Res> {
+  factory $IntegrityFactorsModelCopyWith(IntegrityFactorsModel value,
+          $Res Function(IntegrityFactorsModel) _then) =
+      _$IntegrityFactorsModelCopyWithImpl;
+  @useResult
+  $Res call(
+      {double transitDelayScore,
+      double temperatureComplianceScore,
+      double handoverScore,
+      double conditionScore,
+      double timelinessScore,
+      int? transitDelayMinutes,
+      double? maxTemperatureDeviation,
+      int? numberOfHandovers,
+      int? totalTransitTime});
 }
 
-IntegrityAlertModel _$IntegrityAlertModelFromJson(Map<String, dynamic> json) {
-  return _IntegrityAlertModel.fromJson(json);
+/// @nodoc
+class _$IntegrityFactorsModelCopyWithImpl<$Res>
+    implements $IntegrityFactorsModelCopyWith<$Res> {
+  _$IntegrityFactorsModelCopyWithImpl(this._self, this._then);
+
+  final IntegrityFactorsModel _self;
+  final $Res Function(IntegrityFactorsModel) _then;
+
+  /// Create a copy of IntegrityFactorsModel
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? transitDelayScore = null,
+    Object? temperatureComplianceScore = null,
+    Object? handoverScore = null,
+    Object? conditionScore = null,
+    Object? timelinessScore = null,
+    Object? transitDelayMinutes = freezed,
+    Object? maxTemperatureDeviation = freezed,
+    Object? numberOfHandovers = freezed,
+    Object? totalTransitTime = freezed,
+  }) {
+    return _then(_self.copyWith(
+      transitDelayScore: null == transitDelayScore
+          ? _self.transitDelayScore
+          : transitDelayScore // ignore: cast_nullable_to_non_nullable
+              as double,
+      temperatureComplianceScore: null == temperatureComplianceScore
+          ? _self.temperatureComplianceScore
+          : temperatureComplianceScore // ignore: cast_nullable_to_non_nullable
+              as double,
+      handoverScore: null == handoverScore
+          ? _self.handoverScore
+          : handoverScore // ignore: cast_nullable_to_non_nullable
+              as double,
+      conditionScore: null == conditionScore
+          ? _self.conditionScore
+          : conditionScore // ignore: cast_nullable_to_non_nullable
+              as double,
+      timelinessScore: null == timelinessScore
+          ? _self.timelinessScore
+          : timelinessScore // ignore: cast_nullable_to_non_nullable
+              as double,
+      transitDelayMinutes: freezed == transitDelayMinutes
+          ? _self.transitDelayMinutes
+          : transitDelayMinutes // ignore: cast_nullable_to_non_nullable
+              as int?,
+      maxTemperatureDeviation: freezed == maxTemperatureDeviation
+          ? _self.maxTemperatureDeviation
+          : maxTemperatureDeviation // ignore: cast_nullable_to_non_nullable
+              as double?,
+      numberOfHandovers: freezed == numberOfHandovers
+          ? _self.numberOfHandovers
+          : numberOfHandovers // ignore: cast_nullable_to_non_nullable
+              as int?,
+      totalTransitTime: freezed == totalTransitTime
+          ? _self.totalTransitTime
+          : totalTransitTime // ignore: cast_nullable_to_non_nullable
+              as int?,
+    ));
+  }
+}
+
+/// Adds pattern-matching-related methods to [IntegrityFactorsModel].
+extension IntegrityFactorsModelPatterns on IntegrityFactorsModel {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_IntegrityFactorsModel value)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _IntegrityFactorsModel() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_IntegrityFactorsModel value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _IntegrityFactorsModel():
+        return $default(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_IntegrityFactorsModel value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _IntegrityFactorsModel() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(
+            double transitDelayScore,
+            double temperatureComplianceScore,
+            double handoverScore,
+            double conditionScore,
+            double timelinessScore,
+            int? transitDelayMinutes,
+            double? maxTemperatureDeviation,
+            int? numberOfHandovers,
+            int? totalTransitTime)?
+        $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _IntegrityFactorsModel() when $default != null:
+        return $default(
+            _that.transitDelayScore,
+            _that.temperatureComplianceScore,
+            _that.handoverScore,
+            _that.conditionScore,
+            _that.timelinessScore,
+            _that.transitDelayMinutes,
+            _that.maxTemperatureDeviation,
+            _that.numberOfHandovers,
+            _that.totalTransitTime);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(
+            double transitDelayScore,
+            double temperatureComplianceScore,
+            double handoverScore,
+            double conditionScore,
+            double timelinessScore,
+            int? transitDelayMinutes,
+            double? maxTemperatureDeviation,
+            int? numberOfHandovers,
+            int? totalTransitTime)
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _IntegrityFactorsModel():
+        return $default(
+            _that.transitDelayScore,
+            _that.temperatureComplianceScore,
+            _that.handoverScore,
+            _that.conditionScore,
+            _that.timelinessScore,
+            _that.transitDelayMinutes,
+            _that.maxTemperatureDeviation,
+            _that.numberOfHandovers,
+            _that.totalTransitTime);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(
+            double transitDelayScore,
+            double temperatureComplianceScore,
+            double handoverScore,
+            double conditionScore,
+            double timelinessScore,
+            int? transitDelayMinutes,
+            double? maxTemperatureDeviation,
+            int? numberOfHandovers,
+            int? totalTransitTime)?
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _IntegrityFactorsModel() when $default != null:
+        return $default(
+            _that.transitDelayScore,
+            _that.temperatureComplianceScore,
+            _that.handoverScore,
+            _that.conditionScore,
+            _that.timelinessScore,
+            _that.transitDelayMinutes,
+            _that.maxTemperatureDeviation,
+            _that.numberOfHandovers,
+            _that.totalTransitTime);
+      case _:
+        return null;
+    }
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _IntegrityFactorsModel implements IntegrityFactorsModel {
+  const _IntegrityFactorsModel(
+      {required this.transitDelayScore,
+      required this.temperatureComplianceScore,
+      required this.handoverScore,
+      required this.conditionScore,
+      required this.timelinessScore,
+      this.transitDelayMinutes,
+      this.maxTemperatureDeviation,
+      this.numberOfHandovers,
+      this.totalTransitTime});
+  factory _IntegrityFactorsModel.fromJson(Map<String, dynamic> json) =>
+      _$IntegrityFactorsModelFromJson(json);
+
+  @override
+  final double transitDelayScore;
+  @override
+  final double temperatureComplianceScore;
+  @override
+  final double handoverScore;
+  @override
+  final double conditionScore;
+  @override
+  final double timelinessScore;
+  @override
+  final int? transitDelayMinutes;
+  @override
+  final double? maxTemperatureDeviation;
+  @override
+  final int? numberOfHandovers;
+  @override
+  final int? totalTransitTime;
+
+  /// Create a copy of IntegrityFactorsModel
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$IntegrityFactorsModelCopyWith<_IntegrityFactorsModel> get copyWith =>
+      __$IntegrityFactorsModelCopyWithImpl<_IntegrityFactorsModel>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$IntegrityFactorsModelToJson(
+      this,
+    );
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _IntegrityFactorsModel &&
+            (identical(other.transitDelayScore, transitDelayScore) ||
+                other.transitDelayScore == transitDelayScore) &&
+            (identical(other.temperatureComplianceScore,
+                    temperatureComplianceScore) ||
+                other.temperatureComplianceScore ==
+                    temperatureComplianceScore) &&
+            (identical(other.handoverScore, handoverScore) ||
+                other.handoverScore == handoverScore) &&
+            (identical(other.conditionScore, conditionScore) ||
+                other.conditionScore == conditionScore) &&
+            (identical(other.timelinessScore, timelinessScore) ||
+                other.timelinessScore == timelinessScore) &&
+            (identical(other.transitDelayMinutes, transitDelayMinutes) ||
+                other.transitDelayMinutes == transitDelayMinutes) &&
+            (identical(
+                    other.maxTemperatureDeviation, maxTemperatureDeviation) ||
+                other.maxTemperatureDeviation == maxTemperatureDeviation) &&
+            (identical(other.numberOfHandovers, numberOfHandovers) ||
+                other.numberOfHandovers == numberOfHandovers) &&
+            (identical(other.totalTransitTime, totalTransitTime) ||
+                other.totalTransitTime == totalTransitTime));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      transitDelayScore,
+      temperatureComplianceScore,
+      handoverScore,
+      conditionScore,
+      timelinessScore,
+      transitDelayMinutes,
+      maxTemperatureDeviation,
+      numberOfHandovers,
+      totalTransitTime);
+
+  @override
+  String toString() {
+    return 'IntegrityFactorsModel(transitDelayScore: $transitDelayScore, temperatureComplianceScore: $temperatureComplianceScore, handoverScore: $handoverScore, conditionScore: $conditionScore, timelinessScore: $timelinessScore, transitDelayMinutes: $transitDelayMinutes, maxTemperatureDeviation: $maxTemperatureDeviation, numberOfHandovers: $numberOfHandovers, totalTransitTime: $totalTransitTime)';
+  }
+}
+
+/// @nodoc
+abstract mixin class _$IntegrityFactorsModelCopyWith<$Res>
+    implements $IntegrityFactorsModelCopyWith<$Res> {
+  factory _$IntegrityFactorsModelCopyWith(_IntegrityFactorsModel value,
+          $Res Function(_IntegrityFactorsModel) _then) =
+      __$IntegrityFactorsModelCopyWithImpl;
+  @override
+  @useResult
+  $Res call(
+      {double transitDelayScore,
+      double temperatureComplianceScore,
+      double handoverScore,
+      double conditionScore,
+      double timelinessScore,
+      int? transitDelayMinutes,
+      double? maxTemperatureDeviation,
+      int? numberOfHandovers,
+      int? totalTransitTime});
+}
+
+/// @nodoc
+class __$IntegrityFactorsModelCopyWithImpl<$Res>
+    implements _$IntegrityFactorsModelCopyWith<$Res> {
+  __$IntegrityFactorsModelCopyWithImpl(this._self, this._then);
+
+  final _IntegrityFactorsModel _self;
+  final $Res Function(_IntegrityFactorsModel) _then;
+
+  /// Create a copy of IntegrityFactorsModel
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? transitDelayScore = null,
+    Object? temperatureComplianceScore = null,
+    Object? handoverScore = null,
+    Object? conditionScore = null,
+    Object? timelinessScore = null,
+    Object? transitDelayMinutes = freezed,
+    Object? maxTemperatureDeviation = freezed,
+    Object? numberOfHandovers = freezed,
+    Object? totalTransitTime = freezed,
+  }) {
+    return _then(_IntegrityFactorsModel(
+      transitDelayScore: null == transitDelayScore
+          ? _self.transitDelayScore
+          : transitDelayScore // ignore: cast_nullable_to_non_nullable
+              as double,
+      temperatureComplianceScore: null == temperatureComplianceScore
+          ? _self.temperatureComplianceScore
+          : temperatureComplianceScore // ignore: cast_nullable_to_non_nullable
+              as double,
+      handoverScore: null == handoverScore
+          ? _self.handoverScore
+          : handoverScore // ignore: cast_nullable_to_non_nullable
+              as double,
+      conditionScore: null == conditionScore
+          ? _self.conditionScore
+          : conditionScore // ignore: cast_nullable_to_non_nullable
+              as double,
+      timelinessScore: null == timelinessScore
+          ? _self.timelinessScore
+          : timelinessScore // ignore: cast_nullable_to_non_nullable
+              as double,
+      transitDelayMinutes: freezed == transitDelayMinutes
+          ? _self.transitDelayMinutes
+          : transitDelayMinutes // ignore: cast_nullable_to_non_nullable
+              as int?,
+      maxTemperatureDeviation: freezed == maxTemperatureDeviation
+          ? _self.maxTemperatureDeviation
+          : maxTemperatureDeviation // ignore: cast_nullable_to_non_nullable
+              as double?,
+      numberOfHandovers: freezed == numberOfHandovers
+          ? _self.numberOfHandovers
+          : numberOfHandovers // ignore: cast_nullable_to_non_nullable
+              as int?,
+      totalTransitTime: freezed == totalTransitTime
+          ? _self.totalTransitTime
+          : totalTransitTime // ignore: cast_nullable_to_non_nullable
+              as int?,
+    ));
+  }
 }
 
 /// @nodoc
 mixin _$IntegrityAlertModel {
-  String get severity => throw _privateConstructorUsedError;
-  String get message => throw _privateConstructorUsedError;
-  String get type => throw _privateConstructorUsedError;
-  String get timestamp => throw _privateConstructorUsedError;
-  Map<String, dynamic>? get metadata => throw _privateConstructorUsedError;
+  String get severity;
+  String get message;
+  String get type;
+  String get timestamp;
+  Map<String, dynamic>? get metadata;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $IntegrityAlertModelCopyWith<IntegrityAlertModel> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $IntegrityAlertModelCopyWith<$Res> {
-  factory $IntegrityAlertModelCopyWith(
-          IntegrityAlertModel value, $Res Function(IntegrityAlertModel) then) =
-      _$IntegrityAlertModelCopyWithImpl<$Res, IntegrityAlertModel>;
-  @useResult
-  $Res call(
-      {String severity,
-      String message,
-      String type,
-      String timestamp,
-      Map<String, dynamic>? metadata});
-}
-
-/// @nodoc
-class _$IntegrityAlertModelCopyWithImpl<$Res, $Val extends IntegrityAlertModel>
-    implements $IntegrityAlertModelCopyWith<$Res> {
-  _$IntegrityAlertModelCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
+  /// Create a copy of IntegrityAlertModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @pragma('vm:prefer-inline')
+  $IntegrityAlertModelCopyWith<IntegrityAlertModel> get copyWith =>
+      _$IntegrityAlertModelCopyWithImpl<IntegrityAlertModel>(
+          this as IntegrityAlertModel, _$identity);
+
+  /// Serializes this IntegrityAlertModel to a JSON map.
+  Map<String, dynamic> toJson();
+
   @override
-  $Res call({
-    Object? severity = null,
-    Object? message = null,
-    Object? type = null,
-    Object? timestamp = null,
-    Object? metadata = freezed,
-  }) {
-    return _then(_value.copyWith(
-      severity: null == severity
-          ? _value.severity
-          : severity // ignore: cast_nullable_to_non_nullable
-              as String,
-      message: null == message
-          ? _value.message
-          : message // ignore: cast_nullable_to_non_nullable
-              as String,
-      type: null == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as String,
-      timestamp: null == timestamp
-          ? _value.timestamp
-          : timestamp // ignore: cast_nullable_to_non_nullable
-              as String,
-      metadata: freezed == metadata
-          ? _value.metadata
-          : metadata // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>?,
-    ) as $Val);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is IntegrityAlertModel &&
+            (identical(other.severity, severity) ||
+                other.severity == severity) &&
+            (identical(other.message, message) || other.message == message) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.timestamp, timestamp) ||
+                other.timestamp == timestamp) &&
+            const DeepCollectionEquality().equals(other.metadata, metadata));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, severity, message, type,
+      timestamp, const DeepCollectionEquality().hash(metadata));
+
+  @override
+  String toString() {
+    return 'IntegrityAlertModel(severity: $severity, message: $message, type: $type, timestamp: $timestamp, metadata: $metadata)';
   }
 }
 
 /// @nodoc
-abstract class _$$IntegrityAlertModelImplCopyWith<$Res>
-    implements $IntegrityAlertModelCopyWith<$Res> {
-  factory _$$IntegrityAlertModelImplCopyWith(_$IntegrityAlertModelImpl value,
-          $Res Function(_$IntegrityAlertModelImpl) then) =
-      __$$IntegrityAlertModelImplCopyWithImpl<$Res>;
-  @override
+abstract mixin class $IntegrityAlertModelCopyWith<$Res> {
+  factory $IntegrityAlertModelCopyWith(
+          IntegrityAlertModel value, $Res Function(IntegrityAlertModel) _then) =
+      _$IntegrityAlertModelCopyWithImpl;
   @useResult
   $Res call(
       {String severity,
@@ -732,13 +1136,15 @@ abstract class _$$IntegrityAlertModelImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$IntegrityAlertModelImplCopyWithImpl<$Res>
-    extends _$IntegrityAlertModelCopyWithImpl<$Res, _$IntegrityAlertModelImpl>
-    implements _$$IntegrityAlertModelImplCopyWith<$Res> {
-  __$$IntegrityAlertModelImplCopyWithImpl(_$IntegrityAlertModelImpl _value,
-      $Res Function(_$IntegrityAlertModelImpl) _then)
-      : super(_value, _then);
+class _$IntegrityAlertModelCopyWithImpl<$Res>
+    implements $IntegrityAlertModelCopyWith<$Res> {
+  _$IntegrityAlertModelCopyWithImpl(this._self, this._then);
 
+  final IntegrityAlertModel _self;
+  final $Res Function(IntegrityAlertModel) _then;
+
+  /// Create a copy of IntegrityAlertModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -748,44 +1154,209 @@ class __$$IntegrityAlertModelImplCopyWithImpl<$Res>
     Object? timestamp = null,
     Object? metadata = freezed,
   }) {
-    return _then(_$IntegrityAlertModelImpl(
+    return _then(_self.copyWith(
       severity: null == severity
-          ? _value.severity
+          ? _self.severity
           : severity // ignore: cast_nullable_to_non_nullable
               as String,
       message: null == message
-          ? _value.message
+          ? _self.message
           : message // ignore: cast_nullable_to_non_nullable
               as String,
       type: null == type
-          ? _value.type
+          ? _self.type
           : type // ignore: cast_nullable_to_non_nullable
               as String,
       timestamp: null == timestamp
-          ? _value.timestamp
+          ? _self.timestamp
           : timestamp // ignore: cast_nullable_to_non_nullable
               as String,
       metadata: freezed == metadata
-          ? _value._metadata
+          ? _self.metadata
           : metadata // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>?,
     ));
   }
 }
 
+/// Adds pattern-matching-related methods to [IntegrityAlertModel].
+extension IntegrityAlertModelPatterns on IntegrityAlertModel {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_IntegrityAlertModel value)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _IntegrityAlertModel() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_IntegrityAlertModel value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _IntegrityAlertModel():
+        return $default(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_IntegrityAlertModel value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _IntegrityAlertModel() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(String severity, String message, String type,
+            String timestamp, Map<String, dynamic>? metadata)?
+        $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _IntegrityAlertModel() when $default != null:
+        return $default(_that.severity, _that.message, _that.type,
+            _that.timestamp, _that.metadata);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(String severity, String message, String type,
+            String timestamp, Map<String, dynamic>? metadata)
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _IntegrityAlertModel():
+        return $default(_that.severity, _that.message, _that.type,
+            _that.timestamp, _that.metadata);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(String severity, String message, String type,
+            String timestamp, Map<String, dynamic>? metadata)?
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _IntegrityAlertModel() when $default != null:
+        return $default(_that.severity, _that.message, _that.type,
+            _that.timestamp, _that.metadata);
+      case _:
+        return null;
+    }
+  }
+}
+
 /// @nodoc
 @JsonSerializable()
-class _$IntegrityAlertModelImpl implements _IntegrityAlertModel {
-  const _$IntegrityAlertModelImpl(
+class _IntegrityAlertModel implements IntegrityAlertModel {
+  const _IntegrityAlertModel(
       {required this.severity,
       required this.message,
       required this.type,
       required this.timestamp,
       final Map<String, dynamic>? metadata})
       : _metadata = metadata;
-
-  factory _$IntegrityAlertModelImpl.fromJson(Map<String, dynamic> json) =>
-      _$$IntegrityAlertModelImplFromJson(json);
+  factory _IntegrityAlertModel.fromJson(Map<String, dynamic> json) =>
+      _$IntegrityAlertModelFromJson(json);
 
   @override
   final String severity;
@@ -805,16 +1376,27 @@ class _$IntegrityAlertModelImpl implements _IntegrityAlertModel {
     return EqualUnmodifiableMapView(value);
   }
 
+  /// Create a copy of IntegrityAlertModel
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String toString() {
-    return 'IntegrityAlertModel(severity: $severity, message: $message, type: $type, timestamp: $timestamp, metadata: $metadata)';
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$IntegrityAlertModelCopyWith<_IntegrityAlertModel> get copyWith =>
+      __$IntegrityAlertModelCopyWithImpl<_IntegrityAlertModel>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$IntegrityAlertModelToJson(
+      this,
+    );
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$IntegrityAlertModelImpl &&
+            other is _IntegrityAlertModel &&
             (identical(other.severity, severity) ||
                 other.severity == severity) &&
             (identical(other.message, message) || other.message == message) &&
@@ -824,49 +1406,75 @@ class _$IntegrityAlertModelImpl implements _IntegrityAlertModel {
             const DeepCollectionEquality().equals(other._metadata, _metadata));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, severity, message, type,
       timestamp, const DeepCollectionEquality().hash(_metadata));
 
-  @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
-  _$$IntegrityAlertModelImplCopyWith<_$IntegrityAlertModelImpl> get copyWith =>
-      __$$IntegrityAlertModelImplCopyWithImpl<_$IntegrityAlertModelImpl>(
-          this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$IntegrityAlertModelImplToJson(
-      this,
-    );
+  String toString() {
+    return 'IntegrityAlertModel(severity: $severity, message: $message, type: $type, timestamp: $timestamp, metadata: $metadata)';
   }
 }
 
-abstract class _IntegrityAlertModel implements IntegrityAlertModel {
-  const factory _IntegrityAlertModel(
-      {required final String severity,
-      required final String message,
-      required final String type,
-      required final String timestamp,
-      final Map<String, dynamic>? metadata}) = _$IntegrityAlertModelImpl;
-
-  factory _IntegrityAlertModel.fromJson(Map<String, dynamic> json) =
-      _$IntegrityAlertModelImpl.fromJson;
-
+/// @nodoc
+abstract mixin class _$IntegrityAlertModelCopyWith<$Res>
+    implements $IntegrityAlertModelCopyWith<$Res> {
+  factory _$IntegrityAlertModelCopyWith(_IntegrityAlertModel value,
+          $Res Function(_IntegrityAlertModel) _then) =
+      __$IntegrityAlertModelCopyWithImpl;
   @override
-  String get severity;
-  @override
-  String get message;
-  @override
-  String get type;
-  @override
-  String get timestamp;
-  @override
-  Map<String, dynamic>? get metadata;
-  @override
-  @JsonKey(ignore: true)
-  _$$IntegrityAlertModelImplCopyWith<_$IntegrityAlertModelImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  @useResult
+  $Res call(
+      {String severity,
+      String message,
+      String type,
+      String timestamp,
+      Map<String, dynamic>? metadata});
 }
+
+/// @nodoc
+class __$IntegrityAlertModelCopyWithImpl<$Res>
+    implements _$IntegrityAlertModelCopyWith<$Res> {
+  __$IntegrityAlertModelCopyWithImpl(this._self, this._then);
+
+  final _IntegrityAlertModel _self;
+  final $Res Function(_IntegrityAlertModel) _then;
+
+  /// Create a copy of IntegrityAlertModel
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? severity = null,
+    Object? message = null,
+    Object? type = null,
+    Object? timestamp = null,
+    Object? metadata = freezed,
+  }) {
+    return _then(_IntegrityAlertModel(
+      severity: null == severity
+          ? _self.severity
+          : severity // ignore: cast_nullable_to_non_nullable
+              as String,
+      message: null == message
+          ? _self.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
+      type: null == type
+          ? _self.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as String,
+      timestamp: null == timestamp
+          ? _self.timestamp
+          : timestamp // ignore: cast_nullable_to_non_nullable
+              as String,
+      metadata: freezed == metadata
+          ? _self._metadata
+          : metadata // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>?,
+    ));
+  }
+}
+
+// dart format on

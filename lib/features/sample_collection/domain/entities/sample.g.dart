@@ -6,7 +6,7 @@ part of 'sample.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$SampleImpl _$$SampleImplFromJson(Map<String, dynamic> json) => _$SampleImpl(
+_Sample _$SampleFromJson(Map<String, dynamic> json) => _Sample(
       id: json['id'] as String,
       vialId: json['vialId'] as String,
       patientAbhaId: json['patientAbhaId'] as String,
@@ -60,145 +60,132 @@ _$SampleImpl _$$SampleImplFromJson(Map<String, dynamic> json) => _$SampleImpl(
           : DateTime.parse(json['updatedAt'] as String),
     );
 
-Map<String, dynamic> _$$SampleImplToJson(_$SampleImpl instance) {
-  final val = <String, dynamic>{
-    'id': instance.id,
-    'vialId': instance.vialId,
-    'patientAbhaId': instance.patientAbhaId,
-    'patientName': instance.patientName,
-    'orderId': instance.orderId,
-    'testIds': instance.testIds,
-    'status': instance.status.toJson(),
-    'collectionTime': instance.collectionTime.toIso8601String(),
-    'integrityScore': instance.integrityScore.toJson(),
-    'chainOfCustody': instance.chainOfCustody.map((e) => e.toJson()).toList(),
-  };
+Map<String, dynamic> _$SampleToJson(_Sample instance) => <String, dynamic>{
+      'id': instance.id,
+      'vialId': instance.vialId,
+      'patientAbhaId': instance.patientAbhaId,
+      'patientName': instance.patientName,
+      'orderId': instance.orderId,
+      'testIds': instance.testIds,
+      'status': instance.status,
+      'collectionTime': instance.collectionTime.toIso8601String(),
+      'integrityScore': instance.integrityScore,
+      'chainOfCustody': instance.chainOfCustody,
+      'phlebotomistId': instance.phlebotomistId,
+      'phlebotomistName': instance.phlebotomistName,
+      'labId': instance.labId,
+      'labName': instance.labName,
+      'reachedLabTime': instance.reachedLabTime?.toIso8601String(),
+      'processingStartTime': instance.processingStartTime?.toIso8601String(),
+      'processingEndTime': instance.processingEndTime?.toIso8601String(),
+      'coldChainData': instance.coldChainData,
+      'biometricVerification': instance.biometricVerification,
+      'preAnalyticalRisk': instance.preAnalyticalRisk,
+      'condition': instance.condition,
+      'notes': instance.notes,
+      'imageUrls': instance.imageUrls,
+      'createdAt': instance.createdAt.toIso8601String(),
+      'updatedAt': instance.updatedAt?.toIso8601String(),
+    };
 
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('phlebotomistId', instance.phlebotomistId);
-  writeNotNull('phlebotomistName', instance.phlebotomistName);
-  writeNotNull('labId', instance.labId);
-  writeNotNull('labName', instance.labName);
-  writeNotNull('reachedLabTime', instance.reachedLabTime?.toIso8601String());
-  writeNotNull(
-      'processingStartTime', instance.processingStartTime?.toIso8601String());
-  writeNotNull(
-      'processingEndTime', instance.processingEndTime?.toIso8601String());
-  writeNotNull('coldChainData', instance.coldChainData?.toJson());
-  writeNotNull(
-      'biometricVerification', instance.biometricVerification?.toJson());
-  writeNotNull('preAnalyticalRisk', instance.preAnalyticalRisk?.toJson());
-  writeNotNull('condition', instance.condition?.toJson());
-  writeNotNull('notes', instance.notes);
-  val['imageUrls'] = instance.imageUrls;
-  val['createdAt'] = instance.createdAt.toIso8601String();
-  writeNotNull('updatedAt', instance.updatedAt?.toIso8601String());
-  return val;
-}
-
-_$SampleStatusRequestedImpl _$$SampleStatusRequestedImplFromJson(
+SampleStatusRequested _$SampleStatusRequestedFromJson(
         Map<String, dynamic> json) =>
-    _$SampleStatusRequestedImpl(
+    SampleStatusRequested(
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$SampleStatusRequestedImplToJson(
-        _$SampleStatusRequestedImpl instance) =>
+Map<String, dynamic> _$SampleStatusRequestedToJson(
+        SampleStatusRequested instance) =>
     <String, dynamic>{
       'runtimeType': instance.$type,
     };
 
-_$SampleStatusAssignedImpl _$$SampleStatusAssignedImplFromJson(
+SampleStatusAssigned _$SampleStatusAssignedFromJson(
         Map<String, dynamic> json) =>
-    _$SampleStatusAssignedImpl(
+    SampleStatusAssigned(
       phlebotomistId: json['phlebotomistId'] as String,
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$SampleStatusAssignedImplToJson(
-        _$SampleStatusAssignedImpl instance) =>
+Map<String, dynamic> _$SampleStatusAssignedToJson(
+        SampleStatusAssigned instance) =>
     <String, dynamic>{
       'phlebotomistId': instance.phlebotomistId,
       'runtimeType': instance.$type,
     };
 
-_$SampleStatusInTransitImpl _$$SampleStatusInTransitImplFromJson(
+SampleStatusInTransit _$SampleStatusInTransitFromJson(
         Map<String, dynamic> json) =>
-    _$SampleStatusInTransitImpl(
+    SampleStatusInTransit(
       startTime: DateTime.parse(json['startTime'] as String),
       currentLocation:
           GeoLocation.fromJson(json['currentLocation'] as Map<String, dynamic>),
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$SampleStatusInTransitImplToJson(
-        _$SampleStatusInTransitImpl instance) =>
+Map<String, dynamic> _$SampleStatusInTransitToJson(
+        SampleStatusInTransit instance) =>
     <String, dynamic>{
       'startTime': instance.startTime.toIso8601String(),
-      'currentLocation': instance.currentLocation.toJson(),
+      'currentLocation': instance.currentLocation,
       'runtimeType': instance.$type,
     };
 
-_$SampleStatusReachedLabImpl _$$SampleStatusReachedLabImplFromJson(
+SampleStatusReachedLab _$SampleStatusReachedLabFromJson(
         Map<String, dynamic> json) =>
-    _$SampleStatusReachedLabImpl(
+    SampleStatusReachedLab(
       arrivalTime: DateTime.parse(json['arrivalTime'] as String),
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$SampleStatusReachedLabImplToJson(
-        _$SampleStatusReachedLabImpl instance) =>
+Map<String, dynamic> _$SampleStatusReachedLabToJson(
+        SampleStatusReachedLab instance) =>
     <String, dynamic>{
       'arrivalTime': instance.arrivalTime.toIso8601String(),
       'runtimeType': instance.$type,
     };
 
-_$SampleStatusProcessingImpl _$$SampleStatusProcessingImplFromJson(
+SampleStatusProcessing _$SampleStatusProcessingFromJson(
         Map<String, dynamic> json) =>
-    _$SampleStatusProcessingImpl(
+    SampleStatusProcessing(
       startTime: DateTime.parse(json['startTime'] as String),
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$SampleStatusProcessingImplToJson(
-        _$SampleStatusProcessingImpl instance) =>
+Map<String, dynamic> _$SampleStatusProcessingToJson(
+        SampleStatusProcessing instance) =>
     <String, dynamic>{
       'startTime': instance.startTime.toIso8601String(),
       'runtimeType': instance.$type,
     };
 
-_$SampleStatusCompletedImpl _$$SampleStatusCompletedImplFromJson(
+SampleStatusCompleted _$SampleStatusCompletedFromJson(
         Map<String, dynamic> json) =>
-    _$SampleStatusCompletedImpl(
+    SampleStatusCompleted(
       completionTime: DateTime.parse(json['completionTime'] as String),
       resultId: json['resultId'] as String,
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$SampleStatusCompletedImplToJson(
-        _$SampleStatusCompletedImpl instance) =>
+Map<String, dynamic> _$SampleStatusCompletedToJson(
+        SampleStatusCompleted instance) =>
     <String, dynamic>{
       'completionTime': instance.completionTime.toIso8601String(),
       'resultId': instance.resultId,
       'runtimeType': instance.$type,
     };
 
-_$SampleStatusRejectedImpl _$$SampleStatusRejectedImplFromJson(
+SampleStatusRejected _$SampleStatusRejectedFromJson(
         Map<String, dynamic> json) =>
-    _$SampleStatusRejectedImpl(
+    SampleStatusRejected(
       reason: json['reason'] as String,
       rejectedAt: DateTime.parse(json['rejectedAt'] as String),
       requiresRecollection: json['requiresRecollection'] as bool,
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$SampleStatusRejectedImplToJson(
-        _$SampleStatusRejectedImpl instance) =>
+Map<String, dynamic> _$SampleStatusRejectedToJson(
+        SampleStatusRejected instance) =>
     <String, dynamic>{
       'reason': instance.reason,
       'rejectedAt': instance.rejectedAt.toIso8601String(),
@@ -206,25 +193,24 @@ Map<String, dynamic> _$$SampleStatusRejectedImplToJson(
       'runtimeType': instance.$type,
     };
 
-_$SampleStatusCancelledImpl _$$SampleStatusCancelledImplFromJson(
+SampleStatusCancelled _$SampleStatusCancelledFromJson(
         Map<String, dynamic> json) =>
-    _$SampleStatusCancelledImpl(
+    SampleStatusCancelled(
       reason: json['reason'] as String,
       cancelledAt: DateTime.parse(json['cancelledAt'] as String),
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$SampleStatusCancelledImplToJson(
-        _$SampleStatusCancelledImpl instance) =>
+Map<String, dynamic> _$SampleStatusCancelledToJson(
+        SampleStatusCancelled instance) =>
     <String, dynamic>{
       'reason': instance.reason,
       'cancelledAt': instance.cancelledAt.toIso8601String(),
       'runtimeType': instance.$type,
     };
 
-_$SampleConditionImpl _$$SampleConditionImplFromJson(
-        Map<String, dynamic> json) =>
-    _$SampleConditionImpl(
+_SampleCondition _$SampleConditionFromJson(Map<String, dynamic> json) =>
+    _SampleCondition(
       isHemolyzed: json['isHemolyzed'] as bool,
       isClotted: json['isClotted'] as bool,
       isLipemic: json['isLipemic'] as bool,
@@ -235,27 +221,17 @@ _$SampleConditionImpl _$$SampleConditionImplFromJson(
       notes: json['notes'] as String?,
     );
 
-Map<String, dynamic> _$$SampleConditionImplToJson(
-    _$SampleConditionImpl instance) {
-  final val = <String, dynamic>{
-    'isHemolyzed': instance.isHemolyzed,
-    'isClotted': instance.isClotted,
-    'isLipemic': instance.isLipemic,
-    'isIcteric': instance.isIcteric,
-    'volumeStatus': _$VolumeStatusEnumMap[instance.volumeStatus]!,
-    'containerIntegrity':
-        _$ContainerIntegrityEnumMap[instance.containerIntegrity]!,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('notes', instance.notes);
-  return val;
-}
+Map<String, dynamic> _$SampleConditionToJson(_SampleCondition instance) =>
+    <String, dynamic>{
+      'isHemolyzed': instance.isHemolyzed,
+      'isClotted': instance.isClotted,
+      'isLipemic': instance.isLipemic,
+      'isIcteric': instance.isIcteric,
+      'volumeStatus': _$VolumeStatusEnumMap[instance.volumeStatus]!,
+      'containerIntegrity':
+          _$ContainerIntegrityEnumMap[instance.containerIntegrity]!,
+      'notes': instance.notes,
+    };
 
 const _$VolumeStatusEnumMap = {
   VolumeStatus.underfilled: 'underfilled',

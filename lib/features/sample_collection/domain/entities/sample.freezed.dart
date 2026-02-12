@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,54 +9,136 @@ part of 'sample.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
-
-Sample _$SampleFromJson(Map<String, dynamic> json) {
-  return _Sample.fromJson(json);
-}
 
 /// @nodoc
 mixin _$Sample {
-  String get id => throw _privateConstructorUsedError;
-  String get vialId => throw _privateConstructorUsedError;
-  String get patientAbhaId => throw _privateConstructorUsedError;
-  String get patientName => throw _privateConstructorUsedError;
-  String get orderId => throw _privateConstructorUsedError;
-  List<String> get testIds => throw _privateConstructorUsedError;
-  SampleStatus get status => throw _privateConstructorUsedError;
-  DateTime get collectionTime => throw _privateConstructorUsedError;
-  SampleIntegrityScore get integrityScore => throw _privateConstructorUsedError;
-  List<SampleEvent> get chainOfCustody => throw _privateConstructorUsedError;
-  String? get phlebotomistId => throw _privateConstructorUsedError;
-  String? get phlebotomistName => throw _privateConstructorUsedError;
-  String? get labId => throw _privateConstructorUsedError;
-  String? get labName => throw _privateConstructorUsedError;
-  DateTime? get reachedLabTime => throw _privateConstructorUsedError;
-  DateTime? get processingStartTime => throw _privateConstructorUsedError;
-  DateTime? get processingEndTime => throw _privateConstructorUsedError;
-  ColdChainData? get coldChainData => throw _privateConstructorUsedError;
-  BiometricVerification? get biometricVerification =>
-      throw _privateConstructorUsedError;
-  PreAnalyticalRiskAssessment? get preAnalyticalRisk =>
-      throw _privateConstructorUsedError;
-  SampleCondition? get condition => throw _privateConstructorUsedError;
-  String? get notes => throw _privateConstructorUsedError;
-  List<String> get imageUrls => throw _privateConstructorUsedError;
-  DateTime get createdAt => throw _privateConstructorUsedError;
-  DateTime? get updatedAt => throw _privateConstructorUsedError;
+  String get id;
+  String get vialId;
+  String get patientAbhaId;
+  String get patientName;
+  String get orderId;
+  List<String> get testIds;
+  SampleStatus get status;
+  DateTime get collectionTime;
+  SampleIntegrityScore get integrityScore;
+  List<SampleEvent> get chainOfCustody;
+  String? get phlebotomistId;
+  String? get phlebotomistName;
+  String? get labId;
+  String? get labName;
+  DateTime? get reachedLabTime;
+  DateTime? get processingStartTime;
+  DateTime? get processingEndTime;
+  ColdChainData? get coldChainData;
+  BiometricVerification? get biometricVerification;
+  PreAnalyticalRiskAssessment? get preAnalyticalRisk;
+  SampleCondition? get condition;
+  String? get notes;
+  List<String> get imageUrls;
+  DateTime get createdAt;
+  DateTime? get updatedAt;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $SampleCopyWith<Sample> get copyWith => throw _privateConstructorUsedError;
+  /// Create a copy of Sample
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $SampleCopyWith<Sample> get copyWith =>
+      _$SampleCopyWithImpl<Sample>(this as Sample, _$identity);
+
+  /// Serializes this Sample to a JSON map.
+  Map<String, dynamic> toJson();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is Sample &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.vialId, vialId) || other.vialId == vialId) &&
+            (identical(other.patientAbhaId, patientAbhaId) ||
+                other.patientAbhaId == patientAbhaId) &&
+            (identical(other.patientName, patientName) ||
+                other.patientName == patientName) &&
+            (identical(other.orderId, orderId) || other.orderId == orderId) &&
+            const DeepCollectionEquality().equals(other.testIds, testIds) &&
+            (identical(other.status, status) || other.status == status) &&
+            (identical(other.collectionTime, collectionTime) ||
+                other.collectionTime == collectionTime) &&
+            (identical(other.integrityScore, integrityScore) ||
+                other.integrityScore == integrityScore) &&
+            const DeepCollectionEquality()
+                .equals(other.chainOfCustody, chainOfCustody) &&
+            (identical(other.phlebotomistId, phlebotomistId) ||
+                other.phlebotomistId == phlebotomistId) &&
+            (identical(other.phlebotomistName, phlebotomistName) ||
+                other.phlebotomistName == phlebotomistName) &&
+            (identical(other.labId, labId) || other.labId == labId) &&
+            (identical(other.labName, labName) || other.labName == labName) &&
+            (identical(other.reachedLabTime, reachedLabTime) ||
+                other.reachedLabTime == reachedLabTime) &&
+            (identical(other.processingStartTime, processingStartTime) ||
+                other.processingStartTime == processingStartTime) &&
+            (identical(other.processingEndTime, processingEndTime) ||
+                other.processingEndTime == processingEndTime) &&
+            (identical(other.coldChainData, coldChainData) ||
+                other.coldChainData == coldChainData) &&
+            (identical(other.biometricVerification, biometricVerification) ||
+                other.biometricVerification == biometricVerification) &&
+            (identical(other.preAnalyticalRisk, preAnalyticalRisk) ||
+                other.preAnalyticalRisk == preAnalyticalRisk) &&
+            (identical(other.condition, condition) ||
+                other.condition == condition) &&
+            (identical(other.notes, notes) || other.notes == notes) &&
+            const DeepCollectionEquality().equals(other.imageUrls, imageUrls) &&
+            (identical(other.createdAt, createdAt) ||
+                other.createdAt == createdAt) &&
+            (identical(other.updatedAt, updatedAt) ||
+                other.updatedAt == updatedAt));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        id,
+        vialId,
+        patientAbhaId,
+        patientName,
+        orderId,
+        const DeepCollectionEquality().hash(testIds),
+        status,
+        collectionTime,
+        integrityScore,
+        const DeepCollectionEquality().hash(chainOfCustody),
+        phlebotomistId,
+        phlebotomistName,
+        labId,
+        labName,
+        reachedLabTime,
+        processingStartTime,
+        processingEndTime,
+        coldChainData,
+        biometricVerification,
+        preAnalyticalRisk,
+        condition,
+        notes,
+        const DeepCollectionEquality().hash(imageUrls),
+        createdAt,
+        updatedAt
+      ]);
+
+  @override
+  String toString() {
+    return 'Sample(id: $id, vialId: $vialId, patientAbhaId: $patientAbhaId, patientName: $patientName, orderId: $orderId, testIds: $testIds, status: $status, collectionTime: $collectionTime, integrityScore: $integrityScore, chainOfCustody: $chainOfCustody, phlebotomistId: $phlebotomistId, phlebotomistName: $phlebotomistName, labId: $labId, labName: $labName, reachedLabTime: $reachedLabTime, processingStartTime: $processingStartTime, processingEndTime: $processingEndTime, coldChainData: $coldChainData, biometricVerification: $biometricVerification, preAnalyticalRisk: $preAnalyticalRisk, condition: $condition, notes: $notes, imageUrls: $imageUrls, createdAt: $createdAt, updatedAt: $updatedAt)';
+  }
 }
 
 /// @nodoc
-abstract class $SampleCopyWith<$Res> {
-  factory $SampleCopyWith(Sample value, $Res Function(Sample) then) =
-      _$SampleCopyWithImpl<$Res, Sample>;
+abstract mixin class $SampleCopyWith<$Res> {
+  factory $SampleCopyWith(Sample value, $Res Function(Sample) _then) =
+      _$SampleCopyWithImpl;
   @useResult
   $Res call(
       {String id,
@@ -94,15 +176,14 @@ abstract class $SampleCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$SampleCopyWithImpl<$Res, $Val extends Sample>
-    implements $SampleCopyWith<$Res> {
-  _$SampleCopyWithImpl(this._value, this._then);
+class _$SampleCopyWithImpl<$Res> implements $SampleCopyWith<$Res> {
+  _$SampleCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final Sample _self;
+  final $Res Function(Sample) _then;
 
+  /// Create a copy of Sample
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -132,371 +213,503 @@ class _$SampleCopyWithImpl<$Res, $Val extends Sample>
     Object? createdAt = null,
     Object? updatedAt = freezed,
   }) {
-    return _then(_value.copyWith(
+    return _then(_self.copyWith(
       id: null == id
-          ? _value.id
+          ? _self.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
       vialId: null == vialId
-          ? _value.vialId
+          ? _self.vialId
           : vialId // ignore: cast_nullable_to_non_nullable
               as String,
       patientAbhaId: null == patientAbhaId
-          ? _value.patientAbhaId
+          ? _self.patientAbhaId
           : patientAbhaId // ignore: cast_nullable_to_non_nullable
               as String,
       patientName: null == patientName
-          ? _value.patientName
+          ? _self.patientName
           : patientName // ignore: cast_nullable_to_non_nullable
               as String,
       orderId: null == orderId
-          ? _value.orderId
+          ? _self.orderId
           : orderId // ignore: cast_nullable_to_non_nullable
               as String,
       testIds: null == testIds
-          ? _value.testIds
+          ? _self.testIds
           : testIds // ignore: cast_nullable_to_non_nullable
               as List<String>,
       status: null == status
-          ? _value.status
+          ? _self.status
           : status // ignore: cast_nullable_to_non_nullable
               as SampleStatus,
       collectionTime: null == collectionTime
-          ? _value.collectionTime
+          ? _self.collectionTime
           : collectionTime // ignore: cast_nullable_to_non_nullable
               as DateTime,
       integrityScore: null == integrityScore
-          ? _value.integrityScore
+          ? _self.integrityScore
           : integrityScore // ignore: cast_nullable_to_non_nullable
               as SampleIntegrityScore,
       chainOfCustody: null == chainOfCustody
-          ? _value.chainOfCustody
+          ? _self.chainOfCustody
           : chainOfCustody // ignore: cast_nullable_to_non_nullable
               as List<SampleEvent>,
       phlebotomistId: freezed == phlebotomistId
-          ? _value.phlebotomistId
+          ? _self.phlebotomistId
           : phlebotomistId // ignore: cast_nullable_to_non_nullable
               as String?,
       phlebotomistName: freezed == phlebotomistName
-          ? _value.phlebotomistName
+          ? _self.phlebotomistName
           : phlebotomistName // ignore: cast_nullable_to_non_nullable
               as String?,
       labId: freezed == labId
-          ? _value.labId
+          ? _self.labId
           : labId // ignore: cast_nullable_to_non_nullable
               as String?,
       labName: freezed == labName
-          ? _value.labName
+          ? _self.labName
           : labName // ignore: cast_nullable_to_non_nullable
               as String?,
       reachedLabTime: freezed == reachedLabTime
-          ? _value.reachedLabTime
+          ? _self.reachedLabTime
           : reachedLabTime // ignore: cast_nullable_to_non_nullable
               as DateTime?,
       processingStartTime: freezed == processingStartTime
-          ? _value.processingStartTime
+          ? _self.processingStartTime
           : processingStartTime // ignore: cast_nullable_to_non_nullable
               as DateTime?,
       processingEndTime: freezed == processingEndTime
-          ? _value.processingEndTime
+          ? _self.processingEndTime
           : processingEndTime // ignore: cast_nullable_to_non_nullable
               as DateTime?,
       coldChainData: freezed == coldChainData
-          ? _value.coldChainData
+          ? _self.coldChainData
           : coldChainData // ignore: cast_nullable_to_non_nullable
               as ColdChainData?,
       biometricVerification: freezed == biometricVerification
-          ? _value.biometricVerification
+          ? _self.biometricVerification
           : biometricVerification // ignore: cast_nullable_to_non_nullable
               as BiometricVerification?,
       preAnalyticalRisk: freezed == preAnalyticalRisk
-          ? _value.preAnalyticalRisk
+          ? _self.preAnalyticalRisk
           : preAnalyticalRisk // ignore: cast_nullable_to_non_nullable
               as PreAnalyticalRiskAssessment?,
       condition: freezed == condition
-          ? _value.condition
+          ? _self.condition
           : condition // ignore: cast_nullable_to_non_nullable
               as SampleCondition?,
       notes: freezed == notes
-          ? _value.notes
+          ? _self.notes
           : notes // ignore: cast_nullable_to_non_nullable
               as String?,
       imageUrls: null == imageUrls
-          ? _value.imageUrls
+          ? _self.imageUrls
           : imageUrls // ignore: cast_nullable_to_non_nullable
               as List<String>,
       createdAt: null == createdAt
-          ? _value.createdAt
+          ? _self.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as DateTime,
       updatedAt: freezed == updatedAt
-          ? _value.updatedAt
-          : updatedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-    ) as $Val);
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $SampleStatusCopyWith<$Res> get status {
-    return $SampleStatusCopyWith<$Res>(_value.status, (value) {
-      return _then(_value.copyWith(status: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $SampleIntegrityScoreCopyWith<$Res> get integrityScore {
-    return $SampleIntegrityScoreCopyWith<$Res>(_value.integrityScore, (value) {
-      return _then(_value.copyWith(integrityScore: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $ColdChainDataCopyWith<$Res>? get coldChainData {
-    if (_value.coldChainData == null) {
-      return null;
-    }
-
-    return $ColdChainDataCopyWith<$Res>(_value.coldChainData!, (value) {
-      return _then(_value.copyWith(coldChainData: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $BiometricVerificationCopyWith<$Res>? get biometricVerification {
-    if (_value.biometricVerification == null) {
-      return null;
-    }
-
-    return $BiometricVerificationCopyWith<$Res>(_value.biometricVerification!,
-        (value) {
-      return _then(_value.copyWith(biometricVerification: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $PreAnalyticalRiskAssessmentCopyWith<$Res>? get preAnalyticalRisk {
-    if (_value.preAnalyticalRisk == null) {
-      return null;
-    }
-
-    return $PreAnalyticalRiskAssessmentCopyWith<$Res>(_value.preAnalyticalRisk!,
-        (value) {
-      return _then(_value.copyWith(preAnalyticalRisk: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $SampleConditionCopyWith<$Res>? get condition {
-    if (_value.condition == null) {
-      return null;
-    }
-
-    return $SampleConditionCopyWith<$Res>(_value.condition!, (value) {
-      return _then(_value.copyWith(condition: value) as $Val);
-    });
-  }
-}
-
-/// @nodoc
-abstract class _$$SampleImplCopyWith<$Res> implements $SampleCopyWith<$Res> {
-  factory _$$SampleImplCopyWith(
-          _$SampleImpl value, $Res Function(_$SampleImpl) then) =
-      __$$SampleImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {String id,
-      String vialId,
-      String patientAbhaId,
-      String patientName,
-      String orderId,
-      List<String> testIds,
-      SampleStatus status,
-      DateTime collectionTime,
-      SampleIntegrityScore integrityScore,
-      List<SampleEvent> chainOfCustody,
-      String? phlebotomistId,
-      String? phlebotomistName,
-      String? labId,
-      String? labName,
-      DateTime? reachedLabTime,
-      DateTime? processingStartTime,
-      DateTime? processingEndTime,
-      ColdChainData? coldChainData,
-      BiometricVerification? biometricVerification,
-      PreAnalyticalRiskAssessment? preAnalyticalRisk,
-      SampleCondition? condition,
-      String? notes,
-      List<String> imageUrls,
-      DateTime createdAt,
-      DateTime? updatedAt});
-
-  @override
-  $SampleStatusCopyWith<$Res> get status;
-  @override
-  $SampleIntegrityScoreCopyWith<$Res> get integrityScore;
-  @override
-  $ColdChainDataCopyWith<$Res>? get coldChainData;
-  @override
-  $BiometricVerificationCopyWith<$Res>? get biometricVerification;
-  @override
-  $PreAnalyticalRiskAssessmentCopyWith<$Res>? get preAnalyticalRisk;
-  @override
-  $SampleConditionCopyWith<$Res>? get condition;
-}
-
-/// @nodoc
-class __$$SampleImplCopyWithImpl<$Res>
-    extends _$SampleCopyWithImpl<$Res, _$SampleImpl>
-    implements _$$SampleImplCopyWith<$Res> {
-  __$$SampleImplCopyWithImpl(
-      _$SampleImpl _value, $Res Function(_$SampleImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = null,
-    Object? vialId = null,
-    Object? patientAbhaId = null,
-    Object? patientName = null,
-    Object? orderId = null,
-    Object? testIds = null,
-    Object? status = null,
-    Object? collectionTime = null,
-    Object? integrityScore = null,
-    Object? chainOfCustody = null,
-    Object? phlebotomistId = freezed,
-    Object? phlebotomistName = freezed,
-    Object? labId = freezed,
-    Object? labName = freezed,
-    Object? reachedLabTime = freezed,
-    Object? processingStartTime = freezed,
-    Object? processingEndTime = freezed,
-    Object? coldChainData = freezed,
-    Object? biometricVerification = freezed,
-    Object? preAnalyticalRisk = freezed,
-    Object? condition = freezed,
-    Object? notes = freezed,
-    Object? imageUrls = null,
-    Object? createdAt = null,
-    Object? updatedAt = freezed,
-  }) {
-    return _then(_$SampleImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      vialId: null == vialId
-          ? _value.vialId
-          : vialId // ignore: cast_nullable_to_non_nullable
-              as String,
-      patientAbhaId: null == patientAbhaId
-          ? _value.patientAbhaId
-          : patientAbhaId // ignore: cast_nullable_to_non_nullable
-              as String,
-      patientName: null == patientName
-          ? _value.patientName
-          : patientName // ignore: cast_nullable_to_non_nullable
-              as String,
-      orderId: null == orderId
-          ? _value.orderId
-          : orderId // ignore: cast_nullable_to_non_nullable
-              as String,
-      testIds: null == testIds
-          ? _value._testIds
-          : testIds // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      status: null == status
-          ? _value.status
-          : status // ignore: cast_nullable_to_non_nullable
-              as SampleStatus,
-      collectionTime: null == collectionTime
-          ? _value.collectionTime
-          : collectionTime // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      integrityScore: null == integrityScore
-          ? _value.integrityScore
-          : integrityScore // ignore: cast_nullable_to_non_nullable
-              as SampleIntegrityScore,
-      chainOfCustody: null == chainOfCustody
-          ? _value._chainOfCustody
-          : chainOfCustody // ignore: cast_nullable_to_non_nullable
-              as List<SampleEvent>,
-      phlebotomistId: freezed == phlebotomistId
-          ? _value.phlebotomistId
-          : phlebotomistId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      phlebotomistName: freezed == phlebotomistName
-          ? _value.phlebotomistName
-          : phlebotomistName // ignore: cast_nullable_to_non_nullable
-              as String?,
-      labId: freezed == labId
-          ? _value.labId
-          : labId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      labName: freezed == labName
-          ? _value.labName
-          : labName // ignore: cast_nullable_to_non_nullable
-              as String?,
-      reachedLabTime: freezed == reachedLabTime
-          ? _value.reachedLabTime
-          : reachedLabTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      processingStartTime: freezed == processingStartTime
-          ? _value.processingStartTime
-          : processingStartTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      processingEndTime: freezed == processingEndTime
-          ? _value.processingEndTime
-          : processingEndTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      coldChainData: freezed == coldChainData
-          ? _value.coldChainData
-          : coldChainData // ignore: cast_nullable_to_non_nullable
-              as ColdChainData?,
-      biometricVerification: freezed == biometricVerification
-          ? _value.biometricVerification
-          : biometricVerification // ignore: cast_nullable_to_non_nullable
-              as BiometricVerification?,
-      preAnalyticalRisk: freezed == preAnalyticalRisk
-          ? _value.preAnalyticalRisk
-          : preAnalyticalRisk // ignore: cast_nullable_to_non_nullable
-              as PreAnalyticalRiskAssessment?,
-      condition: freezed == condition
-          ? _value.condition
-          : condition // ignore: cast_nullable_to_non_nullable
-              as SampleCondition?,
-      notes: freezed == notes
-          ? _value.notes
-          : notes // ignore: cast_nullable_to_non_nullable
-              as String?,
-      imageUrls: null == imageUrls
-          ? _value._imageUrls
-          : imageUrls // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      createdAt: null == createdAt
-          ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      updatedAt: freezed == updatedAt
-          ? _value.updatedAt
+          ? _self.updatedAt
           : updatedAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
     ));
+  }
+
+  /// Create a copy of Sample
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $SampleStatusCopyWith<$Res> get status {
+    return $SampleStatusCopyWith<$Res>(_self.status, (value) {
+      return _then(_self.copyWith(status: value));
+    });
+  }
+
+  /// Create a copy of Sample
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $SampleIntegrityScoreCopyWith<$Res> get integrityScore {
+    return $SampleIntegrityScoreCopyWith<$Res>(_self.integrityScore, (value) {
+      return _then(_self.copyWith(integrityScore: value));
+    });
+  }
+
+  /// Create a copy of Sample
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $ColdChainDataCopyWith<$Res>? get coldChainData {
+    if (_self.coldChainData == null) {
+      return null;
+    }
+
+    return $ColdChainDataCopyWith<$Res>(_self.coldChainData!, (value) {
+      return _then(_self.copyWith(coldChainData: value));
+    });
+  }
+
+  /// Create a copy of Sample
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $BiometricVerificationCopyWith<$Res>? get biometricVerification {
+    if (_self.biometricVerification == null) {
+      return null;
+    }
+
+    return $BiometricVerificationCopyWith<$Res>(_self.biometricVerification!,
+        (value) {
+      return _then(_self.copyWith(biometricVerification: value));
+    });
+  }
+
+  /// Create a copy of Sample
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $PreAnalyticalRiskAssessmentCopyWith<$Res>? get preAnalyticalRisk {
+    if (_self.preAnalyticalRisk == null) {
+      return null;
+    }
+
+    return $PreAnalyticalRiskAssessmentCopyWith<$Res>(_self.preAnalyticalRisk!,
+        (value) {
+      return _then(_self.copyWith(preAnalyticalRisk: value));
+    });
+  }
+
+  /// Create a copy of Sample
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $SampleConditionCopyWith<$Res>? get condition {
+    if (_self.condition == null) {
+      return null;
+    }
+
+    return $SampleConditionCopyWith<$Res>(_self.condition!, (value) {
+      return _then(_self.copyWith(condition: value));
+    });
+  }
+}
+
+/// Adds pattern-matching-related methods to [Sample].
+extension SamplePatterns on Sample {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_Sample value)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Sample() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_Sample value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _Sample():
+        return $default(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_Sample value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _Sample() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(
+            String id,
+            String vialId,
+            String patientAbhaId,
+            String patientName,
+            String orderId,
+            List<String> testIds,
+            SampleStatus status,
+            DateTime collectionTime,
+            SampleIntegrityScore integrityScore,
+            List<SampleEvent> chainOfCustody,
+            String? phlebotomistId,
+            String? phlebotomistName,
+            String? labId,
+            String? labName,
+            DateTime? reachedLabTime,
+            DateTime? processingStartTime,
+            DateTime? processingEndTime,
+            ColdChainData? coldChainData,
+            BiometricVerification? biometricVerification,
+            PreAnalyticalRiskAssessment? preAnalyticalRisk,
+            SampleCondition? condition,
+            String? notes,
+            List<String> imageUrls,
+            DateTime createdAt,
+            DateTime? updatedAt)?
+        $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Sample() when $default != null:
+        return $default(
+            _that.id,
+            _that.vialId,
+            _that.patientAbhaId,
+            _that.patientName,
+            _that.orderId,
+            _that.testIds,
+            _that.status,
+            _that.collectionTime,
+            _that.integrityScore,
+            _that.chainOfCustody,
+            _that.phlebotomistId,
+            _that.phlebotomistName,
+            _that.labId,
+            _that.labName,
+            _that.reachedLabTime,
+            _that.processingStartTime,
+            _that.processingEndTime,
+            _that.coldChainData,
+            _that.biometricVerification,
+            _that.preAnalyticalRisk,
+            _that.condition,
+            _that.notes,
+            _that.imageUrls,
+            _that.createdAt,
+            _that.updatedAt);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(
+            String id,
+            String vialId,
+            String patientAbhaId,
+            String patientName,
+            String orderId,
+            List<String> testIds,
+            SampleStatus status,
+            DateTime collectionTime,
+            SampleIntegrityScore integrityScore,
+            List<SampleEvent> chainOfCustody,
+            String? phlebotomistId,
+            String? phlebotomistName,
+            String? labId,
+            String? labName,
+            DateTime? reachedLabTime,
+            DateTime? processingStartTime,
+            DateTime? processingEndTime,
+            ColdChainData? coldChainData,
+            BiometricVerification? biometricVerification,
+            PreAnalyticalRiskAssessment? preAnalyticalRisk,
+            SampleCondition? condition,
+            String? notes,
+            List<String> imageUrls,
+            DateTime createdAt,
+            DateTime? updatedAt)
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _Sample():
+        return $default(
+            _that.id,
+            _that.vialId,
+            _that.patientAbhaId,
+            _that.patientName,
+            _that.orderId,
+            _that.testIds,
+            _that.status,
+            _that.collectionTime,
+            _that.integrityScore,
+            _that.chainOfCustody,
+            _that.phlebotomistId,
+            _that.phlebotomistName,
+            _that.labId,
+            _that.labName,
+            _that.reachedLabTime,
+            _that.processingStartTime,
+            _that.processingEndTime,
+            _that.coldChainData,
+            _that.biometricVerification,
+            _that.preAnalyticalRisk,
+            _that.condition,
+            _that.notes,
+            _that.imageUrls,
+            _that.createdAt,
+            _that.updatedAt);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(
+            String id,
+            String vialId,
+            String patientAbhaId,
+            String patientName,
+            String orderId,
+            List<String> testIds,
+            SampleStatus status,
+            DateTime collectionTime,
+            SampleIntegrityScore integrityScore,
+            List<SampleEvent> chainOfCustody,
+            String? phlebotomistId,
+            String? phlebotomistName,
+            String? labId,
+            String? labName,
+            DateTime? reachedLabTime,
+            DateTime? processingStartTime,
+            DateTime? processingEndTime,
+            ColdChainData? coldChainData,
+            BiometricVerification? biometricVerification,
+            PreAnalyticalRiskAssessment? preAnalyticalRisk,
+            SampleCondition? condition,
+            String? notes,
+            List<String> imageUrls,
+            DateTime createdAt,
+            DateTime? updatedAt)?
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _Sample() when $default != null:
+        return $default(
+            _that.id,
+            _that.vialId,
+            _that.patientAbhaId,
+            _that.patientName,
+            _that.orderId,
+            _that.testIds,
+            _that.status,
+            _that.collectionTime,
+            _that.integrityScore,
+            _that.chainOfCustody,
+            _that.phlebotomistId,
+            _that.phlebotomistName,
+            _that.labId,
+            _that.labName,
+            _that.reachedLabTime,
+            _that.processingStartTime,
+            _that.processingEndTime,
+            _that.coldChainData,
+            _that.biometricVerification,
+            _that.preAnalyticalRisk,
+            _that.condition,
+            _that.notes,
+            _that.imageUrls,
+            _that.createdAt,
+            _that.updatedAt);
+      case _:
+        return null;
+    }
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$SampleImpl implements _Sample {
-  const _$SampleImpl(
+class _Sample implements Sample {
+  const _Sample(
       {required this.id,
       required this.vialId,
       required this.patientAbhaId,
@@ -525,9 +738,7 @@ class _$SampleImpl implements _Sample {
       : _testIds = testIds,
         _chainOfCustody = chainOfCustody,
         _imageUrls = imageUrls;
-
-  factory _$SampleImpl.fromJson(Map<String, dynamic> json) =>
-      _$$SampleImplFromJson(json);
+  factory _Sample.fromJson(Map<String, dynamic> json) => _$SampleFromJson(json);
 
   @override
   final String id;
@@ -599,16 +810,26 @@ class _$SampleImpl implements _Sample {
   @override
   final DateTime? updatedAt;
 
+  /// Create a copy of Sample
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String toString() {
-    return 'Sample(id: $id, vialId: $vialId, patientAbhaId: $patientAbhaId, patientName: $patientName, orderId: $orderId, testIds: $testIds, status: $status, collectionTime: $collectionTime, integrityScore: $integrityScore, chainOfCustody: $chainOfCustody, phlebotomistId: $phlebotomistId, phlebotomistName: $phlebotomistName, labId: $labId, labName: $labName, reachedLabTime: $reachedLabTime, processingStartTime: $processingStartTime, processingEndTime: $processingEndTime, coldChainData: $coldChainData, biometricVerification: $biometricVerification, preAnalyticalRisk: $preAnalyticalRisk, condition: $condition, notes: $notes, imageUrls: $imageUrls, createdAt: $createdAt, updatedAt: $updatedAt)';
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$SampleCopyWith<_Sample> get copyWith =>
+      __$SampleCopyWithImpl<_Sample>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$SampleToJson(
+      this,
+    );
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$SampleImpl &&
+            other is _Sample &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.vialId, vialId) || other.vialId == vialId) &&
             (identical(other.patientAbhaId, patientAbhaId) ||
@@ -653,7 +874,7 @@ class _$SampleImpl implements _Sample {
                 other.updatedAt == updatedAt));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -684,104 +905,278 @@ class _$SampleImpl implements _Sample {
         updatedAt
       ]);
 
-  @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
-  _$$SampleImplCopyWith<_$SampleImpl> get copyWith =>
-      __$$SampleImplCopyWithImpl<_$SampleImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$SampleImplToJson(
-      this,
-    );
+  String toString() {
+    return 'Sample(id: $id, vialId: $vialId, patientAbhaId: $patientAbhaId, patientName: $patientName, orderId: $orderId, testIds: $testIds, status: $status, collectionTime: $collectionTime, integrityScore: $integrityScore, chainOfCustody: $chainOfCustody, phlebotomistId: $phlebotomistId, phlebotomistName: $phlebotomistName, labId: $labId, labName: $labName, reachedLabTime: $reachedLabTime, processingStartTime: $processingStartTime, processingEndTime: $processingEndTime, coldChainData: $coldChainData, biometricVerification: $biometricVerification, preAnalyticalRisk: $preAnalyticalRisk, condition: $condition, notes: $notes, imageUrls: $imageUrls, createdAt: $createdAt, updatedAt: $updatedAt)';
   }
 }
 
-abstract class _Sample implements Sample {
-  const factory _Sample(
-      {required final String id,
-      required final String vialId,
-      required final String patientAbhaId,
-      required final String patientName,
-      required final String orderId,
-      required final List<String> testIds,
-      required final SampleStatus status,
-      required final DateTime collectionTime,
-      required final SampleIntegrityScore integrityScore,
-      required final List<SampleEvent> chainOfCustody,
-      final String? phlebotomistId,
-      final String? phlebotomistName,
-      final String? labId,
-      final String? labName,
-      final DateTime? reachedLabTime,
-      final DateTime? processingStartTime,
-      final DateTime? processingEndTime,
-      final ColdChainData? coldChainData,
-      final BiometricVerification? biometricVerification,
-      final PreAnalyticalRiskAssessment? preAnalyticalRisk,
-      final SampleCondition? condition,
-      final String? notes,
-      final List<String> imageUrls,
-      required final DateTime createdAt,
-      final DateTime? updatedAt}) = _$SampleImpl;
+/// @nodoc
+abstract mixin class _$SampleCopyWith<$Res> implements $SampleCopyWith<$Res> {
+  factory _$SampleCopyWith(_Sample value, $Res Function(_Sample) _then) =
+      __$SampleCopyWithImpl;
+  @override
+  @useResult
+  $Res call(
+      {String id,
+      String vialId,
+      String patientAbhaId,
+      String patientName,
+      String orderId,
+      List<String> testIds,
+      SampleStatus status,
+      DateTime collectionTime,
+      SampleIntegrityScore integrityScore,
+      List<SampleEvent> chainOfCustody,
+      String? phlebotomistId,
+      String? phlebotomistName,
+      String? labId,
+      String? labName,
+      DateTime? reachedLabTime,
+      DateTime? processingStartTime,
+      DateTime? processingEndTime,
+      ColdChainData? coldChainData,
+      BiometricVerification? biometricVerification,
+      PreAnalyticalRiskAssessment? preAnalyticalRisk,
+      SampleCondition? condition,
+      String? notes,
+      List<String> imageUrls,
+      DateTime createdAt,
+      DateTime? updatedAt});
 
-  factory _Sample.fromJson(Map<String, dynamic> json) = _$SampleImpl.fromJson;
+  @override
+  $SampleStatusCopyWith<$Res> get status;
+  @override
+  $SampleIntegrityScoreCopyWith<$Res> get integrityScore;
+  @override
+  $ColdChainDataCopyWith<$Res>? get coldChainData;
+  @override
+  $BiometricVerificationCopyWith<$Res>? get biometricVerification;
+  @override
+  $PreAnalyticalRiskAssessmentCopyWith<$Res>? get preAnalyticalRisk;
+  @override
+  $SampleConditionCopyWith<$Res>? get condition;
+}
 
+/// @nodoc
+class __$SampleCopyWithImpl<$Res> implements _$SampleCopyWith<$Res> {
+  __$SampleCopyWithImpl(this._self, this._then);
+
+  final _Sample _self;
+  final $Res Function(_Sample) _then;
+
+  /// Create a copy of Sample
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String get id;
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? id = null,
+    Object? vialId = null,
+    Object? patientAbhaId = null,
+    Object? patientName = null,
+    Object? orderId = null,
+    Object? testIds = null,
+    Object? status = null,
+    Object? collectionTime = null,
+    Object? integrityScore = null,
+    Object? chainOfCustody = null,
+    Object? phlebotomistId = freezed,
+    Object? phlebotomistName = freezed,
+    Object? labId = freezed,
+    Object? labName = freezed,
+    Object? reachedLabTime = freezed,
+    Object? processingStartTime = freezed,
+    Object? processingEndTime = freezed,
+    Object? coldChainData = freezed,
+    Object? biometricVerification = freezed,
+    Object? preAnalyticalRisk = freezed,
+    Object? condition = freezed,
+    Object? notes = freezed,
+    Object? imageUrls = null,
+    Object? createdAt = null,
+    Object? updatedAt = freezed,
+  }) {
+    return _then(_Sample(
+      id: null == id
+          ? _self.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      vialId: null == vialId
+          ? _self.vialId
+          : vialId // ignore: cast_nullable_to_non_nullable
+              as String,
+      patientAbhaId: null == patientAbhaId
+          ? _self.patientAbhaId
+          : patientAbhaId // ignore: cast_nullable_to_non_nullable
+              as String,
+      patientName: null == patientName
+          ? _self.patientName
+          : patientName // ignore: cast_nullable_to_non_nullable
+              as String,
+      orderId: null == orderId
+          ? _self.orderId
+          : orderId // ignore: cast_nullable_to_non_nullable
+              as String,
+      testIds: null == testIds
+          ? _self._testIds
+          : testIds // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      status: null == status
+          ? _self.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as SampleStatus,
+      collectionTime: null == collectionTime
+          ? _self.collectionTime
+          : collectionTime // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      integrityScore: null == integrityScore
+          ? _self.integrityScore
+          : integrityScore // ignore: cast_nullable_to_non_nullable
+              as SampleIntegrityScore,
+      chainOfCustody: null == chainOfCustody
+          ? _self._chainOfCustody
+          : chainOfCustody // ignore: cast_nullable_to_non_nullable
+              as List<SampleEvent>,
+      phlebotomistId: freezed == phlebotomistId
+          ? _self.phlebotomistId
+          : phlebotomistId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      phlebotomistName: freezed == phlebotomistName
+          ? _self.phlebotomistName
+          : phlebotomistName // ignore: cast_nullable_to_non_nullable
+              as String?,
+      labId: freezed == labId
+          ? _self.labId
+          : labId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      labName: freezed == labName
+          ? _self.labName
+          : labName // ignore: cast_nullable_to_non_nullable
+              as String?,
+      reachedLabTime: freezed == reachedLabTime
+          ? _self.reachedLabTime
+          : reachedLabTime // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      processingStartTime: freezed == processingStartTime
+          ? _self.processingStartTime
+          : processingStartTime // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      processingEndTime: freezed == processingEndTime
+          ? _self.processingEndTime
+          : processingEndTime // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      coldChainData: freezed == coldChainData
+          ? _self.coldChainData
+          : coldChainData // ignore: cast_nullable_to_non_nullable
+              as ColdChainData?,
+      biometricVerification: freezed == biometricVerification
+          ? _self.biometricVerification
+          : biometricVerification // ignore: cast_nullable_to_non_nullable
+              as BiometricVerification?,
+      preAnalyticalRisk: freezed == preAnalyticalRisk
+          ? _self.preAnalyticalRisk
+          : preAnalyticalRisk // ignore: cast_nullable_to_non_nullable
+              as PreAnalyticalRiskAssessment?,
+      condition: freezed == condition
+          ? _self.condition
+          : condition // ignore: cast_nullable_to_non_nullable
+              as SampleCondition?,
+      notes: freezed == notes
+          ? _self.notes
+          : notes // ignore: cast_nullable_to_non_nullable
+              as String?,
+      imageUrls: null == imageUrls
+          ? _self._imageUrls
+          : imageUrls // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      createdAt: null == createdAt
+          ? _self.createdAt
+          : createdAt // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      updatedAt: freezed == updatedAt
+          ? _self.updatedAt
+          : updatedAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+    ));
+  }
+
+  /// Create a copy of Sample
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String get vialId;
+  @pragma('vm:prefer-inline')
+  $SampleStatusCopyWith<$Res> get status {
+    return $SampleStatusCopyWith<$Res>(_self.status, (value) {
+      return _then(_self.copyWith(status: value));
+    });
+  }
+
+  /// Create a copy of Sample
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String get patientAbhaId;
+  @pragma('vm:prefer-inline')
+  $SampleIntegrityScoreCopyWith<$Res> get integrityScore {
+    return $SampleIntegrityScoreCopyWith<$Res>(_self.integrityScore, (value) {
+      return _then(_self.copyWith(integrityScore: value));
+    });
+  }
+
+  /// Create a copy of Sample
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String get patientName;
+  @pragma('vm:prefer-inline')
+  $ColdChainDataCopyWith<$Res>? get coldChainData {
+    if (_self.coldChainData == null) {
+      return null;
+    }
+
+    return $ColdChainDataCopyWith<$Res>(_self.coldChainData!, (value) {
+      return _then(_self.copyWith(coldChainData: value));
+    });
+  }
+
+  /// Create a copy of Sample
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String get orderId;
+  @pragma('vm:prefer-inline')
+  $BiometricVerificationCopyWith<$Res>? get biometricVerification {
+    if (_self.biometricVerification == null) {
+      return null;
+    }
+
+    return $BiometricVerificationCopyWith<$Res>(_self.biometricVerification!,
+        (value) {
+      return _then(_self.copyWith(biometricVerification: value));
+    });
+  }
+
+  /// Create a copy of Sample
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  List<String> get testIds;
+  @pragma('vm:prefer-inline')
+  $PreAnalyticalRiskAssessmentCopyWith<$Res>? get preAnalyticalRisk {
+    if (_self.preAnalyticalRisk == null) {
+      return null;
+    }
+
+    return $PreAnalyticalRiskAssessmentCopyWith<$Res>(_self.preAnalyticalRisk!,
+        (value) {
+      return _then(_self.copyWith(preAnalyticalRisk: value));
+    });
+  }
+
+  /// Create a copy of Sample
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  SampleStatus get status;
-  @override
-  DateTime get collectionTime;
-  @override
-  SampleIntegrityScore get integrityScore;
-  @override
-  List<SampleEvent> get chainOfCustody;
-  @override
-  String? get phlebotomistId;
-  @override
-  String? get phlebotomistName;
-  @override
-  String? get labId;
-  @override
-  String? get labName;
-  @override
-  DateTime? get reachedLabTime;
-  @override
-  DateTime? get processingStartTime;
-  @override
-  DateTime? get processingEndTime;
-  @override
-  ColdChainData? get coldChainData;
-  @override
-  BiometricVerification? get biometricVerification;
-  @override
-  PreAnalyticalRiskAssessment? get preAnalyticalRisk;
-  @override
-  SampleCondition? get condition;
-  @override
-  String? get notes;
-  @override
-  List<String> get imageUrls;
-  @override
-  DateTime get createdAt;
-  @override
-  DateTime? get updatedAt;
-  @override
-  @JsonKey(ignore: true)
-  _$$SampleImplCopyWith<_$SampleImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  @pragma('vm:prefer-inline')
+  $SampleConditionCopyWith<$Res>? get condition {
+    if (_self.condition == null) {
+      return null;
+    }
+
+    return $SampleConditionCopyWith<$Res>(_self.condition!, (value) {
+      return _then(_self.copyWith(condition: value));
+    });
+  }
 }
 
 SampleStatus _$SampleStatusFromJson(Map<String, dynamic> json) {
@@ -811,37 +1206,184 @@ SampleStatus _$SampleStatusFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$SampleStatus {
+  /// Serializes this SampleStatus to a JSON map.
+  Map<String, dynamic> toJson();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is SampleStatus);
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  String toString() {
+    return 'SampleStatus()';
+  }
+}
+
+/// @nodoc
+class $SampleStatusCopyWith<$Res> {
+  $SampleStatusCopyWith(SampleStatus _, $Res Function(SampleStatus) __);
+}
+
+/// Adds pattern-matching-related methods to [SampleStatus].
+extension SampleStatusPatterns on SampleStatus {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
   @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() requested,
-    required TResult Function(String phlebotomistId) assigned,
-    required TResult Function(DateTime startTime, GeoLocation currentLocation)
-        inTransit,
-    required TResult Function(DateTime arrivalTime) reachedLab,
-    required TResult Function(DateTime startTime) processing,
-    required TResult Function(DateTime completionTime, String resultId)
-        completed,
-    required TResult Function(
-            String reason, DateTime rejectedAt, bool requiresRecollection)
-        rejected,
-    required TResult Function(String reason, DateTime cancelledAt) cancelled,
-  }) =>
-      throw _privateConstructorUsedError;
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(SampleStatusRequested value)? requested,
+    TResult Function(SampleStatusAssigned value)? assigned,
+    TResult Function(SampleStatusInTransit value)? inTransit,
+    TResult Function(SampleStatusReachedLab value)? reachedLab,
+    TResult Function(SampleStatusProcessing value)? processing,
+    TResult Function(SampleStatusCompleted value)? completed,
+    TResult Function(SampleStatusRejected value)? rejected,
+    TResult Function(SampleStatusCancelled value)? cancelled,
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case SampleStatusRequested() when requested != null:
+        return requested(_that);
+      case SampleStatusAssigned() when assigned != null:
+        return assigned(_that);
+      case SampleStatusInTransit() when inTransit != null:
+        return inTransit(_that);
+      case SampleStatusReachedLab() when reachedLab != null:
+        return reachedLab(_that);
+      case SampleStatusProcessing() when processing != null:
+        return processing(_that);
+      case SampleStatusCompleted() when completed != null:
+        return completed(_that);
+      case SampleStatusRejected() when rejected != null:
+        return rejected(_that);
+      case SampleStatusCancelled() when cancelled != null:
+        return cancelled(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
   @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? requested,
-    TResult? Function(String phlebotomistId)? assigned,
-    TResult? Function(DateTime startTime, GeoLocation currentLocation)?
-        inTransit,
-    TResult? Function(DateTime arrivalTime)? reachedLab,
-    TResult? Function(DateTime startTime)? processing,
-    TResult? Function(DateTime completionTime, String resultId)? completed,
-    TResult? Function(
-            String reason, DateTime rejectedAt, bool requiresRecollection)?
-        rejected,
-    TResult? Function(String reason, DateTime cancelledAt)? cancelled,
-  }) =>
-      throw _privateConstructorUsedError;
+  TResult map<TResult extends Object?>({
+    required TResult Function(SampleStatusRequested value) requested,
+    required TResult Function(SampleStatusAssigned value) assigned,
+    required TResult Function(SampleStatusInTransit value) inTransit,
+    required TResult Function(SampleStatusReachedLab value) reachedLab,
+    required TResult Function(SampleStatusProcessing value) processing,
+    required TResult Function(SampleStatusCompleted value) completed,
+    required TResult Function(SampleStatusRejected value) rejected,
+    required TResult Function(SampleStatusCancelled value) cancelled,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case SampleStatusRequested():
+        return requested(_that);
+      case SampleStatusAssigned():
+        return assigned(_that);
+      case SampleStatusInTransit():
+        return inTransit(_that);
+      case SampleStatusReachedLab():
+        return reachedLab(_that);
+      case SampleStatusProcessing():
+        return processing(_that);
+      case SampleStatusCompleted():
+        return completed(_that);
+      case SampleStatusRejected():
+        return rejected(_that);
+      case SampleStatusCancelled():
+        return cancelled(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(SampleStatusRequested value)? requested,
+    TResult? Function(SampleStatusAssigned value)? assigned,
+    TResult? Function(SampleStatusInTransit value)? inTransit,
+    TResult? Function(SampleStatusReachedLab value)? reachedLab,
+    TResult? Function(SampleStatusProcessing value)? processing,
+    TResult? Function(SampleStatusCompleted value)? completed,
+    TResult? Function(SampleStatusRejected value)? rejected,
+    TResult? Function(SampleStatusCancelled value)? cancelled,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case SampleStatusRequested() when requested != null:
+        return requested(_that);
+      case SampleStatusAssigned() when assigned != null:
+        return assigned(_that);
+      case SampleStatusInTransit() when inTransit != null:
+        return inTransit(_that);
+      case SampleStatusReachedLab() when reachedLab != null:
+        return reachedLab(_that);
+      case SampleStatusProcessing() when processing != null:
+        return processing(_that);
+      case SampleStatusCompleted() when completed != null:
+        return completed(_that);
+      case SampleStatusRejected() when rejected != null:
+        return rejected(_that);
+      case SampleStatusCancelled() when cancelled != null:
+        return cancelled(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? requested,
@@ -856,259 +1398,243 @@ mixin _$SampleStatus {
         rejected,
     TResult Function(String reason, DateTime cancelledAt)? cancelled,
     required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
+  }) {
+    final _that = this;
+    switch (_that) {
+      case SampleStatusRequested() when requested != null:
+        return requested();
+      case SampleStatusAssigned() when assigned != null:
+        return assigned(_that.phlebotomistId);
+      case SampleStatusInTransit() when inTransit != null:
+        return inTransit(_that.startTime, _that.currentLocation);
+      case SampleStatusReachedLab() when reachedLab != null:
+        return reachedLab(_that.arrivalTime);
+      case SampleStatusProcessing() when processing != null:
+        return processing(_that.startTime);
+      case SampleStatusCompleted() when completed != null:
+        return completed(_that.completionTime, _that.resultId);
+      case SampleStatusRejected() when rejected != null:
+        return rejected(
+            _that.reason, _that.rejectedAt, _that.requiresRecollection);
+      case SampleStatusCancelled() when cancelled != null:
+        return cancelled(_that.reason, _that.cancelledAt);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
   @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(SampleStatusRequested value) requested,
-    required TResult Function(SampleStatusAssigned value) assigned,
-    required TResult Function(SampleStatusInTransit value) inTransit,
-    required TResult Function(SampleStatusReachedLab value) reachedLab,
-    required TResult Function(SampleStatusProcessing value) processing,
-    required TResult Function(SampleStatusCompleted value) completed,
-    required TResult Function(SampleStatusRejected value) rejected,
-    required TResult Function(SampleStatusCancelled value) cancelled,
-  }) =>
-      throw _privateConstructorUsedError;
+  TResult when<TResult extends Object?>({
+    required TResult Function() requested,
+    required TResult Function(String phlebotomistId) assigned,
+    required TResult Function(DateTime startTime, GeoLocation currentLocation)
+        inTransit,
+    required TResult Function(DateTime arrivalTime) reachedLab,
+    required TResult Function(DateTime startTime) processing,
+    required TResult Function(DateTime completionTime, String resultId)
+        completed,
+    required TResult Function(
+            String reason, DateTime rejectedAt, bool requiresRecollection)
+        rejected,
+    required TResult Function(String reason, DateTime cancelledAt) cancelled,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case SampleStatusRequested():
+        return requested();
+      case SampleStatusAssigned():
+        return assigned(_that.phlebotomistId);
+      case SampleStatusInTransit():
+        return inTransit(_that.startTime, _that.currentLocation);
+      case SampleStatusReachedLab():
+        return reachedLab(_that.arrivalTime);
+      case SampleStatusProcessing():
+        return processing(_that.startTime);
+      case SampleStatusCompleted():
+        return completed(_that.completionTime, _that.resultId);
+      case SampleStatusRejected():
+        return rejected(
+            _that.reason, _that.rejectedAt, _that.requiresRecollection);
+      case SampleStatusCancelled():
+        return cancelled(_that.reason, _that.cancelledAt);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
   @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(SampleStatusRequested value)? requested,
-    TResult? Function(SampleStatusAssigned value)? assigned,
-    TResult? Function(SampleStatusInTransit value)? inTransit,
-    TResult? Function(SampleStatusReachedLab value)? reachedLab,
-    TResult? Function(SampleStatusProcessing value)? processing,
-    TResult? Function(SampleStatusCompleted value)? completed,
-    TResult? Function(SampleStatusRejected value)? rejected,
-    TResult? Function(SampleStatusCancelled value)? cancelled,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(SampleStatusRequested value)? requested,
-    TResult Function(SampleStatusAssigned value)? assigned,
-    TResult Function(SampleStatusInTransit value)? inTransit,
-    TResult Function(SampleStatusReachedLab value)? reachedLab,
-    TResult Function(SampleStatusProcessing value)? processing,
-    TResult Function(SampleStatusCompleted value)? completed,
-    TResult Function(SampleStatusRejected value)? rejected,
-    TResult Function(SampleStatusCancelled value)? cancelled,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $SampleStatusCopyWith<$Res> {
-  factory $SampleStatusCopyWith(
-          SampleStatus value, $Res Function(SampleStatus) then) =
-      _$SampleStatusCopyWithImpl<$Res, SampleStatus>;
-}
-
-/// @nodoc
-class _$SampleStatusCopyWithImpl<$Res, $Val extends SampleStatus>
-    implements $SampleStatusCopyWith<$Res> {
-  _$SampleStatusCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-}
-
-/// @nodoc
-abstract class _$$SampleStatusRequestedImplCopyWith<$Res> {
-  factory _$$SampleStatusRequestedImplCopyWith(
-          _$SampleStatusRequestedImpl value,
-          $Res Function(_$SampleStatusRequestedImpl) then) =
-      __$$SampleStatusRequestedImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$SampleStatusRequestedImplCopyWithImpl<$Res>
-    extends _$SampleStatusCopyWithImpl<$Res, _$SampleStatusRequestedImpl>
-    implements _$$SampleStatusRequestedImplCopyWith<$Res> {
-  __$$SampleStatusRequestedImplCopyWithImpl(_$SampleStatusRequestedImpl _value,
-      $Res Function(_$SampleStatusRequestedImpl) _then)
-      : super(_value, _then);
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? requested,
+    TResult? Function(String phlebotomistId)? assigned,
+    TResult? Function(DateTime startTime, GeoLocation currentLocation)?
+        inTransit,
+    TResult? Function(DateTime arrivalTime)? reachedLab,
+    TResult? Function(DateTime startTime)? processing,
+    TResult? Function(DateTime completionTime, String resultId)? completed,
+    TResult? Function(
+            String reason, DateTime rejectedAt, bool requiresRecollection)?
+        rejected,
+    TResult? Function(String reason, DateTime cancelledAt)? cancelled,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case SampleStatusRequested() when requested != null:
+        return requested();
+      case SampleStatusAssigned() when assigned != null:
+        return assigned(_that.phlebotomistId);
+      case SampleStatusInTransit() when inTransit != null:
+        return inTransit(_that.startTime, _that.currentLocation);
+      case SampleStatusReachedLab() when reachedLab != null:
+        return reachedLab(_that.arrivalTime);
+      case SampleStatusProcessing() when processing != null:
+        return processing(_that.startTime);
+      case SampleStatusCompleted() when completed != null:
+        return completed(_that.completionTime, _that.resultId);
+      case SampleStatusRejected() when rejected != null:
+        return rejected(
+            _that.reason, _that.rejectedAt, _that.requiresRecollection);
+      case SampleStatusCancelled() when cancelled != null:
+        return cancelled(_that.reason, _that.cancelledAt);
+      case _:
+        return null;
+    }
+  }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$SampleStatusRequestedImpl implements SampleStatusRequested {
-  const _$SampleStatusRequestedImpl({final String? $type})
+class SampleStatusRequested implements SampleStatus {
+  const SampleStatusRequested({final String? $type})
       : $type = $type ?? 'requested';
-
-  factory _$SampleStatusRequestedImpl.fromJson(Map<String, dynamic> json) =>
-      _$$SampleStatusRequestedImplFromJson(json);
+  factory SampleStatusRequested.fromJson(Map<String, dynamic> json) =>
+      _$SampleStatusRequestedFromJson(json);
 
   @JsonKey(name: 'runtimeType')
   final String $type;
 
   @override
+  Map<String, dynamic> toJson() {
+    return _$SampleStatusRequestedToJson(
+      this,
+    );
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is SampleStatusRequested);
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
   String toString() {
     return 'SampleStatus.requested()';
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class SampleStatusAssigned implements SampleStatus {
+  const SampleStatusAssigned(
+      {required this.phlebotomistId, final String? $type})
+      : $type = $type ?? 'assigned';
+  factory SampleStatusAssigned.fromJson(Map<String, dynamic> json) =>
+      _$SampleStatusAssignedFromJson(json);
+
+  final String phlebotomistId;
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
+
+  /// Create a copy of SampleStatus
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $SampleStatusAssignedCopyWith<SampleStatusAssigned> get copyWith =>
+      _$SampleStatusAssignedCopyWithImpl<SampleStatusAssigned>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$SampleStatusAssignedToJson(
+      this,
+    );
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$SampleStatusRequestedImpl);
+            other is SampleStatusAssigned &&
+            (identical(other.phlebotomistId, phlebotomistId) ||
+                other.phlebotomistId == phlebotomistId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, phlebotomistId);
 
   @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() requested,
-    required TResult Function(String phlebotomistId) assigned,
-    required TResult Function(DateTime startTime, GeoLocation currentLocation)
-        inTransit,
-    required TResult Function(DateTime arrivalTime) reachedLab,
-    required TResult Function(DateTime startTime) processing,
-    required TResult Function(DateTime completionTime, String resultId)
-        completed,
-    required TResult Function(
-            String reason, DateTime rejectedAt, bool requiresRecollection)
-        rejected,
-    required TResult Function(String reason, DateTime cancelledAt) cancelled,
-  }) {
-    return requested();
+  String toString() {
+    return 'SampleStatus.assigned(phlebotomistId: $phlebotomistId)';
   }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? requested,
-    TResult? Function(String phlebotomistId)? assigned,
-    TResult? Function(DateTime startTime, GeoLocation currentLocation)?
-        inTransit,
-    TResult? Function(DateTime arrivalTime)? reachedLab,
-    TResult? Function(DateTime startTime)? processing,
-    TResult? Function(DateTime completionTime, String resultId)? completed,
-    TResult? Function(
-            String reason, DateTime rejectedAt, bool requiresRecollection)?
-        rejected,
-    TResult? Function(String reason, DateTime cancelledAt)? cancelled,
-  }) {
-    return requested?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? requested,
-    TResult Function(String phlebotomistId)? assigned,
-    TResult Function(DateTime startTime, GeoLocation currentLocation)?
-        inTransit,
-    TResult Function(DateTime arrivalTime)? reachedLab,
-    TResult Function(DateTime startTime)? processing,
-    TResult Function(DateTime completionTime, String resultId)? completed,
-    TResult Function(
-            String reason, DateTime rejectedAt, bool requiresRecollection)?
-        rejected,
-    TResult Function(String reason, DateTime cancelledAt)? cancelled,
-    required TResult orElse(),
-  }) {
-    if (requested != null) {
-      return requested();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(SampleStatusRequested value) requested,
-    required TResult Function(SampleStatusAssigned value) assigned,
-    required TResult Function(SampleStatusInTransit value) inTransit,
-    required TResult Function(SampleStatusReachedLab value) reachedLab,
-    required TResult Function(SampleStatusProcessing value) processing,
-    required TResult Function(SampleStatusCompleted value) completed,
-    required TResult Function(SampleStatusRejected value) rejected,
-    required TResult Function(SampleStatusCancelled value) cancelled,
-  }) {
-    return requested(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(SampleStatusRequested value)? requested,
-    TResult? Function(SampleStatusAssigned value)? assigned,
-    TResult? Function(SampleStatusInTransit value)? inTransit,
-    TResult? Function(SampleStatusReachedLab value)? reachedLab,
-    TResult? Function(SampleStatusProcessing value)? processing,
-    TResult? Function(SampleStatusCompleted value)? completed,
-    TResult? Function(SampleStatusRejected value)? rejected,
-    TResult? Function(SampleStatusCancelled value)? cancelled,
-  }) {
-    return requested?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(SampleStatusRequested value)? requested,
-    TResult Function(SampleStatusAssigned value)? assigned,
-    TResult Function(SampleStatusInTransit value)? inTransit,
-    TResult Function(SampleStatusReachedLab value)? reachedLab,
-    TResult Function(SampleStatusProcessing value)? processing,
-    TResult Function(SampleStatusCompleted value)? completed,
-    TResult Function(SampleStatusRejected value)? rejected,
-    TResult Function(SampleStatusCancelled value)? cancelled,
-    required TResult orElse(),
-  }) {
-    if (requested != null) {
-      return requested(this);
-    }
-    return orElse();
-  }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$SampleStatusRequestedImplToJson(
-      this,
-    );
-  }
-}
-
-abstract class SampleStatusRequested implements SampleStatus {
-  const factory SampleStatusRequested() = _$SampleStatusRequestedImpl;
-
-  factory SampleStatusRequested.fromJson(Map<String, dynamic> json) =
-      _$SampleStatusRequestedImpl.fromJson;
 }
 
 /// @nodoc
-abstract class _$$SampleStatusAssignedImplCopyWith<$Res> {
-  factory _$$SampleStatusAssignedImplCopyWith(_$SampleStatusAssignedImpl value,
-          $Res Function(_$SampleStatusAssignedImpl) then) =
-      __$$SampleStatusAssignedImplCopyWithImpl<$Res>;
+abstract mixin class $SampleStatusAssignedCopyWith<$Res>
+    implements $SampleStatusCopyWith<$Res> {
+  factory $SampleStatusAssignedCopyWith(SampleStatusAssigned value,
+          $Res Function(SampleStatusAssigned) _then) =
+      _$SampleStatusAssignedCopyWithImpl;
   @useResult
   $Res call({String phlebotomistId});
 }
 
 /// @nodoc
-class __$$SampleStatusAssignedImplCopyWithImpl<$Res>
-    extends _$SampleStatusCopyWithImpl<$Res, _$SampleStatusAssignedImpl>
-    implements _$$SampleStatusAssignedImplCopyWith<$Res> {
-  __$$SampleStatusAssignedImplCopyWithImpl(_$SampleStatusAssignedImpl _value,
-      $Res Function(_$SampleStatusAssignedImpl) _then)
-      : super(_value, _then);
+class _$SampleStatusAssignedCopyWithImpl<$Res>
+    implements $SampleStatusAssignedCopyWith<$Res> {
+  _$SampleStatusAssignedCopyWithImpl(this._self, this._then);
 
+  final SampleStatusAssigned _self;
+  final $Res Function(SampleStatusAssigned) _then;
+
+  /// Create a copy of SampleStatus
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
-  @override
   $Res call({
     Object? phlebotomistId = null,
   }) {
-    return _then(_$SampleStatusAssignedImpl(
+    return _then(SampleStatusAssigned(
       phlebotomistId: null == phlebotomistId
-          ? _value.phlebotomistId
+          ? _self.phlebotomistId
           : phlebotomistId // ignore: cast_nullable_to_non_nullable
               as String,
     ));
@@ -1117,181 +1643,63 @@ class __$$SampleStatusAssignedImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$SampleStatusAssignedImpl implements SampleStatusAssigned {
-  const _$SampleStatusAssignedImpl(
-      {required this.phlebotomistId, final String? $type})
-      : $type = $type ?? 'assigned';
+class SampleStatusInTransit implements SampleStatus {
+  const SampleStatusInTransit(
+      {required this.startTime,
+      required this.currentLocation,
+      final String? $type})
+      : $type = $type ?? 'inTransit';
+  factory SampleStatusInTransit.fromJson(Map<String, dynamic> json) =>
+      _$SampleStatusInTransitFromJson(json);
 
-  factory _$SampleStatusAssignedImpl.fromJson(Map<String, dynamic> json) =>
-      _$$SampleStatusAssignedImplFromJson(json);
-
-  @override
-  final String phlebotomistId;
+  final DateTime startTime;
+  final GeoLocation currentLocation;
 
   @JsonKey(name: 'runtimeType')
   final String $type;
 
+  /// Create a copy of SampleStatus
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $SampleStatusInTransitCopyWith<SampleStatusInTransit> get copyWith =>
+      _$SampleStatusInTransitCopyWithImpl<SampleStatusInTransit>(
+          this, _$identity);
+
   @override
-  String toString() {
-    return 'SampleStatus.assigned(phlebotomistId: $phlebotomistId)';
+  Map<String, dynamic> toJson() {
+    return _$SampleStatusInTransitToJson(
+      this,
+    );
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$SampleStatusAssignedImpl &&
-            (identical(other.phlebotomistId, phlebotomistId) ||
-                other.phlebotomistId == phlebotomistId));
+            other is SampleStatusInTransit &&
+            (identical(other.startTime, startTime) ||
+                other.startTime == startTime) &&
+            (identical(other.currentLocation, currentLocation) ||
+                other.currentLocation == currentLocation));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, phlebotomistId);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$SampleStatusAssignedImplCopyWith<_$SampleStatusAssignedImpl>
-      get copyWith =>
-          __$$SampleStatusAssignedImplCopyWithImpl<_$SampleStatusAssignedImpl>(
-              this, _$identity);
+  int get hashCode => Object.hash(runtimeType, startTime, currentLocation);
 
   @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() requested,
-    required TResult Function(String phlebotomistId) assigned,
-    required TResult Function(DateTime startTime, GeoLocation currentLocation)
-        inTransit,
-    required TResult Function(DateTime arrivalTime) reachedLab,
-    required TResult Function(DateTime startTime) processing,
-    required TResult Function(DateTime completionTime, String resultId)
-        completed,
-    required TResult Function(
-            String reason, DateTime rejectedAt, bool requiresRecollection)
-        rejected,
-    required TResult Function(String reason, DateTime cancelledAt) cancelled,
-  }) {
-    return assigned(phlebotomistId);
+  String toString() {
+    return 'SampleStatus.inTransit(startTime: $startTime, currentLocation: $currentLocation)';
   }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? requested,
-    TResult? Function(String phlebotomistId)? assigned,
-    TResult? Function(DateTime startTime, GeoLocation currentLocation)?
-        inTransit,
-    TResult? Function(DateTime arrivalTime)? reachedLab,
-    TResult? Function(DateTime startTime)? processing,
-    TResult? Function(DateTime completionTime, String resultId)? completed,
-    TResult? Function(
-            String reason, DateTime rejectedAt, bool requiresRecollection)?
-        rejected,
-    TResult? Function(String reason, DateTime cancelledAt)? cancelled,
-  }) {
-    return assigned?.call(phlebotomistId);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? requested,
-    TResult Function(String phlebotomistId)? assigned,
-    TResult Function(DateTime startTime, GeoLocation currentLocation)?
-        inTransit,
-    TResult Function(DateTime arrivalTime)? reachedLab,
-    TResult Function(DateTime startTime)? processing,
-    TResult Function(DateTime completionTime, String resultId)? completed,
-    TResult Function(
-            String reason, DateTime rejectedAt, bool requiresRecollection)?
-        rejected,
-    TResult Function(String reason, DateTime cancelledAt)? cancelled,
-    required TResult orElse(),
-  }) {
-    if (assigned != null) {
-      return assigned(phlebotomistId);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(SampleStatusRequested value) requested,
-    required TResult Function(SampleStatusAssigned value) assigned,
-    required TResult Function(SampleStatusInTransit value) inTransit,
-    required TResult Function(SampleStatusReachedLab value) reachedLab,
-    required TResult Function(SampleStatusProcessing value) processing,
-    required TResult Function(SampleStatusCompleted value) completed,
-    required TResult Function(SampleStatusRejected value) rejected,
-    required TResult Function(SampleStatusCancelled value) cancelled,
-  }) {
-    return assigned(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(SampleStatusRequested value)? requested,
-    TResult? Function(SampleStatusAssigned value)? assigned,
-    TResult? Function(SampleStatusInTransit value)? inTransit,
-    TResult? Function(SampleStatusReachedLab value)? reachedLab,
-    TResult? Function(SampleStatusProcessing value)? processing,
-    TResult? Function(SampleStatusCompleted value)? completed,
-    TResult? Function(SampleStatusRejected value)? rejected,
-    TResult? Function(SampleStatusCancelled value)? cancelled,
-  }) {
-    return assigned?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(SampleStatusRequested value)? requested,
-    TResult Function(SampleStatusAssigned value)? assigned,
-    TResult Function(SampleStatusInTransit value)? inTransit,
-    TResult Function(SampleStatusReachedLab value)? reachedLab,
-    TResult Function(SampleStatusProcessing value)? processing,
-    TResult Function(SampleStatusCompleted value)? completed,
-    TResult Function(SampleStatusRejected value)? rejected,
-    TResult Function(SampleStatusCancelled value)? cancelled,
-    required TResult orElse(),
-  }) {
-    if (assigned != null) {
-      return assigned(this);
-    }
-    return orElse();
-  }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$SampleStatusAssignedImplToJson(
-      this,
-    );
-  }
-}
-
-abstract class SampleStatusAssigned implements SampleStatus {
-  const factory SampleStatusAssigned({required final String phlebotomistId}) =
-      _$SampleStatusAssignedImpl;
-
-  factory SampleStatusAssigned.fromJson(Map<String, dynamic> json) =
-      _$SampleStatusAssignedImpl.fromJson;
-
-  String get phlebotomistId;
-  @JsonKey(ignore: true)
-  _$$SampleStatusAssignedImplCopyWith<_$SampleStatusAssignedImpl>
-      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$SampleStatusInTransitImplCopyWith<$Res> {
-  factory _$$SampleStatusInTransitImplCopyWith(
-          _$SampleStatusInTransitImpl value,
-          $Res Function(_$SampleStatusInTransitImpl) then) =
-      __$$SampleStatusInTransitImplCopyWithImpl<$Res>;
+abstract mixin class $SampleStatusInTransitCopyWith<$Res>
+    implements $SampleStatusCopyWith<$Res> {
+  factory $SampleStatusInTransitCopyWith(SampleStatusInTransit value,
+          $Res Function(SampleStatusInTransit) _then) =
+      _$SampleStatusInTransitCopyWithImpl;
   @useResult
   $Res call({DateTime startTime, GeoLocation currentLocation});
 
@@ -1299,246 +1707,117 @@ abstract class _$$SampleStatusInTransitImplCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$SampleStatusInTransitImplCopyWithImpl<$Res>
-    extends _$SampleStatusCopyWithImpl<$Res, _$SampleStatusInTransitImpl>
-    implements _$$SampleStatusInTransitImplCopyWith<$Res> {
-  __$$SampleStatusInTransitImplCopyWithImpl(_$SampleStatusInTransitImpl _value,
-      $Res Function(_$SampleStatusInTransitImpl) _then)
-      : super(_value, _then);
+class _$SampleStatusInTransitCopyWithImpl<$Res>
+    implements $SampleStatusInTransitCopyWith<$Res> {
+  _$SampleStatusInTransitCopyWithImpl(this._self, this._then);
 
+  final SampleStatusInTransit _self;
+  final $Res Function(SampleStatusInTransit) _then;
+
+  /// Create a copy of SampleStatus
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
-  @override
   $Res call({
     Object? startTime = null,
     Object? currentLocation = null,
   }) {
-    return _then(_$SampleStatusInTransitImpl(
+    return _then(SampleStatusInTransit(
       startTime: null == startTime
-          ? _value.startTime
+          ? _self.startTime
           : startTime // ignore: cast_nullable_to_non_nullable
               as DateTime,
       currentLocation: null == currentLocation
-          ? _value.currentLocation
+          ? _self.currentLocation
           : currentLocation // ignore: cast_nullable_to_non_nullable
               as GeoLocation,
     ));
   }
 
+  /// Create a copy of SampleStatus
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $GeoLocationCopyWith<$Res> get currentLocation {
-    return $GeoLocationCopyWith<$Res>(_value.currentLocation, (value) {
-      return _then(_value.copyWith(currentLocation: value));
+    return $GeoLocationCopyWith<$Res>(_self.currentLocation, (value) {
+      return _then(_self.copyWith(currentLocation: value));
     });
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$SampleStatusInTransitImpl implements SampleStatusInTransit {
-  const _$SampleStatusInTransitImpl(
-      {required this.startTime,
-      required this.currentLocation,
-      final String? $type})
-      : $type = $type ?? 'inTransit';
+class SampleStatusReachedLab implements SampleStatus {
+  const SampleStatusReachedLab({required this.arrivalTime, final String? $type})
+      : $type = $type ?? 'reachedLab';
+  factory SampleStatusReachedLab.fromJson(Map<String, dynamic> json) =>
+      _$SampleStatusReachedLabFromJson(json);
 
-  factory _$SampleStatusInTransitImpl.fromJson(Map<String, dynamic> json) =>
-      _$$SampleStatusInTransitImplFromJson(json);
-
-  @override
-  final DateTime startTime;
-  @override
-  final GeoLocation currentLocation;
+  final DateTime arrivalTime;
 
   @JsonKey(name: 'runtimeType')
   final String $type;
 
+  /// Create a copy of SampleStatus
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $SampleStatusReachedLabCopyWith<SampleStatusReachedLab> get copyWith =>
+      _$SampleStatusReachedLabCopyWithImpl<SampleStatusReachedLab>(
+          this, _$identity);
+
   @override
-  String toString() {
-    return 'SampleStatus.inTransit(startTime: $startTime, currentLocation: $currentLocation)';
+  Map<String, dynamic> toJson() {
+    return _$SampleStatusReachedLabToJson(
+      this,
+    );
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$SampleStatusInTransitImpl &&
-            (identical(other.startTime, startTime) ||
-                other.startTime == startTime) &&
-            (identical(other.currentLocation, currentLocation) ||
-                other.currentLocation == currentLocation));
+            other is SampleStatusReachedLab &&
+            (identical(other.arrivalTime, arrivalTime) ||
+                other.arrivalTime == arrivalTime));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, startTime, currentLocation);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$SampleStatusInTransitImplCopyWith<_$SampleStatusInTransitImpl>
-      get copyWith => __$$SampleStatusInTransitImplCopyWithImpl<
-          _$SampleStatusInTransitImpl>(this, _$identity);
+  int get hashCode => Object.hash(runtimeType, arrivalTime);
 
   @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() requested,
-    required TResult Function(String phlebotomistId) assigned,
-    required TResult Function(DateTime startTime, GeoLocation currentLocation)
-        inTransit,
-    required TResult Function(DateTime arrivalTime) reachedLab,
-    required TResult Function(DateTime startTime) processing,
-    required TResult Function(DateTime completionTime, String resultId)
-        completed,
-    required TResult Function(
-            String reason, DateTime rejectedAt, bool requiresRecollection)
-        rejected,
-    required TResult Function(String reason, DateTime cancelledAt) cancelled,
-  }) {
-    return inTransit(startTime, currentLocation);
+  String toString() {
+    return 'SampleStatus.reachedLab(arrivalTime: $arrivalTime)';
   }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? requested,
-    TResult? Function(String phlebotomistId)? assigned,
-    TResult? Function(DateTime startTime, GeoLocation currentLocation)?
-        inTransit,
-    TResult? Function(DateTime arrivalTime)? reachedLab,
-    TResult? Function(DateTime startTime)? processing,
-    TResult? Function(DateTime completionTime, String resultId)? completed,
-    TResult? Function(
-            String reason, DateTime rejectedAt, bool requiresRecollection)?
-        rejected,
-    TResult? Function(String reason, DateTime cancelledAt)? cancelled,
-  }) {
-    return inTransit?.call(startTime, currentLocation);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? requested,
-    TResult Function(String phlebotomistId)? assigned,
-    TResult Function(DateTime startTime, GeoLocation currentLocation)?
-        inTransit,
-    TResult Function(DateTime arrivalTime)? reachedLab,
-    TResult Function(DateTime startTime)? processing,
-    TResult Function(DateTime completionTime, String resultId)? completed,
-    TResult Function(
-            String reason, DateTime rejectedAt, bool requiresRecollection)?
-        rejected,
-    TResult Function(String reason, DateTime cancelledAt)? cancelled,
-    required TResult orElse(),
-  }) {
-    if (inTransit != null) {
-      return inTransit(startTime, currentLocation);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(SampleStatusRequested value) requested,
-    required TResult Function(SampleStatusAssigned value) assigned,
-    required TResult Function(SampleStatusInTransit value) inTransit,
-    required TResult Function(SampleStatusReachedLab value) reachedLab,
-    required TResult Function(SampleStatusProcessing value) processing,
-    required TResult Function(SampleStatusCompleted value) completed,
-    required TResult Function(SampleStatusRejected value) rejected,
-    required TResult Function(SampleStatusCancelled value) cancelled,
-  }) {
-    return inTransit(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(SampleStatusRequested value)? requested,
-    TResult? Function(SampleStatusAssigned value)? assigned,
-    TResult? Function(SampleStatusInTransit value)? inTransit,
-    TResult? Function(SampleStatusReachedLab value)? reachedLab,
-    TResult? Function(SampleStatusProcessing value)? processing,
-    TResult? Function(SampleStatusCompleted value)? completed,
-    TResult? Function(SampleStatusRejected value)? rejected,
-    TResult? Function(SampleStatusCancelled value)? cancelled,
-  }) {
-    return inTransit?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(SampleStatusRequested value)? requested,
-    TResult Function(SampleStatusAssigned value)? assigned,
-    TResult Function(SampleStatusInTransit value)? inTransit,
-    TResult Function(SampleStatusReachedLab value)? reachedLab,
-    TResult Function(SampleStatusProcessing value)? processing,
-    TResult Function(SampleStatusCompleted value)? completed,
-    TResult Function(SampleStatusRejected value)? rejected,
-    TResult Function(SampleStatusCancelled value)? cancelled,
-    required TResult orElse(),
-  }) {
-    if (inTransit != null) {
-      return inTransit(this);
-    }
-    return orElse();
-  }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$SampleStatusInTransitImplToJson(
-      this,
-    );
-  }
-}
-
-abstract class SampleStatusInTransit implements SampleStatus {
-  const factory SampleStatusInTransit(
-          {required final DateTime startTime,
-          required final GeoLocation currentLocation}) =
-      _$SampleStatusInTransitImpl;
-
-  factory SampleStatusInTransit.fromJson(Map<String, dynamic> json) =
-      _$SampleStatusInTransitImpl.fromJson;
-
-  DateTime get startTime;
-  GeoLocation get currentLocation;
-  @JsonKey(ignore: true)
-  _$$SampleStatusInTransitImplCopyWith<_$SampleStatusInTransitImpl>
-      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$SampleStatusReachedLabImplCopyWith<$Res> {
-  factory _$$SampleStatusReachedLabImplCopyWith(
-          _$SampleStatusReachedLabImpl value,
-          $Res Function(_$SampleStatusReachedLabImpl) then) =
-      __$$SampleStatusReachedLabImplCopyWithImpl<$Res>;
+abstract mixin class $SampleStatusReachedLabCopyWith<$Res>
+    implements $SampleStatusCopyWith<$Res> {
+  factory $SampleStatusReachedLabCopyWith(SampleStatusReachedLab value,
+          $Res Function(SampleStatusReachedLab) _then) =
+      _$SampleStatusReachedLabCopyWithImpl;
   @useResult
   $Res call({DateTime arrivalTime});
 }
 
 /// @nodoc
-class __$$SampleStatusReachedLabImplCopyWithImpl<$Res>
-    extends _$SampleStatusCopyWithImpl<$Res, _$SampleStatusReachedLabImpl>
-    implements _$$SampleStatusReachedLabImplCopyWith<$Res> {
-  __$$SampleStatusReachedLabImplCopyWithImpl(
-      _$SampleStatusReachedLabImpl _value,
-      $Res Function(_$SampleStatusReachedLabImpl) _then)
-      : super(_value, _then);
+class _$SampleStatusReachedLabCopyWithImpl<$Res>
+    implements $SampleStatusReachedLabCopyWith<$Res> {
+  _$SampleStatusReachedLabCopyWithImpl(this._self, this._then);
 
+  final SampleStatusReachedLab _self;
+  final $Res Function(SampleStatusReachedLab) _then;
+
+  /// Create a copy of SampleStatus
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
-  @override
   $Res call({
     Object? arrivalTime = null,
   }) {
-    return _then(_$SampleStatusReachedLabImpl(
+    return _then(SampleStatusReachedLab(
       arrivalTime: null == arrivalTime
-          ? _value.arrivalTime
+          ? _self.arrivalTime
           : arrivalTime // ignore: cast_nullable_to_non_nullable
               as DateTime,
     ));
@@ -1547,201 +1826,78 @@ class __$$SampleStatusReachedLabImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$SampleStatusReachedLabImpl implements SampleStatusReachedLab {
-  const _$SampleStatusReachedLabImpl(
-      {required this.arrivalTime, final String? $type})
-      : $type = $type ?? 'reachedLab';
+class SampleStatusProcessing implements SampleStatus {
+  const SampleStatusProcessing({required this.startTime, final String? $type})
+      : $type = $type ?? 'processing';
+  factory SampleStatusProcessing.fromJson(Map<String, dynamic> json) =>
+      _$SampleStatusProcessingFromJson(json);
 
-  factory _$SampleStatusReachedLabImpl.fromJson(Map<String, dynamic> json) =>
-      _$$SampleStatusReachedLabImplFromJson(json);
-
-  @override
-  final DateTime arrivalTime;
+  final DateTime startTime;
 
   @JsonKey(name: 'runtimeType')
   final String $type;
 
+  /// Create a copy of SampleStatus
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $SampleStatusProcessingCopyWith<SampleStatusProcessing> get copyWith =>
+      _$SampleStatusProcessingCopyWithImpl<SampleStatusProcessing>(
+          this, _$identity);
+
   @override
-  String toString() {
-    return 'SampleStatus.reachedLab(arrivalTime: $arrivalTime)';
+  Map<String, dynamic> toJson() {
+    return _$SampleStatusProcessingToJson(
+      this,
+    );
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$SampleStatusReachedLabImpl &&
-            (identical(other.arrivalTime, arrivalTime) ||
-                other.arrivalTime == arrivalTime));
+            other is SampleStatusProcessing &&
+            (identical(other.startTime, startTime) ||
+                other.startTime == startTime));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, arrivalTime);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$SampleStatusReachedLabImplCopyWith<_$SampleStatusReachedLabImpl>
-      get copyWith => __$$SampleStatusReachedLabImplCopyWithImpl<
-          _$SampleStatusReachedLabImpl>(this, _$identity);
+  int get hashCode => Object.hash(runtimeType, startTime);
 
   @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() requested,
-    required TResult Function(String phlebotomistId) assigned,
-    required TResult Function(DateTime startTime, GeoLocation currentLocation)
-        inTransit,
-    required TResult Function(DateTime arrivalTime) reachedLab,
-    required TResult Function(DateTime startTime) processing,
-    required TResult Function(DateTime completionTime, String resultId)
-        completed,
-    required TResult Function(
-            String reason, DateTime rejectedAt, bool requiresRecollection)
-        rejected,
-    required TResult Function(String reason, DateTime cancelledAt) cancelled,
-  }) {
-    return reachedLab(arrivalTime);
+  String toString() {
+    return 'SampleStatus.processing(startTime: $startTime)';
   }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? requested,
-    TResult? Function(String phlebotomistId)? assigned,
-    TResult? Function(DateTime startTime, GeoLocation currentLocation)?
-        inTransit,
-    TResult? Function(DateTime arrivalTime)? reachedLab,
-    TResult? Function(DateTime startTime)? processing,
-    TResult? Function(DateTime completionTime, String resultId)? completed,
-    TResult? Function(
-            String reason, DateTime rejectedAt, bool requiresRecollection)?
-        rejected,
-    TResult? Function(String reason, DateTime cancelledAt)? cancelled,
-  }) {
-    return reachedLab?.call(arrivalTime);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? requested,
-    TResult Function(String phlebotomistId)? assigned,
-    TResult Function(DateTime startTime, GeoLocation currentLocation)?
-        inTransit,
-    TResult Function(DateTime arrivalTime)? reachedLab,
-    TResult Function(DateTime startTime)? processing,
-    TResult Function(DateTime completionTime, String resultId)? completed,
-    TResult Function(
-            String reason, DateTime rejectedAt, bool requiresRecollection)?
-        rejected,
-    TResult Function(String reason, DateTime cancelledAt)? cancelled,
-    required TResult orElse(),
-  }) {
-    if (reachedLab != null) {
-      return reachedLab(arrivalTime);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(SampleStatusRequested value) requested,
-    required TResult Function(SampleStatusAssigned value) assigned,
-    required TResult Function(SampleStatusInTransit value) inTransit,
-    required TResult Function(SampleStatusReachedLab value) reachedLab,
-    required TResult Function(SampleStatusProcessing value) processing,
-    required TResult Function(SampleStatusCompleted value) completed,
-    required TResult Function(SampleStatusRejected value) rejected,
-    required TResult Function(SampleStatusCancelled value) cancelled,
-  }) {
-    return reachedLab(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(SampleStatusRequested value)? requested,
-    TResult? Function(SampleStatusAssigned value)? assigned,
-    TResult? Function(SampleStatusInTransit value)? inTransit,
-    TResult? Function(SampleStatusReachedLab value)? reachedLab,
-    TResult? Function(SampleStatusProcessing value)? processing,
-    TResult? Function(SampleStatusCompleted value)? completed,
-    TResult? Function(SampleStatusRejected value)? rejected,
-    TResult? Function(SampleStatusCancelled value)? cancelled,
-  }) {
-    return reachedLab?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(SampleStatusRequested value)? requested,
-    TResult Function(SampleStatusAssigned value)? assigned,
-    TResult Function(SampleStatusInTransit value)? inTransit,
-    TResult Function(SampleStatusReachedLab value)? reachedLab,
-    TResult Function(SampleStatusProcessing value)? processing,
-    TResult Function(SampleStatusCompleted value)? completed,
-    TResult Function(SampleStatusRejected value)? rejected,
-    TResult Function(SampleStatusCancelled value)? cancelled,
-    required TResult orElse(),
-  }) {
-    if (reachedLab != null) {
-      return reachedLab(this);
-    }
-    return orElse();
-  }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$SampleStatusReachedLabImplToJson(
-      this,
-    );
-  }
-}
-
-abstract class SampleStatusReachedLab implements SampleStatus {
-  const factory SampleStatusReachedLab({required final DateTime arrivalTime}) =
-      _$SampleStatusReachedLabImpl;
-
-  factory SampleStatusReachedLab.fromJson(Map<String, dynamic> json) =
-      _$SampleStatusReachedLabImpl.fromJson;
-
-  DateTime get arrivalTime;
-  @JsonKey(ignore: true)
-  _$$SampleStatusReachedLabImplCopyWith<_$SampleStatusReachedLabImpl>
-      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$SampleStatusProcessingImplCopyWith<$Res> {
-  factory _$$SampleStatusProcessingImplCopyWith(
-          _$SampleStatusProcessingImpl value,
-          $Res Function(_$SampleStatusProcessingImpl) then) =
-      __$$SampleStatusProcessingImplCopyWithImpl<$Res>;
+abstract mixin class $SampleStatusProcessingCopyWith<$Res>
+    implements $SampleStatusCopyWith<$Res> {
+  factory $SampleStatusProcessingCopyWith(SampleStatusProcessing value,
+          $Res Function(SampleStatusProcessing) _then) =
+      _$SampleStatusProcessingCopyWithImpl;
   @useResult
   $Res call({DateTime startTime});
 }
 
 /// @nodoc
-class __$$SampleStatusProcessingImplCopyWithImpl<$Res>
-    extends _$SampleStatusCopyWithImpl<$Res, _$SampleStatusProcessingImpl>
-    implements _$$SampleStatusProcessingImplCopyWith<$Res> {
-  __$$SampleStatusProcessingImplCopyWithImpl(
-      _$SampleStatusProcessingImpl _value,
-      $Res Function(_$SampleStatusProcessingImpl) _then)
-      : super(_value, _then);
+class _$SampleStatusProcessingCopyWithImpl<$Res>
+    implements $SampleStatusProcessingCopyWith<$Res> {
+  _$SampleStatusProcessingCopyWithImpl(this._self, this._then);
 
+  final SampleStatusProcessing _self;
+  final $Res Function(SampleStatusProcessing) _then;
+
+  /// Create a copy of SampleStatus
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
-  @override
   $Res call({
     Object? startTime = null,
   }) {
-    return _then(_$SampleStatusProcessingImpl(
+    return _then(SampleStatusProcessing(
       startTime: null == startTime
-          ? _value.startTime
+          ? _self.startTime
           : startTime // ignore: cast_nullable_to_non_nullable
               as DateTime,
     ));
@@ -1750,205 +1906,89 @@ class __$$SampleStatusProcessingImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$SampleStatusProcessingImpl implements SampleStatusProcessing {
-  const _$SampleStatusProcessingImpl(
-      {required this.startTime, final String? $type})
-      : $type = $type ?? 'processing';
+class SampleStatusCompleted implements SampleStatus {
+  const SampleStatusCompleted(
+      {required this.completionTime,
+      required this.resultId,
+      final String? $type})
+      : $type = $type ?? 'completed';
+  factory SampleStatusCompleted.fromJson(Map<String, dynamic> json) =>
+      _$SampleStatusCompletedFromJson(json);
 
-  factory _$SampleStatusProcessingImpl.fromJson(Map<String, dynamic> json) =>
-      _$$SampleStatusProcessingImplFromJson(json);
-
-  @override
-  final DateTime startTime;
+  final DateTime completionTime;
+  final String resultId;
 
   @JsonKey(name: 'runtimeType')
   final String $type;
 
+  /// Create a copy of SampleStatus
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $SampleStatusCompletedCopyWith<SampleStatusCompleted> get copyWith =>
+      _$SampleStatusCompletedCopyWithImpl<SampleStatusCompleted>(
+          this, _$identity);
+
   @override
-  String toString() {
-    return 'SampleStatus.processing(startTime: $startTime)';
+  Map<String, dynamic> toJson() {
+    return _$SampleStatusCompletedToJson(
+      this,
+    );
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$SampleStatusProcessingImpl &&
-            (identical(other.startTime, startTime) ||
-                other.startTime == startTime));
+            other is SampleStatusCompleted &&
+            (identical(other.completionTime, completionTime) ||
+                other.completionTime == completionTime) &&
+            (identical(other.resultId, resultId) ||
+                other.resultId == resultId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, startTime);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$SampleStatusProcessingImplCopyWith<_$SampleStatusProcessingImpl>
-      get copyWith => __$$SampleStatusProcessingImplCopyWithImpl<
-          _$SampleStatusProcessingImpl>(this, _$identity);
+  int get hashCode => Object.hash(runtimeType, completionTime, resultId);
 
   @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() requested,
-    required TResult Function(String phlebotomistId) assigned,
-    required TResult Function(DateTime startTime, GeoLocation currentLocation)
-        inTransit,
-    required TResult Function(DateTime arrivalTime) reachedLab,
-    required TResult Function(DateTime startTime) processing,
-    required TResult Function(DateTime completionTime, String resultId)
-        completed,
-    required TResult Function(
-            String reason, DateTime rejectedAt, bool requiresRecollection)
-        rejected,
-    required TResult Function(String reason, DateTime cancelledAt) cancelled,
-  }) {
-    return processing(startTime);
+  String toString() {
+    return 'SampleStatus.completed(completionTime: $completionTime, resultId: $resultId)';
   }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? requested,
-    TResult? Function(String phlebotomistId)? assigned,
-    TResult? Function(DateTime startTime, GeoLocation currentLocation)?
-        inTransit,
-    TResult? Function(DateTime arrivalTime)? reachedLab,
-    TResult? Function(DateTime startTime)? processing,
-    TResult? Function(DateTime completionTime, String resultId)? completed,
-    TResult? Function(
-            String reason, DateTime rejectedAt, bool requiresRecollection)?
-        rejected,
-    TResult? Function(String reason, DateTime cancelledAt)? cancelled,
-  }) {
-    return processing?.call(startTime);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? requested,
-    TResult Function(String phlebotomistId)? assigned,
-    TResult Function(DateTime startTime, GeoLocation currentLocation)?
-        inTransit,
-    TResult Function(DateTime arrivalTime)? reachedLab,
-    TResult Function(DateTime startTime)? processing,
-    TResult Function(DateTime completionTime, String resultId)? completed,
-    TResult Function(
-            String reason, DateTime rejectedAt, bool requiresRecollection)?
-        rejected,
-    TResult Function(String reason, DateTime cancelledAt)? cancelled,
-    required TResult orElse(),
-  }) {
-    if (processing != null) {
-      return processing(startTime);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(SampleStatusRequested value) requested,
-    required TResult Function(SampleStatusAssigned value) assigned,
-    required TResult Function(SampleStatusInTransit value) inTransit,
-    required TResult Function(SampleStatusReachedLab value) reachedLab,
-    required TResult Function(SampleStatusProcessing value) processing,
-    required TResult Function(SampleStatusCompleted value) completed,
-    required TResult Function(SampleStatusRejected value) rejected,
-    required TResult Function(SampleStatusCancelled value) cancelled,
-  }) {
-    return processing(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(SampleStatusRequested value)? requested,
-    TResult? Function(SampleStatusAssigned value)? assigned,
-    TResult? Function(SampleStatusInTransit value)? inTransit,
-    TResult? Function(SampleStatusReachedLab value)? reachedLab,
-    TResult? Function(SampleStatusProcessing value)? processing,
-    TResult? Function(SampleStatusCompleted value)? completed,
-    TResult? Function(SampleStatusRejected value)? rejected,
-    TResult? Function(SampleStatusCancelled value)? cancelled,
-  }) {
-    return processing?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(SampleStatusRequested value)? requested,
-    TResult Function(SampleStatusAssigned value)? assigned,
-    TResult Function(SampleStatusInTransit value)? inTransit,
-    TResult Function(SampleStatusReachedLab value)? reachedLab,
-    TResult Function(SampleStatusProcessing value)? processing,
-    TResult Function(SampleStatusCompleted value)? completed,
-    TResult Function(SampleStatusRejected value)? rejected,
-    TResult Function(SampleStatusCancelled value)? cancelled,
-    required TResult orElse(),
-  }) {
-    if (processing != null) {
-      return processing(this);
-    }
-    return orElse();
-  }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$SampleStatusProcessingImplToJson(
-      this,
-    );
-  }
-}
-
-abstract class SampleStatusProcessing implements SampleStatus {
-  const factory SampleStatusProcessing({required final DateTime startTime}) =
-      _$SampleStatusProcessingImpl;
-
-  factory SampleStatusProcessing.fromJson(Map<String, dynamic> json) =
-      _$SampleStatusProcessingImpl.fromJson;
-
-  DateTime get startTime;
-  @JsonKey(ignore: true)
-  _$$SampleStatusProcessingImplCopyWith<_$SampleStatusProcessingImpl>
-      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$SampleStatusCompletedImplCopyWith<$Res> {
-  factory _$$SampleStatusCompletedImplCopyWith(
-          _$SampleStatusCompletedImpl value,
-          $Res Function(_$SampleStatusCompletedImpl) then) =
-      __$$SampleStatusCompletedImplCopyWithImpl<$Res>;
+abstract mixin class $SampleStatusCompletedCopyWith<$Res>
+    implements $SampleStatusCopyWith<$Res> {
+  factory $SampleStatusCompletedCopyWith(SampleStatusCompleted value,
+          $Res Function(SampleStatusCompleted) _then) =
+      _$SampleStatusCompletedCopyWithImpl;
   @useResult
   $Res call({DateTime completionTime, String resultId});
 }
 
 /// @nodoc
-class __$$SampleStatusCompletedImplCopyWithImpl<$Res>
-    extends _$SampleStatusCopyWithImpl<$Res, _$SampleStatusCompletedImpl>
-    implements _$$SampleStatusCompletedImplCopyWith<$Res> {
-  __$$SampleStatusCompletedImplCopyWithImpl(_$SampleStatusCompletedImpl _value,
-      $Res Function(_$SampleStatusCompletedImpl) _then)
-      : super(_value, _then);
+class _$SampleStatusCompletedCopyWithImpl<$Res>
+    implements $SampleStatusCompletedCopyWith<$Res> {
+  _$SampleStatusCompletedCopyWithImpl(this._self, this._then);
 
+  final SampleStatusCompleted _self;
+  final $Res Function(SampleStatusCompleted) _then;
+
+  /// Create a copy of SampleStatus
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
-  @override
   $Res call({
     Object? completionTime = null,
     Object? resultId = null,
   }) {
-    return _then(_$SampleStatusCompletedImpl(
+    return _then(SampleStatusCompleted(
       completionTime: null == completionTime
-          ? _value.completionTime
+          ? _self.completionTime
           : completionTime // ignore: cast_nullable_to_non_nullable
               as DateTime,
       resultId: null == resultId
-          ? _value.resultId
+          ? _self.resultId
           : resultId // ignore: cast_nullable_to_non_nullable
               as String,
     ));
@@ -1957,217 +1997,98 @@ class __$$SampleStatusCompletedImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$SampleStatusCompletedImpl implements SampleStatusCompleted {
-  const _$SampleStatusCompletedImpl(
-      {required this.completionTime,
-      required this.resultId,
+class SampleStatusRejected implements SampleStatus {
+  const SampleStatusRejected(
+      {required this.reason,
+      required this.rejectedAt,
+      required this.requiresRecollection,
       final String? $type})
-      : $type = $type ?? 'completed';
+      : $type = $type ?? 'rejected';
+  factory SampleStatusRejected.fromJson(Map<String, dynamic> json) =>
+      _$SampleStatusRejectedFromJson(json);
 
-  factory _$SampleStatusCompletedImpl.fromJson(Map<String, dynamic> json) =>
-      _$$SampleStatusCompletedImplFromJson(json);
-
-  @override
-  final DateTime completionTime;
-  @override
-  final String resultId;
+  final String reason;
+  final DateTime rejectedAt;
+  final bool requiresRecollection;
 
   @JsonKey(name: 'runtimeType')
   final String $type;
 
+  /// Create a copy of SampleStatus
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $SampleStatusRejectedCopyWith<SampleStatusRejected> get copyWith =>
+      _$SampleStatusRejectedCopyWithImpl<SampleStatusRejected>(
+          this, _$identity);
+
   @override
-  String toString() {
-    return 'SampleStatus.completed(completionTime: $completionTime, resultId: $resultId)';
+  Map<String, dynamic> toJson() {
+    return _$SampleStatusRejectedToJson(
+      this,
+    );
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$SampleStatusCompletedImpl &&
-            (identical(other.completionTime, completionTime) ||
-                other.completionTime == completionTime) &&
-            (identical(other.resultId, resultId) ||
-                other.resultId == resultId));
+            other is SampleStatusRejected &&
+            (identical(other.reason, reason) || other.reason == reason) &&
+            (identical(other.rejectedAt, rejectedAt) ||
+                other.rejectedAt == rejectedAt) &&
+            (identical(other.requiresRecollection, requiresRecollection) ||
+                other.requiresRecollection == requiresRecollection));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, completionTime, resultId);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$SampleStatusCompletedImplCopyWith<_$SampleStatusCompletedImpl>
-      get copyWith => __$$SampleStatusCompletedImplCopyWithImpl<
-          _$SampleStatusCompletedImpl>(this, _$identity);
+  int get hashCode =>
+      Object.hash(runtimeType, reason, rejectedAt, requiresRecollection);
 
   @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() requested,
-    required TResult Function(String phlebotomistId) assigned,
-    required TResult Function(DateTime startTime, GeoLocation currentLocation)
-        inTransit,
-    required TResult Function(DateTime arrivalTime) reachedLab,
-    required TResult Function(DateTime startTime) processing,
-    required TResult Function(DateTime completionTime, String resultId)
-        completed,
-    required TResult Function(
-            String reason, DateTime rejectedAt, bool requiresRecollection)
-        rejected,
-    required TResult Function(String reason, DateTime cancelledAt) cancelled,
-  }) {
-    return completed(completionTime, resultId);
+  String toString() {
+    return 'SampleStatus.rejected(reason: $reason, rejectedAt: $rejectedAt, requiresRecollection: $requiresRecollection)';
   }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? requested,
-    TResult? Function(String phlebotomistId)? assigned,
-    TResult? Function(DateTime startTime, GeoLocation currentLocation)?
-        inTransit,
-    TResult? Function(DateTime arrivalTime)? reachedLab,
-    TResult? Function(DateTime startTime)? processing,
-    TResult? Function(DateTime completionTime, String resultId)? completed,
-    TResult? Function(
-            String reason, DateTime rejectedAt, bool requiresRecollection)?
-        rejected,
-    TResult? Function(String reason, DateTime cancelledAt)? cancelled,
-  }) {
-    return completed?.call(completionTime, resultId);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? requested,
-    TResult Function(String phlebotomistId)? assigned,
-    TResult Function(DateTime startTime, GeoLocation currentLocation)?
-        inTransit,
-    TResult Function(DateTime arrivalTime)? reachedLab,
-    TResult Function(DateTime startTime)? processing,
-    TResult Function(DateTime completionTime, String resultId)? completed,
-    TResult Function(
-            String reason, DateTime rejectedAt, bool requiresRecollection)?
-        rejected,
-    TResult Function(String reason, DateTime cancelledAt)? cancelled,
-    required TResult orElse(),
-  }) {
-    if (completed != null) {
-      return completed(completionTime, resultId);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(SampleStatusRequested value) requested,
-    required TResult Function(SampleStatusAssigned value) assigned,
-    required TResult Function(SampleStatusInTransit value) inTransit,
-    required TResult Function(SampleStatusReachedLab value) reachedLab,
-    required TResult Function(SampleStatusProcessing value) processing,
-    required TResult Function(SampleStatusCompleted value) completed,
-    required TResult Function(SampleStatusRejected value) rejected,
-    required TResult Function(SampleStatusCancelled value) cancelled,
-  }) {
-    return completed(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(SampleStatusRequested value)? requested,
-    TResult? Function(SampleStatusAssigned value)? assigned,
-    TResult? Function(SampleStatusInTransit value)? inTransit,
-    TResult? Function(SampleStatusReachedLab value)? reachedLab,
-    TResult? Function(SampleStatusProcessing value)? processing,
-    TResult? Function(SampleStatusCompleted value)? completed,
-    TResult? Function(SampleStatusRejected value)? rejected,
-    TResult? Function(SampleStatusCancelled value)? cancelled,
-  }) {
-    return completed?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(SampleStatusRequested value)? requested,
-    TResult Function(SampleStatusAssigned value)? assigned,
-    TResult Function(SampleStatusInTransit value)? inTransit,
-    TResult Function(SampleStatusReachedLab value)? reachedLab,
-    TResult Function(SampleStatusProcessing value)? processing,
-    TResult Function(SampleStatusCompleted value)? completed,
-    TResult Function(SampleStatusRejected value)? rejected,
-    TResult Function(SampleStatusCancelled value)? cancelled,
-    required TResult orElse(),
-  }) {
-    if (completed != null) {
-      return completed(this);
-    }
-    return orElse();
-  }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$SampleStatusCompletedImplToJson(
-      this,
-    );
-  }
-}
-
-abstract class SampleStatusCompleted implements SampleStatus {
-  const factory SampleStatusCompleted(
-      {required final DateTime completionTime,
-      required final String resultId}) = _$SampleStatusCompletedImpl;
-
-  factory SampleStatusCompleted.fromJson(Map<String, dynamic> json) =
-      _$SampleStatusCompletedImpl.fromJson;
-
-  DateTime get completionTime;
-  String get resultId;
-  @JsonKey(ignore: true)
-  _$$SampleStatusCompletedImplCopyWith<_$SampleStatusCompletedImpl>
-      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$SampleStatusRejectedImplCopyWith<$Res> {
-  factory _$$SampleStatusRejectedImplCopyWith(_$SampleStatusRejectedImpl value,
-          $Res Function(_$SampleStatusRejectedImpl) then) =
-      __$$SampleStatusRejectedImplCopyWithImpl<$Res>;
+abstract mixin class $SampleStatusRejectedCopyWith<$Res>
+    implements $SampleStatusCopyWith<$Res> {
+  factory $SampleStatusRejectedCopyWith(SampleStatusRejected value,
+          $Res Function(SampleStatusRejected) _then) =
+      _$SampleStatusRejectedCopyWithImpl;
   @useResult
   $Res call({String reason, DateTime rejectedAt, bool requiresRecollection});
 }
 
 /// @nodoc
-class __$$SampleStatusRejectedImplCopyWithImpl<$Res>
-    extends _$SampleStatusCopyWithImpl<$Res, _$SampleStatusRejectedImpl>
-    implements _$$SampleStatusRejectedImplCopyWith<$Res> {
-  __$$SampleStatusRejectedImplCopyWithImpl(_$SampleStatusRejectedImpl _value,
-      $Res Function(_$SampleStatusRejectedImpl) _then)
-      : super(_value, _then);
+class _$SampleStatusRejectedCopyWithImpl<$Res>
+    implements $SampleStatusRejectedCopyWith<$Res> {
+  _$SampleStatusRejectedCopyWithImpl(this._self, this._then);
 
+  final SampleStatusRejected _self;
+  final $Res Function(SampleStatusRejected) _then;
+
+  /// Create a copy of SampleStatus
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
-  @override
   $Res call({
     Object? reason = null,
     Object? rejectedAt = null,
     Object? requiresRecollection = null,
   }) {
-    return _then(_$SampleStatusRejectedImpl(
+    return _then(SampleStatusRejected(
       reason: null == reason
-          ? _value.reason
+          ? _self.reason
           : reason // ignore: cast_nullable_to_non_nullable
               as String,
       rejectedAt: null == rejectedAt
-          ? _value.rejectedAt
+          ? _self.rejectedAt
           : rejectedAt // ignore: cast_nullable_to_non_nullable
               as DateTime,
       requiresRecollection: null == requiresRecollection
-          ? _value.requiresRecollection
+          ? _self.requiresRecollection
           : requiresRecollection // ignore: cast_nullable_to_non_nullable
               as bool,
     ));
@@ -2176,221 +2097,86 @@ class __$$SampleStatusRejectedImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$SampleStatusRejectedImpl implements SampleStatusRejected {
-  const _$SampleStatusRejectedImpl(
-      {required this.reason,
-      required this.rejectedAt,
-      required this.requiresRecollection,
-      final String? $type})
-      : $type = $type ?? 'rejected';
+class SampleStatusCancelled implements SampleStatus {
+  const SampleStatusCancelled(
+      {required this.reason, required this.cancelledAt, final String? $type})
+      : $type = $type ?? 'cancelled';
+  factory SampleStatusCancelled.fromJson(Map<String, dynamic> json) =>
+      _$SampleStatusCancelledFromJson(json);
 
-  factory _$SampleStatusRejectedImpl.fromJson(Map<String, dynamic> json) =>
-      _$$SampleStatusRejectedImplFromJson(json);
-
-  @override
   final String reason;
-  @override
-  final DateTime rejectedAt;
-  @override
-  final bool requiresRecollection;
+  final DateTime cancelledAt;
 
   @JsonKey(name: 'runtimeType')
   final String $type;
 
+  /// Create a copy of SampleStatus
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $SampleStatusCancelledCopyWith<SampleStatusCancelled> get copyWith =>
+      _$SampleStatusCancelledCopyWithImpl<SampleStatusCancelled>(
+          this, _$identity);
+
   @override
-  String toString() {
-    return 'SampleStatus.rejected(reason: $reason, rejectedAt: $rejectedAt, requiresRecollection: $requiresRecollection)';
+  Map<String, dynamic> toJson() {
+    return _$SampleStatusCancelledToJson(
+      this,
+    );
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$SampleStatusRejectedImpl &&
+            other is SampleStatusCancelled &&
             (identical(other.reason, reason) || other.reason == reason) &&
-            (identical(other.rejectedAt, rejectedAt) ||
-                other.rejectedAt == rejectedAt) &&
-            (identical(other.requiresRecollection, requiresRecollection) ||
-                other.requiresRecollection == requiresRecollection));
+            (identical(other.cancelledAt, cancelledAt) ||
+                other.cancelledAt == cancelledAt));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, reason, rejectedAt, requiresRecollection);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$SampleStatusRejectedImplCopyWith<_$SampleStatusRejectedImpl>
-      get copyWith =>
-          __$$SampleStatusRejectedImplCopyWithImpl<_$SampleStatusRejectedImpl>(
-              this, _$identity);
+  int get hashCode => Object.hash(runtimeType, reason, cancelledAt);
 
   @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() requested,
-    required TResult Function(String phlebotomistId) assigned,
-    required TResult Function(DateTime startTime, GeoLocation currentLocation)
-        inTransit,
-    required TResult Function(DateTime arrivalTime) reachedLab,
-    required TResult Function(DateTime startTime) processing,
-    required TResult Function(DateTime completionTime, String resultId)
-        completed,
-    required TResult Function(
-            String reason, DateTime rejectedAt, bool requiresRecollection)
-        rejected,
-    required TResult Function(String reason, DateTime cancelledAt) cancelled,
-  }) {
-    return rejected(reason, rejectedAt, requiresRecollection);
+  String toString() {
+    return 'SampleStatus.cancelled(reason: $reason, cancelledAt: $cancelledAt)';
   }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? requested,
-    TResult? Function(String phlebotomistId)? assigned,
-    TResult? Function(DateTime startTime, GeoLocation currentLocation)?
-        inTransit,
-    TResult? Function(DateTime arrivalTime)? reachedLab,
-    TResult? Function(DateTime startTime)? processing,
-    TResult? Function(DateTime completionTime, String resultId)? completed,
-    TResult? Function(
-            String reason, DateTime rejectedAt, bool requiresRecollection)?
-        rejected,
-    TResult? Function(String reason, DateTime cancelledAt)? cancelled,
-  }) {
-    return rejected?.call(reason, rejectedAt, requiresRecollection);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? requested,
-    TResult Function(String phlebotomistId)? assigned,
-    TResult Function(DateTime startTime, GeoLocation currentLocation)?
-        inTransit,
-    TResult Function(DateTime arrivalTime)? reachedLab,
-    TResult Function(DateTime startTime)? processing,
-    TResult Function(DateTime completionTime, String resultId)? completed,
-    TResult Function(
-            String reason, DateTime rejectedAt, bool requiresRecollection)?
-        rejected,
-    TResult Function(String reason, DateTime cancelledAt)? cancelled,
-    required TResult orElse(),
-  }) {
-    if (rejected != null) {
-      return rejected(reason, rejectedAt, requiresRecollection);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(SampleStatusRequested value) requested,
-    required TResult Function(SampleStatusAssigned value) assigned,
-    required TResult Function(SampleStatusInTransit value) inTransit,
-    required TResult Function(SampleStatusReachedLab value) reachedLab,
-    required TResult Function(SampleStatusProcessing value) processing,
-    required TResult Function(SampleStatusCompleted value) completed,
-    required TResult Function(SampleStatusRejected value) rejected,
-    required TResult Function(SampleStatusCancelled value) cancelled,
-  }) {
-    return rejected(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(SampleStatusRequested value)? requested,
-    TResult? Function(SampleStatusAssigned value)? assigned,
-    TResult? Function(SampleStatusInTransit value)? inTransit,
-    TResult? Function(SampleStatusReachedLab value)? reachedLab,
-    TResult? Function(SampleStatusProcessing value)? processing,
-    TResult? Function(SampleStatusCompleted value)? completed,
-    TResult? Function(SampleStatusRejected value)? rejected,
-    TResult? Function(SampleStatusCancelled value)? cancelled,
-  }) {
-    return rejected?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(SampleStatusRequested value)? requested,
-    TResult Function(SampleStatusAssigned value)? assigned,
-    TResult Function(SampleStatusInTransit value)? inTransit,
-    TResult Function(SampleStatusReachedLab value)? reachedLab,
-    TResult Function(SampleStatusProcessing value)? processing,
-    TResult Function(SampleStatusCompleted value)? completed,
-    TResult Function(SampleStatusRejected value)? rejected,
-    TResult Function(SampleStatusCancelled value)? cancelled,
-    required TResult orElse(),
-  }) {
-    if (rejected != null) {
-      return rejected(this);
-    }
-    return orElse();
-  }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$SampleStatusRejectedImplToJson(
-      this,
-    );
-  }
-}
-
-abstract class SampleStatusRejected implements SampleStatus {
-  const factory SampleStatusRejected(
-      {required final String reason,
-      required final DateTime rejectedAt,
-      required final bool requiresRecollection}) = _$SampleStatusRejectedImpl;
-
-  factory SampleStatusRejected.fromJson(Map<String, dynamic> json) =
-      _$SampleStatusRejectedImpl.fromJson;
-
-  String get reason;
-  DateTime get rejectedAt;
-  bool get requiresRecollection;
-  @JsonKey(ignore: true)
-  _$$SampleStatusRejectedImplCopyWith<_$SampleStatusRejectedImpl>
-      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$SampleStatusCancelledImplCopyWith<$Res> {
-  factory _$$SampleStatusCancelledImplCopyWith(
-          _$SampleStatusCancelledImpl value,
-          $Res Function(_$SampleStatusCancelledImpl) then) =
-      __$$SampleStatusCancelledImplCopyWithImpl<$Res>;
+abstract mixin class $SampleStatusCancelledCopyWith<$Res>
+    implements $SampleStatusCopyWith<$Res> {
+  factory $SampleStatusCancelledCopyWith(SampleStatusCancelled value,
+          $Res Function(SampleStatusCancelled) _then) =
+      _$SampleStatusCancelledCopyWithImpl;
   @useResult
   $Res call({String reason, DateTime cancelledAt});
 }
 
 /// @nodoc
-class __$$SampleStatusCancelledImplCopyWithImpl<$Res>
-    extends _$SampleStatusCopyWithImpl<$Res, _$SampleStatusCancelledImpl>
-    implements _$$SampleStatusCancelledImplCopyWith<$Res> {
-  __$$SampleStatusCancelledImplCopyWithImpl(_$SampleStatusCancelledImpl _value,
-      $Res Function(_$SampleStatusCancelledImpl) _then)
-      : super(_value, _then);
+class _$SampleStatusCancelledCopyWithImpl<$Res>
+    implements $SampleStatusCancelledCopyWith<$Res> {
+  _$SampleStatusCancelledCopyWithImpl(this._self, this._then);
 
+  final SampleStatusCancelled _self;
+  final $Res Function(SampleStatusCancelled) _then;
+
+  /// Create a copy of SampleStatus
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
-  @override
   $Res call({
     Object? reason = null,
     Object? cancelledAt = null,
   }) {
-    return _then(_$SampleStatusCancelledImpl(
+    return _then(SampleStatusCancelled(
       reason: null == reason
-          ? _value.reason
+          ? _self.reason
           : reason // ignore: cast_nullable_to_non_nullable
               as String,
       cancelledAt: null == cancelledAt
-          ? _value.cancelledAt
+          ? _self.cancelledAt
           : cancelledAt // ignore: cast_nullable_to_non_nullable
               as DateTime,
     ));
@@ -2398,206 +2184,62 @@ class __$$SampleStatusCancelledImplCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
-class _$SampleStatusCancelledImpl implements SampleStatusCancelled {
-  const _$SampleStatusCancelledImpl(
-      {required this.reason, required this.cancelledAt, final String? $type})
-      : $type = $type ?? 'cancelled';
+mixin _$SampleCondition {
+  bool get isHemolyzed;
+  bool get isClotted;
+  bool get isLipemic;
+  bool get isIcteric;
+  VolumeStatus get volumeStatus;
+  ContainerIntegrity get containerIntegrity;
+  String? get notes;
 
-  factory _$SampleStatusCancelledImpl.fromJson(Map<String, dynamic> json) =>
-      _$$SampleStatusCancelledImplFromJson(json);
+  /// Create a copy of SampleCondition
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $SampleConditionCopyWith<SampleCondition> get copyWith =>
+      _$SampleConditionCopyWithImpl<SampleCondition>(
+          this as SampleCondition, _$identity);
 
-  @override
-  final String reason;
-  @override
-  final DateTime cancelledAt;
-
-  @JsonKey(name: 'runtimeType')
-  final String $type;
-
-  @override
-  String toString() {
-    return 'SampleStatus.cancelled(reason: $reason, cancelledAt: $cancelledAt)';
-  }
+  /// Serializes this SampleCondition to a JSON map.
+  Map<String, dynamic> toJson();
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$SampleStatusCancelledImpl &&
-            (identical(other.reason, reason) || other.reason == reason) &&
-            (identical(other.cancelledAt, cancelledAt) ||
-                other.cancelledAt == cancelledAt));
+            other is SampleCondition &&
+            (identical(other.isHemolyzed, isHemolyzed) ||
+                other.isHemolyzed == isHemolyzed) &&
+            (identical(other.isClotted, isClotted) ||
+                other.isClotted == isClotted) &&
+            (identical(other.isLipemic, isLipemic) ||
+                other.isLipemic == isLipemic) &&
+            (identical(other.isIcteric, isIcteric) ||
+                other.isIcteric == isIcteric) &&
+            (identical(other.volumeStatus, volumeStatus) ||
+                other.volumeStatus == volumeStatus) &&
+            (identical(other.containerIntegrity, containerIntegrity) ||
+                other.containerIntegrity == containerIntegrity) &&
+            (identical(other.notes, notes) || other.notes == notes));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, reason, cancelledAt);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$SampleStatusCancelledImplCopyWith<_$SampleStatusCancelledImpl>
-      get copyWith => __$$SampleStatusCancelledImplCopyWithImpl<
-          _$SampleStatusCancelledImpl>(this, _$identity);
+  int get hashCode => Object.hash(runtimeType, isHemolyzed, isClotted,
+      isLipemic, isIcteric, volumeStatus, containerIntegrity, notes);
 
   @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() requested,
-    required TResult Function(String phlebotomistId) assigned,
-    required TResult Function(DateTime startTime, GeoLocation currentLocation)
-        inTransit,
-    required TResult Function(DateTime arrivalTime) reachedLab,
-    required TResult Function(DateTime startTime) processing,
-    required TResult Function(DateTime completionTime, String resultId)
-        completed,
-    required TResult Function(
-            String reason, DateTime rejectedAt, bool requiresRecollection)
-        rejected,
-    required TResult Function(String reason, DateTime cancelledAt) cancelled,
-  }) {
-    return cancelled(reason, cancelledAt);
+  String toString() {
+    return 'SampleCondition(isHemolyzed: $isHemolyzed, isClotted: $isClotted, isLipemic: $isLipemic, isIcteric: $isIcteric, volumeStatus: $volumeStatus, containerIntegrity: $containerIntegrity, notes: $notes)';
   }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? requested,
-    TResult? Function(String phlebotomistId)? assigned,
-    TResult? Function(DateTime startTime, GeoLocation currentLocation)?
-        inTransit,
-    TResult? Function(DateTime arrivalTime)? reachedLab,
-    TResult? Function(DateTime startTime)? processing,
-    TResult? Function(DateTime completionTime, String resultId)? completed,
-    TResult? Function(
-            String reason, DateTime rejectedAt, bool requiresRecollection)?
-        rejected,
-    TResult? Function(String reason, DateTime cancelledAt)? cancelled,
-  }) {
-    return cancelled?.call(reason, cancelledAt);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? requested,
-    TResult Function(String phlebotomistId)? assigned,
-    TResult Function(DateTime startTime, GeoLocation currentLocation)?
-        inTransit,
-    TResult Function(DateTime arrivalTime)? reachedLab,
-    TResult Function(DateTime startTime)? processing,
-    TResult Function(DateTime completionTime, String resultId)? completed,
-    TResult Function(
-            String reason, DateTime rejectedAt, bool requiresRecollection)?
-        rejected,
-    TResult Function(String reason, DateTime cancelledAt)? cancelled,
-    required TResult orElse(),
-  }) {
-    if (cancelled != null) {
-      return cancelled(reason, cancelledAt);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(SampleStatusRequested value) requested,
-    required TResult Function(SampleStatusAssigned value) assigned,
-    required TResult Function(SampleStatusInTransit value) inTransit,
-    required TResult Function(SampleStatusReachedLab value) reachedLab,
-    required TResult Function(SampleStatusProcessing value) processing,
-    required TResult Function(SampleStatusCompleted value) completed,
-    required TResult Function(SampleStatusRejected value) rejected,
-    required TResult Function(SampleStatusCancelled value) cancelled,
-  }) {
-    return cancelled(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(SampleStatusRequested value)? requested,
-    TResult? Function(SampleStatusAssigned value)? assigned,
-    TResult? Function(SampleStatusInTransit value)? inTransit,
-    TResult? Function(SampleStatusReachedLab value)? reachedLab,
-    TResult? Function(SampleStatusProcessing value)? processing,
-    TResult? Function(SampleStatusCompleted value)? completed,
-    TResult? Function(SampleStatusRejected value)? rejected,
-    TResult? Function(SampleStatusCancelled value)? cancelled,
-  }) {
-    return cancelled?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(SampleStatusRequested value)? requested,
-    TResult Function(SampleStatusAssigned value)? assigned,
-    TResult Function(SampleStatusInTransit value)? inTransit,
-    TResult Function(SampleStatusReachedLab value)? reachedLab,
-    TResult Function(SampleStatusProcessing value)? processing,
-    TResult Function(SampleStatusCompleted value)? completed,
-    TResult Function(SampleStatusRejected value)? rejected,
-    TResult Function(SampleStatusCancelled value)? cancelled,
-    required TResult orElse(),
-  }) {
-    if (cancelled != null) {
-      return cancelled(this);
-    }
-    return orElse();
-  }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$SampleStatusCancelledImplToJson(
-      this,
-    );
-  }
-}
-
-abstract class SampleStatusCancelled implements SampleStatus {
-  const factory SampleStatusCancelled(
-      {required final String reason,
-      required final DateTime cancelledAt}) = _$SampleStatusCancelledImpl;
-
-  factory SampleStatusCancelled.fromJson(Map<String, dynamic> json) =
-      _$SampleStatusCancelledImpl.fromJson;
-
-  String get reason;
-  DateTime get cancelledAt;
-  @JsonKey(ignore: true)
-  _$$SampleStatusCancelledImplCopyWith<_$SampleStatusCancelledImpl>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-SampleCondition _$SampleConditionFromJson(Map<String, dynamic> json) {
-  return _SampleCondition.fromJson(json);
 }
 
 /// @nodoc
-mixin _$SampleCondition {
-  bool get isHemolyzed => throw _privateConstructorUsedError;
-  bool get isClotted => throw _privateConstructorUsedError;
-  bool get isLipemic => throw _privateConstructorUsedError;
-  bool get isIcteric => throw _privateConstructorUsedError;
-  VolumeStatus get volumeStatus => throw _privateConstructorUsedError;
-  ContainerIntegrity get containerIntegrity =>
-      throw _privateConstructorUsedError;
-  String? get notes => throw _privateConstructorUsedError;
-
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $SampleConditionCopyWith<SampleCondition> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $SampleConditionCopyWith<$Res> {
+abstract mixin class $SampleConditionCopyWith<$Res> {
   factory $SampleConditionCopyWith(
-          SampleCondition value, $Res Function(SampleCondition) then) =
-      _$SampleConditionCopyWithImpl<$Res, SampleCondition>;
+          SampleCondition value, $Res Function(SampleCondition) _then) =
+      _$SampleConditionCopyWithImpl;
   @useResult
   $Res call(
       {bool isHemolyzed,
@@ -2610,15 +2252,15 @@ abstract class $SampleConditionCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$SampleConditionCopyWithImpl<$Res, $Val extends SampleCondition>
+class _$SampleConditionCopyWithImpl<$Res>
     implements $SampleConditionCopyWith<$Res> {
-  _$SampleConditionCopyWithImpl(this._value, this._then);
+  _$SampleConditionCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final SampleCondition _self;
+  final $Res Function(SampleCondition) _then;
 
+  /// Create a copy of SampleCondition
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2630,113 +2272,245 @@ class _$SampleConditionCopyWithImpl<$Res, $Val extends SampleCondition>
     Object? containerIntegrity = null,
     Object? notes = freezed,
   }) {
-    return _then(_value.copyWith(
+    return _then(_self.copyWith(
       isHemolyzed: null == isHemolyzed
-          ? _value.isHemolyzed
+          ? _self.isHemolyzed
           : isHemolyzed // ignore: cast_nullable_to_non_nullable
               as bool,
       isClotted: null == isClotted
-          ? _value.isClotted
+          ? _self.isClotted
           : isClotted // ignore: cast_nullable_to_non_nullable
               as bool,
       isLipemic: null == isLipemic
-          ? _value.isLipemic
+          ? _self.isLipemic
           : isLipemic // ignore: cast_nullable_to_non_nullable
               as bool,
       isIcteric: null == isIcteric
-          ? _value.isIcteric
+          ? _self.isIcteric
           : isIcteric // ignore: cast_nullable_to_non_nullable
               as bool,
       volumeStatus: null == volumeStatus
-          ? _value.volumeStatus
+          ? _self.volumeStatus
           : volumeStatus // ignore: cast_nullable_to_non_nullable
               as VolumeStatus,
       containerIntegrity: null == containerIntegrity
-          ? _value.containerIntegrity
+          ? _self.containerIntegrity
           : containerIntegrity // ignore: cast_nullable_to_non_nullable
               as ContainerIntegrity,
       notes: freezed == notes
-          ? _value.notes
-          : notes // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
-  }
-}
-
-/// @nodoc
-abstract class _$$SampleConditionImplCopyWith<$Res>
-    implements $SampleConditionCopyWith<$Res> {
-  factory _$$SampleConditionImplCopyWith(_$SampleConditionImpl value,
-          $Res Function(_$SampleConditionImpl) then) =
-      __$$SampleConditionImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {bool isHemolyzed,
-      bool isClotted,
-      bool isLipemic,
-      bool isIcteric,
-      VolumeStatus volumeStatus,
-      ContainerIntegrity containerIntegrity,
-      String? notes});
-}
-
-/// @nodoc
-class __$$SampleConditionImplCopyWithImpl<$Res>
-    extends _$SampleConditionCopyWithImpl<$Res, _$SampleConditionImpl>
-    implements _$$SampleConditionImplCopyWith<$Res> {
-  __$$SampleConditionImplCopyWithImpl(
-      _$SampleConditionImpl _value, $Res Function(_$SampleConditionImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? isHemolyzed = null,
-    Object? isClotted = null,
-    Object? isLipemic = null,
-    Object? isIcteric = null,
-    Object? volumeStatus = null,
-    Object? containerIntegrity = null,
-    Object? notes = freezed,
-  }) {
-    return _then(_$SampleConditionImpl(
-      isHemolyzed: null == isHemolyzed
-          ? _value.isHemolyzed
-          : isHemolyzed // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isClotted: null == isClotted
-          ? _value.isClotted
-          : isClotted // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isLipemic: null == isLipemic
-          ? _value.isLipemic
-          : isLipemic // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isIcteric: null == isIcteric
-          ? _value.isIcteric
-          : isIcteric // ignore: cast_nullable_to_non_nullable
-              as bool,
-      volumeStatus: null == volumeStatus
-          ? _value.volumeStatus
-          : volumeStatus // ignore: cast_nullable_to_non_nullable
-              as VolumeStatus,
-      containerIntegrity: null == containerIntegrity
-          ? _value.containerIntegrity
-          : containerIntegrity // ignore: cast_nullable_to_non_nullable
-              as ContainerIntegrity,
-      notes: freezed == notes
-          ? _value.notes
+          ? _self.notes
           : notes // ignore: cast_nullable_to_non_nullable
               as String?,
     ));
   }
 }
 
+/// Adds pattern-matching-related methods to [SampleCondition].
+extension SampleConditionPatterns on SampleCondition {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_SampleCondition value)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _SampleCondition() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_SampleCondition value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _SampleCondition():
+        return $default(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_SampleCondition value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _SampleCondition() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(
+            bool isHemolyzed,
+            bool isClotted,
+            bool isLipemic,
+            bool isIcteric,
+            VolumeStatus volumeStatus,
+            ContainerIntegrity containerIntegrity,
+            String? notes)?
+        $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _SampleCondition() when $default != null:
+        return $default(
+            _that.isHemolyzed,
+            _that.isClotted,
+            _that.isLipemic,
+            _that.isIcteric,
+            _that.volumeStatus,
+            _that.containerIntegrity,
+            _that.notes);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(
+            bool isHemolyzed,
+            bool isClotted,
+            bool isLipemic,
+            bool isIcteric,
+            VolumeStatus volumeStatus,
+            ContainerIntegrity containerIntegrity,
+            String? notes)
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _SampleCondition():
+        return $default(
+            _that.isHemolyzed,
+            _that.isClotted,
+            _that.isLipemic,
+            _that.isIcteric,
+            _that.volumeStatus,
+            _that.containerIntegrity,
+            _that.notes);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(
+            bool isHemolyzed,
+            bool isClotted,
+            bool isLipemic,
+            bool isIcteric,
+            VolumeStatus volumeStatus,
+            ContainerIntegrity containerIntegrity,
+            String? notes)?
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _SampleCondition() when $default != null:
+        return $default(
+            _that.isHemolyzed,
+            _that.isClotted,
+            _that.isLipemic,
+            _that.isIcteric,
+            _that.volumeStatus,
+            _that.containerIntegrity,
+            _that.notes);
+      case _:
+        return null;
+    }
+  }
+}
+
 /// @nodoc
 @JsonSerializable()
-class _$SampleConditionImpl implements _SampleCondition {
-  const _$SampleConditionImpl(
+class _SampleCondition implements SampleCondition {
+  const _SampleCondition(
       {required this.isHemolyzed,
       required this.isClotted,
       required this.isLipemic,
@@ -2744,9 +2518,8 @@ class _$SampleConditionImpl implements _SampleCondition {
       required this.volumeStatus,
       required this.containerIntegrity,
       this.notes});
-
-  factory _$SampleConditionImpl.fromJson(Map<String, dynamic> json) =>
-      _$$SampleConditionImplFromJson(json);
+  factory _SampleCondition.fromJson(Map<String, dynamic> json) =>
+      _$SampleConditionFromJson(json);
 
   @override
   final bool isHemolyzed;
@@ -2763,16 +2536,26 @@ class _$SampleConditionImpl implements _SampleCondition {
   @override
   final String? notes;
 
+  /// Create a copy of SampleCondition
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String toString() {
-    return 'SampleCondition(isHemolyzed: $isHemolyzed, isClotted: $isClotted, isLipemic: $isLipemic, isIcteric: $isIcteric, volumeStatus: $volumeStatus, containerIntegrity: $containerIntegrity, notes: $notes)';
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$SampleConditionCopyWith<_SampleCondition> get copyWith =>
+      __$SampleConditionCopyWithImpl<_SampleCondition>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$SampleConditionToJson(
+      this,
+    );
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$SampleConditionImpl &&
+            other is _SampleCondition &&
             (identical(other.isHemolyzed, isHemolyzed) ||
                 other.isHemolyzed == isHemolyzed) &&
             (identical(other.isClotted, isClotted) ||
@@ -2788,55 +2571,87 @@ class _$SampleConditionImpl implements _SampleCondition {
             (identical(other.notes, notes) || other.notes == notes));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, isHemolyzed, isClotted,
       isLipemic, isIcteric, volumeStatus, containerIntegrity, notes);
 
-  @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
-  _$$SampleConditionImplCopyWith<_$SampleConditionImpl> get copyWith =>
-      __$$SampleConditionImplCopyWithImpl<_$SampleConditionImpl>(
-          this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$SampleConditionImplToJson(
-      this,
-    );
+  String toString() {
+    return 'SampleCondition(isHemolyzed: $isHemolyzed, isClotted: $isClotted, isLipemic: $isLipemic, isIcteric: $isIcteric, volumeStatus: $volumeStatus, containerIntegrity: $containerIntegrity, notes: $notes)';
   }
 }
 
-abstract class _SampleCondition implements SampleCondition {
-  const factory _SampleCondition(
-      {required final bool isHemolyzed,
-      required final bool isClotted,
-      required final bool isLipemic,
-      required final bool isIcteric,
-      required final VolumeStatus volumeStatus,
-      required final ContainerIntegrity containerIntegrity,
-      final String? notes}) = _$SampleConditionImpl;
-
-  factory _SampleCondition.fromJson(Map<String, dynamic> json) =
-      _$SampleConditionImpl.fromJson;
-
+/// @nodoc
+abstract mixin class _$SampleConditionCopyWith<$Res>
+    implements $SampleConditionCopyWith<$Res> {
+  factory _$SampleConditionCopyWith(
+          _SampleCondition value, $Res Function(_SampleCondition) _then) =
+      __$SampleConditionCopyWithImpl;
   @override
-  bool get isHemolyzed;
-  @override
-  bool get isClotted;
-  @override
-  bool get isLipemic;
-  @override
-  bool get isIcteric;
-  @override
-  VolumeStatus get volumeStatus;
-  @override
-  ContainerIntegrity get containerIntegrity;
-  @override
-  String? get notes;
-  @override
-  @JsonKey(ignore: true)
-  _$$SampleConditionImplCopyWith<_$SampleConditionImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  @useResult
+  $Res call(
+      {bool isHemolyzed,
+      bool isClotted,
+      bool isLipemic,
+      bool isIcteric,
+      VolumeStatus volumeStatus,
+      ContainerIntegrity containerIntegrity,
+      String? notes});
 }
+
+/// @nodoc
+class __$SampleConditionCopyWithImpl<$Res>
+    implements _$SampleConditionCopyWith<$Res> {
+  __$SampleConditionCopyWithImpl(this._self, this._then);
+
+  final _SampleCondition _self;
+  final $Res Function(_SampleCondition) _then;
+
+  /// Create a copy of SampleCondition
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? isHemolyzed = null,
+    Object? isClotted = null,
+    Object? isLipemic = null,
+    Object? isIcteric = null,
+    Object? volumeStatus = null,
+    Object? containerIntegrity = null,
+    Object? notes = freezed,
+  }) {
+    return _then(_SampleCondition(
+      isHemolyzed: null == isHemolyzed
+          ? _self.isHemolyzed
+          : isHemolyzed // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isClotted: null == isClotted
+          ? _self.isClotted
+          : isClotted // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isLipemic: null == isLipemic
+          ? _self.isLipemic
+          : isLipemic // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isIcteric: null == isIcteric
+          ? _self.isIcteric
+          : isIcteric // ignore: cast_nullable_to_non_nullable
+              as bool,
+      volumeStatus: null == volumeStatus
+          ? _self.volumeStatus
+          : volumeStatus // ignore: cast_nullable_to_non_nullable
+              as VolumeStatus,
+      containerIntegrity: null == containerIntegrity
+          ? _self.containerIntegrity
+          : containerIntegrity // ignore: cast_nullable_to_non_nullable
+              as ContainerIntegrity,
+      notes: freezed == notes
+          ? _self.notes
+          : notes // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+// dart format on
