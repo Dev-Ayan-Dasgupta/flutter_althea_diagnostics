@@ -32,8 +32,6 @@ abstract class $ScanBarcodeParamsCopyWith<$Res> {
       _$ScanBarcodeParamsCopyWithImpl<$Res, ScanBarcodeParams>;
   @useResult
   $Res call({String vialId, String phlebotomistId, GeoLocation location});
-
-  $GeoLocationCopyWith<$Res> get location;
 }
 
 /// @nodoc
@@ -51,7 +49,7 @@ class _$ScanBarcodeParamsCopyWithImpl<$Res, $Val extends ScanBarcodeParams>
   $Res call({
     Object? vialId = null,
     Object? phlebotomistId = null,
-    Object? location = null,
+    Object? location = freezed,
   }) {
     return _then(_value.copyWith(
       vialId: null == vialId
@@ -62,19 +60,11 @@ class _$ScanBarcodeParamsCopyWithImpl<$Res, $Val extends ScanBarcodeParams>
           ? _value.phlebotomistId
           : phlebotomistId // ignore: cast_nullable_to_non_nullable
               as String,
-      location: null == location
+      location: freezed == location
           ? _value.location
           : location // ignore: cast_nullable_to_non_nullable
               as GeoLocation,
     ) as $Val);
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $GeoLocationCopyWith<$Res> get location {
-    return $GeoLocationCopyWith<$Res>(_value.location, (value) {
-      return _then(_value.copyWith(location: value) as $Val);
-    });
   }
 }
 
@@ -87,9 +77,6 @@ abstract class _$$ScanBarcodeParamsImplCopyWith<$Res>
   @override
   @useResult
   $Res call({String vialId, String phlebotomistId, GeoLocation location});
-
-  @override
-  $GeoLocationCopyWith<$Res> get location;
 }
 
 /// @nodoc
@@ -105,7 +92,7 @@ class __$$ScanBarcodeParamsImplCopyWithImpl<$Res>
   $Res call({
     Object? vialId = null,
     Object? phlebotomistId = null,
-    Object? location = null,
+    Object? location = freezed,
   }) {
     return _then(_$ScanBarcodeParamsImpl(
       vialId: null == vialId
@@ -116,7 +103,7 @@ class __$$ScanBarcodeParamsImplCopyWithImpl<$Res>
           ? _value.phlebotomistId
           : phlebotomistId // ignore: cast_nullable_to_non_nullable
               as String,
-      location: null == location
+      location: freezed == location
           ? _value.location
           : location // ignore: cast_nullable_to_non_nullable
               as GeoLocation,
@@ -152,13 +139,12 @@ class _$ScanBarcodeParamsImpl implements _ScanBarcodeParams {
             (identical(other.vialId, vialId) || other.vialId == vialId) &&
             (identical(other.phlebotomistId, phlebotomistId) ||
                 other.phlebotomistId == phlebotomistId) &&
-            (identical(other.location, location) ||
-                other.location == location));
+            const DeepCollectionEquality().equals(other.location, location));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, vialId, phlebotomistId, location);
+  int get hashCode => Object.hash(runtimeType, vialId, phlebotomistId,
+      const DeepCollectionEquality().hash(location));
 
   @JsonKey(ignore: true)
   @override

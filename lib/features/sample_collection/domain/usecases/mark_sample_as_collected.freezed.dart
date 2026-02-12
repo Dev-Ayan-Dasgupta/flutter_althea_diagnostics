@@ -41,8 +41,6 @@ abstract class $MarkSampleAsCollectedParamsCopyWith<$Res> {
       GeoLocation location,
       List<String>? imageUrls,
       String? notes});
-
-  $GeoLocationCopyWith<$Res> get location;
 }
 
 /// @nodoc
@@ -61,7 +59,7 @@ class _$MarkSampleAsCollectedParamsCopyWithImpl<$Res,
   $Res call({
     Object? sampleId = null,
     Object? collectionTime = null,
-    Object? location = null,
+    Object? location = freezed,
     Object? imageUrls = freezed,
     Object? notes = freezed,
   }) {
@@ -74,7 +72,7 @@ class _$MarkSampleAsCollectedParamsCopyWithImpl<$Res,
           ? _value.collectionTime
           : collectionTime // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      location: null == location
+      location: freezed == location
           ? _value.location
           : location // ignore: cast_nullable_to_non_nullable
               as GeoLocation,
@@ -87,14 +85,6 @@ class _$MarkSampleAsCollectedParamsCopyWithImpl<$Res,
           : notes // ignore: cast_nullable_to_non_nullable
               as String?,
     ) as $Val);
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $GeoLocationCopyWith<$Res> get location {
-    return $GeoLocationCopyWith<$Res>(_value.location, (value) {
-      return _then(_value.copyWith(location: value) as $Val);
-    });
   }
 }
 
@@ -113,9 +103,6 @@ abstract class _$$MarkSampleAsCollectedParamsImplCopyWith<$Res>
       GeoLocation location,
       List<String>? imageUrls,
       String? notes});
-
-  @override
-  $GeoLocationCopyWith<$Res> get location;
 }
 
 /// @nodoc
@@ -133,7 +120,7 @@ class __$$MarkSampleAsCollectedParamsImplCopyWithImpl<$Res>
   $Res call({
     Object? sampleId = null,
     Object? collectionTime = null,
-    Object? location = null,
+    Object? location = freezed,
     Object? imageUrls = freezed,
     Object? notes = freezed,
   }) {
@@ -146,7 +133,7 @@ class __$$MarkSampleAsCollectedParamsImplCopyWithImpl<$Res>
           ? _value.collectionTime
           : collectionTime // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      location: null == location
+      location: freezed == location
           ? _value.location
           : location // ignore: cast_nullable_to_non_nullable
               as GeoLocation,
@@ -207,16 +194,20 @@ class _$MarkSampleAsCollectedParamsImpl
                 other.sampleId == sampleId) &&
             (identical(other.collectionTime, collectionTime) ||
                 other.collectionTime == collectionTime) &&
-            (identical(other.location, location) ||
-                other.location == location) &&
+            const DeepCollectionEquality().equals(other.location, location) &&
             const DeepCollectionEquality()
                 .equals(other._imageUrls, _imageUrls) &&
             (identical(other.notes, notes) || other.notes == notes));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, sampleId, collectionTime,
-      location, const DeepCollectionEquality().hash(_imageUrls), notes);
+  int get hashCode => Object.hash(
+      runtimeType,
+      sampleId,
+      collectionTime,
+      const DeepCollectionEquality().hash(location),
+      const DeepCollectionEquality().hash(_imageUrls),
+      notes);
 
   @JsonKey(ignore: true)
   @override

@@ -41,8 +41,6 @@ abstract class $BiometricHandshakeParamsCopyWith<$Res> {
       double proximityDistance,
       int signalStrength,
       GeoLocation location});
-
-  $GeoLocationCopyWith<$Res> get location;
 }
 
 /// @nodoc
@@ -64,7 +62,7 @@ class _$BiometricHandshakeParamsCopyWithImpl<$Res,
     Object? phlebotomistDeviceId = null,
     Object? proximityDistance = null,
     Object? signalStrength = null,
-    Object? location = null,
+    Object? location = freezed,
   }) {
     return _then(_value.copyWith(
       sampleId: null == sampleId
@@ -87,19 +85,11 @@ class _$BiometricHandshakeParamsCopyWithImpl<$Res,
           ? _value.signalStrength
           : signalStrength // ignore: cast_nullable_to_non_nullable
               as int,
-      location: null == location
+      location: freezed == location
           ? _value.location
           : location // ignore: cast_nullable_to_non_nullable
               as GeoLocation,
     ) as $Val);
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $GeoLocationCopyWith<$Res> get location {
-    return $GeoLocationCopyWith<$Res>(_value.location, (value) {
-      return _then(_value.copyWith(location: value) as $Val);
-    });
   }
 }
 
@@ -119,9 +109,6 @@ abstract class _$$BiometricHandshakeParamsImplCopyWith<$Res>
       double proximityDistance,
       int signalStrength,
       GeoLocation location});
-
-  @override
-  $GeoLocationCopyWith<$Res> get location;
 }
 
 /// @nodoc
@@ -142,7 +129,7 @@ class __$$BiometricHandshakeParamsImplCopyWithImpl<$Res>
     Object? phlebotomistDeviceId = null,
     Object? proximityDistance = null,
     Object? signalStrength = null,
-    Object? location = null,
+    Object? location = freezed,
   }) {
     return _then(_$BiometricHandshakeParamsImpl(
       sampleId: null == sampleId
@@ -165,7 +152,7 @@ class __$$BiometricHandshakeParamsImplCopyWithImpl<$Res>
           ? _value.signalStrength
           : signalStrength // ignore: cast_nullable_to_non_nullable
               as int,
-      location: null == location
+      location: freezed == location
           ? _value.location
           : location // ignore: cast_nullable_to_non_nullable
               as GeoLocation,
@@ -217,13 +204,18 @@ class _$BiometricHandshakeParamsImpl implements _BiometricHandshakeParams {
                 other.proximityDistance == proximityDistance) &&
             (identical(other.signalStrength, signalStrength) ||
                 other.signalStrength == signalStrength) &&
-            (identical(other.location, location) ||
-                other.location == location));
+            const DeepCollectionEquality().equals(other.location, location));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, sampleId, patientDeviceId,
-      phlebotomistDeviceId, proximityDistance, signalStrength, location);
+  int get hashCode => Object.hash(
+      runtimeType,
+      sampleId,
+      patientDeviceId,
+      phlebotomistDeviceId,
+      proximityDistance,
+      signalStrength,
+      const DeepCollectionEquality().hash(location));
 
   @JsonKey(ignore: true)
   @override

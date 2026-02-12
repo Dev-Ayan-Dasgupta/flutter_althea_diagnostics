@@ -39,8 +39,6 @@ abstract class $GetSamplesParamsCopyWith<$Res> {
       DateTime? endDate,
       int page,
       int limit});
-
-  $SampleStatusCopyWith<$Res>? get status;
 }
 
 /// @nodoc
@@ -85,18 +83,6 @@ class _$GetSamplesParamsCopyWithImpl<$Res, $Val extends GetSamplesParams>
               as int,
     ) as $Val);
   }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $SampleStatusCopyWith<$Res>? get status {
-    if (_value.status == null) {
-      return null;
-    }
-
-    return $SampleStatusCopyWith<$Res>(_value.status!, (value) {
-      return _then(_value.copyWith(status: value) as $Val);
-    });
-  }
 }
 
 /// @nodoc
@@ -113,9 +99,6 @@ abstract class _$$GetSamplesParamsImplCopyWith<$Res>
       DateTime? endDate,
       int page,
       int limit});
-
-  @override
-  $SampleStatusCopyWith<$Res>? get status;
 }
 
 /// @nodoc
@@ -193,7 +176,7 @@ class _$GetSamplesParamsImpl implements _GetSamplesParams {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$GetSamplesParamsImpl &&
-            (identical(other.status, status) || other.status == status) &&
+            const DeepCollectionEquality().equals(other.status, status) &&
             (identical(other.startDate, startDate) ||
                 other.startDate == startDate) &&
             (identical(other.endDate, endDate) || other.endDate == endDate) &&
@@ -202,8 +185,13 @@ class _$GetSamplesParamsImpl implements _GetSamplesParams {
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, status, startDate, endDate, page, limit);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(status),
+      startDate,
+      endDate,
+      page,
+      limit);
 
   @JsonKey(ignore: true)
   @override
