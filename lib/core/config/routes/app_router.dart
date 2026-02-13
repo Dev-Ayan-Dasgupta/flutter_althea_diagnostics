@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import '../../../features/auth/presentation/providers/auth_providers.dart';
 import '../../../features/auth/presentation/screens/login_screen.dart';
 import '../../../features/auth/presentation/screens/otp_verification_screen.dart';
 import '../../../features/cold_chain/presentation/screens/cold_chain_log_screen.dart';
 import '../../../features/dashboard/presentation/screens/dashboard_screen.dart';
 import '../../../features/notifications/presentation/screens/notifications_screen.dart';
+import '../../../features/onboarding/presentation/screens/export.dart';
 import '../../../features/sample_collection/presentation/screens/export.dart';
 import '../../../features/sample_integrity/presentation/screens/integrity_dashboard_screen.dart';
 import '../../../features/cold_chain/presentation/screens/cold_chain_monitor_screen.dart';
@@ -54,6 +56,10 @@ class AppRoutes {
 
   // Notifications
   static const String notifications = '/notifications';
+
+  // Onboarding
+  static const String onboarding = '/onboarding';
+  static const String permissions = '/permissions';
 }
 
 // Router Provider
@@ -61,27 +67,59 @@ final routerProvider = Provider<GoRouter>((ref) {
   final authState = ref.watch(authProvider);
 
   return GoRouter(
-    initialLocation: AppRoutes.dashboard,
+    initialLocation: AppRoutes.onboarding,
     debugLogDiagnostics: true,
-    redirect: (context, state) {
+    redirect: (context, state) async {
       final isAuthenticated = authState.value != null;
       final isLoginRoute =
           state.matchedLocation == AppRoutes.login ||
           state.matchedLocation == AppRoutes.otpVerification;
+      final isOnboardingRoute =
+          state.matchedLocation == AppRoutes.onboarding ||
+          state.matchedLocation == AppRoutes.permissions;
 
-      // If not authenticated and not on login route, redirect to login
-      if (!isAuthenticated && !isLoginRoute) {
+      // Check if onboarding is completed
+      final prefs = await SharedPreferences.getInstance();
+      final onboardingCompleted =
+          prefs.getBool('onboarding_completed') ?? false;
+
+      // If onboarding not completed and not on onboarding routes
+      if (!onboardingCompleted && !isOnboardingRoute) {
+        return AppRoutes.onboarding;
+      }
+
+      // If onboarding completed but not authenticated and not on login route
+      if (onboardingCompleted && !isAuthenticated && !isLoginRoute) {
         return AppRoutes.login;
       }
 
-      // If authenticated and on login route, redirect to dashboard
-      if (isAuthenticated && isLoginRoute) {
+      // If authenticated and on login/onboarding route, redirect to dashboard
+      if (isAuthenticated && (isLoginRoute || isOnboardingRoute)) {
         return AppRoutes.dashboard;
       }
 
       return null;
     },
     routes: [
+      // Onboarding Routes
+      GoRoute(
+        path: AppRoutes.onboarding,
+        name: 'onboarding',
+        pageBuilder: (context, state) => _buildPageWithTransition(
+          context: context,
+          state: state,
+          child: const OnboardingScreen(),
+        ),
+      ),
+      GoRoute(
+        path: AppRoutes.permissions,
+        name: 'permissions',
+        pageBuilder: (context, state) => _buildPageWithTransition(
+          context: context,
+          state: state,
+          child: const PermissionsScreen(),
+        ),
+      ),
       // Auth Routes
       GoRoute(
         path: AppRoutes.login,

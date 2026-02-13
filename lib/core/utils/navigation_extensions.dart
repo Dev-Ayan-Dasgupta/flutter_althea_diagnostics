@@ -24,6 +24,12 @@ extension NavigationExtensions on BuildContext {
     push(AppRoutes.notifications);
   }
 
+  // Add to existing navigation_extensions.dart file
+
+  void goToPermissions() {
+    push(AppRoutes.permissions);
+  }
+
   // Cold Chain Navigation
   void goToColdChainMonitor(String sampleId) {
     push(AppRoutes.coldChainMonitor.replaceFirst(':id', sampleId));

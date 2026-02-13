@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import '../../../features/analytics/presentation/screens/analytics_dashboard_screen.dart';
 import '../../../features/auth/presentation/providers/auth_providers.dart';
+import '../../../features/onboarding/presentation/screens/export.dart';
 import '../../config/design/export.dart';
 import '../../config/theme/export.dart';
 import '../../providers/theme_provider.dart';
@@ -415,6 +417,26 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                               builder: (_) => const AnalyticsDashboardScreen(),
                             ),
                           );
+                        },
+                      ),
+
+                      SettingsListItem(
+                        icon: Icons.replay,
+                        title: 'Show Onboarding',
+                        subtitle: 'View the app introduction again',
+                        iconColor: AppColors.inTransit,
+                        onTap: () async {
+                          final prefs = await SharedPreferences.getInstance();
+                          await prefs.setBool('onboarding_completed', false);
+                          if (context.mounted) {
+                            Navigator.pushAndRemoveUntil(
+                              context,
+                              MaterialPageRoute(
+                                builder: (_) => const OnboardingScreen(),
+                              ),
+                              (route) => false,
+                            );
+                          }
                         },
                       ),
                     ],
