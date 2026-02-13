@@ -45,7 +45,10 @@ class BreachCard extends StatelessWidget {
         gradient: AppGradients.surfaceDark,
         borderRadius: BorderRadius.circular(AppDimensions.radiusMedium),
         boxShadow: AppShadows.soft,
-        border: Border.all(color: _severityColor.withOpacity(0.3), width: 2),
+        border: Border.all(
+          color: _severityColor.withValues(alpha: 0.3),
+          width: 2,
+        ),
       ),
       child: Row(
         children: [
@@ -53,7 +56,7 @@ class BreachCard extends StatelessWidget {
           Container(
             padding: const EdgeInsets.all(AppDimensions.spacing12),
             decoration: BoxDecoration(
-              color: _severityColor.withOpacity(0.2),
+              color: _severityColor.withValues(alpha: 0.2),
               borderRadius: BorderRadius.circular(AppDimensions.radiusSmall),
             ),
             child: Icon(

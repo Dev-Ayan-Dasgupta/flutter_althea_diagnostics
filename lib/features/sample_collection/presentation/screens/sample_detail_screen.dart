@@ -581,12 +581,12 @@ class _SampleDetailScreenState extends ConsumerState<SampleDetailScreen>
     return sample.status.when(
       requested: () => 'Requested',
       assigned: (_) => 'Assigned',
-      inTransit: (_, __) => 'In Transit',
+      inTransit: (_, _) => 'In Transit',
       reachedLab: (_) => 'At Lab',
       processing: (_) => 'Processing',
-      completed: (_, __) => 'Completed',
-      rejected: (_, __, ___) => 'Rejected',
-      cancelled: (_, __) => 'Cancelled',
+      completed: (_, _) => 'Completed',
+      rejected: (_, _, _) => 'Rejected',
+      cancelled: (_, _) => 'Cancelled',
     );
   }
 
@@ -594,12 +594,12 @@ class _SampleDetailScreenState extends ConsumerState<SampleDetailScreen>
     return sample.status.when(
       requested: () => BadgeType.info,
       assigned: (_) => BadgeType.info,
-      inTransit: (_, __) => BadgeType.processing,
+      inTransit: (_, _) => BadgeType.processing,
       reachedLab: (_) => BadgeType.warning,
       processing: (_) => BadgeType.warning,
-      completed: (_, __) => BadgeType.success,
-      rejected: (_, __, ___) => BadgeType.critical,
-      cancelled: (_, __) => BadgeType.critical,
+      completed: (_, _) => BadgeType.success,
+      rejected: (_, _, _) => BadgeType.critical,
+      cancelled: (_, _) => BadgeType.critical,
     );
   }
 

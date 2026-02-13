@@ -6,10 +6,7 @@ import '../../../features/auth/presentation/screens/login_screen.dart';
 import '../../../features/auth/presentation/screens/otp_verification_screen.dart';
 import '../../../features/cold_chain/presentation/screens/cold_chain_log_screen.dart';
 import '../../../features/dashboard/presentation/screens/dashboard_screen.dart';
-import '../../../features/sample_collection/presentation/screens/samples_list_screen.dart';
-import '../../../features/sample_collection/presentation/screens/sample_detail_screen.dart';
-import '../../../features/sample_collection/presentation/screens/barcode_scanner_screen.dart';
-import '../../../features/sample_collection/presentation/screens/sample_collection_screen.dart';
+import '../../../features/sample_collection/presentation/screens/export.dart';
 import '../../../features/sample_integrity/presentation/screens/integrity_dashboard_screen.dart';
 import '../../../features/cold_chain/presentation/screens/cold_chain_monitor_screen.dart';
 import '../../../features/result_entry/presentation/screens/result_entry_screen.dart';
@@ -168,6 +165,18 @@ final routerProvider = Provider<GoRouter>((ref) {
           context: context,
           state: state,
           child: const BarcodeScannerScreen(),
+          fullscreenDialog: true,
+        ),
+      ),
+
+      // Manual Barcode Entry
+      GoRoute(
+        path: '/manual-barcode-entry',
+        name: 'manual-barcode-entry',
+        pageBuilder: (context, state) => _buildPageWithTransition(
+          context: context,
+          state: state,
+          child: const ManualBarcodeEntryScreen(),
           fullscreenDialog: true,
         ),
       ),

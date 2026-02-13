@@ -16,6 +16,10 @@ extension NavigationExtensions on BuildContext {
     push(AppRoutes.scanBarcode);
   }
 
+  void goToManualBarcodeEntry() {
+    push('/manual-barcode-entry');
+  }
+
   // Cold Chain Navigation
   void goToColdChainMonitor(String sampleId) {
     push(AppRoutes.coldChainMonitor.replaceFirst(':id', sampleId));

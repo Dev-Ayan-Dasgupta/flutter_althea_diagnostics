@@ -48,12 +48,12 @@ class _SampleListItemState extends State<SampleListItem>
     return widget.sample.status.when(
       requested: () => BadgeType.info,
       assigned: (_) => BadgeType.info,
-      inTransit: (_, __) => BadgeType.processing,
+      inTransit: (_, _) => BadgeType.processing,
       reachedLab: (_) => BadgeType.warning,
       processing: (_) => BadgeType.warning,
-      completed: (_, __) => BadgeType.success,
-      rejected: (_, __, ___) => BadgeType.critical,
-      cancelled: (_, __) => BadgeType.critical,
+      completed: (_, _) => BadgeType.success,
+      rejected: (_, _, _) => BadgeType.critical,
+      cancelled: (_, _) => BadgeType.critical,
     );
   }
 
@@ -61,12 +61,12 @@ class _SampleListItemState extends State<SampleListItem>
     return widget.sample.status.when(
       requested: () => 'Requested',
       assigned: (_) => 'Assigned',
-      inTransit: (_, __) => 'In Transit',
+      inTransit: (_, _) => 'In Transit',
       reachedLab: (_) => 'At Lab',
       processing: (_) => 'Processing',
-      completed: (_, __) => 'Completed',
-      rejected: (_, __, ___) => 'Rejected',
-      cancelled: (_, __) => 'Cancelled',
+      completed: (_, _) => 'Completed',
+      rejected: (_, _, _) => 'Rejected',
+      cancelled: (_, _) => 'Cancelled',
     );
   }
 
@@ -74,12 +74,12 @@ class _SampleListItemState extends State<SampleListItem>
     return widget.sample.status.when(
       requested: () => Icons.schedule,
       assigned: (_) => Icons.person_pin_circle,
-      inTransit: (_, __) => Icons.local_shipping,
+      inTransit: (_, _) => Icons.local_shipping,
       reachedLab: (_) => Icons.business,
       processing: (_) => Icons.science,
-      completed: (_, __) => Icons.check_circle,
-      rejected: (_, __, ___) => Icons.error,
-      cancelled: (_, __) => Icons.cancel,
+      completed: (_, _) => Icons.check_circle,
+      rejected: (_, _, _) => Icons.error,
+      cancelled: (_, _) => Icons.cancel,
     );
   }
 
@@ -214,7 +214,7 @@ class _SampleListItemState extends State<SampleListItem>
         vertical: AppDimensions.spacing8,
       ),
       decoration: BoxDecoration(
-        color: color.withOpacity(0.1),
+        color: color.withValues(alpha: 0.1),
         borderRadius: BorderRadius.circular(AppDimensions.radiusSmall),
       ),
       child: Column(

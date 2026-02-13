@@ -106,8 +106,8 @@ class _StatsCardState extends State<StatsCard>
                         ),
                         boxShadow: [
                           BoxShadow(
-                            color: widget.gradient.colors.first.withOpacity(
-                              0.4,
+                            color: widget.gradient.colors.first.withValues(
+                              alpha: 0.4,
                             ),
                             blurRadius: 12,
                             spreadRadius: 2,

@@ -15,3 +15,5 @@ export './status_badge.dart';
 export './temperature_chart.dart';
 export './temperature_gauge.dart';
 export './timeline_item.dart';
+export './scan_success_animation.dart';
+export './scanner_overlay.dart';

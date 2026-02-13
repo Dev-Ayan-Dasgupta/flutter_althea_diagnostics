@@ -65,7 +65,7 @@ class _TemperatureChartState extends State<TemperatureChart> {
         getDrawingHorizontalLine: (value) {
           if (value == widget.minTemp || value == widget.maxTemp) {
             return FlLine(
-              color: AppColors.critical.withOpacity(0.3),
+              color: AppColors.critical.withValues(alpha: .3),
               strokeWidth: 2,
               dashArray: [5, 5],
             );
@@ -150,7 +150,7 @@ class _TemperatureChartState extends State<TemperatureChart> {
             show: true,
             gradient: LinearGradient(
               colors: _getGradientColors()
-                  .map((color) => color.withOpacity(0.2))
+                  .map((color) => color.withValues(alpha: .2))
                   .toList(),
             ),
           ),
