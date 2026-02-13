@@ -1,10 +1,10 @@
 import 'package:dartz/dartz.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import '../../../../core/domain/usecase.dart';
-import '../../../../core/errors/failures.dart';
-import '../domain/entities/sample.dart';
-import '../domain/entities/sample_event.dart';
-import '../domain/repositories/sample_repository.dart';
+import '../../../../../core/domain/usecase.dart';
+import '../../../../../core/errors/failures.dart';
+import '../entities/sample.dart';
+import '../entities/sample_event.dart';
+import '../repositories/sample_repository.dart';
 
 part 'mark_sample_as_collected.freezed.dart';
 

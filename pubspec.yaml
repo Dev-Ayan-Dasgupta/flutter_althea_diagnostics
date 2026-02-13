@@ -70,18 +70,18 @@ flutter:
   fonts:
     - family: BalooBhaijaan2
       fonts:
-        - asset: assets/fonts/BalooBhaijaan2-Regular.ttf
+        - asset: assets/fonts/BalooBhaijaan2-VariableFont_wght.ttf
           weight: 400
-        - asset: assets/fonts/BalooBhaijaan2-Medium.ttf
+        - asset: assets/fonts/BalooBhaijaan2-VariableFont_wght.ttf
           weight: 500
-        - asset: assets/fonts/BalooBhaijaan2-SemiBold.ttf
+        - asset: assets/fonts/BalooBhaijaan2-VariableFont_wght.ttf
           weight: 600
-        - asset: assets/fonts/BalooBhaijaan2-Bold.ttf
+        - asset: assets/fonts/BalooBhaijaan2-VariableFont_wght.ttf
           weight: 700
-        - asset: assets/fonts/BalooBhaijaan2-ExtraBold.ttf
+        - asset: assets/fonts/BalooBhaijaan2-VariableFont_wght.ttf
           weight: 800
 
-  assets:
-    - assets/images/
-    - assets/icons/
-    - assets/lottie/
+  # assets:
+  # - assets/images/
+  # - assets/icons/
+  # - assets/lottie/

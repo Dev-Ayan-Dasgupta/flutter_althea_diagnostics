@@ -1,9 +1,9 @@
 import 'package:dartz/dartz.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import '../../../../core/domain/usecase.dart';
-import '../../../../core/errors/failures.dart';
-import '../domain/entities/sample.dart';
-import '../domain/repositories/sample_repository.dart';
+import '../../../../../core/domain/usecase.dart';
+import '../../../../../core/errors/failures.dart';
+import '../entities/sample.dart';
+import '../repositories/sample_repository.dart';
 
 part 'get_samples.freezed.dart';
 

@@ -6,8 +6,8 @@ import '../../domain/entities/biometric_verification.dart';
 import '../../domain/entities/sample.dart';
 import '../../domain/entities/sample_event.dart';
 import '../../domain/repositories/sample_repository.dart';
-import '../data_sources/sample_local_datasource.dart';
-import '../data_sources/sample_remote_datasource.dart';
+import '../datasources/sample_local_datasource.dart';
+import '../datasources/sample_remote_datasource.dart';
 import '../models/sample_model.dart';
 
 class SampleRepositoryImpl implements SampleRepository {
@@ -70,8 +70,9 @@ class SampleRepositoryImpl implements SampleRepository {
       return Right(sample.toEntity());
     } on ServerException catch (e) {
       try {
-        final cachedSample =
-            await localDataSource.getCachedSampleById(sampleId);
+        final cachedSample = await localDataSource.getCachedSampleById(
+          sampleId,
+        );
         if (cachedSample != null) {
           return Right(cachedSample.toEntity());
         }
@@ -80,8 +81,9 @@ class SampleRepositoryImpl implements SampleRepository {
       return Left(Failure.server(message: e.message, statusCode: e.statusCode));
     } on NetworkException catch (e) {
       try {
-        final cachedSample =
-            await localDataSource.getCachedSampleById(sampleId);
+        final cachedSample = await localDataSource.getCachedSampleById(
+          sampleId,
+        );
         if (cachedSample != null) {
           return Right(cachedSample.toEntity());
         }
@@ -357,7 +359,9 @@ class SampleRepositoryImpl implements SampleRepository {
 
   @override
   Stream<Either<Failure, Sample>> watchSample(String sampleId) {
-    return remoteDataSource.watchSample(sampleId).transform(
+    return remoteDataSource
+        .watchSample(sampleId)
+        .transform(
           StreamTransformer.fromHandlers(
             handleData: (data, sink) {
               sink.add(Right(data.toEntity()));
@@ -376,10 +380,10 @@ class SampleRepositoryImpl implements SampleRepository {
   }
 
   @override
-  Stream<Either<Failure, List<Sample>>> watchSamples({
-    SampleStatus? status,
-  }) {
-    return remoteDataSource.watchSamples(status: status?.toString()).transform(
+  Stream<Either<Failure, List<Sample>>> watchSamples({SampleStatus? status}) {
+    return remoteDataSource
+        .watchSamples(status: status?.toString())
+        .transform(
           StreamTransformer.fromHandlers(
             handleData: (data, sink) {
               sink.add(Right(data.map((model) => model.toEntity()).toList()));
