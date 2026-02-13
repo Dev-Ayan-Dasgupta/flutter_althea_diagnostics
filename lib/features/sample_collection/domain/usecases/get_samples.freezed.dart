@@ -25,12 +25,12 @@ $GetSamplesParamsCopyWith<GetSamplesParams> get copyWith => _$GetSamplesParamsCo
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is GetSamplesParams&&const DeepCollectionEquality().equals(other.status, status)&&(identical(other.startDate, startDate) || other.startDate == startDate)&&(identical(other.endDate, endDate) || other.endDate == endDate)&&(identical(other.page, page) || other.page == page)&&(identical(other.limit, limit) || other.limit == limit));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is GetSamplesParams&&(identical(other.status, status) || other.status == status)&&(identical(other.startDate, startDate) || other.startDate == startDate)&&(identical(other.endDate, endDate) || other.endDate == endDate)&&(identical(other.page, page) || other.page == page)&&(identical(other.limit, limit) || other.limit == limit));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(status),startDate,endDate,page,limit);
+int get hashCode => Object.hash(runtimeType,status,startDate,endDate,page,limit);
 
 @override
 String toString() {
@@ -49,7 +49,7 @@ $Res call({
 });
 
 
-
+$SampleStatusCopyWith<$Res>? get status;
 
 }
 /// @nodoc
@@ -72,7 +72,19 @@ as int,limit: null == limit ? _self.limit : limit // ignore: cast_nullable_to_no
 as int,
   ));
 }
+/// Create a copy of GetSamplesParams
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$SampleStatusCopyWith<$Res>? get status {
+    if (_self.status == null) {
+    return null;
+  }
 
+  return $SampleStatusCopyWith<$Res>(_self.status!, (value) {
+    return _then(_self.copyWith(status: value));
+  });
+}
 }
 
 
@@ -229,12 +241,12 @@ _$GetSamplesParamsCopyWith<_GetSamplesParams> get copyWith => __$GetSamplesParam
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _GetSamplesParams&&const DeepCollectionEquality().equals(other.status, status)&&(identical(other.startDate, startDate) || other.startDate == startDate)&&(identical(other.endDate, endDate) || other.endDate == endDate)&&(identical(other.page, page) || other.page == page)&&(identical(other.limit, limit) || other.limit == limit));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _GetSamplesParams&&(identical(other.status, status) || other.status == status)&&(identical(other.startDate, startDate) || other.startDate == startDate)&&(identical(other.endDate, endDate) || other.endDate == endDate)&&(identical(other.page, page) || other.page == page)&&(identical(other.limit, limit) || other.limit == limit));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(status),startDate,endDate,page,limit);
+int get hashCode => Object.hash(runtimeType,status,startDate,endDate,page,limit);
 
 @override
 String toString() {
@@ -253,7 +265,7 @@ $Res call({
 });
 
 
-
+@override $SampleStatusCopyWith<$Res>? get status;
 
 }
 /// @nodoc
@@ -277,7 +289,19 @@ as int,
   ));
 }
 
+/// Create a copy of GetSamplesParams
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$SampleStatusCopyWith<$Res>? get status {
+    if (_self.status == null) {
+    return null;
+  }
 
+  return $SampleStatusCopyWith<$Res>(_self.status!, (value) {
+    return _then(_self.copyWith(status: value));
+  });
+}
 }
 
 // dart format on

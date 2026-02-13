@@ -25,12 +25,12 @@ $ScanBarcodeParamsCopyWith<ScanBarcodeParams> get copyWith => _$ScanBarcodeParam
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ScanBarcodeParams&&(identical(other.vialId, vialId) || other.vialId == vialId)&&(identical(other.phlebotomistId, phlebotomistId) || other.phlebotomistId == phlebotomistId)&&const DeepCollectionEquality().equals(other.location, location));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is ScanBarcodeParams&&(identical(other.vialId, vialId) || other.vialId == vialId)&&(identical(other.phlebotomistId, phlebotomistId) || other.phlebotomistId == phlebotomistId)&&(identical(other.location, location) || other.location == location));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,vialId,phlebotomistId,const DeepCollectionEquality().hash(location));
+int get hashCode => Object.hash(runtimeType,vialId,phlebotomistId,location);
 
 @override
 String toString() {
@@ -49,7 +49,7 @@ $Res call({
 });
 
 
-
+$GeoLocationCopyWith<$Res> get location;
 
 }
 /// @nodoc
@@ -62,15 +62,24 @@ class _$ScanBarcodeParamsCopyWithImpl<$Res>
 
 /// Create a copy of ScanBarcodeParams
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? vialId = null,Object? phlebotomistId = null,Object? location = freezed,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? vialId = null,Object? phlebotomistId = null,Object? location = null,}) {
   return _then(_self.copyWith(
 vialId: null == vialId ? _self.vialId : vialId // ignore: cast_nullable_to_non_nullable
 as String,phlebotomistId: null == phlebotomistId ? _self.phlebotomistId : phlebotomistId // ignore: cast_nullable_to_non_nullable
-as String,location: freezed == location ? _self.location : location // ignore: cast_nullable_to_non_nullable
+as String,location: null == location ? _self.location : location // ignore: cast_nullable_to_non_nullable
 as GeoLocation,
   ));
 }
-
+/// Create a copy of ScanBarcodeParams
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$GeoLocationCopyWith<$Res> get location {
+  
+  return $GeoLocationCopyWith<$Res>(_self.location, (value) {
+    return _then(_self.copyWith(location: value));
+  });
+}
 }
 
 
@@ -225,12 +234,12 @@ _$ScanBarcodeParamsCopyWith<_ScanBarcodeParams> get copyWith => __$ScanBarcodePa
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _ScanBarcodeParams&&(identical(other.vialId, vialId) || other.vialId == vialId)&&(identical(other.phlebotomistId, phlebotomistId) || other.phlebotomistId == phlebotomistId)&&const DeepCollectionEquality().equals(other.location, location));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _ScanBarcodeParams&&(identical(other.vialId, vialId) || other.vialId == vialId)&&(identical(other.phlebotomistId, phlebotomistId) || other.phlebotomistId == phlebotomistId)&&(identical(other.location, location) || other.location == location));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,vialId,phlebotomistId,const DeepCollectionEquality().hash(location));
+int get hashCode => Object.hash(runtimeType,vialId,phlebotomistId,location);
 
 @override
 String toString() {
@@ -249,7 +258,7 @@ $Res call({
 });
 
 
-
+@override $GeoLocationCopyWith<$Res> get location;
 
 }
 /// @nodoc
@@ -262,16 +271,25 @@ class __$ScanBarcodeParamsCopyWithImpl<$Res>
 
 /// Create a copy of ScanBarcodeParams
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? vialId = null,Object? phlebotomistId = null,Object? location = freezed,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? vialId = null,Object? phlebotomistId = null,Object? location = null,}) {
   return _then(_ScanBarcodeParams(
 vialId: null == vialId ? _self.vialId : vialId // ignore: cast_nullable_to_non_nullable
 as String,phlebotomistId: null == phlebotomistId ? _self.phlebotomistId : phlebotomistId // ignore: cast_nullable_to_non_nullable
-as String,location: freezed == location ? _self.location : location // ignore: cast_nullable_to_non_nullable
+as String,location: null == location ? _self.location : location // ignore: cast_nullable_to_non_nullable
 as GeoLocation,
   ));
 }
 
-
+/// Create a copy of ScanBarcodeParams
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$GeoLocationCopyWith<$Res> get location {
+  
+  return $GeoLocationCopyWith<$Res>(_self.location, (value) {
+    return _then(_self.copyWith(location: value));
+  });
+}
 }
 
 // dart format on

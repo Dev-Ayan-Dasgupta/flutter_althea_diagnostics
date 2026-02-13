@@ -25,12 +25,12 @@ $BiometricHandshakeParamsCopyWith<BiometricHandshakeParams> get copyWith => _$Bi
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is BiometricHandshakeParams&&(identical(other.sampleId, sampleId) || other.sampleId == sampleId)&&(identical(other.patientDeviceId, patientDeviceId) || other.patientDeviceId == patientDeviceId)&&(identical(other.phlebotomistDeviceId, phlebotomistDeviceId) || other.phlebotomistDeviceId == phlebotomistDeviceId)&&(identical(other.proximityDistance, proximityDistance) || other.proximityDistance == proximityDistance)&&(identical(other.signalStrength, signalStrength) || other.signalStrength == signalStrength)&&const DeepCollectionEquality().equals(other.location, location));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is BiometricHandshakeParams&&(identical(other.sampleId, sampleId) || other.sampleId == sampleId)&&(identical(other.patientDeviceId, patientDeviceId) || other.patientDeviceId == patientDeviceId)&&(identical(other.phlebotomistDeviceId, phlebotomistDeviceId) || other.phlebotomistDeviceId == phlebotomistDeviceId)&&(identical(other.proximityDistance, proximityDistance) || other.proximityDistance == proximityDistance)&&(identical(other.signalStrength, signalStrength) || other.signalStrength == signalStrength)&&(identical(other.location, location) || other.location == location));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,sampleId,patientDeviceId,phlebotomistDeviceId,proximityDistance,signalStrength,const DeepCollectionEquality().hash(location));
+int get hashCode => Object.hash(runtimeType,sampleId,patientDeviceId,phlebotomistDeviceId,proximityDistance,signalStrength,location);
 
 @override
 String toString() {
@@ -49,7 +49,7 @@ $Res call({
 });
 
 
-
+$GeoLocationCopyWith<$Res> get location;
 
 }
 /// @nodoc
@@ -62,18 +62,27 @@ class _$BiometricHandshakeParamsCopyWithImpl<$Res>
 
 /// Create a copy of BiometricHandshakeParams
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? sampleId = null,Object? patientDeviceId = null,Object? phlebotomistDeviceId = null,Object? proximityDistance = null,Object? signalStrength = null,Object? location = freezed,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? sampleId = null,Object? patientDeviceId = null,Object? phlebotomistDeviceId = null,Object? proximityDistance = null,Object? signalStrength = null,Object? location = null,}) {
   return _then(_self.copyWith(
 sampleId: null == sampleId ? _self.sampleId : sampleId // ignore: cast_nullable_to_non_nullable
 as String,patientDeviceId: null == patientDeviceId ? _self.patientDeviceId : patientDeviceId // ignore: cast_nullable_to_non_nullable
 as String,phlebotomistDeviceId: null == phlebotomistDeviceId ? _self.phlebotomistDeviceId : phlebotomistDeviceId // ignore: cast_nullable_to_non_nullable
 as String,proximityDistance: null == proximityDistance ? _self.proximityDistance : proximityDistance // ignore: cast_nullable_to_non_nullable
 as double,signalStrength: null == signalStrength ? _self.signalStrength : signalStrength // ignore: cast_nullable_to_non_nullable
-as int,location: freezed == location ? _self.location : location // ignore: cast_nullable_to_non_nullable
+as int,location: null == location ? _self.location : location // ignore: cast_nullable_to_non_nullable
 as GeoLocation,
   ));
 }
-
+/// Create a copy of BiometricHandshakeParams
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$GeoLocationCopyWith<$Res> get location {
+  
+  return $GeoLocationCopyWith<$Res>(_self.location, (value) {
+    return _then(_self.copyWith(location: value));
+  });
+}
 }
 
 
@@ -231,12 +240,12 @@ _$BiometricHandshakeParamsCopyWith<_BiometricHandshakeParams> get copyWith => __
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _BiometricHandshakeParams&&(identical(other.sampleId, sampleId) || other.sampleId == sampleId)&&(identical(other.patientDeviceId, patientDeviceId) || other.patientDeviceId == patientDeviceId)&&(identical(other.phlebotomistDeviceId, phlebotomistDeviceId) || other.phlebotomistDeviceId == phlebotomistDeviceId)&&(identical(other.proximityDistance, proximityDistance) || other.proximityDistance == proximityDistance)&&(identical(other.signalStrength, signalStrength) || other.signalStrength == signalStrength)&&const DeepCollectionEquality().equals(other.location, location));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _BiometricHandshakeParams&&(identical(other.sampleId, sampleId) || other.sampleId == sampleId)&&(identical(other.patientDeviceId, patientDeviceId) || other.patientDeviceId == patientDeviceId)&&(identical(other.phlebotomistDeviceId, phlebotomistDeviceId) || other.phlebotomistDeviceId == phlebotomistDeviceId)&&(identical(other.proximityDistance, proximityDistance) || other.proximityDistance == proximityDistance)&&(identical(other.signalStrength, signalStrength) || other.signalStrength == signalStrength)&&(identical(other.location, location) || other.location == location));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,sampleId,patientDeviceId,phlebotomistDeviceId,proximityDistance,signalStrength,const DeepCollectionEquality().hash(location));
+int get hashCode => Object.hash(runtimeType,sampleId,patientDeviceId,phlebotomistDeviceId,proximityDistance,signalStrength,location);
 
 @override
 String toString() {
@@ -255,7 +264,7 @@ $Res call({
 });
 
 
-
+@override $GeoLocationCopyWith<$Res> get location;
 
 }
 /// @nodoc
@@ -268,19 +277,28 @@ class __$BiometricHandshakeParamsCopyWithImpl<$Res>
 
 /// Create a copy of BiometricHandshakeParams
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? sampleId = null,Object? patientDeviceId = null,Object? phlebotomistDeviceId = null,Object? proximityDistance = null,Object? signalStrength = null,Object? location = freezed,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? sampleId = null,Object? patientDeviceId = null,Object? phlebotomistDeviceId = null,Object? proximityDistance = null,Object? signalStrength = null,Object? location = null,}) {
   return _then(_BiometricHandshakeParams(
 sampleId: null == sampleId ? _self.sampleId : sampleId // ignore: cast_nullable_to_non_nullable
 as String,patientDeviceId: null == patientDeviceId ? _self.patientDeviceId : patientDeviceId // ignore: cast_nullable_to_non_nullable
 as String,phlebotomistDeviceId: null == phlebotomistDeviceId ? _self.phlebotomistDeviceId : phlebotomistDeviceId // ignore: cast_nullable_to_non_nullable
 as String,proximityDistance: null == proximityDistance ? _self.proximityDistance : proximityDistance // ignore: cast_nullable_to_non_nullable
 as double,signalStrength: null == signalStrength ? _self.signalStrength : signalStrength // ignore: cast_nullable_to_non_nullable
-as int,location: freezed == location ? _self.location : location // ignore: cast_nullable_to_non_nullable
+as int,location: null == location ? _self.location : location // ignore: cast_nullable_to_non_nullable
 as GeoLocation,
   ));
 }
 
-
+/// Create a copy of BiometricHandshakeParams
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$GeoLocationCopyWith<$Res> get location {
+  
+  return $GeoLocationCopyWith<$Res>(_self.location, (value) {
+    return _then(_self.copyWith(location: value));
+  });
+}
 }
 
 // dart format on

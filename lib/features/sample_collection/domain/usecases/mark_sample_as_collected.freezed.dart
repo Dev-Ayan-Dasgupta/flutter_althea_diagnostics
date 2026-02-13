@@ -25,12 +25,12 @@ $MarkSampleAsCollectedParamsCopyWith<MarkSampleAsCollectedParams> get copyWith =
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is MarkSampleAsCollectedParams&&(identical(other.sampleId, sampleId) || other.sampleId == sampleId)&&(identical(other.collectionTime, collectionTime) || other.collectionTime == collectionTime)&&const DeepCollectionEquality().equals(other.location, location)&&const DeepCollectionEquality().equals(other.imageUrls, imageUrls)&&(identical(other.notes, notes) || other.notes == notes));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is MarkSampleAsCollectedParams&&(identical(other.sampleId, sampleId) || other.sampleId == sampleId)&&(identical(other.collectionTime, collectionTime) || other.collectionTime == collectionTime)&&(identical(other.location, location) || other.location == location)&&const DeepCollectionEquality().equals(other.imageUrls, imageUrls)&&(identical(other.notes, notes) || other.notes == notes));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,sampleId,collectionTime,const DeepCollectionEquality().hash(location),const DeepCollectionEquality().hash(imageUrls),notes);
+int get hashCode => Object.hash(runtimeType,sampleId,collectionTime,location,const DeepCollectionEquality().hash(imageUrls),notes);
 
 @override
 String toString() {
@@ -49,7 +49,7 @@ $Res call({
 });
 
 
-
+$GeoLocationCopyWith<$Res> get location;
 
 }
 /// @nodoc
@@ -62,17 +62,26 @@ class _$MarkSampleAsCollectedParamsCopyWithImpl<$Res>
 
 /// Create a copy of MarkSampleAsCollectedParams
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? sampleId = null,Object? collectionTime = null,Object? location = freezed,Object? imageUrls = freezed,Object? notes = freezed,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? sampleId = null,Object? collectionTime = null,Object? location = null,Object? imageUrls = freezed,Object? notes = freezed,}) {
   return _then(_self.copyWith(
 sampleId: null == sampleId ? _self.sampleId : sampleId // ignore: cast_nullable_to_non_nullable
 as String,collectionTime: null == collectionTime ? _self.collectionTime : collectionTime // ignore: cast_nullable_to_non_nullable
-as DateTime,location: freezed == location ? _self.location : location // ignore: cast_nullable_to_non_nullable
+as DateTime,location: null == location ? _self.location : location // ignore: cast_nullable_to_non_nullable
 as GeoLocation,imageUrls: freezed == imageUrls ? _self.imageUrls : imageUrls // ignore: cast_nullable_to_non_nullable
 as List<String>?,notes: freezed == notes ? _self.notes : notes // ignore: cast_nullable_to_non_nullable
 as String?,
   ));
 }
-
+/// Create a copy of MarkSampleAsCollectedParams
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$GeoLocationCopyWith<$Res> get location {
+  
+  return $GeoLocationCopyWith<$Res>(_self.location, (value) {
+    return _then(_self.copyWith(location: value));
+  });
+}
 }
 
 
@@ -237,12 +246,12 @@ _$MarkSampleAsCollectedParamsCopyWith<_MarkSampleAsCollectedParams> get copyWith
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _MarkSampleAsCollectedParams&&(identical(other.sampleId, sampleId) || other.sampleId == sampleId)&&(identical(other.collectionTime, collectionTime) || other.collectionTime == collectionTime)&&const DeepCollectionEquality().equals(other.location, location)&&const DeepCollectionEquality().equals(other._imageUrls, _imageUrls)&&(identical(other.notes, notes) || other.notes == notes));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _MarkSampleAsCollectedParams&&(identical(other.sampleId, sampleId) || other.sampleId == sampleId)&&(identical(other.collectionTime, collectionTime) || other.collectionTime == collectionTime)&&(identical(other.location, location) || other.location == location)&&const DeepCollectionEquality().equals(other._imageUrls, _imageUrls)&&(identical(other.notes, notes) || other.notes == notes));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,sampleId,collectionTime,const DeepCollectionEquality().hash(location),const DeepCollectionEquality().hash(_imageUrls),notes);
+int get hashCode => Object.hash(runtimeType,sampleId,collectionTime,location,const DeepCollectionEquality().hash(_imageUrls),notes);
 
 @override
 String toString() {
@@ -261,7 +270,7 @@ $Res call({
 });
 
 
-
+@override $GeoLocationCopyWith<$Res> get location;
 
 }
 /// @nodoc
@@ -274,18 +283,27 @@ class __$MarkSampleAsCollectedParamsCopyWithImpl<$Res>
 
 /// Create a copy of MarkSampleAsCollectedParams
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? sampleId = null,Object? collectionTime = null,Object? location = freezed,Object? imageUrls = freezed,Object? notes = freezed,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? sampleId = null,Object? collectionTime = null,Object? location = null,Object? imageUrls = freezed,Object? notes = freezed,}) {
   return _then(_MarkSampleAsCollectedParams(
 sampleId: null == sampleId ? _self.sampleId : sampleId // ignore: cast_nullable_to_non_nullable
 as String,collectionTime: null == collectionTime ? _self.collectionTime : collectionTime // ignore: cast_nullable_to_non_nullable
-as DateTime,location: freezed == location ? _self.location : location // ignore: cast_nullable_to_non_nullable
+as DateTime,location: null == location ? _self.location : location // ignore: cast_nullable_to_non_nullable
 as GeoLocation,imageUrls: freezed == imageUrls ? _self._imageUrls : imageUrls // ignore: cast_nullable_to_non_nullable
 as List<String>?,notes: freezed == notes ? _self.notes : notes // ignore: cast_nullable_to_non_nullable
 as String?,
   ));
 }
 
-
+/// Create a copy of MarkSampleAsCollectedParams
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$GeoLocationCopyWith<$Res> get location {
+  
+  return $GeoLocationCopyWith<$Res>(_self.location, (value) {
+    return _then(_self.copyWith(location: value));
+  });
+}
 }
 
 // dart format on
