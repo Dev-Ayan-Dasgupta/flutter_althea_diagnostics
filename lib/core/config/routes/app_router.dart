@@ -6,6 +6,7 @@ import '../../../features/auth/presentation/screens/login_screen.dart';
 import '../../../features/auth/presentation/screens/otp_verification_screen.dart';
 import '../../../features/cold_chain/presentation/screens/cold_chain_log_screen.dart';
 import '../../../features/dashboard/presentation/screens/dashboard_screen.dart';
+import '../../../features/notifications/presentation/screens/notifications_screen.dart';
 import '../../../features/sample_collection/presentation/screens/export.dart';
 import '../../../features/sample_integrity/presentation/screens/integrity_dashboard_screen.dart';
 import '../../../features/cold_chain/presentation/screens/cold_chain_monitor_screen.dart';
@@ -32,6 +33,7 @@ class AppRoutes {
   static const String samples = '/samples';
   static const String sampleDetail = '/samples/:id';
   static const String scanBarcode = '/scan-barcode';
+  static const String manualBarcodeEntry = '/manual-barcode-entry';
   static const String collectSample = '/collect-sample/:id';
 
   // Sample Integrity
@@ -49,6 +51,9 @@ class AppRoutes {
   // Settings
   static const String settings = '/settings';
   static const String profile = '/profile';
+
+  // Notifications
+  static const String notifications = '/notifications';
 }
 
 // Router Provider
@@ -246,6 +251,17 @@ final routerProvider = Provider<GoRouter>((ref) {
           context: context,
           state: state,
           child: const ProfileScreen(),
+        ),
+      ),
+
+      // Add to routes list
+      GoRoute(
+        path: AppRoutes.notifications,
+        name: 'notifications',
+        pageBuilder: (context, state) => _buildPageWithTransition(
+          context: context,
+          state: state,
+          child: const NotificationsScreen(),
         ),
       ),
     ],

@@ -166,6 +166,43 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen>
               ),
             ),
           ),
+          const Spacer(),
+          // Notification Bell
+          GestureDetector(
+            onTap: () => context.goToNotifications(),
+            child: Stack(
+              children: [
+                Container(
+                  padding: const EdgeInsets.all(AppDimensions.spacing12),
+                  decoration: BoxDecoration(
+                    gradient: AppGradients.surfaceDark,
+                    borderRadius: BorderRadius.circular(
+                      AppDimensions.radiusMedium,
+                    ),
+                    boxShadow: AppShadows.soft,
+                  ),
+                  child: const Icon(
+                    Icons.notifications_outlined,
+                    size: AppDimensions.iconMedium,
+                  ),
+                ),
+                // Unread badge
+                Positioned(
+                  top: 8,
+                  right: 8,
+                  child: Container(
+                    width: 8,
+                    height: 8,
+                    decoration: BoxDecoration(
+                      gradient: AppGradients.critical,
+                      shape: BoxShape.circle,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(width: AppDimensions.spacing12),
         ],
       ),
     );

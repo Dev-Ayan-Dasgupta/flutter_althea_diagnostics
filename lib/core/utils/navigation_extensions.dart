@@ -17,7 +17,11 @@ extension NavigationExtensions on BuildContext {
   }
 
   void goToManualBarcodeEntry() {
-    push('/manual-barcode-entry');
+    push(AppRoutes.manualBarcodeEntry);
+  }
+
+  void goToNotifications() {
+    push(AppRoutes.notifications);
   }
 
   // Cold Chain Navigation
