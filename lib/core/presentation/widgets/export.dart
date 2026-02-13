@@ -22,3 +22,7 @@ export './sync_status_banner.dart';
 export './temperature_chart.dart';
 export './temperature_gauge.dart';
 export './timeline_item.dart';
+export './recent_searches.dart';
+export './search_bar_custom.dart';
+export './pie_chart_widget.dart';
+export './bar_chart_widget.dart';

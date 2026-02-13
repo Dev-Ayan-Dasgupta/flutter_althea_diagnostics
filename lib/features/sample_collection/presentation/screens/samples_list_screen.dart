@@ -13,6 +13,7 @@ import '../../../../core/presentation/widgets/empty_state.dart';
 import '../../../../core/presentation/widgets/sample_list_item.dart';
 import '../../../../core/utils/responsive_helper.dart';
 import '../../../../core/utils/navigation_extensions.dart';
+import '../../../search/presentation/screens/search_screen.dart';
 import '../../domain/entities/sample.dart';
 import '../providers/sample_providers.dart';
 
@@ -151,16 +152,19 @@ class _SamplesListScreenState extends ConsumerState<SamplesListScreen>
           // Search Button
           GestureDetector(
             onTap: () {
-              // TODO: Implement search
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (_) => const SearchScreen()),
+              );
             },
             child: Container(
-              padding: const EdgeInsets.all(AppDimensions.spacing12),
+              padding: const EdgeInsets.all(AppDimensions.spacing8),
               decoration: BoxDecoration(
                 gradient: AppGradients.surfaceDark,
                 borderRadius: BorderRadius.circular(AppDimensions.radiusMedium),
                 boxShadow: AppShadows.soft,
               ),
-              child: const Icon(Icons.search, size: AppDimensions.iconMedium),
+              child: const Icon(Icons.search),
             ),
           ),
         ],
