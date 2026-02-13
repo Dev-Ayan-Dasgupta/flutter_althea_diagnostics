@@ -2,6 +2,9 @@ import 'dart:async';
 import 'package:dartz/dartz.dart';
 import '../../../../core/errors/exceptions.dart';
 import '../../../../core/errors/failures.dart';
+import '../../../../core/services/connectivity_service.dart';
+import '../../../../core/sync/models/sync_item.dart';
+import '../../../../core/sync/services/sync_queue_service.dart';
 import '../../../sample_collection/data/models/sample_model.dart';
 import '../../../sample_collection/domain/entities/sample_event.dart';
 import '../../domain/entities/cold_chain_data.dart';
@@ -23,6 +26,32 @@ class ColdChainRepositoryImpl implements ColdChainRepository {
   }) async {
     try {
       final locationJson = GeoLocationModel.fromEntity(location).toJson();
+
+      // Check if online
+      if (!ConnectivityService().isOnline) {
+        // Add to sync queue for later
+        await SyncQueueService().addToQueue(
+          entityType: SyncEntityType.temperature,
+          operation: SyncOperation.create,
+          data: {
+            'sampleId': sampleId,
+            'temperature': temperature,
+            'humidity': humidity,
+            'location': locationJson,
+          },
+        );
+
+        // Return optimistic response
+        return Right(
+          TelemetryReading(
+            timestamp: DateTime.now(),
+            temperature: temperature,
+            humidity: humidity,
+          ),
+        );
+      }
+
+      // Online - proceed normally
       final reading = await remoteDataSource.logTemperature(
         sampleId: sampleId,
         temperature: temperature,
@@ -31,10 +60,9 @@ class ColdChainRepositoryImpl implements ColdChainRepository {
       );
       return Right(reading.toEntity());
     } on ServerException catch (e) {
-      return Left(Failure.coldChain(
-        message: e.message,
-        temperature: temperature,
-      ));
+      return Left(
+        Failure.coldChain(message: e.message, temperature: temperature),
+      );
     } on NetworkException catch (e) {
       return Left(Failure.network(message: e.message));
     } catch (e) {
@@ -50,16 +78,18 @@ class ColdChainRepositoryImpl implements ColdChainRepository {
   }) async {
     try {
       final readingsJson = readings
-          .map((r) => {
-                'timestamp': r.timestamp.toIso8601String(),
-                'temperature': r.temperature,
-                'humidity': r.humidity,
-                'shockDetected': r.shockDetected,
-                'tiltDetected': r.tiltDetected,
-                'lidOpenDetected': r.lidOpenDetected,
-                'batteryLevel': r.batteryLevel,
-                'deviceId': r.deviceId,
-              })
+          .map(
+            (r) => {
+              'timestamp': r.timestamp.toIso8601String(),
+              'temperature': r.temperature,
+              'humidity': r.humidity,
+              'shockDetected': r.shockDetected,
+              'tiltDetected': r.tiltDetected,
+              'lidOpenDetected': r.lidOpenDetected,
+              'batteryLevel': r.batteryLevel,
+              'deviceId': r.deviceId,
+            },
+          )
           .toList();
 
       await remoteDataSource.ingestTelemetryData(
@@ -120,12 +150,14 @@ class ColdChainRepositoryImpl implements ColdChainRepository {
       var readings = data.readings.map((r) => r.toEntity()).toList();
 
       if (startTime != null) {
-        readings =
-            readings.where((r) => r.timestamp.isAfter(startTime)).toList();
+        readings = readings
+            .where((r) => r.timestamp.isAfter(startTime))
+            .toList();
       }
       if (endTime != null) {
-        readings =
-            readings.where((r) => r.timestamp.isBefore(endTime)).toList();
+        readings = readings
+            .where((r) => r.timestamp.isBefore(endTime))
+            .toList();
       }
 
       return Right(readings);
@@ -206,7 +238,9 @@ class ColdChainRepositoryImpl implements ColdChainRepository {
 
   @override
   Stream<Either<Failure, TelemetryReading>> watchTelemetry(String sampleId) {
-    return remoteDataSource.watchTelemetry(sampleId).transform(
+    return remoteDataSource
+        .watchTelemetry(sampleId)
+        .transform(
           StreamTransformer.fromHandlers(
             handleData: (data, sink) {
               sink.add(Right(data.toEntity()));
@@ -226,8 +260,11 @@ class ColdChainRepositoryImpl implements ColdChainRepository {
 
   @override
   Stream<Either<Failure, ColdChainCompliance>> watchCompliance(
-      String sampleId) {
-    return remoteDataSource.watchCompliance(sampleId).transform(
+    String sampleId,
+  ) {
+    return remoteDataSource
+        .watchCompliance(sampleId)
+        .transform(
           StreamTransformer.fromHandlers(
             handleData: (data, sink) {
               sink.add(Right(data.toEntity()));

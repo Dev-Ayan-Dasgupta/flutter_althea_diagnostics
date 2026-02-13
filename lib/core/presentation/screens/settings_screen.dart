@@ -8,6 +8,8 @@ import '../widgets/export.dart';
 import '../../utils/navigation_extensions.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 
+import 'export.dart';
+
 class SettingsScreen extends ConsumerStatefulWidget {
   const SettingsScreen({super.key});
 
@@ -382,6 +384,21 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                         iconColor: AppColors.warning,
                         onTap: () {
                           // TODO: Open terms
+                        },
+                      ),
+                      // In settings_screen.dart, add to the settings list:
+                      SettingsListItem(
+                        icon: Icons.sync,
+                        title: 'Sync & Offline',
+                        subtitle: 'Manage offline data and sync',
+                        iconColor: AppColors.inTransit,
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (_) => const SyncSettingsScreen(),
+                            ),
+                          );
                         },
                       ),
                     ],
