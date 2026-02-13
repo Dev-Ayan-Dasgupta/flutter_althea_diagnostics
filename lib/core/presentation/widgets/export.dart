@@ -28,3 +28,5 @@ export './pie_chart_widget.dart';
 export './bar_chart_widget.dart';
 export './onboarding_page.dart';
 export './page_indicator.dart';
+export './protected_route.dart';
+export './role_selector.dart';
