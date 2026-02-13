@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import '../../../features/analytics/presentation/screens/analytics_dashboard_screen.dart';
 import '../../../features/auth/presentation/providers/auth_providers.dart';
 import '../../config/design/export.dart';
 import '../../config/theme/export.dart';
@@ -397,6 +398,21 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                             context,
                             MaterialPageRoute(
                               builder: (_) => const SyncSettingsScreen(),
+                            ),
+                          );
+                        },
+                      ),
+
+                      SettingsListItem(
+                        icon: Icons.analytics,
+                        title: 'Reports & Analytics',
+                        subtitle: 'View performance insights',
+                        iconColor: AppColors.secondary,
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (_) => const AnalyticsDashboardScreen(),
                             ),
                           );
                         },

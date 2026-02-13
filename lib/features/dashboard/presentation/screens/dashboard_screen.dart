@@ -15,6 +15,7 @@ import '../../../../core/presentation/widgets/mini_chart.dart';
 import '../../../../core/presentation/widgets/app_card.dart';
 import '../../../../core/utils/responsive_helper.dart';
 import '../../../../core/utils/navigation_extensions.dart';
+import '../../../analytics/presentation/screens/analytics_dashboard_screen.dart';
 import '../../../auth/presentation/providers/auth_providers.dart';
 import '../../domain/entities/lab_pulse.dart';
 import '../providers/dashboard_providers.dart';
@@ -90,6 +91,8 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen>
                         SliverToBoxAdapter(child: _buildErrorState(error)),
                   ),
                 ),
+
+                // In dashboard_screen.dart, add a card for quick analytics access:
               ],
             ),
           ),
@@ -239,8 +242,60 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen>
         const SizedBox(height: AppDimensions.spacing12),
         _buildCapacityCard(pulse.capacity),
 
+        const SizedBox(height: AppDimensions.spacing24),
+
+        _buildAnalyticsCard(context),
+
         const SizedBox(height: AppDimensions.spacing40),
       ]),
+    );
+  }
+
+  AppCard _buildAnalyticsCard(BuildContext context) {
+    return AppCard(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (_) => const AnalyticsDashboardScreen()),
+        );
+      },
+      child: Row(
+        children: [
+          Container(
+            padding: const EdgeInsets.all(AppDimensions.spacing12),
+            decoration: BoxDecoration(
+              gradient: AppGradients.secondaryButton,
+              borderRadius: BorderRadius.circular(AppDimensions.radiusSmall),
+            ),
+            child: const Icon(Icons.analytics, color: Colors.white),
+          ),
+          const SizedBox(width: AppDimensions.spacing16),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'View Analytics',
+                  style: AppTextStyles.bodyLarge.copyWith(
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+                Text(
+                  'Detailed insights & reports',
+                  style: AppTextStyles.bodySmall.copyWith(
+                    color: AppColors.textSecondary,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Icon(
+            Icons.arrow_forward_ios,
+            size: 16,
+            color: AppColors.textSecondary,
+          ),
+        ],
+      ),
     );
   }
 
