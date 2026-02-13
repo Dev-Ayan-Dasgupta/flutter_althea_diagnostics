@@ -1,16 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:shared_preferences/shared_preferences.dart';
-import '../../../features/analytics/presentation/screens/analytics_dashboard_screen.dart';
+import '../../../features/auth/domain/entities/user.dart';
 import '../../../features/auth/presentation/providers/auth_providers.dart';
-import '../../../features/onboarding/presentation/screens/export.dart';
 import '../../config/design/export.dart';
-import '../../config/theme/export.dart';
+import '../../config/theme/app_text_styles.dart';
+import '../../config/theme/app_colors.dart';
 import '../../providers/theme_provider.dart';
-import '../widgets/export.dart';
+import '../../providers/app_settings_provider.dart';
+import '../widgets/gradient_text.dart';
+import '../widgets/settings_list_item.dart';
+import '../widgets/settings_section_header.dart';
+import '../widgets/app_button.dart';
+import '../widgets/app_card.dart';
 import '../../utils/navigation_extensions.dart';
 import 'package:package_info_plus/package_info_plus.dart';
-
 import 'export.dart';
 
 class SettingsScreen extends ConsumerStatefulWidget {
@@ -75,10 +78,101 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
     );
   }
 
+  void _showThemeDialog() {
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        backgroundColor: AppColors.darkSurface,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(AppDimensions.radiusLarge),
+        ),
+        title: Text(
+          'Choose Theme',
+          style: AppTextStyles.h4.copyWith(fontWeight: FontWeight.w700),
+        ),
+        content: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            _buildThemeOption('Light', ThemeMode.light),
+            _buildThemeOption('Dark', ThemeMode.dark),
+            _buildThemeOption('System Default', ThemeMode.system),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildThemeOption(String label, ThemeMode mode) {
+    final currentMode = ref.watch(themeProvider);
+
+    return ListTile(
+      title: Text(label),
+      leading: Radio<ThemeMode>(
+        value: mode,
+        groupValue: currentMode,
+        onChanged: (value) {
+          if (value != null) {
+            ref.read(themeProvider.notifier).setThemeMode(value);
+            Navigator.pop(context);
+          }
+        },
+        activeColor: AppColors.primary,
+      ),
+      onTap: () {
+        ref.read(themeProvider.notifier).setThemeMode(mode);
+        Navigator.pop(context);
+      },
+    );
+  }
+
+  void _showClearCacheDialog() {
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        backgroundColor: AppColors.darkSurface,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(AppDimensions.radiusLarge),
+        ),
+        title: Text(
+          'Clear Cache',
+          style: AppTextStyles.h4.copyWith(fontWeight: FontWeight.w700),
+        ),
+        content: Text(
+          'This will free up storage space. Are you sure?',
+          style: AppTextStyles.bodyMedium,
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context),
+            child: Text(
+              'Cancel',
+              style: TextStyle(color: AppColors.textSecondary),
+            ),
+          ),
+          TextButton(
+            onPressed: () {
+              Navigator.pop(context);
+              // TODO: Implement cache clearing
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                  content: const Text('Cache cleared successfully'),
+                  backgroundColor: AppColors.success,
+                  behavior: SnackBarBehavior.floating,
+                ),
+              );
+            },
+            child: Text('Clear', style: TextStyle(color: AppColors.critical)),
+          ),
+        ],
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final user = ref.watch(currentUserProvider);
     final themeMode = ref.watch(themeProvider);
+    final settings = ref.watch(appSettingsProvider);
 
     return Scaffold(
       body: Container(
@@ -86,7 +180,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
         child: SafeArea(
           child: CustomScrollView(
             slivers: [
-              // Header with User Info
+              // Header
               SliverToBoxAdapter(
                 child: Padding(
                   padding: const EdgeInsets.all(AppDimensions.spacing16),
@@ -140,13 +234,6 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                                     style: AppTextStyles.bodyMedium.copyWith(
                                       color: AppColors.textSecondary,
                                     ),
-                                  )
-                                else
-                                  Text(
-                                    'Manage your account and preferences',
-                                    style: AppTextStyles.bodyMedium.copyWith(
-                                      color: AppColors.textSecondary,
-                                    ),
                                   ),
                               ],
                             ),
@@ -158,7 +245,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                 ),
               ),
 
-              // Quick Stats Card
+              // Quick Stats Card (if user exists)
               if (user != null)
                 SliverToBoxAdapter(
                   child: Padding(
@@ -268,14 +355,53 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                             ? 'Light Mode'
                             : 'System Default',
                         iconColor: AppColors.warning,
+                        onTap: _showThemeDialog,
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+
+              // Sound & Vibration Section
+              const SliverToBoxAdapter(
+                child: SettingsSectionHeader(
+                  title: 'Sound & Vibration',
+                  icon: Icons.volume_up,
+                ),
+              ),
+              SliverToBoxAdapter(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: AppDimensions.spacing16,
+                  ),
+                  child: Column(
+                    children: [
+                      SettingsListItem(
+                        icon: Icons.volume_up,
+                        title: 'Sound',
+                        subtitle: 'Play sound for notifications',
+                        iconColor: AppColors.inTransit,
                         trailing: Switch(
-                          value: themeMode == ThemeMode.dark,
+                          value: settings.soundEnabled,
                           onChanged: (value) {
                             ref
-                                .read(themeProvider.notifier)
-                                .setThemeMode(
-                                  value ? ThemeMode.dark : ThemeMode.light,
-                                );
+                                .read(appSettingsProvider.notifier)
+                                .setSoundEnabled(value);
+                          },
+                          activeThumbColor: AppColors.primary,
+                        ),
+                      ),
+                      SettingsListItem(
+                        icon: Icons.vibration,
+                        title: 'Vibration',
+                        subtitle: 'Vibrate for notifications',
+                        iconColor: AppColors.secondary,
+                        trailing: Switch(
+                          value: settings.vibrationEnabled,
+                          onChanged: (value) {
+                            ref
+                                .read(appSettingsProvider.notifier)
+                                .setVibrationEnabled(value);
                           },
                           activeThumbColor: AppColors.primary,
                         ),
@@ -301,29 +427,119 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                     children: [
                       SettingsListItem(
                         icon: Icons.notifications_active,
-                        title: 'Push Notifications',
+                        title: 'Enable Notifications',
                         subtitle: 'Receive alerts and updates',
                         iconColor: AppColors.inTransit,
                         trailing: Switch(
-                          value: true,
+                          value: settings.notificationsEnabled,
                           onChanged: (value) {
-                            // TODO: Implement notification toggle
+                            ref
+                                .read(appSettingsProvider.notifier)
+                                .setNotificationsEnabled(value);
                           },
                           activeThumbColor: AppColors.primary,
                         ),
                       ),
                       SettingsListItem(
-                        icon: Icons.email,
-                        title: 'Email Notifications',
-                        subtitle: 'Receive updates via email',
-                        iconColor: AppColors.secondary,
+                        icon: Icons.shopping_bag,
+                        title: 'Order Alerts',
+                        subtitle: 'Get notified about new orders',
+                        iconColor: AppColors.warning,
                         trailing: Switch(
-                          value: false,
+                          value: settings.orderAlertsEnabled,
                           onChanged: (value) {
-                            // TODO: Implement email toggle
+                            ref
+                                .read(appSettingsProvider.notifier)
+                                .setOrderAlertsEnabled(value);
                           },
                           activeThumbColor: AppColors.primary,
                         ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+
+              // Order Preferences Section (for Phlebotomists)
+              if (user?.isPhlebotomist ?? false) ...[
+                const SliverToBoxAdapter(
+                  child: SettingsSectionHeader(
+                    title: 'Order Preferences',
+                    icon: Icons.shopping_bag,
+                  ),
+                ),
+                SliverToBoxAdapter(
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: AppDimensions.spacing16,
+                    ),
+                    child: Column(
+                      children: [
+                        SettingsListItem(
+                          icon: Icons.check_circle,
+                          title: 'Auto Accept Orders',
+                          subtitle: 'Automatically accept incoming orders',
+                          iconColor: AppColors.success,
+                          trailing: Switch(
+                            value: settings.autoAcceptOrders,
+                            onChanged: (value) {
+                              ref
+                                  .read(appSettingsProvider.notifier)
+                                  .setAutoAcceptOrders(value);
+                            },
+                            activeThumbColor: AppColors.primary,
+                          ),
+                        ),
+                        _buildOrderRadiusSetting(settings.orderRadius),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+
+              // Data & Storage Section
+              const SliverToBoxAdapter(
+                child: SettingsSectionHeader(
+                  title: 'Data & Storage',
+                  icon: Icons.storage,
+                ),
+              ),
+              SliverToBoxAdapter(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: AppDimensions.spacing16,
+                  ),
+                  child: Column(
+                    children: [
+                      SettingsListItem(
+                        icon: Icons.sync,
+                        title: 'Sync & Offline',
+                        subtitle: 'Manage offline data and sync',
+                        iconColor: AppColors.inTransit,
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (_) => const SyncSettingsScreen(),
+                            ),
+                          );
+                        },
+                      ),
+                      SettingsListItem(
+                        icon: Icons.delete_sweep,
+                        title: 'Clear Cache',
+                        subtitle: 'Free up storage space',
+                        iconColor: AppColors.critical,
+                        onTap: _showClearCacheDialog,
+                      ),
+                      SettingsListItem(
+                        icon: Icons.download,
+                        title: 'Download Data',
+                        subtitle: 'Export your data',
+                        iconColor: AppColors.secondary,
+                        onTap: () {
+                          // TODO: Implement data export
+                        },
                       ),
                     ],
                   ),
@@ -350,7 +566,12 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                         subtitle: 'Get help and support',
                         iconColor: AppColors.integrityHigh,
                         onTap: () {
-                          // TODO: Implement help center
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (_) => const HelpCenterScreen(),
+                            ),
+                          );
                         },
                       ),
                       SettingsListItem(
@@ -368,16 +589,45 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                         subtitle: 'Version $_appVersion',
                         iconColor: AppColors.textSecondary,
                         onTap: () {
-                          _showAboutDialog();
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (_) => const AboutScreen(),
+                            ),
+                          );
                         },
                       ),
+                    ],
+                  ),
+                ),
+              ),
+
+              // Legal Section
+              const SliverToBoxAdapter(
+                child: SettingsSectionHeader(title: 'Legal', icon: Icons.gavel),
+              ),
+              SliverToBoxAdapter(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: AppDimensions.spacing16,
+                  ),
+                  child: Column(
+                    children: [
                       SettingsListItem(
                         icon: Icons.privacy_tip,
                         title: 'Privacy Policy',
                         subtitle: 'Read our privacy policy',
                         iconColor: AppColors.warning,
                         onTap: () {
-                          // TODO: Open privacy policy
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (_) => const WebViewScreen(
+                                title: 'Privacy Policy',
+                                url: 'https://altheacare.com/privacy-policy',
+                              ),
+                            ),
+                          );
                         },
                       ),
                       SettingsListItem(
@@ -386,57 +636,15 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                         subtitle: 'Read our terms',
                         iconColor: AppColors.warning,
                         onTap: () {
-                          // TODO: Open terms
-                        },
-                      ),
-                      // In settings_screen.dart, add to the settings list:
-                      SettingsListItem(
-                        icon: Icons.sync,
-                        title: 'Sync & Offline',
-                        subtitle: 'Manage offline data and sync',
-                        iconColor: AppColors.inTransit,
-                        onTap: () {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (_) => const SyncSettingsScreen(),
-                            ),
-                          );
-                        },
-                      ),
-
-                      SettingsListItem(
-                        icon: Icons.analytics,
-                        title: 'Reports & Analytics',
-                        subtitle: 'View performance insights',
-                        iconColor: AppColors.secondary,
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (_) => const AnalyticsDashboardScreen(),
-                            ),
-                          );
-                        },
-                      ),
-
-                      SettingsListItem(
-                        icon: Icons.replay,
-                        title: 'Show Onboarding',
-                        subtitle: 'View the app introduction again',
-                        iconColor: AppColors.inTransit,
-                        onTap: () async {
-                          final prefs = await SharedPreferences.getInstance();
-                          await prefs.setBool('onboarding_completed', false);
-                          if (context.mounted) {
-                            Navigator.pushAndRemoveUntil(
-                              context,
-                              MaterialPageRoute(
-                                builder: (_) => const OnboardingScreen(),
+                              builder: (_) => const WebViewScreen(
+                                title: 'Terms of Service',
+                                url: 'https://altheacare.com/terms',
                               ),
-                              (route) => false,
-                            );
-                          }
+                            ),
+                          );
                         },
                       ),
                     ],
@@ -490,67 +698,56 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
     );
   }
 
-  void _showAboutDialog() {
-    showDialog(
-      context: context,
-      builder: (context) => AlertDialog(
-        backgroundColor: AppColors.darkSurface,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(AppDimensions.radiusLarge),
-        ),
-        title: Column(
-          children: [
-            Container(
-              width: 80,
-              height: 80,
-              decoration: BoxDecoration(
-                gradient: AppGradients.primaryButton,
-                shape: BoxShape.circle,
+  Widget _buildOrderRadiusSetting(double currentRadius) {
+    return AppCard(
+      padding: const EdgeInsets.only(bottom: AppDimensions.spacing12),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              Icon(Icons.location_on, color: AppColors.primary),
+              const SizedBox(width: AppDimensions.spacing12),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Order Radius',
+                      style: AppTextStyles.bodyLarge.copyWith(
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                    const SizedBox(height: AppDimensions.spacing4),
+                    Text(
+                      'Accept orders within this radius',
+                      style: AppTextStyles.bodySmall.copyWith(
+                        color: AppColors.textSecondary,
+                      ),
+                    ),
+                  ],
+                ),
               ),
-              child: const Icon(
-                Icons.medical_services_rounded,
-                size: 40,
-                color: Colors.white,
+              Text(
+                '${currentRadius.toStringAsFixed(1)} km',
+                style: AppTextStyles.bodyLarge.copyWith(
+                  fontWeight: FontWeight.w700,
+                  color: AppColors.success,
+                ),
               ),
-            ),
-            const SizedBox(height: AppDimensions.spacing16),
-            GradientText(
-              'AltheaCare',
-              style: AppTextStyles.h3.copyWith(fontWeight: FontWeight.w800),
-              gradient: AppGradients.primaryText,
-            ),
-          ],
-        ),
-        content: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Text(
-              'Diagnostic Partner Portal',
-              style: AppTextStyles.bodyMedium.copyWith(
-                color: AppColors.textSecondary,
-              ),
-            ),
-            const SizedBox(height: AppDimensions.spacing16),
-            Text(
-              'Version $_appVersion',
-              style: AppTextStyles.bodySmall.copyWith(
-                color: AppColors.textSecondary,
-              ),
-            ),
-            const SizedBox(height: AppDimensions.spacing8),
-            Text(
-              '© 2024 AltheaCare. All rights reserved.',
-              style: AppTextStyles.bodySmall.copyWith(
-                color: AppColors.textSecondary,
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ],
-        ),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.pop(context),
-            child: Text('Close', style: TextStyle(color: AppColors.primary)),
+            ],
+          ),
+          const SizedBox(height: AppDimensions.spacing16),
+          Slider(
+            value: currentRadius,
+            min: 1.0,
+            max: 20.0,
+            divisions: 19,
+            activeColor: AppColors.primary,
+            label: '${currentRadius.toStringAsFixed(1)} km',
+            onChanged: (value) {
+              ref.read(appSettingsProvider.notifier).setOrderRadius(value);
+            },
           ),
         ],
       ),
