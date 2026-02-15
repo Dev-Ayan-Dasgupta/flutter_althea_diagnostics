@@ -13,6 +13,9 @@ import '../../../features/sample_collection/presentation/screens/export.dart';
 import '../../../features/sample_integrity/presentation/screens/integrity_dashboard_screen.dart';
 import '../../../features/cold_chain/presentation/screens/cold_chain_monitor_screen.dart';
 import '../../../features/result_entry/presentation/screens/result_entry_screen.dart';
+import '../../../features/staff/presentation/screens/staff_management_screen.dart';
+import '../../../features/wallet/presentation/screens/wallet_screen.dart';
+import '../../../features/wallet/presentation/screens/payout_management_screen.dart';
 import '../../presentation/screens/error_screen.dart';
 import '../../presentation/screens/profile_screen.dart';
 import '../../presentation/screens/settings_screen.dart';
@@ -60,6 +63,14 @@ class AppRoutes {
   // Onboarding
   static const String onboarding = '/onboarding';
   static const String permissions = '/permissions';
+
+  // Staff Management
+  static const String staffManagement = '/staff-management';
+  static const String staffDetail = '/staff-management/:id';
+
+  // Wallet & Payouts
+  static const String wallet = '/wallet';
+  static const String payoutManagement = '/payout-management';
 }
 
 // Router Provider
@@ -307,6 +318,39 @@ final routerProvider = Provider<GoRouter>((ref) {
           context: context,
           state: state,
           child: const NotificationsScreen(),
+        ),
+      ),
+
+      // Staff Management
+      GoRoute(
+        path: AppRoutes.staffManagement,
+        name: 'staff-management',
+        pageBuilder: (context, state) => _buildPageWithTransition(
+          context: context,
+          state: state,
+          child: const StaffManagementScreen(),
+        ),
+      ),
+
+      // Wallet
+      GoRoute(
+        path: AppRoutes.wallet,
+        name: 'wallet',
+        pageBuilder: (context, state) => _buildPageWithTransition(
+          context: context,
+          state: state,
+          child: const WalletScreen(),
+        ),
+      ),
+
+      // Payout Management
+      GoRoute(
+        path: AppRoutes.payoutManagement,
+        name: 'payout-management',
+        pageBuilder: (context, state) => _buildPageWithTransition(
+          context: context,
+          state: state,
+          child: const PayoutManagementScreen(),
         ),
       ),
     ],

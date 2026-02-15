@@ -85,6 +85,20 @@ extension NavigationExtensions on BuildContext {
     pop(result);
   }
 
+  // Staff Management Navigation
+  void goToStaffManagement() {
+    push(AppRoutes.staffManagement);
+  }
+
+  // Wallet & Payout Navigation
+  void goToWallet() {
+    push(AppRoutes.wallet);
+  }
+
+  void goToPayoutManagement() {
+    push(AppRoutes.payoutManagement);
+  }
+
   // Show dialogs with navigation context
   Future<T?> showAppDialog<T>({
     required Widget child,
