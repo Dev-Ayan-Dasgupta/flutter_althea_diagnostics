@@ -27,16 +27,15 @@ class AuthLocalDataSourceImpl implements AuthLocalDataSource {
   @override
   Future<void> cacheToken(AuthTokenModel token) async {
     try {
-      await Future.wait([
-        secureStorage.write(key: _accessTokenKey, value: token.accessToken),
-        secureStorage.write(key: _refreshTokenKey, value: token.refreshToken),
-        secureStorage.write(key: _tokenTypeKey, value: token.tokenType),
-        secureStorage.write(
-          key: _expiresInKey,
-          value: token.expiresIn.toString(),
-        ),
-        secureStorage.write(key: _issuedAtKey, value: token.issuedAt),
-      ]);
+      // Write token data to secure storage
+      await secureStorage.write(key: _accessTokenKey, value: token.accessToken);
+      await secureStorage.write(key: _refreshTokenKey, value: token.refreshToken);
+      await secureStorage.write(key: _tokenTypeKey, value: token.tokenType);
+      await secureStorage.write(
+        key: _expiresInKey,
+        value: token.expiresIn.toString(),
+      );
+      await secureStorage.write(key: _issuedAtKey, value: token.issuedAt);
     } catch (e) {
       throw CacheException('Failed to cache token: ${e.toString()}');
     }
@@ -75,13 +74,12 @@ class AuthLocalDataSourceImpl implements AuthLocalDataSource {
   @override
   Future<void> clearToken() async {
     try {
-      await Future.wait([
-        secureStorage.delete(key: _accessTokenKey),
-        secureStorage.delete(key: _refreshTokenKey),
-        secureStorage.delete(key: _tokenTypeKey),
-        secureStorage.delete(key: _expiresInKey),
-        secureStorage.delete(key: _issuedAtKey),
-      ]);
+      // Delete token data sequentially to avoid race conditions
+      await secureStorage.delete(key: _accessTokenKey);
+      await secureStorage.delete(key: _refreshTokenKey);
+      await secureStorage.delete(key: _tokenTypeKey);
+      await secureStorage.delete(key: _expiresInKey);
+      await secureStorage.delete(key: _issuedAtKey);
     } catch (e) {
       throw CacheException('Failed to clear token: ${e.toString()}');
     }
