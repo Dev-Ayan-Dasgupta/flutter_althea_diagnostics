@@ -9,7 +9,15 @@ class GraphQLService {
 
   GraphQLService._();
 
-  final FlutterSecureStorage _secureStorage = const FlutterSecureStorage();
+  final FlutterSecureStorage _secureStorage = const FlutterSecureStorage(
+    aOptions: AndroidOptions(
+      encryptedSharedPreferences: true,
+    ),
+    iOptions: IOSOptions(
+      // Use unlocked_this_device_only for better security - requires device to be unlocked
+      accessibility: KeychainAccessibility.unlocked_this_device_only,
+    ),
+  );
   GraphQLClient? _client;
   ValueNotifier<GraphQLClient>? _clientNotifier;
 

@@ -1,4 +1,5 @@
 import 'package:dartz/dartz.dart';
+import '../../../../core/errors/exceptions.dart';
 import '../../../../core/errors/failures.dart';
 import '../../domain/entities/auth_token.dart';
 import '../../domain/entities/user.dart';
@@ -55,6 +56,8 @@ class MockAuthRepositoryImpl implements AuthRepository {
       );
 
       return Right(token);
+    } on CacheException catch (e) {
+      return Left(Failure.cache(message: e.message));
     } on Exception catch (e) {
       return Left(Failure.authentication(message: e.toString()));
     }
@@ -103,6 +106,8 @@ class MockAuthRepositoryImpl implements AuthRepository {
       );
 
       return Right(token);
+    } on CacheException catch (e) {
+      return Left(Failure.cache(message: e.message));
     } on Exception catch (e) {
       return Left(Failure.authentication(message: e.toString()));
     }
@@ -132,6 +137,8 @@ class MockAuthRepositoryImpl implements AuthRepository {
       );
 
       return Right(token);
+    } on CacheException catch (e) {
+      return Left(Failure.cache(message: e.message));
     } on Exception catch (e) {
       return Left(Failure.authentication(message: e.toString()));
     }
@@ -145,6 +152,8 @@ class MockAuthRepositoryImpl implements AuthRepository {
       await localDataSource.clearUser();
       _currentUser = null;
       return const Right(null);
+    } on CacheException catch (e) {
+      return Left(Failure.cache(message: e.message));
     } on Exception catch (e) {
       return Left(Failure.authentication(message: e.toString()));
     }
@@ -173,6 +182,8 @@ class MockAuthRepositoryImpl implements AuthRepository {
 
       // If no cached user, authentication has expired
       return Left(Failure.authentication(message: 'User session expired'));
+    } on CacheException catch (e) {
+      return Left(Failure.cache(message: e.message));
     } on Exception catch (e) {
       return Left(Failure.authentication(message: e.toString()));
     }
@@ -203,6 +214,8 @@ class MockAuthRepositoryImpl implements AuthRepository {
       await localDataSource.cacheUser(userModel);
 
       return Right(_currentUser!);
+    } on CacheException catch (e) {
+      return Left(Failure.cache(message: e.message));
     } on Exception catch (e) {
       return Left(Failure.server(message: e.toString()));
     }

@@ -12,7 +12,19 @@ final graphqlServiceProvider = Provider<GraphQLService>((ref) {
 
 /// Secure Storage Provider
 final secureStorageProvider = Provider<FlutterSecureStorage>((ref) {
-  return const FlutterSecureStorage();
+  // Configure with proper Android/iOS options to handle platform-specific issues
+  const androidOptions = AndroidOptions(
+    encryptedSharedPreferences: true,
+  );
+  const iosOptions = IOSOptions(
+    // Use unlocked_this_device_only for better security - requires device to be unlocked
+    accessibility: KeychainAccessibility.unlocked_this_device_only,
+  );
+  
+  return const FlutterSecureStorage(
+    aOptions: androidOptions,
+    iOptions: iosOptions,
+  );
 });
 
 /// Hive Provider (for local caching)
