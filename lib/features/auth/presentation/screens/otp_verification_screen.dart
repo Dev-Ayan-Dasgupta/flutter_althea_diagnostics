@@ -132,7 +132,7 @@ class _OtpVerificationScreenState extends ConsumerState<OtpVerificationScreen>
         context.goToDashboard();
       }
       // Show error message on failure
-      else if (next.hasError) {
+      else if (next.hasError && mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
             content: Text('OTP verification failed: ${next.error}'),
