@@ -2,7 +2,9 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 import '../../../../core/providers/providers.dart';
 import '../../data/datasources/auth_local_datasource.dart';
 import '../../data/datasources/auth_remote_datasource.dart';
+import '../../data/datasources/auth_mock_datasource.dart'; // ← Add this import
 import '../../data/repositories/auth_repository_impl.dart';
+import '../../data/repositories/mock_auth_repository_impl.dart';
 import '../../domain/entities/user.dart';
 import '../../domain/repositories/auth_repository.dart';
 import '../../domain/usecases/login.dart';
@@ -10,11 +12,21 @@ import '../../domain/usecases/logout.dart';
 import '../../domain/usecases/verify_otp.dart';
 import '../../domain/usecases/send_otp.dart';
 import '../../domain/usecases/get_current_user.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 part 'auth_providers.g.dart';
 
-// Data Sources
+// Add this flag to switch between mock and real backend
+const bool USE_MOCK_AUTH =
+    true; // ← Set to true for mock, false for real backend
 
+// Mock Data Source Provider
+@riverpod
+MockAuthDataSource mockAuthDataSource(Ref ref) {
+  return MockAuthDataSource();
+}
+
+// Data Sources
 @riverpod
 AuthRemoteDataSource authRemoteDataSource(Ref ref) {
   final graphqlService = ref.watch(graphqlServiceProvider);
@@ -27,20 +39,29 @@ AuthLocalDataSource authLocalDataSource(Ref ref) {
   return AuthLocalDataSourceImpl(secureStorage: secureStorage);
 }
 
-// Repository
-
+// Repository - Updated to use mock or real based on flag
 @riverpod
 AuthRepository authRepository(Ref ref) {
-  final remoteDataSource = ref.watch(authRemoteDataSourceProvider);
-  final localDataSource = ref.watch(authLocalDataSourceProvider);
-  return AuthRepositoryImpl(
-    remoteDataSource: remoteDataSource,
-    localDataSource: localDataSource,
-  );
+  if (USE_MOCK_AUTH) {
+    // Use mock repository implementation
+    final mockDataSource = ref.watch(mockAuthDataSourceProvider);
+    final localDataSource = ref.watch(authLocalDataSourceProvider);
+    return MockAuthRepositoryImpl(
+      mockDataSource: mockDataSource,
+      localDataSource: localDataSource,
+    );
+  } else {
+    // Use real repository implementation
+    final remoteDataSource = ref.watch(authRemoteDataSourceProvider);
+    final localDataSource = ref.watch(authLocalDataSourceProvider);
+    return AuthRepositoryImpl(
+      remoteDataSource: remoteDataSource,
+      localDataSource: localDataSource,
+    );
+  }
 }
 
-// Use Cases
-
+// Use Cases (remain the same)
 @riverpod
 Login loginUseCase(Ref ref) {
   final repository = ref.watch(authRepositoryProvider);
@@ -72,20 +93,32 @@ GetCurrentUser getCurrentUserUseCase(Ref ref) {
 }
 
 // Auth State Provider
-
 @riverpod
-class AuthNotifier extends _$AuthNotifier {
+class Auth extends _$Auth {
   @override
   Future<User?> build() async {
-    final repository = ref.watch(authRepositoryProvider);
-    final isAuthenticated = await repository.isAuthenticated();
+    // Check if user is already logged in
+    final prefs = await SharedPreferences.getInstance();
+    final userEmail = prefs.getString('user_email');
 
-    if (!isAuthenticated) {
+    if (userEmail == null) {
       return null;
     }
 
-    final result = await ref.read(getCurrentUserUseCaseProvider).call();
-    return result.fold((failure) => null, (user) => user);
+    // Try to get current user
+    try {
+      final repository = ref.watch(authRepositoryProvider);
+      final isAuthenticated = await repository.isAuthenticated();
+
+      if (!isAuthenticated) {
+        return null;
+      }
+
+      final result = await ref.read(getCurrentUserUseCaseProvider).call();
+      return result.fold((failure) => null, (user) => user);
+    } catch (e) {
+      return null;
+    }
   }
 
   Future<void> login({required String email, required String password}) async {
@@ -96,10 +129,15 @@ class AuthNotifier extends _$AuthNotifier {
         .call(LoginParams(email: email, password: password));
 
     state = await AsyncValue.guard(() async {
-      return result.fold((failure) => throw failure, (token) async {
+      return result.fold((failure) => throw Exception(failure.message), (
+        token,
+      ) async {
         // Get user after successful login
         final userResult = await ref.read(getCurrentUserUseCaseProvider).call();
-        return userResult.fold((failure) => throw failure, (user) => user);
+        return userResult.fold(
+          (failure) => throw Exception(failure.message),
+          (user) => user,
+        );
       });
     });
   }
@@ -115,9 +153,14 @@ class AuthNotifier extends _$AuthNotifier {
         .call(VerifyOtpParams(phoneNumber: phoneNumber, otp: otp));
 
     state = await AsyncValue.guard(() async {
-      return result.fold((failure) => throw failure, (token) async {
+      return result.fold((failure) => throw Exception(failure.message), (
+        token,
+      ) async {
         final userResult = await ref.read(getCurrentUserUseCaseProvider).call();
-        return userResult.fold((failure) => throw failure, (user) => user);
+        return userResult.fold(
+          (failure) => throw Exception(failure.message),
+          (user) => user,
+        );
       });
     });
   }
@@ -128,14 +171,17 @@ class AuthNotifier extends _$AuthNotifier {
     final result = await ref.read(logoutUseCaseProvider).call();
 
     state = await AsyncValue.guard(() async {
-      return result.fold((failure) => throw failure, (_) => null);
+      return result.fold(
+        (failure) => throw Exception(failure.message),
+        (_) => null,
+      );
     });
   }
 
   Future<void> refreshUser() async {
     final result = await ref.read(getCurrentUserUseCaseProvider).call();
     state = result.fold(
-      (failure) => AsyncError(failure, StackTrace.current),
+      (failure) => AsyncError(Exception(failure.message), StackTrace.current),
       (user) => AsyncData(user),
     );
   }

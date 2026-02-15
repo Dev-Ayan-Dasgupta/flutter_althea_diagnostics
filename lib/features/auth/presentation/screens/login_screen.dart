@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../../core/config/design/app_dimensions.dart';
@@ -74,7 +76,34 @@ class _LoginScreenState extends ConsumerState<LoginScreen>
   }
 
   void _handleLogin() async {
+    // Unfocus text fields
+    FocusManager.instance.primaryFocus?.unfocus();
+
     if (_isEmailLogin) {
+      // Validate inputs
+      if (_emailController.text.trim().isEmpty) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: const Text('Please enter your email'),
+            backgroundColor: AppColors.errorRed,
+            behavior: SnackBarBehavior.floating,
+          ),
+        );
+        return;
+      }
+
+      if (_passwordController.text.isEmpty) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: const Text('Please enter your password'),
+            backgroundColor: AppColors.errorRed,
+            behavior: SnackBarBehavior.floating,
+          ),
+        );
+        return;
+      }
+
+      // Attempt login
       await ref
           .read(authProvider.notifier)
           .login(
@@ -83,7 +112,18 @@ class _LoginScreenState extends ConsumerState<LoginScreen>
           );
     } else {
       // Navigate to OTP screen
-      if (_phoneController.text.trim().isNotEmpty) {
+      if (_phoneController.text.trim().isEmpty) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: const Text('Please enter your phone number'),
+            backgroundColor: AppColors.errorRed,
+            behavior: SnackBarBehavior.floating,
+          ),
+        );
+        return;
+      }
+
+      if (mounted) {
         context.goToOtpVerification(_phoneController.text.trim());
       }
     }
@@ -111,6 +151,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen>
       }
       // Show error message on failure
       else if (next.hasError && mounted) {
+        log('Login failed: ${next.error}');
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
             content: Text('Login failed: ${next.error}'),
@@ -193,7 +234,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen>
             gradient: AppGradients.primaryButton,
             boxShadow: [
               BoxShadow(
-                color: AppColors.primary.withOpacity(0.5),
+                color: AppColors.primary.withValues(alpha: 0.5),
                 blurRadius: 30,
                 spreadRadius: 5,
               ),

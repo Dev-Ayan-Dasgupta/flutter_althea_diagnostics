@@ -280,7 +280,7 @@ class _NotificationsScreenState extends ConsumerState<NotificationsScreen> {
       child: ListView.separated(
         scrollDirection: Axis.horizontal,
         itemCount: _filterOptions.length,
-        separatorBuilder: (_, __) =>
+        separatorBuilder: (_, _) =>
             const SizedBox(width: AppDimensions.spacing8),
         itemBuilder: (context, index) {
           final option = _filterOptions[index];

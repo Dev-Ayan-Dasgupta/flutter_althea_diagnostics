@@ -90,7 +90,7 @@ class _SearchScreenState extends ConsumerState<SearchScreen> {
 
     ref.read(searchHistoryProvider.notifier).state = [
       newItem,
-      ...history.where((item) => item.query != query).take(9).toList(),
+      ...history.where((item) => item.query != query).take(9),
     ];
   }
 

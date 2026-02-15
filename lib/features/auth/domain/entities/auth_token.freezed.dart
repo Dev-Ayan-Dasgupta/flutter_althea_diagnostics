@@ -11,7 +11,6 @@ part of 'auth_token.dart';
 
 // dart format off
 T _$identity<T>(T value) => value;
-
 /// @nodoc
 mixin _$AuthToken {
 
@@ -22,8 +21,6 @@ mixin _$AuthToken {
 @pragma('vm:prefer-inline')
 $AuthTokenCopyWith<AuthToken> get copyWith => _$AuthTokenCopyWithImpl<AuthToken>(this as AuthToken, _$identity);
 
-  /// Serializes this AuthToken to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -31,7 +28,7 @@ bool operator ==(Object other) {
   return identical(this, other) || (other.runtimeType == runtimeType&&other is AuthToken&&(identical(other.accessToken, accessToken) || other.accessToken == accessToken)&&(identical(other.refreshToken, refreshToken) || other.refreshToken == refreshToken)&&(identical(other.tokenType, tokenType) || other.tokenType == tokenType)&&(identical(other.expiresIn, expiresIn) || other.expiresIn == expiresIn)&&(identical(other.issuedAt, issuedAt) || other.issuedAt == issuedAt));
 }
 
-@JsonKey(includeFromJson: false, includeToJson: false)
+
 @override
 int get hashCode => Object.hash(runtimeType,accessToken,refreshToken,tokenType,expiresIn,issuedAt);
 
@@ -210,11 +207,11 @@ return $default(_that.accessToken,_that.refreshToken,_that.tokenType,_that.expir
 }
 
 /// @nodoc
-@JsonSerializable()
 
-class _AuthToken implements AuthToken {
-  const _AuthToken({required this.accessToken, required this.refreshToken, required this.tokenType, required this.expiresIn, required this.issuedAt});
-  factory _AuthToken.fromJson(Map<String, dynamic> json) => _$AuthTokenFromJson(json);
+
+class _AuthToken extends AuthToken {
+  const _AuthToken({required this.accessToken, required this.refreshToken, required this.tokenType, required this.expiresIn, required this.issuedAt}): super._();
+  
 
 @override final  String accessToken;
 @override final  String refreshToken;
@@ -228,17 +225,14 @@ class _AuthToken implements AuthToken {
 @pragma('vm:prefer-inline')
 _$AuthTokenCopyWith<_AuthToken> get copyWith => __$AuthTokenCopyWithImpl<_AuthToken>(this, _$identity);
 
-@override
-Map<String, dynamic> toJson() {
-  return _$AuthTokenToJson(this, );
-}
+
 
 @override
 bool operator ==(Object other) {
   return identical(this, other) || (other.runtimeType == runtimeType&&other is _AuthToken&&(identical(other.accessToken, accessToken) || other.accessToken == accessToken)&&(identical(other.refreshToken, refreshToken) || other.refreshToken == refreshToken)&&(identical(other.tokenType, tokenType) || other.tokenType == tokenType)&&(identical(other.expiresIn, expiresIn) || other.expiresIn == expiresIn)&&(identical(other.issuedAt, issuedAt) || other.issuedAt == issuedAt));
 }
 
-@JsonKey(includeFromJson: false, includeToJson: false)
+
 @override
 int get hashCode => Object.hash(runtimeType,accessToken,refreshToken,tokenType,expiresIn,issuedAt);
 

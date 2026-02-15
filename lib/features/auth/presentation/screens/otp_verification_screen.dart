@@ -195,7 +195,9 @@ class _OtpVerificationScreenState extends ConsumerState<OtpVerificationScreen>
                                 gradient: AppGradients.secondaryButton,
                                 boxShadow: [
                                   BoxShadow(
-                                    color: AppColors.secondary.withOpacity(0.5),
+                                    color: AppColors.secondary.withValues(
+                                      alpha: 0.5,
+                                    ),
                                     blurRadius: 30,
                                     spreadRadius: 5,
                                   ),
@@ -298,7 +300,7 @@ class _OtpVerificationScreenState extends ConsumerState<OtpVerificationScreen>
         boxShadow: _focusNodes[index].hasFocus
             ? [
                 BoxShadow(
-                  color: AppColors.primary.withOpacity(0.3),
+                  color: AppColors.primary.withValues(alpha: 0.3),
                   blurRadius: 15,
                   spreadRadius: 2,
                 ),

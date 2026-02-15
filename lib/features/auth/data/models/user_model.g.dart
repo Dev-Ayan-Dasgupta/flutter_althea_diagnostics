@@ -20,6 +20,20 @@ _UserModel _$UserModelFromJson(Map<String, dynamic> json) => _UserModel(
       .toList(),
   createdAt: json['createdAt'] as String,
   lastLoginAt: json['lastLoginAt'] as String?,
+  phlebotomistStatus: json['phlebotomistStatus'] as String?,
+  currentBalance: (json['currentBalance'] as num?)?.toDouble(),
+  totalCollections: (json['totalCollections'] as num?)?.toInt(),
+  averageRating: (json['averageRating'] as num?)?.toDouble(),
+  certifications: (json['certifications'] as List<dynamic>?)
+      ?.map((e) => e as String)
+      .toList(),
+  vehicleNumber: json['vehicleNumber'] as String?,
+  isAvailableForCollection: json['isAvailableForCollection'] as bool?,
+  managedLabIds: (json['managedLabIds'] as List<dynamic>?)
+      ?.map((e) => e as String)
+      .toList(),
+  staffCount: (json['staffCount'] as num?)?.toInt(),
+  licenseNumber: json['licenseNumber'] as String?,
 );
 
 Map<String, dynamic> _$UserModelToJson(_UserModel instance) =>
@@ -35,6 +49,16 @@ Map<String, dynamic> _$UserModelToJson(_UserModel instance) =>
       'permissions': instance.permissions,
       'createdAt': instance.createdAt,
       'lastLoginAt': instance.lastLoginAt,
+      'phlebotomistStatus': instance.phlebotomistStatus,
+      'currentBalance': instance.currentBalance,
+      'totalCollections': instance.totalCollections,
+      'averageRating': instance.averageRating,
+      'certifications': instance.certifications,
+      'vehicleNumber': instance.vehicleNumber,
+      'isAvailableForCollection': instance.isAvailableForCollection,
+      'managedLabIds': instance.managedLabIds,
+      'staffCount': instance.staffCount,
+      'licenseNumber': instance.licenseNumber,
     };
 
 _AuthTokenModel _$AuthTokenModelFromJson(Map<String, dynamic> json) =>

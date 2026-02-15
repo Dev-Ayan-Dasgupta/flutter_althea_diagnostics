@@ -19,6 +19,20 @@ abstract class UserModel with _$UserModel {
     required List<String> permissions,
     required String createdAt,
     String? lastLoginAt,
+
+    // Phlebotomist-specific fields
+    String? phlebotomistStatus,
+    double? currentBalance,
+    int? totalCollections,
+    double? averageRating,
+    List<String>? certifications,
+    String? vehicleNumber,
+    bool? isAvailableForCollection,
+
+    // Lab Admin-specific fields
+    List<String>? managedLabIds,
+    int? staffCount,
+    String? licenseNumber,
   }) = _UserModel;
 
   factory UserModel.fromJson(Map<String, dynamic> json) =>
@@ -37,6 +51,45 @@ abstract class UserModel with _$UserModel {
       permissions: entity.permissions,
       createdAt: entity.createdAt.toIso8601String(),
       lastLoginAt: entity.lastLoginAt?.toIso8601String(),
+      phlebotomistStatus: entity.phlebotomistStatus?.name,
+      currentBalance: entity.currentBalance,
+      totalCollections: entity.totalCollections,
+      averageRating: entity.averageRating,
+      certifications: entity.certifications,
+      vehicleNumber: entity.vehicleNumber,
+      isAvailableForCollection: entity.isAvailableForCollection,
+      managedLabIds: entity.managedLabIds,
+      staffCount: entity.staffCount,
+      licenseNumber: entity.licenseNumber,
+    );
+  }
+
+  factory UserModel.fromDomain(User user) {
+    return UserModel(
+      id: user.id,
+      name: user.name,
+      email: user.email,
+      phoneNumber: user.phoneNumber,
+      avatarUrl: user.avatarUrl,
+      role: user.role.name, // ← Convert enum to string
+      labId: user.labId,
+      labName: user.labName,
+      permissions: user.permissions,
+      createdAt: user.createdAt
+          .toIso8601String(), // ← Convert DateTime to string
+      lastLoginAt: user.lastLoginAt
+          ?.toIso8601String(), // ← Convert DateTime to string
+      phlebotomistStatus:
+          user.phlebotomistStatus?.name, // ← Convert enum to string
+      currentBalance: user.currentBalance,
+      totalCollections: user.totalCollections,
+      averageRating: user.averageRating,
+      certifications: user.certifications,
+      vehicleNumber: user.vehicleNumber,
+      isAvailableForCollection: user.isAvailableForCollection,
+      managedLabIds: user.managedLabIds,
+      staffCount: user.staffCount,
+      licenseNumber: user.licenseNumber,
     );
   }
 }
@@ -51,6 +104,18 @@ extension UserModelX on UserModel {
       ),
     );
 
+    // Parse phlebotomist status if present
+    PhlebotomistStatus? parsedStatus;
+    if (phlebotomistStatus != null) {
+      try {
+        parsedStatus = PhlebotomistStatus.values.firstWhere(
+          (e) => e.name.toLowerCase() == phlebotomistStatus!.toLowerCase(),
+        );
+      } catch (_) {
+        parsedStatus = null;
+      }
+    }
+
     return User(
       id: id,
       name: name,
@@ -63,6 +128,16 @@ extension UserModelX on UserModel {
       permissions: permissions,
       createdAt: DateTime.parse(createdAt),
       lastLoginAt: lastLoginAt != null ? DateTime.parse(lastLoginAt!) : null,
+      phlebotomistStatus: parsedStatus,
+      currentBalance: currentBalance,
+      totalCollections: totalCollections,
+      averageRating: averageRating,
+      certifications: certifications,
+      vehicleNumber: vehicleNumber,
+      isAvailableForCollection: isAvailableForCollection,
+      managedLabIds: managedLabIds,
+      staffCount: staffCount,
+      licenseNumber: licenseNumber,
     );
   }
 }
@@ -80,25 +155,27 @@ abstract class AuthTokenModel with _$AuthTokenModel {
   factory AuthTokenModel.fromJson(Map<String, dynamic> json) =>
       _$AuthTokenModelFromJson(json);
 
-  static AuthTokenModel fromEntity(AuthToken entity) {
+  factory AuthTokenModel.fromDomain(AuthToken token) {
     return AuthTokenModel(
-      accessToken: entity.accessToken,
-      refreshToken: entity.refreshToken,
-      tokenType: entity.tokenType,
-      expiresIn: entity.expiresIn,
-      issuedAt: entity.issuedAt.toIso8601String(),
+      accessToken: token.accessToken,
+      refreshToken: token.refreshToken,
+      tokenType: token.tokenType,
+      expiresIn: token.expiresIn,
+      issuedAt: token.issuedAt.toIso8601String(),
     );
   }
 }
 
 extension AuthTokenModelX on AuthTokenModel {
-  AuthToken toEntity() {
+  AuthToken toDomain() {
+    final issuedAtDateTime = DateTime.parse(issuedAt);
+
     return AuthToken(
       accessToken: accessToken,
       refreshToken: refreshToken,
       tokenType: tokenType,
       expiresIn: expiresIn,
-      issuedAt: DateTime.parse(issuedAt),
+      issuedAt: issuedAtDateTime,
     );
   }
 }

@@ -9,6 +9,54 @@ part of 'auth_providers.dart';
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint, type=warning
 
+@ProviderFor(mockAuthDataSource)
+final mockAuthDataSourceProvider = MockAuthDataSourceProvider._();
+
+final class MockAuthDataSourceProvider
+    extends
+        $FunctionalProvider<
+          MockAuthDataSource,
+          MockAuthDataSource,
+          MockAuthDataSource
+        >
+    with $Provider<MockAuthDataSource> {
+  MockAuthDataSourceProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'mockAuthDataSourceProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$mockAuthDataSourceHash();
+
+  @$internal
+  @override
+  $ProviderElement<MockAuthDataSource> $createElement(
+    $ProviderPointer pointer,
+  ) => $ProviderElement(pointer);
+
+  @override
+  MockAuthDataSource create(Ref ref) {
+    return mockAuthDataSource(ref);
+  }
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(MockAuthDataSource value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<MockAuthDataSource>(value),
+    );
+  }
+}
+
+String _$mockAuthDataSourceHash() =>
+    r'536824908fcff880fef6d422c221b07846174afb';
+
 @ProviderFor(authRemoteDataSource)
 final authRemoteDataSourceProvider = AuthRemoteDataSourceProvider._();
 
@@ -144,7 +192,7 @@ final class AuthRepositoryProvider
   }
 }
 
-String _$authRepositoryHash() => r'be4170c2159a42b9eb42f599da5b4f4a852e67cd';
+String _$authRepositoryHash() => r'0b6d2803ab3d8c1697d939481a4bfd5dd587fe0f';
 
 @ProviderFor(loginUseCase)
 final loginUseCaseProvider = LoginUseCaseProvider._();
@@ -352,12 +400,11 @@ final class GetCurrentUserUseCaseProvider
 String _$getCurrentUserUseCaseHash() =>
     r'4df090fb839426c4252c45ef2fef4dd2d8af4591';
 
-@ProviderFor(AuthNotifier)
-final authProvider = AuthNotifierProvider._();
+@ProviderFor(Auth)
+final authProvider = AuthProvider._();
 
-final class AuthNotifierProvider
-    extends $AsyncNotifierProvider<AuthNotifier, User?> {
-  AuthNotifierProvider._()
+final class AuthProvider extends $AsyncNotifierProvider<Auth, User?> {
+  AuthProvider._()
     : super(
         from: null,
         argument: null,
@@ -369,16 +416,16 @@ final class AuthNotifierProvider
       );
 
   @override
-  String debugGetCreateSourceHash() => _$authNotifierHash();
+  String debugGetCreateSourceHash() => _$authHash();
 
   @$internal
   @override
-  AuthNotifier create() => AuthNotifier();
+  Auth create() => Auth();
 }
 
-String _$authNotifierHash() => r'abd8b5565f8625e61f9545c00aece1dcfed6e395';
+String _$authHash() => r'38b7e6ee23054e5f2e7e03882d0f72e9ae87e3ec';
 
-abstract class _$AuthNotifier extends $AsyncNotifier<User?> {
+abstract class _$Auth extends $AsyncNotifier<User?> {
   FutureOr<User?> build();
   @$mustCallSuper
   @override

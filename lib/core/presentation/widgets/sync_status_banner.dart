@@ -60,7 +60,7 @@ class SyncStatusBanner extends StatelessWidget {
                   const SizedBox(height: AppDimensions.spacing4),
                   LinearProgressIndicator(
                     value: progress.progress,
-                    backgroundColor: Colors.white.withOpacity(0.3),
+                    backgroundColor: Colors.white.withValues(alpha: 0.3),
                     valueColor: const AlwaysStoppedAnimation<Color>(
                       Colors.white,
                     ),
@@ -71,7 +71,7 @@ class SyncStatusBanner extends StatelessWidget {
                   Text(
                     progress.error!,
                     style: AppTextStyles.bodySmall.copyWith(
-                      color: Colors.white.withOpacity(0.8),
+                      color: Colors.white.withValues(alpha: 0.8),
                     ),
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,

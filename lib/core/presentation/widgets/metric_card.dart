@@ -52,7 +52,7 @@ class MetricCard extends StatelessWidget {
                   ),
                   boxShadow: [
                     BoxShadow(
-                      color: gradient.colors.first.withOpacity(0.4),
+                      color: gradient.colors.first.withValues(alpha: 0.4),
                       blurRadius: 12,
                       spreadRadius: 2,
                     ),
@@ -65,7 +65,7 @@ class MetricCard extends StatelessWidget {
                 ),
               ),
               const Spacer(),
-              if (trailing != null) trailing!,
+              ?trailing,
             ],
           ),
           const SizedBox(height: AppDimensions.spacing16),
@@ -93,8 +93,8 @@ class MetricCard extends StatelessWidget {
                   ),
                   decoration: BoxDecoration(
                     color: trendValue! >= 0
-                        ? AppColors.success.withOpacity(0.2)
-                        : AppColors.critical.withOpacity(0.2),
+                        ? AppColors.success.withValues(alpha: 0.2)
+                        : AppColors.critical.withValues(alpha: 0.2),
                     borderRadius: BorderRadius.circular(
                       AppDimensions.radiusSmall,
                     ),

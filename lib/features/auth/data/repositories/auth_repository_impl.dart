@@ -35,7 +35,7 @@ class AuthRepositoryImpl implements AuthRepository {
       await localDataSource.cacheToken(token);
       await localDataSource.cacheUser(user);
 
-      return Right(token.toEntity());
+      return Right(token.toDomain());
     } on ServerException catch (e) {
       return Left(Failure.authentication(message: e.message));
     } on NetworkException catch (e) {
@@ -76,7 +76,7 @@ class AuthRepositoryImpl implements AuthRepository {
       await localDataSource.cacheToken(token);
       await localDataSource.cacheUser(user);
 
-      return Right(token.toEntity());
+      return Right(token.toDomain());
     } on ServerException catch (e) {
       return Left(Failure.authentication(message: e.message));
     } on NetworkException catch (e) {
@@ -91,7 +91,7 @@ class AuthRepositoryImpl implements AuthRepository {
     try {
       final token = await remoteDataSource.refreshToken(refreshToken);
       await localDataSource.cacheToken(token);
-      return Right(token.toEntity());
+      return Right(token.toDomain());
     } on ServerException catch (e) {
       return Left(Failure.authentication(message: e.message));
     } on NetworkException catch (e) {
@@ -174,7 +174,7 @@ class AuthRepositoryImpl implements AuthRepository {
   Future<Either<Failure, AuthToken?>> getStoredToken() async {
     try {
       final token = await localDataSource.getToken();
-      return Right(token?.toEntity());
+      return Right(token?.toDomain());
     } on CacheException catch (e) {
       return Left(Failure.cache(message: e.message));
     } catch (e) {
@@ -185,14 +185,14 @@ class AuthRepositoryImpl implements AuthRepository {
   @override
   Stream<Either<Failure, User?>> watchAuthState() {
     return remoteDataSource.watchAuthState().transform(
-          StreamTransformer.fromHandlers(
-            handleData: (data, sink) {
-              sink.add(Right(data?.toEntity()));
-            },
-            handleError: (error, stackTrace, sink) {
-              sink.add(Left(Failure.authentication(message: error.toString())));
-            },
-          ),
-        );
+      StreamTransformer.fromHandlers(
+        handleData: (data, sink) {
+          sink.add(Right(data?.toEntity()));
+        },
+        handleError: (error, stackTrace, sink) {
+          sink.add(Left(Failure.authentication(message: error.toString())));
+        },
+      ),
+    );
   }
 }

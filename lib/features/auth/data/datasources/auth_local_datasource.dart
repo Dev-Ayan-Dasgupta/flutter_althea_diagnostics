@@ -1,4 +1,5 @@
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
+import 'dart:convert';
 import '../../../../core/errors/exceptions.dart';
 import '../models/user_model.dart';
 
@@ -31,7 +32,9 @@ class AuthLocalDataSourceImpl implements AuthLocalDataSource {
         secureStorage.write(key: _refreshTokenKey, value: token.refreshToken),
         secureStorage.write(key: _tokenTypeKey, value: token.tokenType),
         secureStorage.write(
-            key: _expiresInKey, value: token.expiresIn.toString()),
+          key: _expiresInKey,
+          value: token.expiresIn.toString(),
+        ),
         secureStorage.write(key: _issuedAtKey, value: token.issuedAt),
       ]);
     } catch (e) {
@@ -87,10 +90,8 @@ class AuthLocalDataSourceImpl implements AuthLocalDataSource {
   @override
   Future<void> cacheUser(UserModel user) async {
     try {
-      await secureStorage.write(
-        key: _userKey,
-        value: user.toJson().toString(),
-      );
+      final userJson = jsonEncode(user.toJson());
+      await secureStorage.write(key: _userKey, value: userJson);
     } catch (e) {
       throw CacheException('Failed to cache user: ${e.toString()}');
     }
@@ -101,8 +102,9 @@ class AuthLocalDataSourceImpl implements AuthLocalDataSource {
     try {
       final userData = await secureStorage.read(key: _userKey);
       if (userData == null) return null;
-      // Note: This is simplified - you'd want proper JSON parsing
-      return null; // TODO: Implement proper JSON parsing from string
+
+      final userJson = jsonDecode(userData) as Map<String, dynamic>;
+      return UserModel.fromJson(userJson);
     } catch (e) {
       throw CacheException('Failed to get user: ${e.toString()}');
     }

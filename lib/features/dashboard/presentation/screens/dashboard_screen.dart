@@ -581,7 +581,7 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen>
                   ],
                 ),
               ),
-              Container(
+              SizedBox(
                 width: 80,
                 height: 80,
                 child: Stack(

@@ -84,7 +84,7 @@ class _AdvancedFilterSheetState extends ConsumerState<AdvancedFilterSheet> {
       reachedLab: (_) => SampleStatusType.reachedLab,
       processing: (_) => SampleStatusType.processing,
       completed: (_, _) => SampleStatusType.completed,
-      rejected: (_, _, __) => SampleStatusType.rejected,
+      rejected: (_, _, _) => SampleStatusType.rejected,
       cancelled: (_, _) => SampleStatusType.cancelled,
     );
   }
