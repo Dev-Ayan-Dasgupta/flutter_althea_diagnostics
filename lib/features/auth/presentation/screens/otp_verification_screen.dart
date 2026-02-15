@@ -10,6 +10,7 @@ import '../../../../core/config/theme/app_colors.dart';
 import '../../../../core/presentation/widgets/app_button.dart';
 import '../../../../core/presentation/widgets/app_card.dart';
 import '../../../../core/utils/responsive_helper.dart';
+import '../../../../core/utils/navigation_extensions.dart';
 import '../providers/auth_providers.dart';
 
 class OtpVerificationScreen extends ConsumerStatefulWidget {
@@ -123,6 +124,27 @@ class _OtpVerificationScreenState extends ConsumerState<OtpVerificationScreen>
     final authState = ref.watch(authProvider);
     final isLoading = authState.isLoading;
     final deviceType = ResponsiveHelper.getDeviceType(context);
+
+    // Listen for auth state changes to navigate after successful OTP verification
+    ref.listen(authProvider, (previous, next) {
+      // Navigate to dashboard on successful authentication
+      if (next.hasValue && next.value != null) {
+        context.goToDashboard();
+      }
+      // Show error message on failure
+      else if (next.hasError && mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text('OTP verification failed: ${next.error}'),
+            backgroundColor: AppColors.error,
+            behavior: SnackBarBehavior.floating,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(AppDimensions.radiusMedium),
+            ),
+          ),
+        );
+      }
+    });
 
     return Scaffold(
       body: Container(
