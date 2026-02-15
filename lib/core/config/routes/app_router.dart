@@ -67,38 +67,45 @@ final routerProvider = Provider<GoRouter>((ref) {
   final authState = ref.watch(authProvider);
 
   return GoRouter(
-    initialLocation: AppRoutes.onboarding,
+    initialLocation: AppRoutes.login,
     debugLogDiagnostics: true,
     redirect: (context, state) async {
+      // Check authentication and onboarding status
       final isAuthenticated = authState.value != null;
-      final isLoginRoute =
-          state.matchedLocation == AppRoutes.login ||
-          state.matchedLocation == AppRoutes.otpVerification;
-      final isOnboardingRoute =
-          state.matchedLocation == AppRoutes.onboarding ||
-          state.matchedLocation == AppRoutes.permissions;
+      final currentPath = state.matchedLocation;
 
       // Check if onboarding is completed
       final prefs = await SharedPreferences.getInstance();
       final onboardingCompleted =
           prefs.getBool('onboarding_completed') ?? false;
 
-      // If onboarding not completed and not on onboarding routes
-      if (!onboardingCompleted && !isOnboardingRoute) {
+      // If not completed onboarding and not on onboarding routes
+      if (!onboardingCompleted &&
+          currentPath != AppRoutes.onboarding &&
+          currentPath != AppRoutes.permissions) {
         return AppRoutes.onboarding;
       }
 
-      // If onboarding completed but not authenticated and not on login route
-      if (onboardingCompleted && !isAuthenticated && !isLoginRoute) {
-        return AppRoutes.login;
+      // If onboarding completed but not authenticated
+      if (onboardingCompleted && !isAuthenticated) {
+        // Allow access to login and OTP screens
+        if (currentPath == AppRoutes.login ||
+            currentPath == AppRoutes.otpVerification) {
+          return null; // Stay on current route
+        }
+        return AppRoutes.login; // Redirect to login
       }
 
-      // If authenticated and on login/onboarding route, redirect to dashboard
-      if (isAuthenticated && (isLoginRoute || isOnboardingRoute)) {
+      // If authenticated and trying to access auth screens
+      if (isAuthenticated &&
+          (currentPath == AppRoutes.login ||
+              currentPath == AppRoutes.otpVerification ||
+              currentPath == AppRoutes.onboarding ||
+              currentPath == AppRoutes.permissions)) {
         return AppRoutes.dashboard;
       }
 
-      return null;
+      return null; // No redirect needed
     },
     routes: [
       // Onboarding Routes

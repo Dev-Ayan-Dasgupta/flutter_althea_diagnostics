@@ -19,6 +19,9 @@ class LoginScreen extends ConsumerStatefulWidget {
 
 class _LoginScreenState extends ConsumerState<LoginScreen>
     with TickerProviderStateMixin {
+  final FocusNode _emailFocusNode = FocusNode();
+  final FocusNode _passwordFocusNode = FocusNode();
+
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
   final _phoneController = TextEditingController();
@@ -65,6 +68,8 @@ class _LoginScreenState extends ConsumerState<LoginScreen>
     _phoneController.dispose();
     _fadeController.dispose();
     _slideController.dispose();
+    _emailFocusNode.dispose();
+    _passwordFocusNode.dispose();
     super.dispose();
   }
 
@@ -98,44 +103,52 @@ class _LoginScreenState extends ConsumerState<LoginScreen>
     final deviceType = ResponsiveHelper.getDeviceType(context);
     final isLoading = authState.isLoading;
 
-    return Scaffold(
-      body: Container(
-        decoration: const BoxDecoration(gradient: AppGradients.darkBackground),
-        child: SafeArea(
-          child: Center(
-            child: SingleChildScrollView(
-              padding: EdgeInsets.all(
-                deviceType == DeviceType.mobile
-                    ? AppDimensions.spacing24
-                    : AppDimensions.spacing48,
-              ),
-              child: FadeTransition(
-                opacity: _fadeAnimation,
-                child: SlideTransition(
-                  position: _slideAnimation,
-                  child: ConstrainedBox(
-                    constraints: BoxConstraints(
-                      maxWidth: deviceType == DeviceType.mobile
-                          ? double.infinity
-                          : AppDimensions.maxContentWidthMobile,
-                    ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.stretch,
-                      children: [
-                        // Logo Section
-                        _buildLogoSection(),
+    return GestureDetector(
+      onTap: () {
+        // Unfocus when tapping outside text fields
+        FocusManager.instance.primaryFocus?.unfocus();
+      },
+      child: Scaffold(
+        body: Container(
+          decoration: const BoxDecoration(
+            gradient: AppGradients.darkBackground,
+          ),
+          child: SafeArea(
+            child: Center(
+              child: SingleChildScrollView(
+                padding: EdgeInsets.all(
+                  deviceType == DeviceType.mobile
+                      ? AppDimensions.spacing24
+                      : AppDimensions.spacing48,
+                ),
+                child: FadeTransition(
+                  opacity: _fadeAnimation,
+                  child: SlideTransition(
+                    position: _slideAnimation,
+                    child: ConstrainedBox(
+                      constraints: BoxConstraints(
+                        maxWidth: deviceType == DeviceType.mobile
+                            ? double.infinity
+                            : AppDimensions.maxContentWidthMobile,
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                        children: [
+                          // Logo Section
+                          _buildLogoSection(),
 
-                        const SizedBox(height: AppDimensions.spacing64),
+                          const SizedBox(height: AppDimensions.spacing64),
 
-                        // Login Form Card
-                        _buildLoginCard(isLoading),
+                          // Login Form Card
+                          _buildLoginCard(isLoading),
 
-                        const SizedBox(height: AppDimensions.spacing24),
+                          const SizedBox(height: AppDimensions.spacing24),
 
-                        // Toggle Login Mode
-                        _buildToggleButton(),
-                      ],
+                          // Toggle Login Mode
+                          _buildToggleButton(),
+                        ],
+                      ),
                     ),
                   ),
                 ),
