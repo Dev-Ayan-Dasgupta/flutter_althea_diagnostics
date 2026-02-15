@@ -246,6 +246,21 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen>
 
         _buildAnalyticsCard(context),
 
+        const SizedBox(height: AppDimensions.spacing16),
+
+        // Staff Management Card (for Lab Admin and Platform Admin)
+        if (user?.canManageStaff ?? false) _buildStaffManagementCard(context),
+
+        const SizedBox(height: AppDimensions.spacing16),
+
+        // Wallet Card (for staff with wallet access)
+        if (user?.hasWallet ?? false) _buildWalletCard(context),
+
+        const SizedBox(height: AppDimensions.spacing16),
+
+        // Payout Management Card (for Lab Admin and Platform Admin)
+        if (user?.canManageStaff ?? false) _buildPayoutManagementCard(context),
+
         const SizedBox(height: AppDimensions.spacing40),
       ]),
     );
@@ -282,6 +297,137 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen>
                 ),
                 Text(
                   'Detailed insights & reports',
+                  style: AppTextStyles.bodySmall.copyWith(
+                    color: AppColors.textSecondary,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Icon(
+            Icons.arrow_forward_ios,
+            size: 16,
+            color: AppColors.textSecondary,
+          ),
+        ],
+      ),
+    );
+  }
+
+  AppCard _buildStaffManagementCard(BuildContext context) {
+    return AppCard(
+      onTap: () => context.goToStaffManagement(),
+      child: Row(
+        children: [
+          Container(
+            padding: const EdgeInsets.all(AppDimensions.spacing12),
+            decoration: BoxDecoration(
+              gradient: AppGradients.primaryButton,
+              borderRadius: BorderRadius.circular(AppDimensions.radiusSmall),
+            ),
+            child: const Icon(Icons.people, color: Colors.white),
+          ),
+          const SizedBox(width: AppDimensions.spacing16),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Manage Staff',
+                  style: AppTextStyles.bodyLarge.copyWith(
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+                Text(
+                  'Add, edit, or remove staff members',
+                  style: AppTextStyles.bodySmall.copyWith(
+                    color: AppColors.textSecondary,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Icon(
+            Icons.arrow_forward_ios,
+            size: 16,
+            color: AppColors.textSecondary,
+          ),
+        ],
+      ),
+    );
+  }
+
+  AppCard _buildWalletCard(BuildContext context) {
+    return AppCard(
+      onTap: () => context.goToWallet(),
+      child: Row(
+        children: [
+          Container(
+            padding: const EdgeInsets.all(AppDimensions.spacing12),
+            decoration: BoxDecoration(
+              gradient: AppGradients.success,
+              borderRadius: BorderRadius.circular(AppDimensions.radiusSmall),
+            ),
+            child: const Icon(Icons.account_balance_wallet, color: Colors.white),
+          ),
+          const SizedBox(width: AppDimensions.spacing16),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'My Wallet',
+                  style: AppTextStyles.bodyLarge.copyWith(
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+                Text(
+                  'View earnings & request payouts',
+                  style: AppTextStyles.bodySmall.copyWith(
+                    color: AppColors.textSecondary,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Icon(
+            Icons.arrow_forward_ios,
+            size: 16,
+            color: AppColors.textSecondary,
+          ),
+        ],
+      ),
+    );
+  }
+
+  AppCard _buildPayoutManagementCard(BuildContext context) {
+    return AppCard(
+      onTap: () => context.goToPayoutManagement(),
+      child: Row(
+        children: [
+          Container(
+            padding: const EdgeInsets.all(AppDimensions.spacing12),
+            decoration: BoxDecoration(
+              gradient: const LinearGradient(
+                colors: [Color(0xFFFF9800), Color(0xFFF57C00)],
+              ),
+              borderRadius: BorderRadius.circular(AppDimensions.radiusSmall),
+            ),
+            child: const Icon(Icons.payments, color: Colors.white),
+          ),
+          const SizedBox(width: AppDimensions.spacing16),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Manage Payouts',
+                  style: AppTextStyles.bodyLarge.copyWith(
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+                Text(
+                  'Approve & process payout requests',
                   style: AppTextStyles.bodySmall.copyWith(
                     color: AppColors.textSecondary,
                   ),

@@ -15,6 +15,7 @@ import '../../../../core/utils/navigation_extensions.dart';
 import '../../../auth/domain/entities/user.dart';
 import '../../domain/entities/staff.dart';
 import '../widgets/staff_filter_sheet.dart';
+import 'staff_detail_screen.dart';
 
 // Mock providers - replace with actual implementation
 final staffListProvider = StateProvider<List<StaffMember>>((ref) => []);
@@ -222,11 +223,11 @@ class _StaffManagementScreenState extends ConsumerState<StaffManagementScreen> {
   }
 
   void _showStaffDetails(StaffMember staff) {
-    showModalBottomSheet(
-      context: context,
-      isScrollControlled: true,
-      backgroundColor: Colors.transparent,
-      builder: (context) => StaffDetailsSheet(staff: staff),
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => StaffDetailScreen(staff: staff),
+      ),
     );
   }
 }
