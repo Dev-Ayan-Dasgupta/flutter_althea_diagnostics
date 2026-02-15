@@ -3,6 +3,18 @@ import 'package:flutter/material.dart';
 class AppColors {
   AppColors._();
 
+  // Success Colors
+  static const Color successGreen = Color(0xFFC1FF72); // Nano Banana
+  static const Color successGreenDark = Color(0xFF9EEB5B);
+
+  // Warning Colors
+  static const Color warningAmber = Color(0xFFFFB800); // Amber
+  static const Color warningAmberDark = Color(0xFFFFA000);
+
+  // Error Colors
+  static const Color errorRed = Color(0xFFFF3131); // Critical Red
+  static const Color errorRedDark = Color(0xFFFF1744);
+
   // Primary Colors (Maroon & Violet)
   static const Color primary = Color(0xFF800020); // Maroon
   static const Color secondary = Color(0xFF8B00FF); // Violet

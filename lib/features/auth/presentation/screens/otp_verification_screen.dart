@@ -136,7 +136,7 @@ class _OtpVerificationScreenState extends ConsumerState<OtpVerificationScreen>
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
             content: Text('OTP verification failed: ${next.error}'),
-            backgroundColor: AppColors.error,
+            backgroundColor: AppColors.errorRed,
             behavior: SnackBarBehavior.floating,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(AppDimensions.radiusMedium),
