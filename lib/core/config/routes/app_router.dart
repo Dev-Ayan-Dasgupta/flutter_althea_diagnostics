@@ -68,7 +68,7 @@ final routerProvider = Provider<GoRouter>((ref) {
 
   return GoRouter(
     initialLocation: AppRoutes.login,
-    debugLogDiagnostics: true,
+    // debugLogDiagnostics: true,
     redirect: (context, state) async {
       // Check authentication and onboarding status
       final isAuthenticated = authState.value != null;

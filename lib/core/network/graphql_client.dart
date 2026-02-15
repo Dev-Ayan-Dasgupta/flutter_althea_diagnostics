@@ -9,23 +9,13 @@ class GraphQLService {
 
   GraphQLService._();
 
-  final FlutterSecureStorage _secureStorage = const FlutterSecureStorage(
-    aOptions: AndroidOptions(
-      encryptedSharedPreferences: true,
-    ),
-    iOptions: IOSOptions(
-      // Use unlocked_this_device_only for better security - requires device to be unlocked
-      accessibility: KeychainAccessibility.unlocked_this_device_only,
-    ),
-  );
+  final FlutterSecureStorage _secureStorage = FlutterSecureStorage();
   GraphQLClient? _client;
   ValueNotifier<GraphQLClient>? _clientNotifier;
 
   /// Initialize GraphQL client
   Future<void> initialize() async {
-    final HttpLink httpLink = HttpLink(
-      ApiConstants.graphqlUrl,
-    );
+    final HttpLink httpLink = HttpLink(ApiConstants.graphqlUrl);
 
     final AuthLink authLink = AuthLink(
       getToken: () async {
@@ -42,9 +32,7 @@ class GraphQLService {
         initialPayload: () async {
           final token = await _secureStorage.read(key: 'access_token');
           return {
-            'headers': {
-              'Authorization': token != null ? 'Bearer $token' : '',
-            },
+            'headers': {'Authorization': token != null ? 'Bearer $token' : ''},
           };
         },
       ),
@@ -57,9 +45,7 @@ class GraphQLService {
     );
 
     _client = GraphQLClient(
-      cache: GraphQLCache(
-        store: HiveStore(),
-      ),
+      cache: GraphQLCache(store: HiveStore()),
       link: link,
       defaultPolicies: DefaultPolicies(
         query: Policies(
@@ -85,7 +71,8 @@ class GraphQLService {
   GraphQLClient get client {
     if (_client == null) {
       throw Exception(
-          'GraphQL client not initialized. Call initialize() first.');
+        'GraphQL client not initialized. Call initialize() first.',
+      );
     }
     return _client!;
   }
@@ -94,7 +81,8 @@ class GraphQLService {
   ValueNotifier<GraphQLClient> get clientNotifier {
     if (_clientNotifier == null) {
       throw Exception(
-          'GraphQL client not initialized. Call initialize() first.');
+        'GraphQL client not initialized. Call initialize() first.',
+      );
     }
     return _clientNotifier!;
   }
@@ -122,10 +110,7 @@ class GraphQLService {
     Map<String, dynamic>? variables,
   }) async {
     final result = await client.mutate(
-      MutationOptions(
-        document: gql(mutation),
-        variables: variables ?? {},
-      ),
+      MutationOptions(document: gql(mutation), variables: variables ?? {}),
     );
 
     return result;
