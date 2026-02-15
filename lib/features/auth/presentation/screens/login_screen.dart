@@ -193,7 +193,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen>
             gradient: AppGradients.primaryButton,
             boxShadow: [
               BoxShadow(
-                color: AppColors.primary.withValues(alpha: 0.5),
+                color: AppColors.primary.withOpacity(0.5),
                 blurRadius: 30,
                 spreadRadius: 5,
               ),
