@@ -176,7 +176,7 @@ class MockAuthRepositoryImpl implements AuthRepository {
       // Try to get cached user
       final cachedUser = await localDataSource.getUser();
       if (cachedUser != null) {
-        _currentUser = cachedUser as User;
+        _currentUser = cachedUser.toEntity();
         return Right(_currentUser!);
       }
 
