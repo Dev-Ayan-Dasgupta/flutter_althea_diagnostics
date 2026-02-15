@@ -217,7 +217,7 @@ class _AboutScreenState extends State<AboutScreen> {
           child: Column(
             children: [
               Text(
-                'Made with ❤️ in India',
+                'Made with ❤️ in Kolkata, India',
                 style: AppTextStyles.bodyMedium.copyWith(
                   fontWeight: FontWeight.w600,
                 ),

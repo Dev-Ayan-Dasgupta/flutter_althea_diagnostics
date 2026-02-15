@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_riverpod/legacy.dart';
-import '../../../../core/config/design/app_dimensions.dart';
-import '../../../../core/config/design/app_gradients.dart';
-import '../../../../core/config/design/app_shadows.dart';
-import '../../../../core/config/theme/app_text_styles.dart';
-import '../../../../core/config/theme/app_colors.dart';
-import '../../../../core/presentation/widgets/gradient_text.dart';
-import '../../../../core/presentation/widgets/app_card.dart';
-import '../../../../core/presentation/widgets/withdrawal_request_card.dart';
-import '../../../../core/presentation/widgets/empty_state.dart';
-import '../../../../core/presentation/widgets/filter_chip_custom.dart';
-import '../../../../core/utils/navigation_extensions.dart';
-import '../domain/entities/wallet.dart';
+import '../../../../../core/config/design/app_dimensions.dart';
+import '../../../../../core/config/design/app_gradients.dart';
+import '../../../../../core/config/design/app_shadows.dart';
+import '../../../../../core/config/theme/app_text_styles.dart';
+import '../../../../../core/config/theme/app_colors.dart';
+import '../../../../../core/presentation/widgets/gradient_text.dart';
+import '../../../../../core/presentation/widgets/app_card.dart';
+import '../../../../../core/presentation/widgets/withdrawal_request_card.dart';
+import '../../../../../core/presentation/widgets/empty_state.dart';
+import '../../../../../core/presentation/widgets/filter_chip_custom.dart';
+import '../../../../../core/utils/navigation_extensions.dart';
+import '../../domain/entities/wallet.dart';
 
 // Mock providers - replace with actual implementation
 final withdrawalRequestsProvider = StateProvider<List<WithdrawalRequest>>(
