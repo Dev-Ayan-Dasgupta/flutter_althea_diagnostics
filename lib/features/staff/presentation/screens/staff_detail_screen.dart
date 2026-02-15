@@ -404,11 +404,22 @@ class _StaffDetailScreenState extends ConsumerState<StaffDetailScreen> {
             ),
           ),
           const SizedBox(height: AppDimensions.spacing16),
-          AppButton(
-            text: 'Remove Staff Member',
+          ElevatedButton.icon(
             onPressed: _removeStaff,
             icon: const Icon(Icons.person_remove),
-            type: AppButtonType.critical,
+            label: const Text('Remove Staff Member'),
+            style: ElevatedButton.styleFrom(
+              backgroundColor: AppColors.critical,
+              foregroundColor: Colors.white,
+              padding: const EdgeInsets.symmetric(
+                vertical: AppDimensions.spacing16,
+              ),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(
+                  AppDimensions.radiusMedium,
+                ),
+              ),
+            ),
           ),
         ],
       ),
@@ -511,13 +522,13 @@ class _StaffDetailScreenState extends ConsumerState<StaffDetailScreen> {
       case PhlebotomistStatus.active:
         return BadgeType.success;
       case PhlebotomistStatus.inactive:
-        return BadgeType.secondary;
+        return BadgeType.info;
       case PhlebotomistStatus.suspended:
         return BadgeType.critical;
       case PhlebotomistStatus.onBreak:
         return BadgeType.warning;
       default:
-        return BadgeType.secondary;
+        return BadgeType.info;
     }
   }
 
