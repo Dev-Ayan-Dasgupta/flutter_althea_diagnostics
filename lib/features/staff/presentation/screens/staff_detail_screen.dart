@@ -101,19 +101,20 @@ class _StaffDetailScreenState extends ConsumerState<StaffDetailScreen> {
           ),
           TextButton(
             onPressed: () {
-              // TODO: Implement actual removal
+              // TODO: Implement actual removal with backend API
               Navigator.pop(context);
-              ScaffoldMessenger.of(context).showSnackBar(
+              // Show snackbar and navigate back
+              final messenger = ScaffoldMessenger.of(context);
+              messenger.showSnackBar(
                 SnackBar(
                   content: const Text('Staff member removed successfully'),
                   backgroundColor: AppColors.success,
                   behavior: SnackBarBehavior.floating,
+                  duration: const Duration(seconds: 2),
                 ),
               );
-              // Navigate back after showing snackbar
-              Future.delayed(const Duration(milliseconds: 100), () {
-                context.goBack();
-              });
+              // Navigate back immediately
+              context.goBack();
             },
             child: Text(
               'Remove',

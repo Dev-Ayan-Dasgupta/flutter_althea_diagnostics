@@ -246,20 +246,23 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen>
 
         _buildAnalyticsCard(context),
 
-        const SizedBox(height: AppDimensions.spacing16),
-
         // Staff Management Card (for Lab Admin and Platform Admin)
-        if (user?.canManageStaff ?? false) _buildStaffManagementCard(context),
-
-        const SizedBox(height: AppDimensions.spacing16),
+        if (user?.canManageStaff ?? false) ...[
+          const SizedBox(height: AppDimensions.spacing16),
+          _buildStaffManagementCard(context),
+        ],
 
         // Wallet Card (for staff with wallet access)
-        if (user?.hasWallet ?? false) _buildWalletCard(context),
-
-        const SizedBox(height: AppDimensions.spacing16),
+        if (user?.hasWallet ?? false) ...[
+          const SizedBox(height: AppDimensions.spacing16),
+          _buildWalletCard(context),
+        ],
 
         // Payout Management Card (for Lab Admin and Platform Admin)
-        if (user?.canManageStaff ?? false) _buildPayoutManagementCard(context),
+        if (user?.canManageStaff ?? false) ...[
+          const SizedBox(height: AppDimensions.spacing16),
+          _buildPayoutManagementCard(context),
+        ],
 
         const SizedBox(height: AppDimensions.spacing40),
       ]),

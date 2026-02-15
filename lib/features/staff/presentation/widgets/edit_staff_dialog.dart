@@ -190,8 +190,6 @@ class _EditStaffDialogState extends State<EditStaffDialog> {
         return 'Lab Technician';
       case UserRole.pathologist:
         return 'Pathologist';
-      case UserRole.platformAdmin:
-        return 'Platform Admin';
       default:
         return role.name;
     }

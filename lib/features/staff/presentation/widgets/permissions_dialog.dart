@@ -166,7 +166,8 @@ class _PermissionsDialogState extends State<PermissionsDialog> {
   void initState() {
     super.initState();
     // TODO: Load current permissions from staff member or permission provider
-    // For now, initialize with empty set
+    // Initialize with empty set for now
+    // In production, this should load from: ref.read(staffPermissionsProvider(widget.staff.id))
     _selectedPermissions = {};
   }
 
