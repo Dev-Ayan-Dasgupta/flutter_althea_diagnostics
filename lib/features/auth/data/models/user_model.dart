@@ -43,13 +43,21 @@ abstract class UserModel with _$UserModel {
 
 extension UserModelX on UserModel {
   User toEntity() {
+    // Parse role with case-insensitive matching
+    final matchedRole = UserRole.values.firstWhere(
+      (e) => e.name.toLowerCase() == role.toLowerCase(),
+      orElse: () => throw FormatException(
+        'Invalid user role: "$role". Expected one of: ${UserRole.values.map((e) => e.name).join(", ")}',
+      ),
+    );
+
     return User(
       id: id,
       name: name,
       email: email,
       phoneNumber: phoneNumber,
       avatarUrl: avatarUrl,
-      role: UserRole.values.firstWhere((e) => e.name == role),
+      role: matchedRole,
       labId: labId,
       labName: labName,
       permissions: permissions,
