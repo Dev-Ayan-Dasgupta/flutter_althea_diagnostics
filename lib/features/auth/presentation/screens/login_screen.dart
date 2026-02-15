@@ -59,6 +59,29 @@ class _LoginScreenState extends ConsumerState<LoginScreen>
 
     _fadeController.forward();
     _slideController.forward();
+
+    // Listen for auth state changes to navigate after successful login
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      ref.listen(authProvider, (previous, next) {
+        // Navigate to dashboard on successful authentication
+        if (next.hasValue && next.value != null) {
+          context.goToDashboard();
+        }
+        // Show error message on failure
+        else if (next.hasError) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+              content: Text('Login failed: ${next.error}'),
+              backgroundColor: AppColors.error,
+              behavior: SnackBarBehavior.floating,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(AppDimensions.radiusMedium),
+              ),
+            ),
+          );
+        }
+      });
+    });
   }
 
   @override

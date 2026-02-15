@@ -49,6 +49,30 @@ class _OtpVerificationScreenState extends ConsumerState<OtpVerificationScreen>
     _pulseAnimation = Tween<double>(begin: 0.95, end: 1.05).animate(
       CurvedAnimation(parent: _pulseController, curve: Curves.easeInOut),
     );
+
+    // Listen for auth state changes to navigate after successful OTP verification
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      ref.listen(authProvider, (previous, next) {
+        // Navigate to dashboard on successful authentication
+        if (next.hasValue && next.value != null) {
+          Navigator.of(context).popUntil((route) => route.isFirst);
+          // The router will automatically redirect to dashboard
+        }
+        // Show error message on failure
+        else if (next.hasError) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+              content: Text('OTP verification failed: ${next.error}'),
+              backgroundColor: AppColors.error,
+              behavior: SnackBarBehavior.floating,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(AppDimensions.radiusMedium),
+              ),
+            ),
+          );
+        }
+      });
+    });
   }
 
   @override
