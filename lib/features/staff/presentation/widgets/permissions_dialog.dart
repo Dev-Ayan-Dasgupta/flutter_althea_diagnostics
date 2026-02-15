@@ -165,13 +165,22 @@ class _PermissionsDialogState extends State<PermissionsDialog> {
   @override
   void initState() {
     super.initState();
-    // TODO: Load current permissions from staff member
+    // TODO: Load current permissions from staff member or permission provider
+    // For now, initialize with empty set
     _selectedPermissions = {};
   }
 
   void _savePermissions() {
-    // TODO: Implement actual permission update
-    Navigator.pop(context, true);
+    // TODO: Implement actual permission update with backend API
+    // For now, show a message that backend integration is pending
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: const Text('Backend integration pending - permissions not persisted'),
+        backgroundColor: AppColors.warning,
+        behavior: SnackBarBehavior.floating,
+      ),
+    );
+    Navigator.pop(context, false);
   }
 
   @override

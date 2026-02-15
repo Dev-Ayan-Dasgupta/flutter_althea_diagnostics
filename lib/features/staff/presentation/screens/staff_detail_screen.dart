@@ -103,7 +103,6 @@ class _StaffDetailScreenState extends ConsumerState<StaffDetailScreen> {
             onPressed: () {
               // TODO: Implement actual removal
               Navigator.pop(context);
-              context.goBack();
               ScaffoldMessenger.of(context).showSnackBar(
                 SnackBar(
                   content: const Text('Staff member removed successfully'),
@@ -111,6 +110,10 @@ class _StaffDetailScreenState extends ConsumerState<StaffDetailScreen> {
                   behavior: SnackBarBehavior.floating,
                 ),
               );
+              // Navigate back after showing snackbar
+              Future.delayed(const Duration(milliseconds: 100), () {
+                context.goBack();
+              });
             },
             child: Text(
               'Remove',
@@ -123,15 +126,18 @@ class _StaffDetailScreenState extends ConsumerState<StaffDetailScreen> {
   }
 
   void _toggleStatus() {
-    // TODO: Implement status toggle
+    // TODO: Implement status toggle with actual state update
     final newStatus = widget.staff.status == PhlebotomistStatus.active
         ? PhlebotomistStatus.inactive
         : PhlebotomistStatus.active;
     
+    // Show message that backend integration is needed
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
-        content: Text('Status changed to ${_getStatusLabel(newStatus)}'),
-        backgroundColor: AppColors.success,
+        content: Text(
+          'Status will be changed to ${_getStatusLabel(newStatus)} (Backend integration pending)',
+        ),
+        backgroundColor: AppColors.warning,
         behavior: SnackBarBehavior.floating,
       ),
     );

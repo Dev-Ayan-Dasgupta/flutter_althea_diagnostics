@@ -40,8 +40,16 @@ class _EditStaffDialogState extends State<EditStaffDialog> {
   }
 
   void _saveChanges() {
-    // TODO: Implement actual update
-    Navigator.pop(context, true);
+    // TODO: Implement actual update with backend API
+    // For now, show a message that backend integration is pending
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: const Text('Backend integration pending - changes not persisted'),
+        backgroundColor: AppColors.warning,
+        behavior: SnackBarBehavior.floating,
+      ),
+    );
+    Navigator.pop(context, false);
   }
 
   @override
