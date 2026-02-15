@@ -17,7 +17,8 @@ final secureStorageProvider = Provider<FlutterSecureStorage>((ref) {
     encryptedSharedPreferences: true,
   );
   const iosOptions = IOSOptions(
-    accessibility: KeychainAccessibility.first_unlock,
+    // Use unlocked_this_device_only for better security - requires device to be unlocked
+    accessibility: KeychainAccessibility.unlocked_this_device_only,
   );
   
   return const FlutterSecureStorage(
