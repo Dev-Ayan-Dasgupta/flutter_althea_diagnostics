@@ -17,8 +17,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 part 'auth_providers.g.dart';
 
 // Add this flag to switch between mock and real backend
-const bool USE_MOCK_AUTH =
-    true; // ← Set to true for mock, false for real backend
+const bool useMockAuth = true; // ← Set to true for mock, false for real backend
 
 // Mock Data Source Provider
 @riverpod
@@ -42,7 +41,7 @@ AuthLocalDataSource authLocalDataSource(Ref ref) {
 // Repository - Updated to use mock or real based on flag
 @riverpod
 AuthRepository authRepository(Ref ref) {
-  if (USE_MOCK_AUTH) {
+  if (useMockAuth) {
     // Use mock repository implementation
     final mockDataSource = ref.watch(mockAuthDataSourceProvider);
     final localDataSource = ref.watch(authLocalDataSourceProvider);

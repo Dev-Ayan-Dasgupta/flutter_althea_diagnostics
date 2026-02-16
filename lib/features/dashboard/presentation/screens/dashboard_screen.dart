@@ -373,7 +373,10 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen>
               gradient: AppGradients.success,
               borderRadius: BorderRadius.circular(AppDimensions.radiusSmall),
             ),
-            child: const Icon(Icons.account_balance_wallet, color: Colors.white),
+            child: const Icon(
+              Icons.account_balance_wallet,
+              color: Colors.white,
+            ),
           ),
           const SizedBox(width: AppDimensions.spacing16),
           Expanded(

@@ -18,10 +18,7 @@ import '../widgets/permissions_dialog.dart';
 class StaffDetailScreen extends ConsumerStatefulWidget {
   final StaffMember staff;
 
-  const StaffDetailScreen({
-    super.key,
-    required this.staff,
-  });
+  const StaffDetailScreen({super.key, required this.staff});
 
   @override
   ConsumerState<StaffDetailScreen> createState() => _StaffDetailScreenState();
@@ -33,7 +30,7 @@ class _StaffDetailScreenState extends ConsumerState<StaffDetailScreen> {
       context: context,
       builder: (context) => EditStaffDialog(staff: widget.staff),
     ).then((updated) {
-      if (updated == true) {
+      if (updated == true && mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
             content: const Text('Staff details updated successfully'),
@@ -50,7 +47,7 @@ class _StaffDetailScreenState extends ConsumerState<StaffDetailScreen> {
       context: context,
       builder: (context) => PermissionsDialog(staff: widget.staff),
     ).then((updated) {
-      if (updated == true) {
+      if (updated == true && mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
             content: const Text('Permissions updated successfully'),
@@ -116,10 +113,7 @@ class _StaffDetailScreenState extends ConsumerState<StaffDetailScreen> {
               // Navigate back immediately
               context.goBack();
             },
-            child: Text(
-              'Remove',
-              style: TextStyle(color: AppColors.critical),
-            ),
+            child: Text('Remove', style: TextStyle(color: AppColors.critical)),
           ),
         ],
       ),
@@ -131,7 +125,7 @@ class _StaffDetailScreenState extends ConsumerState<StaffDetailScreen> {
     final newStatus = widget.staff.status == PhlebotomistStatus.active
         ? PhlebotomistStatus.inactive
         : PhlebotomistStatus.active;
-    
+
     // Show message that backend integration is needed
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
@@ -246,9 +240,7 @@ class _StaffDetailScreenState extends ConsumerState<StaffDetailScreen> {
           const SizedBox(height: AppDimensions.spacing16),
           Text(
             widget.staff.name,
-            style: AppTextStyles.h3.copyWith(
-              fontWeight: FontWeight.w800,
-            ),
+            style: AppTextStyles.h3.copyWith(fontWeight: FontWeight.w800),
           ),
           const SizedBox(height: AppDimensions.spacing4),
           Text(
@@ -267,10 +259,7 @@ class _StaffDetailScreenState extends ConsumerState<StaffDetailScreen> {
               ),
               if (widget.staff.isOnline) ...[
                 const SizedBox(width: AppDimensions.spacing8),
-                StatusBadge(
-                  text: 'Online',
-                  type: BadgeType.success,
-                ),
+                StatusBadge(text: 'Online', type: BadgeType.success),
               ],
             ],
           ),
@@ -422,9 +411,7 @@ class _StaffDetailScreenState extends ConsumerState<StaffDetailScreen> {
                 vertical: AppDimensions.spacing16,
               ),
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(
-                  AppDimensions.radiusMedium,
-                ),
+                borderRadius: BorderRadius.circular(AppDimensions.radiusMedium),
               ),
             ),
           ),
@@ -469,17 +456,11 @@ class _StaffDetailScreenState extends ConsumerState<StaffDetailScreen> {
   Widget _buildStatItem(String label, String value, IconData icon) {
     return Column(
       children: [
-        Icon(
-          icon,
-          size: AppDimensions.iconLarge,
-          color: AppColors.primary,
-        ),
+        Icon(icon, size: AppDimensions.iconLarge, color: AppColors.primary),
         const SizedBox(height: AppDimensions.spacing8),
         Text(
           value,
-          style: AppTextStyles.h3.copyWith(
-            fontWeight: FontWeight.w800,
-          ),
+          style: AppTextStyles.h3.copyWith(fontWeight: FontWeight.w800),
         ),
         const SizedBox(height: AppDimensions.spacing4),
         Text(
@@ -504,8 +485,6 @@ class _StaffDetailScreenState extends ConsumerState<StaffDetailScreen> {
         return 'Pathologist';
       case UserRole.platformAdmin:
         return 'Platform Admin';
-      default:
-        return role.name;
     }
   }
 
@@ -519,8 +498,6 @@ class _StaffDetailScreenState extends ConsumerState<StaffDetailScreen> {
         return 'Suspended';
       case PhlebotomistStatus.onBreak:
         return 'On Break';
-      default:
-        return status.name;
     }
   }
 
@@ -534,8 +511,6 @@ class _StaffDetailScreenState extends ConsumerState<StaffDetailScreen> {
         return BadgeType.critical;
       case PhlebotomistStatus.onBreak:
         return BadgeType.warning;
-      default:
-        return BadgeType.info;
     }
   }
 

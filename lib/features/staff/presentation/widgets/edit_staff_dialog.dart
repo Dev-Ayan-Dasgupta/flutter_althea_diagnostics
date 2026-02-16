@@ -44,7 +44,9 @@ class _EditStaffDialogState extends State<EditStaffDialog> {
     // For now, show a message that backend integration is pending
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
-        content: const Text('Backend integration pending - changes not persisted'),
+        content: const Text(
+          'Backend integration pending - changes not persisted',
+        ),
         backgroundColor: AppColors.warning,
         behavior: SnackBarBehavior.floating,
       ),
@@ -117,17 +119,18 @@ class _EditStaffDialogState extends State<EditStaffDialog> {
                   ),
                 ),
               ),
-              items: [
-                UserRole.phlebotomist,
-                UserRole.labAdmin,
-                UserRole.labTechnician,
-                UserRole.pathologist,
-              ].map((role) {
-                return DropdownMenuItem(
-                  value: role,
-                  child: Text(_getRoleLabel(role)),
-                );
-              }).toList(),
+              items:
+                  [
+                    UserRole.phlebotomist,
+                    UserRole.labAdmin,
+                    UserRole.labTechnician,
+                    UserRole.pathologist,
+                  ].map((role) {
+                    return DropdownMenuItem(
+                      value: role,
+                      child: Text(_getRoleLabel(role)),
+                    );
+                  }).toList(),
               onChanged: (value) {
                 if (value != null) {
                   setState(() => _selectedRole = value);
@@ -205,8 +208,6 @@ class _EditStaffDialogState extends State<EditStaffDialog> {
         return 'Suspended';
       case PhlebotomistStatus.onBreak:
         return 'On Break';
-      default:
-        return status.name;
     }
   }
 }
