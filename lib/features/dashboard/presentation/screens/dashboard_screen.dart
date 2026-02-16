@@ -16,6 +16,7 @@ import '../../../../core/presentation/widgets/app_card.dart';
 import '../../../../core/utils/responsive_helper.dart';
 import '../../../../core/utils/navigation_extensions.dart';
 import '../../../analytics/presentation/screens/analytics_dashboard_screen.dart';
+import '../../../auth/domain/entities/user.dart';
 import '../../../auth/presentation/providers/auth_providers.dart';
 import '../../domain/entities/lab_pulse.dart';
 import '../providers/dashboard_providers.dart';
@@ -84,7 +85,7 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen>
                         : AppDimensions.spacing24,
                   ),
                   sliver: labPulseState.when(
-                    data: (pulse) => _buildContent(context, pulse, deviceType),
+                    data: (pulse) => _buildContent(context, pulse, deviceType, user),
                     loading: () =>
                         SliverToBoxAdapter(child: _buildLoadingState()),
                     error: (error, stack) =>
@@ -215,6 +216,7 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen>
     BuildContext context,
     LabPulse pulse,
     DeviceType deviceType,
+    User? user,
   ) {
     return SliverList(
       delegate: SliverChildListDelegate([
